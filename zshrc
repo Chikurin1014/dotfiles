@@ -4,12 +4,12 @@ SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
 # Source files in ~/.zsh
-# DOTZSH_DIR="${HOME}/.zsh"
-# if [ -d $DOTZSH_DIR ] && [ -r $DOTZSH_DIR ] && [ -x $DOTZSH_DIR ]; then
-#     for file in ${DOTZSH_DIR}/**/*.zsh; do
-#         [ -r $file ] && source $file
-#     done
-# fi
+DOTZSH_DIR="${HOME}/.zsh"
+if [ -d $DOTZSH_DIR ] && [ -r $DOTZSH_DIR ] && [ -x $DOTZSH_DIR ]; then
+    for file in ${DOTZSH_DIR}/**/*.zsh; do
+        [ -r $file ] && source $file
+    done
+fi
 
 ESPUP_DIR="${HOME}/.cargo/bin/espup"
 if [ -e $ESPUP_DIR ]; then

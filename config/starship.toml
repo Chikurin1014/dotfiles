@@ -10,24 +10,24 @@
 
 format = """
 $username[@](fg:#AAB2BF)$hostname$directory\
-$git_branch$git_commit$git_state$git_status$hg_branch\
+$git_branch$git_commit$git_state$git_status$hg_branch\n\
 $character
 """
 add_newline = false
 
 [username]
 show_always = true
-style_user = "fg:#56B6C2"
-style_root = "fg:#E06C75"
+style_user = "fg:#66CDAA"
+style_root = "fg:#E9967A"
 format = "[$user]($style)"
 
 [hostname]
+style = "fg:#66CDAA"
 ssh_only = false
 format = "[$hostname]($style)"
-style = "fg:#56B6C2"
 
 [directory]
-style = "fg:#C678DD"
+style = "fg:#FFB6C1"
 read_only = "\uf023"  # nf-fa-lock
 read_only_style = "fg:#ABB2BF"
 format = "[$read_only]($read_only_style) [$path]($style) "
