@@ -23,7 +23,6 @@ defer = "{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}"
 # [plugins.base16]
 # github = "chriskempson/base16-shell"
 
-# zsh settings
 [plugins.zsh-defer]
 github = "romkatv/zsh-defer"
 
@@ -38,6 +37,10 @@ github = "zsh-users/zsh-syntax-highlighting"
 
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
+
+# ls deluxe
+[plugins.ls-deluxe]
+inline = "alias ls='lsd'"
 
 # starship
 [plugins.starship]

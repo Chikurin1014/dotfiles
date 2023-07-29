@@ -11,7 +11,7 @@ if [ -d $DOTZSH_DIR ] && [ -r $DOTZSH_DIR ] && [ -x $DOTZSH_DIR ]; then
     done
 fi
 
-ESPUP_DIR="${HOME}/.cargo/bin/espup"
+ESPUP_DIR=`which "espup"`
 if [ -e $ESPUP_DIR ]; then
 alias export-esp='. $HOME/export-esp.sh'
 export-esp
