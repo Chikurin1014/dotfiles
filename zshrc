@@ -11,8 +11,9 @@ if [ -d $DOTZSH_DIR ] && [ -r $DOTZSH_DIR ] && [ -x $DOTZSH_DIR ]; then
     done
 fi
 
-ESPUP_DIR=`which "espup"`
-if [ -e $ESPUP_DIR ]; then
+# Run if espup (embedded-rust package for esp32) is installed
+ESPUP_DIR="`which "espup"`"
+if [ -n $ESPUP_DIR ]; then
 alias export-esp='. $HOME/export-esp.sh'
 export-esp
 fi
