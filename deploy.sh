@@ -32,6 +32,7 @@ function resolve_dest() {
 }
 
 SRC_DIR=`cd $(dirname $0) && pwd`
+echo $SRC_DIR
 DEST_DIR="$HOME"
 
 echo "Resolving old links and files..."
@@ -39,7 +40,7 @@ echo "$FILES" | while read file
 do
     [ ! -n "$file" ] && continue
     ARGS=(`echo $file`)
-    DEST="$DEST_DIR/${ARGS[1]}"
+    DEST="$DEST_DIR/${ARGS[2]}"
     DEST_D=`dirname "$DEST"`
     mkdir -p "$DEST_D"
     resolve_dest `check_dest "$DEST"`
@@ -51,15 +52,16 @@ echo "$FILES" | while read file
 do
     [ ! -n "$file" ] && continue
     ARGS=(`echo $file`)
-    S="${ARGS[0]}"
-    D="${ARGS[1]}"
+    S="${ARGS[1]}"
+    D="${ARGS[2]}"
     SRC="$SRC_DIR/$S"
     DEST="$DEST_DIR/$D"
+    echo "$S -> $D"
     ln -sv "$SRC" "$DEST"
 done
 echo ""
 
-bash -c "source \"$SRC_DIR/installation/_install.sh\""
+source "$SRC_DIR/installation/_install.sh"
 echo ""
 
 echo "Done"
