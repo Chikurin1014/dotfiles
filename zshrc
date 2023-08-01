@@ -14,8 +14,7 @@ fi
 # Run if espup (embedded-rust package for esp32) is installed
 ESPUP_DIR="`which "espup"`"
 if [ -n $ESPUP_DIR ]; then
-alias export-esp='. $HOME/export-esp.sh'
-export-esp
+    source $HOME/export-esp.sh
 fi
 
 source ~/.cargo/env
