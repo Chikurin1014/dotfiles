@@ -56,7 +56,6 @@ do
     D="${ARGS[2]}"
     SRC="$SRC_DIR/$S"
     DEST="$DEST_DIR/$D"
-    echo "$S -> $D"
     ln -sv "$SRC" "$DEST"
 done
 echo ""
