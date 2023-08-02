@@ -4,9 +4,21 @@ FILES="
 zshrc                       .zshrc
 zsh/completion.zsh          .zsh/completion.zsh
 zsh/option.zsh              .zsh/option.zsh
+zsh/style.zsh               .zsh/style.zsh
 config/sheldon/plugins.toml .config/sheldon/plugins.toml
 config/starship.toml        .config/starship.toml
 "
+
+MODE="normal"
+OPTIND=1
+while getopts m opt
+do
+    case "$opt" in
+    m)
+        MODE="minimal"
+        ;;
+    esac
+done
 
 function check_dest() {
     if   [ -L "$1" ]; then
@@ -32,7 +44,6 @@ function resolve_dest() {
 }
 
 SRC_DIR=`cd $(dirname $0) && pwd`
-echo $SRC_DIR
 DEST_DIR="$HOME"
 
 echo "Resolving old links and files..."
@@ -60,7 +71,7 @@ do
 done
 echo ""
 
-source "$SRC_DIR/installation/_install.sh"
+source "$SRC_DIR/installation/_install.sh" $MODE
 echo ""
 
 echo "Done"

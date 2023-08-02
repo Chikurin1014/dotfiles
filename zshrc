@@ -12,10 +12,10 @@ if [ -d $DOTZSH_DIR ] && [ -r $DOTZSH_DIR ] && [ -x $DOTZSH_DIR ]; then
 fi
 
 # Run if espup (embedded-rust package for esp32) is installed
-ESPUP_DIR="`which "espup"`"
-if [ -n $ESPUP_DIR ]; then
-    source $HOME/export-esp.sh
-fi
+ESPUP_SRC=`which "espup"`
+[ -n $ESPUP_SRC ] && [ $ESPUP_SRC != "espup not found" ] && source $HOME/export-esp.sh
 
 source ~/.cargo/env
-eval "$(sheldon source)"
+
+SHELDON_SRC=`which "sheldon"`
+[ -n $SHELDON_SRC ] && [ $SHELDON_SRC != "sheldon not found" ] && eval "$(sheldon source)"

@@ -12,9 +12,6 @@ INSTALL_BY_APT=(
 INSTALL_BY_CARGO=(
     "cargo-update"
     "cargo-generate"
-    "sheldon"
-    "starship"
-    "lsd"
 )
 
 function install_apt() {
