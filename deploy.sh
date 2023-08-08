@@ -7,6 +7,9 @@ zsh/option.zsh              .zsh/option.zsh
 zsh/style.zsh               .zsh/style.zsh
 config/sheldon/plugins.toml .config/sheldon/plugins.toml
 config/starship.toml        .config/starship.toml
+config/lsd/colors.yaml      .config/lsd/colors.yaml
+config/lsd/config.yaml      .config/lsd/config.yaml
+config/lsd/icons.yaml       .config/lsd/icons.yaml
 "
 
 MODE="normal"
@@ -34,10 +37,10 @@ function resolve_dest() {
     STATUS=$1
     FILE=$2
     if [ "$STATUS" = "link-exists" ]; then
-        echo "Unlink \`$FILE\`"
+        echo "Unlink $FILE"
         unlink "$FILE"
     elif [ "$STATUS" = "file-exists" ]; then
-        echo "Move \`$FILE\` to \`$FILE.old\` (if \`$FILE.old\` already exists, remove old one)"
+        echo "Move $FILE to $FILE.old (if $FILE.old already exists, remove old one)"
         [ -e "$FILE.old" ] && rm "$FILE.old"
         mv "$FILE" "$FILE.old"
     fi
@@ -67,7 +70,8 @@ do
     D="${ARGS[2]}"
     SRC="$SRC_DIR/$S"
     DEST="$DEST_DIR/$D"
-    ln -sv "$SRC" "$DEST"
+    echo "$SRC -> $DEST"
+    ln -s "$SRC" "$DEST"
 done
 echo ""
 
