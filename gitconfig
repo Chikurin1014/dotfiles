@@ -1,0 +1,7 @@
+[init]
+	defaultBranch = main
+[user]
+	name = T_Takebayashi
+	email = chikurin1014@gmail.com
+[core]
+	editor = code --wait

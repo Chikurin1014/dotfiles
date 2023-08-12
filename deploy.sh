@@ -11,6 +11,7 @@ config/lsd/colors.yaml      .config/lsd/colors.yaml
 config/lsd/config.yaml      .config/lsd/config.yaml
 config/lsd/icons.yaml       .config/lsd/icons.yaml
 tmux.conf                   .tmux.conf
+gitconfig                   .gitconfig
 "
 
 MODE="normal"
