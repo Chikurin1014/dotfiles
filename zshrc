@@ -19,3 +19,7 @@ source ~/.cargo/env
 
 SHELDON_SRC=`which "sheldon"`
 [ -n $SHELDON_SRC ] && [ $SHELDON_SRC != "sheldon not found" ] && eval "$(sheldon source)"
+
+LSD_SRC=`which "lsd"`
+[ -n $LSD_SRC ] && [ $LSD_SRC != "lsd not found" ] && alias ls='lsd'
+
