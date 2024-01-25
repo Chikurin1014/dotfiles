@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 APT_INSTALL="$SRC_DIR/shellscripts/install/_apt_install.sh"
-CAGO_INSTALL="$SRC_DIR/shellscripts/install/_cargo_install.sh"
+CARGO_INSTALL="$SRC_DIR/shellscripts/install/_cargo_install.sh"
 
 MODE="$1"
 
@@ -14,11 +14,11 @@ sudo apt-get install -yqq jq
 echo " -> Done"
 echo ""
 
-if [[ $MODE == "Full" ]]; then
-    source $APT_INSTALL
-    source $CAGO_INSTALL
-elif [[ $MODE == "Minimal" ]];then
-    source $APT_INSTALL
+if [[ "$MODE" == "Full" ]]; then
+    source "$APT_INSTALL"
+    source "$CARGO_INSTALL"
+elif [[ "$MODE" == "Minimal" ]];then
+    source "$APT_INSTALL"
 else
     exit 1
 fi

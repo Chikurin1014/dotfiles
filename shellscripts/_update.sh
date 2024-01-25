@@ -1,12 +1,10 @@
 #!/usr/bin/env bash
 
-sudo -v # ask sudo password at first
-
 echo "Updating apt packages ..."
-sudo apt-get -yqq update
+sudo apt-get update -yqq
 echo ""
 echo "Upgrading apt packages ..."
-sudo apt-get -yqq upgrade
+sudo apt-get upgrade -yqq
 echo " -> Done"
 echo ""
 
