@@ -16,7 +16,7 @@ function install_apt() {
 
 # install packages by install_apt
 PACS=$(cat "$JSON" | jq -r '.[]')
-for pac in "$PACS"; do
+echo "$PACS" | while read pac; do
     install_apt "$pac"
     echo ""
 done

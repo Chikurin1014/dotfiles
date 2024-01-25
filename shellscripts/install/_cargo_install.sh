@@ -25,7 +25,7 @@ fi
 
 # install packages by cargo
 PACS=$(cat "$JSON" | jq -c '.[]')
-for pac in "$PACS"; do
+echo "$PACS" | while read pac; do
     install_cargo "$pac"
     echo ""
 done
