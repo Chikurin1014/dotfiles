@@ -1,24 +1,22 @@
-*.*
-*/**.*
+*
+**/*
 
 !deploy.sh
 !README.md
 
-!sh/*.*
-!sh/*/**.*
+!sh/
+!sh/a
 
+!files/
+!files/config/
 !files/config/lsd/colors.yaml
 !files/config/lsd/config.yaml
 !files/config/lsd/icons.yaml
-
 !files/config/sheldon/plugins.toml
-
 !files/config/starship.toml
-
 !files/zshrc
-
+!files/zsh/
 !files/zsh/completion.zsh
 !files/zsh/option.zsh
 !files/zsh/style.zsh
-
 !files/tmux.conf
