@@ -3,18 +3,21 @@
 sudo -v # ask sudo password at first
 
 echo "Updating apt packages ..."
+sudo apt-get -yqq update
 echo ""
-sudo apt-get -y update
-sudo apt-get -y upgrade
+echo "Upgrading apt packages ..."
+sudo apt-get -yqq upgrade
+echo " -> Done"
+echo ""
 
 if [[  -e $(which rustup) ]]; then
     echo "Updating rustup ..."
-    echo ""
     rustup update
+    echo " -> Done"
     echo ""
     echo "Updating cargo packages ..."
-    echo ""
-    cargo install-update --all
+    cargo install-update --all -q
+    echo " -> Done"
     echo ""
 else
     echo "Rust is not installed"

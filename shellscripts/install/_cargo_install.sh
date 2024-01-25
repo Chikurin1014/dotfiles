@@ -1,19 +1,18 @@
 #!/usr/bin/env bash
 
-INSTALL_BY_CARGO=(
-    "cargo-update"
-    "cargo-generate"
-    "sheldon"
-    "starship"
-    "lsd"
-)
+DOTFILES_DIR="$HOME/dotfiles"
+JSON="$DOTFILES_DIR/json/cargo_install.json"
+
+PACS=$(cat "$JSON" | jq -c '.[]')
 
 function install_cargo() {
     ARG=$1
+    echo "Installing $ARG ..."
     if [ -z "$(cargo install --list | grep "$ARG")" ]; then
         cargo install -q --message-format human "$ARG"
+        echo " -> Done"
     else
-        echo "    already exists"
+        echo " -> Already exists"
     fi
 }
 
@@ -22,18 +21,14 @@ function install_cargo() {
 if [ ! -e $(which rustup) ]; then
     echo "Installing rustup ..."
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+    echo " -> Done"
 else
-    echo "Rustup already exists"
+    echo " -> Rustup already exists"
 fi
-echo ""
 
 # install packages by cargo
-echo "Installing cargo packages ..."
-echo ""
-for pac in ${INSTALL_BY_CARGO[@]}
-do
-echo "Installing $pac ..."
-install_cargo "$pac"
-echo ""
+for pac in "$PACS"; do
+    install_cargo "$pac"
+    echo ""
 done
 

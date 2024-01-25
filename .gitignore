@@ -4,8 +4,10 @@
 !deploy.sh
 !README.md
 
-!sh/
-!sh/a
+!shellscripts/
+!shellscripts/**
+!json/
+!json/**
 
 !files/
 !files/config/
