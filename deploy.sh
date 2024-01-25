@@ -13,16 +13,29 @@ config/lsd/icons.yaml       .config/lsd/icons.yaml
 tmux.conf                   .tmux.conf
 "
 
-MODE="normal"
+MODE=""
 OPTIND=1
-while getopts m opt
+while getopts fm opt
 do
     case "$opt" in
+    f)
+        MODE="Full"
+        ;;
     m)
-        MODE="minimal"
+        MODE="Minimal"
         ;;
     esac
 done
+
+if [[ $MODE == "" ]]; then
+    echo "[Error] You must specify install mode"
+    echo "Usage: ./deploy.sh [install-mode]"
+    echo "install-mode:"
+    echo "    -f: full"
+    echo "    -m: minimal"
+    echo ""
+    exit 1
+fi
 
 function check_dest() {
     if   [ -L "$1" ]; then
@@ -47,15 +60,24 @@ function resolve_dest() {
     fi
 }
 
-SRC_DIR=`cd $(dirname $0) && pwd`
-DEST_DIR="$HOME"
+SRC_DIR=`cd $(dirname $BASH_SOURCE) && pwd`
+
+# ----------------------------------------
+# deploy
+# ----------------------------------------
+
+echo ""
+
+echo "Install mode: $MODE"
+echo ""
 
 echo "Resolving old links and files..."
 echo "$FILES" | while read file
 do
     [ ! -n "$file" ] && continue
     ARGS=(`echo $file`)
-    DEST="$DEST_DIR/${ARGS[2]}"
+
+    DEST="$HOME/${ARGS[1]}"
     DEST_D=`dirname "$DEST"`
     mkdir -p "$DEST_D"
     resolve_dest `check_dest "$DEST"`
@@ -67,16 +89,19 @@ echo "$FILES" | while read file
 do
     [ ! -n "$file" ] && continue
     ARGS=(`echo $file`)
-    S="${ARGS[1]}"
-    D="${ARGS[2]}"
-    SRC="$SRC_DIR/$S"
-    DEST="$DEST_DIR/$D"
-    echo "$SRC -> $DEST"
+
+    SRC="$SRC_DIR/files/${ARGS[0]}"
+    DEST="$HOME/${ARGS[1]}"
+
+    echo "$SRC"
+    echo " -> $DEST"
+    echo ""
     ln -s "$SRC" "$DEST"
 done
 echo ""
 
-source "$SRC_DIR/installation/_install.sh" $MODE
+source "$SRC_DIR/sh/_install.sh" $MODE
 echo ""
 
 echo "Done"
+echo ""
