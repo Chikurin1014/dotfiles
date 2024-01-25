@@ -1,12 +1,7 @@
 #!/usr/bin/env bash
 
-sudo -v # ask sudo password at first
-
-SRC_DIR=`cd $(dirname $BASH_SOURCE) && pwd`
-
-APT_INSTALL="${SRC_DIR}/install/_apt_install.sh"
-CAGO_INSTALL="${SRC_DIR}/install/_cargo_install.sh"
-UPDATE="${SRC_DIR}/_update.sh"
+APT_INSTALL="$SRC_DIR/shellscripts/install/_apt_install.sh"
+CAGO_INSTALL="$SRC_DIR/shellscripts/install/_cargo_install.sh"
 
 MODE="$1"
 
@@ -27,5 +22,3 @@ elif [[ $MODE == "Minimal" ]];then
 else
     exit 1
 fi
-
-source $UPDATE

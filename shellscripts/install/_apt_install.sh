@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 
-sudo -v # ask sudo password at first
-
-DOTFILES_DIR="$HOME/dotfiles"
-JSON="$DOTFILES_DIR/json/apt_install.json" # json file which contains packages to install
+JSON="$SRC_DIR/json/apt_install.json" # json file which contains packages to install
 JQ="jq" # jq is required to parse json
 
 function install_apt() {

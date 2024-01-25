@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 
-DOTFILES_DIR="$HOME/dotfiles"
-JSON="$DOTFILES_DIR/json/cargo_install.json"
-
-PACS=$(cat "$JSON" | jq -c '.[]')
+JSON="$SRC_DIR/json/cargo_install.json"
 
 function install_cargo() {
     ARG=$1
@@ -27,6 +24,7 @@ else
 fi
 
 # install packages by cargo
+PACS=$(cat "$JSON" | jq -c '.[]')
 for pac in "$PACS"; do
     install_cargo "$pac"
     echo ""
