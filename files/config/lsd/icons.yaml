@@ -8,13 +8,13 @@ extension:
   hs: 
   rs: 🦀
 filetype:
-  dir: 📂
+  dir: 
   file: 📄
   pipe: 📩
-  socket: 󰆨
+  socket: 🧦
   executable: 
   symlink-dir: 
   symlink-file: 
   device-char: 
-  device-block: 󰜫
+  device-block: 
   special: 
