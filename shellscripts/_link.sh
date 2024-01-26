@@ -31,10 +31,9 @@ function resolve_dest() {
 # link files
 echo "Resolving old links and files..."
 echo "$FILES" | while read file; do
-    echo "$file"
     [[ ! -n "$file" ]] && continue
     DEST="$HOME/$(echo "$file" | jq -r ".dest")"
-    DEST_D=`dirname "$DEST"`
+    DEST_D=$(dirname "$DEST")
     mkdir -p "$DEST_D"
     resolve_dest $(check_dest "$DEST")
 done

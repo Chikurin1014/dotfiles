@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-SRC_DIR=$(cd $(dirname $BASH_SOURCE) && pwd)
+set -e
+
+SRC_DIR=$(cd $(dirname ${BASH_SOURCE:-$0}) && pwd)
 
 # Perse options and set install mode
 MODE=""
