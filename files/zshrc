@@ -3,6 +3,8 @@ HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
+alias deploy-dotfiles='source ~/dotfiles/deploy.sh'
+
 # Source files in ~/.zsh
 DOTZSH_DIR="$HOME/.zsh"
 if [[ -d $DOTZSH_DIR ]] && [[ -r $DOTZSH_DIR ]] && [[ -x $DOTZSH_DIR ]]; then
