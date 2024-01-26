@@ -2,6 +2,7 @@
 
 echo "Updating apt packages ..."
 sudo apt-get update -yqq
+echo " -> Done"
 echo ""
 echo "Upgrading apt packages ..."
 sudo apt-get upgrade -yqq
