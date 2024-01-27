@@ -34,7 +34,9 @@ if [[ $MODE == "" ]]; then
 fi
 
 # ask sudo password at the beginning
-sudo -v
+if [[ $MODE != "No-Install" ]]; then
+    sudo -v
+fi
 
 # deploy
 echo ""

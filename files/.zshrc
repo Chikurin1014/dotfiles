@@ -5,8 +5,10 @@ HISTFILE=~/.zsh_history
 
 export PATH="$HOME/.local/bin:$PATH"
 
+eval "$(mise activate)"
+
 if [[ $(which sheldon) = "sheldon not found" ]]; then
-    DOTZSH_DIR="$HOME/.zsh"
+    DOTZSH_DIR="$HOME/.config/zsh"
     if [[ -d $DOTZSH_DIR ]] && [[ -r $DOTZSH_DIR ]] && [[ -x $DOTZSH_DIR ]]; then
         for file in ${DOTZSH_DIR}/**/*.zsh; do
             [[ -r $file ]] && source $file

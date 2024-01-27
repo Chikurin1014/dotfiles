@@ -23,6 +23,11 @@ defer = "{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}"
 # [plugins.base16]
 # github = "chriskempson/base16-shell"
 
+# local files
+[plugins.local]
+local = "~/.config/zsh"
+use = ["*.zsh"]
+
 [plugins.zsh-defer]
 github = "romkatv/zsh-defer"
 apply = ['source']
@@ -51,8 +56,3 @@ inline = "alias cat=bat"
 
 [plugins.starship]
 inline = 'eval "$(starship init zsh)"'
-
-# local files
-# [plugins.local]
-# local = "~/.config/.zsh"
-# use = ["*.zsh"]
