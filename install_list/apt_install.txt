@@ -3,4 +3,5 @@ build-essential
 git
 ssh
 libssl-dev
+bat
 lsd

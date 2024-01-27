@@ -44,5 +44,6 @@ echo ""
 source "$SRC_DIR/shellscripts/_update.sh" $MODE
 source "$SRC_DIR/shellscripts/_install.sh" $MODE
 source "$SRC_DIR/shellscripts/_link.sh"
+source "$SRC_DIR/shellscripts/_supplement.sh"
 echo "Done"
 echo ""
