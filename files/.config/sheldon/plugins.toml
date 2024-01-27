@@ -25,18 +25,23 @@ defer = "{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}"
 
 [plugins.zsh-defer]
 github = "romkatv/zsh-defer"
-
-[plugins.rust-zsh-completions]
-github = "ryutok/rust-zsh-completions"
-
-[plugins.zsh-completions]
-github = "zsh-users/zsh-completions"
+apply = ['source']
 
 [plugins.zsh-syntax-highlighting]
 github = "zsh-users/zsh-syntax-highlighting"
+apply = ['source']
+
+[plugins.zsh-completions]
+github = "zsh-users/zsh-completions"
+apply = ['defer']
 
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
+apply = ['defer']
+
+[plugins.rust-zsh-completions]
+github = "ryutok/rust-zsh-completions"
+apply = ['defer']
 
 # ls deluxe
 [plugins.ls-deluxe]
@@ -45,3 +50,8 @@ inline = "alias ls='lsd'"
 # starship
 [plugins.starship]
 inline = 'eval "$(starship init zsh)"'
+
+# local files
+[plugins.local]
+local = "~/.zsh"
+use = ["*.zsh"]

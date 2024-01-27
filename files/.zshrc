@@ -5,12 +5,13 @@ HISTFILE=~/.zsh_history
 
 alias deploy-dotfiles='~/dotfiles/deploy.sh'
 
-# Source files in ~/.zsh
-DOTZSH_DIR="$HOME/.zsh"
-if [[ -d $DOTZSH_DIR ]] && [[ -r $DOTZSH_DIR ]] && [[ -x $DOTZSH_DIR ]]; then
-    for file in ${DOTZSH_DIR}/**/*.zsh; do
-        [[ -r $file ]] && source $file
-    done
+if [[ $(which sheldon) = "sheldon not found" ]]; then
+    DOTZSH_DIR="$HOME/.zsh"
+    if [[ -d $DOTZSH_DIR ]] && [[ -r $DOTZSH_DIR ]] && [[ -x $DOTZSH_DIR ]]; then
+        for file in ${DOTZSH_DIR}/**/*.zsh; do
+            [[ -r $file ]] && source $file
+        done
+    fi
+else
+    eval "$(sheldon source)"
 fi
-
-[[ ! $(which sheldon) = "sheldon not found" ]] && eval "$(sheldon source)"
