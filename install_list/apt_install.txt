@@ -1,7 +1,11 @@
-jq
-build-essential
-git
-ssh
-libssl-dev
 bat
+build-essential
+curl
+git
+jq
+libssl-dev
 lsd
+ssh
+tmux
+zip
+zsh
