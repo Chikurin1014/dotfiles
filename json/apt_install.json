@@ -1,7 +1,0 @@
-[
-    "jq",
-    "build-essential",
-    "git",
-    "ssh",
-    "libssl-dev"
-]

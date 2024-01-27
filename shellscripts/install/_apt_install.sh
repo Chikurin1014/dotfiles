@@ -1,22 +1,19 @@
 #!/usr/bin/env bash
 
-JSON="$SRC_DIR/json/apt_install.json" # json file which contains packages to install
-JQ="jq" # jq is required to parse json
+LIST=$(cat "$SRC_DIR/install_list/apt_install.txt")
 
 function install_apt() {
     arg=$1
+    apt-cache show "$arg" > /dev/null 2>&1 || return 1
+    [[ ! $(dpkg -l "$arg") = "dpkg-query: no pakcages found matching $arg" ]] && return 2
     echo "Installing $arg ..."
-    if [[ -z $(dpkg -l | grep "$arg") ]]; then
-        sudo apt-get install -yqq "$arg"
-        echo " -> Done"
-    else
-        echo " -> Already exists"
-    fi
+    sudo apt-get install -yqq "$arg"
+    echo " -> Done"
+    echo ""
+    return 0
 }
 
 # install packages by install_apt
-PACS=$(cat "$JSON" | jq -r '.[]')
-echo "$PACS" | while read pac; do
-    install_apt "$pac"
-    echo ""
+echo "$LIST" | while read pac; do
+    install_apt "$pac" || continue
 done

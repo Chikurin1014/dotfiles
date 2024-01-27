@@ -41,8 +41,8 @@ echo ""
 echo "Install mode: $MODE"
 echo ""
 echo ""
-# source "$SRC_DIR/shellscripts/_install.sh" $MODE
-# source "$SRC_DIR/shellscripts/_update.sh" $MODE
+source "$SRC_DIR/shellscripts/_update.sh" $MODE
+source "$SRC_DIR/shellscripts/_install.sh" $MODE
 source "$SRC_DIR/shellscripts/_link.sh"
 echo "Done"
 echo ""

@@ -6,8 +6,8 @@
 
 !shellscripts/
 !shellscripts/**
-!json/
-!json/**
+!install_list/
+!install_list/**
 
 !files/
 !files/.config/

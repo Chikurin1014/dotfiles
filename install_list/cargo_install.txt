@@ -1,0 +1,4 @@
+cargo-update
+cargo-generate
+sheldon
+starship

@@ -13,6 +13,4 @@ if [[ -d $DOTZSH_DIR ]] && [[ -r $DOTZSH_DIR ]] && [[ -x $DOTZSH_DIR ]]; then
     done
 fi
 
-which sheldon && eval "$(sheldon source)"
-
-which lsd && alias ls='lsd'
+[[ ! $(which sheldon) = "sheldon not found" ]] && eval "$(sheldon source)"
