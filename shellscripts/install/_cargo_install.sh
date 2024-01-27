@@ -3,10 +3,12 @@
 LIST=$(cat "$SRC_DIR/install_list/cargo_install.txt")
 
 function install_cargo() {
-    ARG=$1
-    echo "Installing $ARG ..."
-        cargo install -q --message-format human "$ARG" || return 1
+    arg=$1
+        echo "Installing $arg ..."
+        [[ -e $(cargo install --list | grep -e "^$arg") ]] && echo " -> Already installed" && return 1 # package is already installed
+        cargo install "$arg" > /dev/null 2>&1 || (echo " -> Not available in cargo" && return 2) # package cannot be installed by cargo
         echo " -> Done"
+        return 0
 }
 
 # install rustup which includes cargo
@@ -19,6 +21,6 @@ fi
 
 # install packages by cargo
 echo "$LIST" | while read pac; do
-    install_cargo "$pac"
+    install_cargo "$pac" || continue
 done
 

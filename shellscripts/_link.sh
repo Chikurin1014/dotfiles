@@ -44,7 +44,6 @@ for file in $(find "$SRC_DIR/files/" -type f); do
     DEST="$HOME/${file#"$SRC_DIR/files/"}"
     echo "$SRC"
     echo " -> $DEST"
-    echo ""
     ln -s "$SRC" "$DEST"
 done
 echo ""

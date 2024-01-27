@@ -3,24 +3,21 @@
 [[ $1 == "No-Install" ]] && exit 0
 
 echo "Updating apt packages ..."
-sudo apt-get update -yqq
+sudo apt-get update -y > /dev/null 2>&1
 echo " -> Done"
-echo ""
 echo "Upgrading apt packages ..."
-sudo apt-get upgrade -yqq
+sudo apt-get upgrade -y > /dev/null 2>&1
 echo " -> Done"
-echo ""
 
 if [[  -e $(which rustup) ]]; then
     echo "Updating rustup ..."
-    rustup update
+    rustup update > /dev/null 2>&1
     echo " -> Done"
-    echo ""
     echo "Updating cargo packages ..."
-    cargo install-update --all -q
+    cargo install-update --all > /dev/null 2>&1
     echo " -> Done"
-    echo ""
 else
     echo "Rust is not installed"
-    echo ""
 fi
+
+echo ""
