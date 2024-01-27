@@ -11,5 +11,5 @@ if [[ $? -ne 0 ]]; then
     echo " -> Done"
     eval "$(mise activate)"
     echo "Installing runtimes by mise ..."
-    mise install -q
+    mise install -yq
 fi

@@ -1,5 +1,6 @@
 [tools]
 cmake = '3'
+dotnet = '8'
 ghc = '9'
 node = '21'
 python  = '3'
