@@ -10,6 +10,8 @@ if [[ $? -ne 0 ]]; then
     sudo apt install -y mise > /dev/null 2>&1
     echo " -> Done"
     eval "$(mise activate)"
+    mkdir -p $HOME/.config/mise
+    ln -s $SRC_DIR/files/.config/mise/config.toml $HOME/.config/mise/config.toml
     echo "Installing runtimes by mise ..."
     mise install -yq
 fi

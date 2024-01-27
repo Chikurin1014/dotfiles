@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-[[ $1 == "No-Install" ]] && exit 0
+[[ $MODE == "No-Install" ]] && return 0
 
 echo "Updating apt packages ..."
 sudo apt-get update -y > /dev/null 2>&1

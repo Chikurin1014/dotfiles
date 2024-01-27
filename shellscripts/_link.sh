@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# SRC_DIR=$(cd $(dirname $BASH_SOURCE) && pwd)
-
 # functions
 function check_dest() {
     if   [ -L "$1" ]; then
@@ -27,10 +25,17 @@ function resolve_dest() {
 }
 
 # link files
+ROOT="$SRC_DIR/files"
+
+FILES=$(find "$ROOT/" -type f)
+
 echo "Resolving existing files..."
-for file in $(find "$SRC_DIR/files/" -type f); do
+for file in $FILES; do
     [[ ! -n "$file" ]] && continue
-    DEST="$HOME/${file#"$SRC_DIR/files/"}"
+    [[ $MODE = "Minimal" ]] && [[ ! $file =~ "$ROOT/.config/zsh/"* ]] && continue
+    [[ $MODE = "No-Install" ]] && continue
+
+    DEST="$HOME/${file#"$ROOT/"}"
     DEST_D=$(dirname "$DEST")
     mkdir -p "$DEST_D"
     resolve_dest $(check_dest "$DEST")
@@ -38,10 +43,13 @@ done
 echo ""
 
 echo "Creating new links..."
-for file in $(find "$SRC_DIR/files/" -type f); do
+for file in $FILES; do
     [[ ! -n "$file" ]] && continue
+    [[ $MODE = "Minimal" ]] && [[ ! $file =~ "$ROOT/.config/zsh/"* ]] && continue
+    [[ $MODE = "No-Install" ]] && continue
+
     SRC="$file"
-    DEST="$HOME/${file#"$SRC_DIR/files/"}"
+    DEST="$HOME/${file#"$ROOT"}"
     echo "$SRC"
     echo " -> $DEST"
     ln -s "$SRC" "$DEST"
