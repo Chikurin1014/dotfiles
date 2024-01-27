@@ -43,13 +43,14 @@ apply = ['defer']
 github = "ryutok/rust-zsh-completions"
 apply = ['defer']
 
-# ls deluxe
 [plugins.ls-deluxe]
 inline = "alias ls='lsd'"
 
-# starship
 [plugins.starship]
 inline = 'eval "$(starship init zsh)"'
+
+[plugins.bat]
+inline = "alias cat='batcat'"
 
 # local files
 [plugins.local]
