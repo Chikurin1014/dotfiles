@@ -15,3 +15,8 @@ if [[ $? -ne 0 ]]; then
     echo "Installing runtimes by mise ..."
     mise install -yq
 fi
+# mise activate
+if [[ $MODE = "Minimal" ]]; then
+    touch "$HOME/.config/zsh/mise_activate.zsh"
+    echo 'eval "$(mise activate)"' > "$HOME/.config/zsh/mise_activate.zsh"
+fi
