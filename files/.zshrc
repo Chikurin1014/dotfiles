@@ -3,7 +3,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
-alias deploy-dotfiles='~/dotfiles/deploy.sh'
+export PATH="$HOME/.local/bin:$PATH"
 
 if [[ $(which sheldon) = "sheldon not found" ]]; then
     DOTZSH_DIR="$HOME/.zsh"

@@ -19,6 +19,7 @@
 !files/.config/sheldon/plugins.toml
 !files/.config/starship.toml
 !files/.config/zsh/
+!files/.config/zsh/alias.zsh
 !files/.config/zsh/completion.zsh
 !files/.config/zsh/option.zsh
 !files/.config/zsh/style.zsh

@@ -44,10 +44,10 @@ github = "ryutok/rust-zsh-completions"
 apply = ['defer']
 
 [plugins.ls-deluxe]
-inline = "alias ls='lsd'"
+inline = "alias ls=lsd"
 
 [plugins.bat]
-inline = "alias cat='batcat'"
+inline = "alias cat=bat"
 
 [plugins.starship]
 inline = 'eval "$(starship init zsh)"'
