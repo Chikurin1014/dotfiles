@@ -5,3 +5,4 @@ ssh
 libssl-dev
 bat
 lsd
+mise
