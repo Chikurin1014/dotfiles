@@ -46,13 +46,13 @@ apply = ['defer']
 [plugins.ls-deluxe]
 inline = "alias ls='lsd'"
 
-[plugins.starship]
-inline = 'eval "$(starship init zsh)"'
-
 [plugins.bat]
 inline = "alias cat='batcat'"
 
+[plugins.starship]
+inline = 'eval "$(starship init zsh)"'
+
 # local files
-[plugins.local]
-local = "~/.zsh"
-use = ["*.zsh"]
+# [plugins.local]
+# local = "~/.config/.zsh"
+# use = ["*.zsh"]
