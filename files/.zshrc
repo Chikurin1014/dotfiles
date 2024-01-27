@@ -3,7 +3,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
-alias deploy-dotfiles='source ~/dotfiles/deploy.sh'
+alias deploy-dotfiles='~/dotfiles/deploy.sh'
 
 # Source files in ~/.zsh
 DOTZSH_DIR="$HOME/.zsh"
@@ -13,8 +13,6 @@ if [[ -d $DOTZSH_DIR ]] && [[ -r $DOTZSH_DIR ]] && [[ -x $DOTZSH_DIR ]]; then
     done
 fi
 
-SHELDON_SRC=$(which "sheldon")
-[[ $SHELDON_SRC != "sheldon not found" ]] && eval "$(sheldon source)"
+which sheldon && eval "$(sheldon source)"
 
-LSD_SRC=$(which "lsd")
-[[ $LSD_SRC != "lsd not found" ]] && alias ls='lsd'
+which lsd && alias ls='lsd'

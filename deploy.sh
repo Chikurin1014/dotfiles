@@ -7,7 +7,7 @@ SRC_DIR=$(cd $(dirname ${BASH_SOURCE:-$0}) && pwd)
 # Perse options and set install mode
 MODE=""
 OPTIND=1
-while getopts fm opt
+while getopts fmn opt
 do
     case "$opt" in
     f)
@@ -15,6 +15,9 @@ do
         ;;
     m)
         MODE="Minimal"
+        ;;
+    n)
+        MODE="No-Install"
         ;;
     esac
 done
@@ -25,6 +28,7 @@ if [[ $MODE == "" ]]; then
     echo "install-mode:"
     echo "    -f: full"
     echo "    -m: minimal"
+    echo "    -n: no-install"
     echo ""
     exit 1
 fi
@@ -37,8 +41,8 @@ echo ""
 echo "Install mode: $MODE"
 echo ""
 echo ""
-source "$SRC_DIR/shellscripts/_install.sh" $MODE
-source "$SRC_DIR/shellscripts/_update.sh"
+# source "$SRC_DIR/shellscripts/_install.sh" $MODE
+# source "$SRC_DIR/shellscripts/_update.sh" $MODE
 source "$SRC_DIR/shellscripts/_link.sh"
 echo "Done"
 echo ""

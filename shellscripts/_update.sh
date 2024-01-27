@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+[[ $1 == "No-Install" ]] && exit 0
+
 echo "Updating apt packages ..."
 sudo apt-get update -yqq
 echo " -> Done"

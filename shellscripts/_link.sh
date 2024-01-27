@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-FILES=$(cat "$SRC_DIR/json/link.json" | jq -rc '.[]')
-
 # SRC_DIR=$(cd $(dirname $BASH_SOURCE) && pwd)
 
 # functions
@@ -29,10 +27,10 @@ function resolve_dest() {
 }
 
 # link files
-echo "Resolving old links and files..."
-echo "$FILES" | while read file; do
+echo "Resolving existing files..."
+for file in $(find "$SRC_DIR/files/" -type f); do
     [[ ! -n "$file" ]] && continue
-    DEST="$HOME/$(echo "$file" | jq -r ".dest")"
+    DEST="$HOME/${file#"$SRC_DIR/files/"}"
     DEST_D=$(dirname "$DEST")
     mkdir -p "$DEST_D"
     resolve_dest $(check_dest "$DEST")
@@ -40,16 +38,13 @@ done
 echo ""
 
 echo "Creating new links..."
-
-echo "$FILES" | while read file; do
+for file in $(find "$SRC_DIR/files/" -type f); do
     [[ ! -n "$file" ]] && continue
-    SRC="$SRC_DIR/files/$(echo "$file" | jq -r ".src")"
-    DEST="$HOME/$(echo "$file" | jq -r ".dest")"
-
+    SRC="$file"
+    DEST="$HOME/${file#"$SRC_DIR/files/"}"
     echo "$SRC"
     echo " -> $DEST"
     echo ""
     ln -s "$SRC" "$DEST"
 done
-
 echo ""
