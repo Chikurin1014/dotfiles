@@ -1,7 +1,5 @@
 [tools]
 cmake = 'latest'
-dotnet = 'latest'
-ghc = 'latest'
 node = 'latest'
 python  = 'latest'
 
