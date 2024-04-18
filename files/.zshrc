@@ -11,3 +11,6 @@ if [[ -d $DOTZSH_DIR ]] && [[ -r $DOTZSH_DIR ]] && [[ -x $DOTZSH_DIR ]]; then
         [[ -r $file ]] && source $file
     done
 fi
+
+which mise > /dev/null && eval "$(mise activate zsh)"
+which sheldon > /dev/null && eval "$(sheldon source)"
