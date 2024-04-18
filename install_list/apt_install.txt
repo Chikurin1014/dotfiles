@@ -6,6 +6,7 @@ jq
 libssl-dev
 lsd
 pkg-config
+shellcheck
 ssh
 tmux
 zip

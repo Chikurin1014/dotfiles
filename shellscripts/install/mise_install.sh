@@ -28,8 +28,8 @@ if ! which mise > /dev/null; then
     # activate mise and install runtimes
     echo "==== Activate mise and install runtimes ===="
     eval "$(mise activate bash)"
-    mkdir -p $HOME/.config/mise
-    ln -s $SRC_DIR/files/.config/mise/config.toml $HOME/.config/mise/config.toml
+    mkdir -p "$HOME"/.config/mise
+    ln -s "$SRC_DIR"/files/.config/mise/config.toml "$HOME"/.config/mise/config.toml
     echo "Installing runtimes by mise ..."
     mise install -yq
     echo "============================================"

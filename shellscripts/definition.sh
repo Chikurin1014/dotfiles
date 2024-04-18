@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
 
-source "$SRC_DIR/shellscripts/definition/functions.sh" $@
-source "$SRC_DIR/shellscripts/definition/variables.sh" $@
+# file exists
+# shellcheck disable=SC1091
+source "$SRC_DIR/shellscripts/definition/functions.sh" "$@"
+# file exists
+# shellcheck disable=SC1091
+source "$SRC_DIR/shellscripts/definition/variables.sh" "$@"
