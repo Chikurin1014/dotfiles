@@ -49,7 +49,7 @@ for file in $FILES; do
     [[ $MODE = "No-Install" ]] && continue
 
     SRC="$file"
-    DEST="$HOME/${file#"$ROOT"}"
+    DEST="$HOME/${file#"$ROOT/"}"
     echo "$SRC"
     echo " -> $DEST"
     ln -s "$SRC" "$DEST"
