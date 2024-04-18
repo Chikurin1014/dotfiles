@@ -8,6 +8,7 @@
 !shellscripts/**
 !install_list/
 !install_list/**
+!sl-maker-for-dotfiles/
 
 !files/
 !files/.config/
@@ -23,6 +24,7 @@
 !files/.config/zsh/
 !files/.config/zsh/alias.zsh
 !files/.config/zsh/completion.zsh
+!files/.config/zsh/eval_sources.zsh
 !files/.config/zsh/option.zsh
 !files/.config/zsh/style.zsh
 !files/.zshrc
