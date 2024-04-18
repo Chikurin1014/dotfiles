@@ -4,49 +4,12 @@ set -e
 
 SRC_DIR=$(cd $(dirname ${BASH_SOURCE:-$0}) && pwd)
 
-# Perse options and set install mode
-MODE=""
-OPTIND=1
-while getopts fmn opt
-do
-    case "$opt" in
-    f)
-        MODE="Full"
-        ;;
-    m)
-        MODE="Minimal"
-        ;;
-    n)
-        MODE="No-Install"
-        ;;
-    esac
-done
-
-if [[ $MODE == "" ]]; then
-    echo "[Error] You must specify install mode"
-    echo "Usage: ./deploy.sh [install-mode]"
-    echo "install-mode:"
-    echo "    -f: full"
-    echo "    -m: minimal"
-    echo "    -n: no-install"
-    echo ""
-    exit 1
-fi
-
-# ask sudo password at the beginning
-if [[ $MODE != "No-Install" ]]; then
-    sudo -v
-fi
-
 # deploy
-echo ""
-echo "Install mode: $MODE"
-echo ""
-echo ""
-source "$SRC_DIR/shellscripts/_supplement_pre.sh"
-source "$SRC_DIR/shellscripts/_update.sh"
-source "$SRC_DIR/shellscripts/_install.sh"
-source "$SRC_DIR/shellscripts/_link.sh"
-source "$SRC_DIR/shellscripts/_supplement_post.sh"
+source "$SRC_DIR/shellscripts/definition.sh" $@
+source "$SRC_DIR/shellscripts/update_apt.sh" $@
+source "$SRC_DIR/shellscripts/install.sh" $@
+echo "Linking files"
+source "$SRC_DIR/sl-maker-for-dotfiles/run.sh" -o "$SRC_DIR/files" -d "$HOME" -n > "$SRC_DIR/sl-maker.log"
+source "$SRC_DIR/shellscripts/update_apt.sh" $@
 echo "Done"
 echo ""
