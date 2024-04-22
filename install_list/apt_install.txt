@@ -4,7 +4,6 @@ curl
 git
 jq
 libssl-dev
-lsd
 pkg-config
 shellcheck
 ssh
