@@ -18,8 +18,8 @@ end
 -- This is where you actually apply your config choices
 
 config.default_prog = { 'zsh', '-l' }
-config.initial_rows = 40
-config.initial_cols = 140
+config.initial_rows = 35
+config.initial_cols = 120
 config.window_decorations = 'RESIZE'
 config.inactive_pane_hsb = { hue = 1.0, saturation = 0.8, brightness = 0.8 }
 
