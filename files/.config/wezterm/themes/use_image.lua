@@ -29,7 +29,7 @@ theme.background = {
         width = 'Cover',
         vertical_align = 'Middle',
         horizontal_align = 'Center',
-        opacity = 0.95,
+        opacity = 0.90,
         attachment = 'Fixed'
     }
 }
