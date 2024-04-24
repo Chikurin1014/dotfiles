@@ -14,4 +14,6 @@ source "$SRC_DIR/shellscripts/install/cargo_install.sh" "$@"
 # file exists
 # shellcheck disable=SC1091
 source "$SRC_DIR/shellscripts/install/tpm_install.sh" "$@"
-
+# file exists
+# shellcheck disable=SC1091
+source "$SRC_DIR/shellscripts/install/wezterm_install.sh" "$@"

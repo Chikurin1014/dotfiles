@@ -19,7 +19,7 @@ theme.window_frame = {
 }
 theme.background = {
     {
-        source = { File = home .. '/Pictures/bg.png' },
+        source = { File = home .. '/Pictures/wezterm/bg.png' },
         hsb = {
             hue = 1.0,
             saturation = 1.0,
