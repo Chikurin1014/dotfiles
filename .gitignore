@@ -1,5 +1,4 @@
 *
-**/*
 
 !deploy.sh
 !README.md
@@ -21,6 +20,16 @@
 !files/.config/sheldon/
 !files/.config/sheldon/plugins.toml
 !files/.config/starship.toml
+!files/.config/wezterm/
+!files/.config/wezterm/wezterm.lua
+!files/.config/wezterm/font.lua
+!files/.config/wezterm/keybindings/
+!files/.config/wezterm/keybindings/init.lua
+!files/.config/wezterm/keybindings/keys.lua
+!files/.config/wezterm/themes/
+!files/.config/wezterm/themes/init.lua
+!files/.config/wezterm/themes/no_image.lua
+!files/.config/wezterm/themes/use_image.lua
 !files/.config/zsh/
 !files/.config/zsh/alias.zsh
 !files/.config/zsh/completion.zsh
