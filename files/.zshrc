@@ -16,4 +16,3 @@ fi
 
 which mise > /dev/null && eval "$(mise activate zsh)"
 which sheldon > /dev/null && eval "$(sheldon source)"
-
