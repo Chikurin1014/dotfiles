@@ -1,6 +1,6 @@
 # dotfiles
 
-**dotfiles** used by Chikurin1014
+**dotfiles** used by [Chikurin1014](https://github.com/Chikurin1014)
 
 ## `main` branch
 
