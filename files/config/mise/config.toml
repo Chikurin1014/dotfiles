@@ -1,5 +1,4 @@
 [tools]
-cmake = 'latest'
 node = 'latest'
 python  = 'latest'
 

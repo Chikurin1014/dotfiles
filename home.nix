@@ -29,10 +29,12 @@
     pkgs.tmux
     pkgs.bat
     pkgs.eza
-    # gnu compiler collection
-    pkgs.libgcc
     # runtime manager
     pkgs.mise
+    # compile/build tools
+    pkgs.gcc
+    pkgs.cmake
+    pkgs.ghc
   ];
 
   # Files to be linked to certain directories
