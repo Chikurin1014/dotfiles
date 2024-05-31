@@ -21,7 +21,7 @@ HM="$HOME/.config/home-manager" && [ -d "$HM" ] && mv "$HM" "$HM.bak"
 Then clone `main` branch of this repository to `~/.config/home-manager`
 
 ```shell
-git clone -b main git@github.com:Chikurin1014/dotfiles.git $HOME/.config/home-manager
+git clone git@github.com:Chikurin1014/dotfiles.git $HOME/.config/home-manager -b main
 ```
 
 ### Usage
