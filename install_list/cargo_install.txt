@@ -1,5 +1,0 @@
-cargo-update
-cargo-generate
-eza
-sheldon
-starship
