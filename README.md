@@ -15,7 +15,7 @@
 You may already have `~/.config/home-manager` directory, so remove/archive it.
 
 ```shell
-HOME_MANAGER="$HOME/.config/home-manager" && [ -d "$HOME_MANAGER" ] && mv "$HOME_MANAGER" "$HOME_MANAGER.bak"
+HM="$HOME/.config/home-manager" && [ -d "$HM" ] && mv "$HM" "$HM.bak"
 ```
 
 Then clone `main` branch of this repository to `~/.config/home-manager`
