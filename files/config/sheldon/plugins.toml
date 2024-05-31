@@ -49,10 +49,10 @@ github = "ryutok/rust-zsh-completions"
 apply = ['defer']
 
 [plugins.eza]
-inline = "which eza > /dev/null && alias ls='eza --icons'"
+inline = "alias ls='eza --icons'"
 
 [plugins.bat]
-inline = "which bat > /dev/null && alias cat=bat"
+inline = "alias cat=bat"
 
 [plugins.starship]
 inline = 'eval "$(starship init zsh)"'
