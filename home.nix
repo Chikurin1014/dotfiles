@@ -13,6 +13,8 @@
   home.packages = [
     # shell
     pkgs.zsh
+    # terminal
+    pkgs.wezterm
     # essential tools
     pkgs.curl
     pkgs.git
@@ -25,8 +27,7 @@
     pkgs.sheldon
     pkgs.starship
     pkgs.tmux
-    pkgs.tee
-    pkg.bat
+    pkgs.bat
     pkgs.eza
     # gnu compiler collection
     pkgs.libgcc
@@ -53,6 +54,8 @@
     ".tmux/plugins/tpm".source = pkgs.fetchFromGitHub {
       owner = "tmux-plugins";
       repo = "tpm";
+      rev = "v3.1.0";
+      hash = "sha256-CeI9Wq6tHqV68woE11lIY4cLoNY8XWyXyMHTDmFKJKI=";
     };
   };
 
