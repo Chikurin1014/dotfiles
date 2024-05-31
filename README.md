@@ -10,6 +10,23 @@
 - Use **Nix**
 - Use **Home Manager** (requires **Nix**)
 
+#### Installation of Nix and Home Manager (Only if needed)
+
+If you haven't installed **Nix** and **Home Manager**, you need to install it.
+
+You can install **Nix** by running:
+
+```shell
+sh <(curl -L https://nixos.org/nix/install)
+```
+
+You can install **Home Manager** by running:
+
+```shell
+nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
+nix-channel --update
+```
+
 ### Installatioin
 
 You may already have `~/.config/home-manager` directory, so remove/archive it.
