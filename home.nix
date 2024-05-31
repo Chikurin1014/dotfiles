@@ -35,6 +35,7 @@
     pkgs.gcc
     pkgs.cmake
     pkgs.ghc
+    pkgs.platformio
   ];
 
   # Files to be linked to certain directories
