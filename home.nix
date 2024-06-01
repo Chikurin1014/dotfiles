@@ -9,6 +9,12 @@
   # Home Manager version
   home.stateVersion = "24.05"; # Please read the comment before changing.
 
+  # Nix settings (that will generate ~/.config/nix/nix.conf)
+  nix = {
+    package = pkgs.nix;
+    settings.experimental-features = [ "nix-command" "flakes" ];
+  };
+
   # Packages to be installed
   home.packages = [
     # shell
@@ -43,7 +49,6 @@
     ".zshrc".source                               = files/zshrc;
     ".tmux.conf".source                           = files/tmux.conf;
     ".config/starship.toml".source                = files/config/starship.toml;
-    ".config/nix/nix.conf".source                 = files/config/nix/nix.conf;
     ".config/mise/config.toml".source             = files/config/mise/config.toml;
     ".config/sheldon/plugins.toml".source         = files/config/sheldon/plugins.toml;
     ".config/wezterm/wezterm.lua".source          = files/config/wezterm/wezterm.lua;
