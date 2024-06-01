@@ -21,20 +21,24 @@
     pkgs.zsh
     # terminal
     pkgs.wezterm
+    # editor
+    pkgs.neovim
     # essential tools
     pkgs.curl
     pkgs.git
     pkgs.openssl
     pkgs.openssh
     pkgs.tree
+    pkgs.unzip
     pkgs.vim
     pkgs.wget
     # shell tools
+    pkgs.bat
+    pkgs.eza
+    pkgs.lazygit
     pkgs.sheldon
     pkgs.starship
     pkgs.tmux
-    pkgs.bat
-    pkgs.eza
     # runtime manager
     pkgs.mise
     # compile/build tools
