@@ -33,7 +33,10 @@
     # shell tools
     pkgs.bat
     pkgs.eza
+    pkgs.fd
     pkgs.lazygit
+    pkgs.ripgrep
+    pkgs.sd
     pkgs.sheldon
     pkgs.starship
     pkgs.tmux
@@ -44,6 +47,10 @@
     pkgs.cmake
     pkgs.ghc
     pkgs.platformio
+    # formatter/linter
+    pkgs.clang-tools
+    pkgs.shellcheck
+    pkgs.shfmt
   ];
 
   # Files to be linked to certain directories
