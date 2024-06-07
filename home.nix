@@ -55,8 +55,8 @@
     ".config/sheldon/plugins.toml".source         = files/config/sheldon/plugins.toml;
     ".config/wezterm/wezterm.lua".source          = files/config/wezterm/wezterm.lua;
     ".config/wezterm/font.lua".source             = files/config/wezterm/font.lua;
-    ".config/wezterm/keybindings/init.lua".source  = files/config/wezterm/keybindings/init.lua;
-    ".config/wezterm/keybindings/keys.lua".source  = files/config/wezterm/keybindings/keys.lua;
+    ".config/wezterm/keybindings/init.lua".source = files/config/wezterm/keybindings/init.lua;
+    ".config/wezterm/keybindings/keys.lua".source = files/config/wezterm/keybindings/keys.lua;
     ".config/wezterm/themes/init.lua".source      = files/config/wezterm/themes/init.lua;
     ".config/wezterm/themes/no_image.lua".source  = files/config/wezterm/themes/no_image.lua;
     ".config/wezterm/themes/use_image.lua".source = files/config/wezterm/themes/use_image.lua;
