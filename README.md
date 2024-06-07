@@ -6,6 +6,7 @@
 
 ### Environment requirements
 
+- Use **Curl**
 - Use **Git**
 - Use **Nix**
 - Use **Home Manager** (requires **Nix**)
@@ -44,6 +45,11 @@ Then clone `main` branch of this repository to `~/.config/home-manager`
 ```shell
 $ git clone git@github.com:Chikurin1014/dotfiles.git $HOME/.config/home-manager -b main
 ```
+
+### Packages you need to install manually
+
+- [WezTerm](https://wezfurlong.org/wezterm/installation.html)
+- [FirgeNerd Font](https://github.com/yuru7/Firge/releases)
 
 ### Usage
 
