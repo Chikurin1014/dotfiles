@@ -75,6 +75,20 @@
     # EDITOR = "nvim";
   };
 
+  programs.git = {
+    enable = true;
+    userName = "Chikurin1014";
+    userEmail = "chikurin1014@gmail.com";
+    extraConfig = {
+      core = {
+        editor = "code --wait";
+      };
+      init = {
+        defaultBranch = "main";
+      };
+    };
+  };
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
