@@ -17,6 +17,8 @@
 
   # Packages to be installed
   home.packages = [
+    # japanese input system
+    pkgs.ibus-engines.mozc
     # shell
     pkgs.zsh
     # editor
@@ -82,16 +84,18 @@
     # EDITOR = "nvim";
   };
 
-  programs.git = {
-    enable = true;
-    userName = "Chikurin1014";
-    userEmail = "chikurin1014@gmail.com";
-    extraConfig = {
-      core = {
-        editor = "code --wait";
-      };
-      init = {
-        defaultBranch = "main";
+  programs = {
+    git = {
+      enable = true;
+      userName = "Chikurin1014";
+      userEmail = "chikurin1014@gmail.com";
+      extraConfig = {
+        core = {
+          editor = "code --wait";
+        };
+        init = {
+          defaultBranch = "main";
+        };
       };
     };
   };
