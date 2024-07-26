@@ -47,7 +47,6 @@
     # compile/build tools
     pkgs.gcc
     pkgs.cmake
-    pkgs.ghc
     pkgs.platformio
     # formatter/linter
     pkgs.clang-tools
