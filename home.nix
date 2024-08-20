@@ -71,15 +71,7 @@
     ".config/wezterm/themes/no_image.lua".source  = files/config/wezterm/themes/no_image.lua;
     ".config/wezterm/themes/use_image.lua".source = files/config/wezterm/themes/use_image.lua;
     ".config/zellij/config.kdl".source            = files/config/zellij/config.kdl;
-    ".config/zellij/completion.zsh".source = files/config/zellij/completion.zsh;
-    # install tmux plugin manager
-    # ref: https://github.com/tmux-plugins/tpm
-    ".tmux/plugins/tpm".source = pkgs.fetchFromGitHub {
-      owner = "tmux-plugins";
-      repo = "tpm";
-      rev = "v3.1.0";
-      hash = "sha256-CeI9Wq6tHqV68woE11lIY4cLoNY8XWyXyMHTDmFKJKI=";
-    };
+    ".config/zellij/completion.zsh".source        = files/config/zellij/completion.zsh;
   };
 
   # Environment variables
