@@ -42,6 +42,7 @@
     pkgs.sheldon
     pkgs.starship
     pkgs.tmux
+    pkgs.zellij
     # runtime manager
     pkgs.mise
     # compile/build tools
@@ -58,7 +59,6 @@
   # Files to be linked to certain directories
   home.file = {
     ".zshrc".source                               = files/zshrc;
-    ".tmux.conf".source                           = files/tmux.conf;
     ".clang-format".source                        = files/clang-format;
     ".config/starship.toml".source                = files/config/starship.toml;
     ".config/mise/config.toml".source             = files/config/mise/config.toml;
