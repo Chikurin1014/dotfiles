@@ -71,6 +71,7 @@
     ".config/wezterm/themes/no_image.lua".source  = files/config/wezterm/themes/no_image.lua;
     ".config/wezterm/themes/use_image.lua".source = files/config/wezterm/themes/use_image.lua;
     ".config/zellij/config.kdl".source            = files/config/zellij/config.kdl;
+    ".config/zellij/completion.zsh".source = files/config/zellij/completion.zsh;
     # install tmux plugin manager
     # ref: https://github.com/tmux-plugins/tpm
     ".tmux/plugins/tpm".source = pkgs.fetchFromGitHub {
