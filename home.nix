@@ -48,6 +48,7 @@
     pkgs.gcc
     pkgs.cmake
     pkgs.platformio
+    pkgs.probe-rs
     # formatter/linter
     pkgs.clang-tools
     pkgs.shellcheck
