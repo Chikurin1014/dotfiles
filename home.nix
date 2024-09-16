@@ -26,6 +26,7 @@
     # essential tools
     pkgs.curl
     pkgs.git
+    pkgs.openocd
     pkgs.openssl
     pkgs.openssh
     pkgs.tree
@@ -48,8 +49,6 @@
     # compile/build tools
     pkgs.gcc
     pkgs.cmake
-    pkgs.platformio
-    pkgs.probe-rs
     # formatter/linter
     pkgs.clang-tools
     pkgs.shellcheck
