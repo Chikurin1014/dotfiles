@@ -71,6 +71,10 @@
     ".config/wezterm/themes/use_image.lua".source = files/config/wezterm/themes/use_image.lua;
     ".config/zellij/config.kdl".source            = files/config/zellij/config.kdl;
     ".config/zellij/completion.zsh".source        = files/config/zellij/completion.zsh;
+    ".config/zsh/alias.zsh".source                = files/config/zsh/alias.zsh;
+    ".config/zsh/completion.zsh".source           = files/config/zsh/completion.zsh;
+    ".config/zsh/option.zsh".source               = files/config/zsh/option.zsh;
+    ".config/zsh/style.zsh".source                = files/config/zsh/style.zsh;
   };
 
   # Environment variables
