@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ configm, lib, pkgs, ... }:
 
 {
   # User name and Home directory
@@ -25,10 +25,12 @@
     pkgs.neovim
     # essential tools
     pkgs.curl
+    pkgs.dbus
     pkgs.git
     pkgs.openocd
     pkgs.openssl
     pkgs.openssh
+    pkgs.pkg-config
     pkgs.tree
     pkgs.unzip
     pkgs.vim
@@ -78,9 +80,7 @@
   };
 
   # Environment variables
-  home.sessionVariables = {
-    # EDITOR = "nvim";
-  };
+  home.sessionVariables = {};
 
   programs = {
     git = {
@@ -94,6 +94,13 @@
         init = {
           defaultBranch = "main";
         };
+      };
+    };
+    zsh = {
+      enable = true;
+      sessionVariables = {
+        EDITOR = "nvim";
+        PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
       };
     };
   };
