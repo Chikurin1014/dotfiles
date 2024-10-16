@@ -62,6 +62,7 @@
     ".zshrc".source                               = files/zshrc;
     ".clang-format".source                        = files/clang-format;
     ".config/starship.toml".source                = files/config/starship.toml;
+    ".config/git/commit_template".source          = files/config/git/commit_template;
     ".config/mise/config.toml".source             = files/config/mise/config.toml;
     ".config/sheldon/plugins.toml".source         = files/config/sheldon/plugins.toml;
     ".config/wezterm/wezterm.lua".source          = files/config/wezterm/wezterm.lua;
@@ -93,6 +94,9 @@
         };
         init = {
           defaultBranch = "main";
+        };
+        commit = {
+          template = "~/.config/git/commit_template";
         };
       };
     };
