@@ -46,6 +46,8 @@
     pkgs.starship
     pkgs.tmux
     pkgs.zellij
+    # virtual environment
+    pkgs.docker
     # runtime manager
     pkgs.mise
     # compile/build tools
@@ -88,17 +90,6 @@
       enable = true;
       userName = "Chikurin1014";
       userEmail = "chikurin1014@gmail.com";
-      extraConfig = {
-        core = {
-          editor = "code --wait";
-        };
-        init = {
-          defaultBranch = "main";
-        };
-        commit = {
-          template = "~/.config/git/commit_template";
-        };
-      };
     };
     zsh = {
       enable = true;
