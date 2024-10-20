@@ -63,6 +63,7 @@
   home.file = {
     ".zshrc".source                               = files/zshrc;
     ".clang-format".source                        = files/clang-format;
+    ".gitconfig".source                           = files/gitconfig;
     ".config/starship.toml".source                = files/config/starship.toml;
     ".config/git/commit_template".source          = files/config/git/commit_template;
     ".config/mise/config.toml".source             = files/config/mise/config.toml;
@@ -86,11 +87,6 @@
   home.sessionVariables = {};
 
   programs = {
-    git = {
-      enable = true;
-      userName = "Chikurin1014";
-      userEmail = "chikurin1014@gmail.com";
-    };
     zsh = {
       enable = true;
       sessionVariables = {
