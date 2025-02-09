@@ -17,6 +17,8 @@ source "$SRC_DIR/sl-maker-for-dotfiles/run.sh" \
     -r "config/ -> .config/" \
     -r "clang-format -> .clang-format" \
     -r "gitconfig -> .gitconfig" \
+    -i ".git" \
+    -i ".gitignore" \
     > "$SRC_DIR/sl-maker.log"
 source "$SRC_DIR/shellscripts/update_apt.sh" "$@"
 echo "Done"
