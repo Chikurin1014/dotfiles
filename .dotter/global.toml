@@ -26,7 +26,7 @@
 "files/config/wezterm/themes/no_image.lua" = "~/.config/wezterm/themes/no_image.lua"
 "files/config/wezterm/themes/use_image.lua" = "~/.config/wezterm/themes/use_image.lua"
 
-[latex]
+[latex.files]
 "files/latexmkrc" = "~/.latexmkrc"
 "files/indentconfig.yaml" = "~/.indentconfig.yaml"
 "files/latexindentconfig/default.yaml" = "~/.latexindentconfig/default.yaml"
