@@ -2,6 +2,12 @@
 "files/gitconfig" = "~/.gitconfig"
 "files/config/git/commit_template" = "~/.config/git/commit_template"
 
+[wsl.files]
+"files/wslconfig" = "~/.wslconfig"
+
+[clang-format.files]
+"files/clang-format" = "~/.clang-format"
+
 [nushell.files]
 "files/config/nushell/config.nu" = "~/AppData/Roaming/nushell/config.nu"
 "files/config/nushell/cfg.nu" = "~/AppData/Roaming/nushell/cfg.nu"
@@ -19,6 +25,11 @@
 "files/config/wezterm/themes/init.lua" = "~/.config/wezterm/themes/init.lua"
 "files/config/wezterm/themes/no_image.lua" = "~/.config/wezterm/themes/no_image.lua"
 "files/config/wezterm/themes/use_image.lua" = "~/.config/wezterm/themes/use_image.lua"
+
+[latex]
+"files/latexmkrc" = "~/.latexmkrc"
+"files/indentconfig.yaml" = "~/.indentconfig.yaml"
+"files/latexindentconfig/default.yaml" = "~/.latexindentconfig/default.yaml"
 
 [settings]
 default_target_type = "symbolic"
