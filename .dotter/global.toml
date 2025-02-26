@@ -1,0 +1,24 @@
+[git.files]
+"files/gitconfig" = "~/.gitconfig"
+"files/config/git/commit_template" = "~/.config/git/commit_template"
+
+[nushell.files]
+"files/config/nushell/config.nu" = "~/AppData/Roaming/nushell/config.nu"
+"files/config/nushell/cfg.nu" = "~/AppData/Roaming/nushell/cfg.nu"
+"files/config/nushell/color.nu" = "~/AppData/Roaming/nushell/color.nu"
+"files/config/nushell/detail.nu" = "~/AppData/Roaming/nushell/detail.nu"
+"files/config/nushell/env.nu" = "~/AppData/Roaming/nushell/env.nu"
+"files/config/nushell/hooks.nu" = "~/AppData/Roaming/nushell/hooks.nu"
+"files/config/nushell/key.nu" = "~/AppData/Roaming/nushell/key.nu"
+
+[wezterm.files]
+"files/config/wezterm/wezterm.lua" = "~/.config/wezterm/wezterm.lua"
+"files/config/wezterm/font.lua" = "~/.config/wezterm/font.lua"
+"files/config/wezterm/keybindings/init.lua" = "~/.config/wezterm/keybindings/init.lua"
+"files/config/wezterm/keybindings/keys.lua" = "~/.config/wezterm/keybindings/keys.lua"
+"files/config/wezterm/themes/init.lua" = "~/.config/wezterm/themes/init.lua"
+"files/config/wezterm/themes/no_image.lua" = "~/.config/wezterm/themes/no_image.lua"
+"files/config/wezterm/themes/use_image.lua" = "~/.config/wezterm/themes/use_image.lua"
+
+[settings]
+default_target_type = "symbolic"
