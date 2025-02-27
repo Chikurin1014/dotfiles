@@ -2,14 +2,11 @@
 "files/gitconfig" = "~/.gitconfig"
 "files/config/git/commit_template" = "~/.config/git/commit_template"
 
-[wsl.files]
-"files/wslconfig" = "~/.wslconfig"
-
 [clang-format.files]
 "files/clang-format" = "~/.clang-format"
 
 [wezterm.files]
-"files/config/wezterm/wezterm.lua" = "~/.config/wezterm/wezterm.lua"
+"files_win/config/wezterm/wezterm.lua" = "~/.config/wezterm/wezterm.lua"
 "files/config/wezterm/font.lua" = "~/.config/wezterm/font.lua"
 "files/config/wezterm/keybindings/init.lua" = "~/.config/wezterm/keybindings/init.lua"
 "files/config/wezterm/keybindings/keys.lua" = "~/.config/wezterm/keybindings/keys.lua"
@@ -25,6 +22,9 @@
 "files_win/AppDataRoaming/nushell/env.nu" = "~/AppData/Roaming/nushell/env.nu"
 "files_win/AppDataRoaming/nushell/hooks.nu" = "~/AppData/Roaming/nushell/hooks.nu"
 "files_win/AppDataRoaming/nushell/key.nu" = "~/AppData/Roaming/nushell/key.nu"
+
+[wsl.files]
+"files_win/wslconfig" = "~/.wslconfig"
 
 [latex.files]
 "files_win/latexmkrc" = "~/.latexmkrc"
