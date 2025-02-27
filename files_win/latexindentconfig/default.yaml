@@ -1,0 +1,129 @@
+# バックアップファイルを1つにする (0 -> 3つ)
+onlyOneBackUp: 1
+
+# 置換
+replacements:
+  -
+    this: '、'
+    that: ', '
+  -
+    this: '。'
+    that: '. '
+# 改行
+modifyLineBreaks:
+  oneSentencePerLine:
+    manipulateSentences: 0
+  textWrapOptions:
+    columns: 60
+  items:
+    ItemStartsOnOwnLine: 1
+  environments:
+    BeginStartsOnOwnLine: 1
+    BodyStartsOnOwnLine: 1
+    EndStartsOnOwnLine: 1
+    EndFinishesWithLineBreak: 1
+    DBSFinishesWithLineBreak: 1
+    # 前後に改行がいらない環境
+    matrix:
+      BeginStartsOnOwnLine: 0
+      EndFinishesWithLineBreak: 0
+    bmatrix:
+      BeginStartsOnOwnLine: 0
+      EndFinishesWithLineBreak: 0
+    pmatrix:
+      BeginStartsOnOwnLine: 0
+      EndFinishesWithLineBreak: 0
+    vmatrix:
+      BeginStartsOnOwnLine: 0
+      EndFinishesWithLineBreak: 0
+    Vmatrix:
+      BeginStartsOnOwnLine: 0
+      EndFinishesWithLineBreak: 0
+    # 前後に空行を入れる環境
+    figure:
+      BeginStartsOnOwnLine: 4
+      EndFinishesWithLineBreak: 4
+    table:
+      BeginStartsOnOwnLine: 4
+      EndFinishesWithLineBreak: 4
+    quote:
+      BeginStartsOnOwnLine: 4
+      EndFinishesWithLineBreak: 4
+    quotation:
+      BeginStartsOnOwnLine: 4
+      EndFinishesWithLineBreak: 4
+    align:
+      BeginStartsOnOwnLine: 4
+      EndFinishesWithLineBreak: 4
+    align*:
+      BeginStartsOnOwnLine: 4
+      EndFinishesWithLineBreak: 4
+    equation:
+      BeginStartsOnOwnLine: 4
+      EndFinishesWithLineBreak: 4
+    equation*:
+      BeginStartsOnOwnLine: 4
+      EndFinishesWithLineBreak: 4
+    # DBSFinishesWithLineBreakが欲しい環境
+    split:
+      DBSFinishesWithLineBreak: 1
+
+lookForAlignDelims:
+  align:
+    AlignFinalDoubleBackSlash: 0
+  align*:
+    AlignFinalDoubleBackSlash: 0
+  split:
+    delims: 1
+
+# itemizeなどの環境でのインデント
+indentAfterItems:
+  itemize: 1
+  enumerate: 1
+  description: 1
+  list: 1
+
+# ヘッダごとのインデント
+indentAfterHeadings:
+  part:
+    indentAfterThisHeading: 1
+    level: 1
+  part*:
+    indentAfterThisHeading: 1
+    level: 1
+  chapter:
+    indentAfterThisHeading: 1
+    level: 2
+  chapter*:
+    indentAfterThisHeading: 1
+    level: 2
+  section:
+    indentAfterThisHeading: 1
+    level: 3
+  section*:
+    indentAfterThisHeading: 1
+    level: 3
+  subsection:
+    indentAfterThisHeading: 1
+    level: 4
+  subsection*:
+    indentAfterThisHeading: 1
+    level: 4
+  subsubsection:
+    indentAfterThisHeading: 1
+    level: 5
+  subsubsection*:
+    indentAfterThisHeading: 1
+    level: 5
+  paragraph:
+    indentAfterThisHeading: 1
+    level: 6
+  paragraph*:
+    indentAfterThisHeading: 1
+    level: 6
+  subparagraph:
+    indentAfterThisHeading: 1
+    level: 7
+  subparagraph*:
+    indentAfterThisHeading: 1
+    level: 7

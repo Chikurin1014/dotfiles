@@ -8,15 +8,6 @@
 [clang-format.files]
 "files/clang-format" = "~/.clang-format"
 
-[nushell.files]
-"files/config/nushell/config.nu" = "~/AppData/Roaming/nushell/config.nu"
-"files/config/nushell/cfg.nu" = "~/AppData/Roaming/nushell/cfg.nu"
-"files/config/nushell/color.nu" = "~/AppData/Roaming/nushell/color.nu"
-"files/config/nushell/detail.nu" = "~/AppData/Roaming/nushell/detail.nu"
-"files/config/nushell/env.nu" = "~/AppData/Roaming/nushell/env.nu"
-"files/config/nushell/hooks.nu" = "~/AppData/Roaming/nushell/hooks.nu"
-"files/config/nushell/key.nu" = "~/AppData/Roaming/nushell/key.nu"
-
 [wezterm.files]
 "files/config/wezterm/wezterm.lua" = "~/.config/wezterm/wezterm.lua"
 "files/config/wezterm/font.lua" = "~/.config/wezterm/font.lua"
@@ -26,10 +17,19 @@
 "files/config/wezterm/themes/no_image.lua" = "~/.config/wezterm/themes/no_image.lua"
 "files/config/wezterm/themes/use_image.lua" = "~/.config/wezterm/themes/use_image.lua"
 
+[nushell.files]
+"files_win/AppDataRoaming/nushell/config.nu" = "~/AppData/Roaming/nushell/config.nu"
+"files_win/AppDataRoaming/nushell/cfg.nu" = "~/AppData/Roaming/nushell/cfg.nu"
+"files_win/AppDataRoaming/nushell/color.nu" = "~/AppData/Roaming/nushell/color.nu"
+"files_win/AppDataRoaming/nushell/detail.nu" = "~/AppData/Roaming/nushell/detail.nu"
+"files_win/AppDataRoaming/nushell/env.nu" = "~/AppData/Roaming/nushell/env.nu"
+"files_win/AppDataRoaming/nushell/hooks.nu" = "~/AppData/Roaming/nushell/hooks.nu"
+"files_win/AppDataRoaming/nushell/key.nu" = "~/AppData/Roaming/nushell/key.nu"
+
 [latex.files]
-"files/latexmkrc" = "~/.latexmkrc"
-"files/indentconfig.yaml" = "~/.indentconfig.yaml"
-"files/latexindentconfig/default.yaml" = "~/.latexindentconfig/default.yaml"
+"files_win/latexmkrc" = "~/.latexmkrc"
+"files_win/indentconfig.yaml" = "~/.indentconfig.yaml"
+"files_win/latexindentconfig/default.yaml" = "~/.latexindentconfig/default.yaml"
 
 [settings]
 default_target_type = "symbolic"
