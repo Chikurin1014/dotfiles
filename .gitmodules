@@ -1,4 +1,4 @@
 [submodule "files"]
 	path = files
 	url = git@github.com:Chikurin1014/dtfls
-	branch = windows
+	branch = main
