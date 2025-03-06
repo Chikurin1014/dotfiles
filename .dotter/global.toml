@@ -5,6 +5,9 @@
 [clang-format.files]
 "files/clang-format" = "~/.clang-format"
 
+[mise.files]
+"files/config/mise/config.toml" = "~/.config/mise/config.toml"
+
 [wezterm.files]
 "files_win/config/wezterm/wezterm.lua" = "~/.config/wezterm/wezterm.lua"
 "files/config/wezterm/font.lua" = "~/.config/wezterm/font.lua"
@@ -22,6 +25,7 @@
 "files_win/AppDataRoaming/nushell/env.nu" = "~/AppData/Roaming/nushell/env.nu"
 "files_win/AppDataRoaming/nushell/hooks.nu" = "~/AppData/Roaming/nushell/hooks.nu"
 "files_win/AppDataRoaming/nushell/key.nu" = "~/AppData/Roaming/nushell/key.nu"
+"files_win/AppDataRoaming/nushell/mise.nu" = "~/AppData/Roaming/nushell/mise.nu"
 
 [wsl.files]
 "files_win/wslconfig" = "~/.wslconfig"

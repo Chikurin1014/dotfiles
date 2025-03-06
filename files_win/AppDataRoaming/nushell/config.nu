@@ -17,3 +17,4 @@ def ls_grid [path? --all (-a) ] {
 }
 
 alias lsg = ls_grid
+source mise.nu
