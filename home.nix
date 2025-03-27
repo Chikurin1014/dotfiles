@@ -17,6 +17,7 @@
 
   # Packages to be installed
   home.packages = [
+    pkgs.systemd
     # japanese input system
     pkgs.ibus-engines.mozc
     # shell
@@ -91,7 +92,6 @@
       enable = true;
       sessionVariables = {
         EDITOR = "nvim";
-        PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
       };
     };
   };
