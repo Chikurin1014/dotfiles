@@ -1,0 +1,221 @@
+{
+    "buckets": [
+        {
+            "Name": "main",
+            "Source": "https://github.com/ScoopInstaller/Main.git",
+            "Updated": "2025-03-29T01:29:36+09:00",
+            "Manifests": 1387
+        },
+        {
+            "Name": "extras",
+            "Source": "https://github.com/ScoopInstaller/Extras",
+            "Updated": "2025-03-29T02:10:53+09:00",
+            "Manifests": 2145
+        }
+    ],
+    "apps": [
+        {
+            "Source": "main",
+            "Version": "24.09",
+            "Updated": "2025-02-26T01:00:05.2717931+09:00",
+            "Name": "7zip",
+            "Info": ""
+        },
+        {
+            "Source": "main",
+            "Version": "0.25.0",
+            "Updated": "2025-02-26T21:31:25.4603535+09:00",
+            "Name": "bat",
+            "Info": ""
+        },
+        {
+            "Source": "extras",
+            "Version": "2024.3.4-243.25659.42",
+            "Updated": "2025-03-06T15:04:08.3202937+09:00",
+            "Name": "clion",
+            "Info": ""
+        },
+        {
+            "Source": "main",
+            "Version": "3.14",
+            "Updated": "2025-02-26T01:06:10.8142451+09:00",
+            "Name": "dark",
+            "Info": ""
+        },
+        {
+            "Source": "extras",
+            "Version": "1.0.9156-20",
+            "Updated": "2025-02-26T21:08:14.0613037+09:00",
+            "Name": "discord",
+            "Info": ""
+        },
+        {
+            "Source": "main",
+            "Version": "28.0.1",
+            "Updated": "2025-03-06T15:04:13.3886947+09:00",
+            "Name": "docker",
+            "Info": ""
+        },
+        {
+            "Source": "main",
+            "Version": "0.13.3",
+            "Updated": "2025-02-26T21:11:22.239371+09:00",
+            "Name": "dotter",
+            "Info": ""
+        },
+        {
+            "Source": "main",
+            "Version": "2.48.1",
+            "Updated": "2025-02-26T01:00:49.9091473+09:00",
+            "Name": "git",
+            "Info": ""
+        },
+        {
+            "Source": "extras",
+            "Version": "9.0.0",
+            "Updated": "2025-02-26T01:04:32.1258251+09:00",
+            "Name": "kicad",
+            "Info": ""
+        },
+        {
+            "Source": "extras",
+            "Version": "0.48.0",
+            "Updated": "2025-03-06T15:04:15.6173628+09:00",
+            "Name": "lazygit",
+            "Info": ""
+        },
+        {
+            "Source": "main",
+            "Version": "14.2.0-rt_v12-rev1",
+            "Updated": "2025-02-26T01:05:35.5158684+09:00",
+            "Name": "mingw",
+            "Info": ""
+        },
+        {
+            "Source": "main",
+            "Version": "2025.3.0",
+            "Updated": "2025-03-06T15:04:21.4336366+09:00",
+            "Name": "mise",
+            "Info": ""
+        },
+        {
+            "Source": "extras",
+            "Version": "4.4.4.243461245",
+            "Updated": "2025-02-26T01:05:52.5192784+09:00",
+            "Name": "musescore",
+            "Info": ""
+        },
+        {
+            "Source": "main",
+            "Version": "0.10.4",
+            "Updated": "2025-02-26T02:15:56.8682217+09:00",
+            "Name": "neovim",
+            "Info": ""
+        },
+        {
+            "Source": "main",
+            "Version": "0.102.0",
+            "Updated": "2025-02-26T21:11:10.8830257+09:00",
+            "Name": "nu",
+            "Info": ""
+        },
+        {
+            "Source": "extras",
+            "Version": "11.35.2",
+            "Updated": "2025-03-06T15:04:33.3322178+09:00",
+            "Name": "postman",
+            "Info": ""
+        },
+        {
+            "Source": "main",
+            "Version": "1.27.1",
+            "Updated": "2025-02-26T01:39:04.5807102+09:00",
+            "Name": "rustup",
+            "Info": ""
+        },
+        {
+            "Source": "extras",
+            "Version": "4.42.120",
+            "Updated": "2025-02-26T01:09:27.6269048+09:00",
+            "Name": "slack",
+            "Info": ""
+        },
+        {
+            "Source": "extras",
+            "Version": "1.2.59.514.g834e17d4",
+            "Updated": "2025-03-19T21:04:05.0041782+09:00",
+            "Name": "spotify",
+            "Info": ""
+        },
+        {
+            "Source": "main",
+            "Version": "0.2020.01.26",
+            "Updated": "2025-02-26T01:00:50.6326342+09:00",
+            "Name": "sudo",
+            "Info": ""
+        },
+        {
+            "Source": "main",
+            "Version": "0.15.0",
+            "Updated": "2025-02-26T22:40:29.1411402+09:00",
+            "Name": "tectonic",
+            "Info": ""
+        },
+        {
+            "Source": "main",
+            "Version": "0.13.0",
+            "Updated": "2025-02-26T01:09:47.9450898+09:00",
+            "Name": "typst",
+            "Info": ""
+        },
+        {
+            "Source": "extras",
+            "Version": "14.42.34438.0",
+            "Updated": "2025-02-26T01:52:18.9237643+09:00",
+            "Name": "vcredist2022",
+            "Info": ""
+        },
+        {
+            "Source": "extras",
+            "Version": "1.98.0",
+            "Updated": "2025-03-06T15:05:11.5239128+09:00",
+            "Name": "vscode",
+            "Info": ""
+        },
+        {
+            "Source": "extras",
+            "Version": "20240203-110809-5046fc22",
+            "Updated": "2025-02-26T21:11:16.394371+09:00",
+            "Name": "wezterm",
+            "Info": ""
+        },
+        {
+            "Source": "main",
+            "Version": "2.20",
+            "Updated": "2025-02-26T02:15:17.6177311+09:00",
+            "Name": "which",
+            "Info": ""
+        },
+        {
+            "Source": "main",
+            "Version": "0.14.0",
+            "Updated": "2025-03-06T15:06:23.7378942+09:00",
+            "Name": "zig",
+            "Info": ""
+        },
+        {
+            "Source": "main",
+            "Version": "0.14.0",
+            "Updated": "2025-03-21T15:45:12.2206022+09:00",
+            "Name": "zls",
+            "Info": ""
+        },
+        {
+            "Source": "extras",
+            "Version": "6.3.11.60501",
+            "Updated": "2025-03-06T15:06:33.1398617+09:00",
+            "Name": "zoom",
+            "Info": ""
+        }
+    ]
+}
