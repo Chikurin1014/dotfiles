@@ -28,10 +28,7 @@
     pkgs.curl
     pkgs.dbus
     pkgs.git
-    pkgs.openocd
-    pkgs.openssl
-    pkgs.openssh
-    pkgs.pkg-config
+    pkgs.tmux
     pkgs.tree
     pkgs.unzip
     pkgs.vim
@@ -45,19 +42,11 @@
     pkgs.sd
     pkgs.sheldon
     pkgs.starship
-    pkgs.tmux
     pkgs.zellij
     # virtual environment
     pkgs.docker
     # runtime manager
     pkgs.mise
-    # compile/build tools
-    pkgs.gcc
-    pkgs.cmake
-    # formatter/linter
-    pkgs.clang-tools
-    pkgs.shellcheck
-    pkgs.shfmt
   ];
 
   # Files to be linked to certain directories
