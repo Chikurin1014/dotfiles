@@ -71,6 +71,7 @@
     ".config/zsh/alias.zsh".source                = files/config/zsh/alias.zsh;
     ".config/zsh/completion.zsh".source           = files/config/zsh/completion.zsh;
     ".config/zsh/option.zsh".source               = files/config/zsh/option.zsh;
+    ".config/zsh/ssh-agent.zsh".source            = files/config/zsh/ssh-agent.zsh;
     ".config/zsh/style.zsh".source                = files/config/zsh/style.zsh;
   };
 
