@@ -16,37 +16,39 @@
   };
 
   # Packages to be installed
-  home.packages = [
-    pkgs.systemd
+  home.packages = with pkgs; [
+    systemd
     # japanese input system
-    pkgs.ibus-engines.mozc
+    ibus-engines.mozc
     # shell
-    pkgs.zsh
+    zsh
     # editor
-    pkgs.neovim
+    neovim
     # essential tools
-    pkgs.curl
-    pkgs.dbus
-    pkgs.git
-    pkgs.tmux
-    pkgs.tree
-    pkgs.unzip
-    pkgs.vim
-    pkgs.wget
+    curl
+    dbus
+    git
+    tmux
+    tree
+    unzip
+    vim
+    wget
     # shell tools
-    pkgs.bat
-    pkgs.eza
-    pkgs.fd
-    pkgs.lazygit
-    pkgs.ripgrep
-    pkgs.sd
-    pkgs.sheldon
-    pkgs.starship
-    pkgs.zellij
+    bat
+    dust
+    eza
+    fd
+    lazygit
+    ripgrep
+    sd
+    sheldon
+    starship
+    xplr
+    zellij
     # virtual environment
-    pkgs.docker
+    docker
     # runtime manager
-    pkgs.mise
+    mise
   ];
 
   # Files to be linked to certain directories
