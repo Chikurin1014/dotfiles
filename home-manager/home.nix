@@ -53,9 +53,6 @@
 
   # Files to be linked to certain directories
   home.file = {
-    # Link this repository to ~/.config/home-manager
-    ".config/home-manager".source                 = ./.;
-    # Dotfiles to be deployed
     ".zshrc".source                               = files/zshrc;
     ".clang-format".source                        = files/clang-format;
     ".gitconfig".source                           = files/gitconfig;
