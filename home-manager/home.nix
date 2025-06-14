@@ -28,6 +28,7 @@
     curl
     dbus
     git
+    openssh
     tmux
     tree
     unzip
@@ -45,9 +46,6 @@
     starship
     xplr
     zellij
-    # virtual environment
-    docker
-    colima
     # runtime manager
     mise
   ];
