@@ -31,6 +31,12 @@ Initialize & update the submodules.
 git submodule init && git submodule update
 ```
 
+Link `home-manager` to `~/.config/home-manager`.
+
+```shell
+ln -sfn $(pwd)/home-manager ~/.config/home-manager
+```
+
 ### Packages you need to install manually
 
 - [WezTerm](https://wezfurlong.org/wezterm/installation.html)
