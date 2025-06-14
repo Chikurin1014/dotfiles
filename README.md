@@ -31,12 +31,6 @@ Initialize & update the submodules.
 git submodule init && git submodule update
 ```
 
-Link `home-manager` to `~/.config/home-manager`.
-
-```shell
-ln -sfn $(pwd)/home-manager ~/.config/home-manager
-```
-
 ### Packages you need to install manually
 
 - [WezTerm](https://wezfurlong.org/wezterm/installation.html)
@@ -48,12 +42,6 @@ At the first time, run the following command at the root of this repository:
 
 ```shell
 nix run home-manager -- switch --flake .?submodules=1
-```
-
-After that, you can use the following command anywhere:
-
-```shell
-home-manager switch
 ```
 
 ## `minimal` branch

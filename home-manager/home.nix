@@ -47,6 +47,7 @@
     zellij
     # virtual environment
     docker
+    colima
     # runtime manager
     mise
   ];
