@@ -22,7 +22,7 @@ or [Determinate Nix](https://docs.determinate.systems/determinate-nix#getting-st
 Clone `main` branch of this repository to `~/.config/home-manager`.
 
 ```shell
-git clone git@github.com:Chikurin1014/dotfiles.git $HOME/.config/home-manager -b main
+git clone git@github.com:Chikurin1014/dotfiles.git -b main
 ```
 
 Initialize & update the submodules.
@@ -38,10 +38,16 @@ git submodule init && git submodule update
 
 ### Usage
 
-Run in the root of the repository:
+At the first time, run the following command at the root of this repository:
 
 ```shell
-nix run home-manager -- switch .?submodules=1
+nix run home-manager -- switch --flake .?submodules=1
+```
+
+After that, you can use the following command anywhere:
+
+```shell
+home-manager switch
 ```
 
 ## `minimal` branch
