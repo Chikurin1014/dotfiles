@@ -1,5 +1,8 @@
 { configm, lib, pkgs, ... }:
-
+let
+  dtfls_files = import ./dtfls/nix/deploy_list.nix { src = ./dtfls; };
+  nvim_config_files = import ./nvim-config/nix/deploy_list.nix { src = ./nvim-config; };
+in
 {
   # User name and Home directory
   home.username = "chikurin";
@@ -54,31 +57,7 @@
   ];
 
   # Files to be linked to certain directories
-  home.file = {
-    ".zshrc".source                               = files/zshrc;
-    ".clang-format".source                        = files/clang-format;
-    ".gitconfig".source                           = files/gitconfig;
-    ".config/starship.toml".source                = files/config/starship.toml;
-    ".config/git/commit_template".source          = files/config/git/commit_template;
-    ".config/mise/config.toml".source             = files/config/mise/config.toml;
-    ".config/sheldon/plugins.toml".source         = files/config/sheldon/plugins.toml;
-    ".config/wezterm/wezterm.lua".source          = files/config/wezterm/wezterm.lua;
-    ".config/wezterm/font.lua".source             = files/config/wezterm/font.lua;
-    ".config/wezterm/keybindings/init.lua".source = files/config/wezterm/keybindings/init.lua;
-    ".config/wezterm/keybindings/keys.lua".source = files/config/wezterm/keybindings/keys.lua;
-    ".config/wezterm/themes/init.lua".source      = files/config/wezterm/themes/init.lua;
-    ".config/wezterm/themes/no_image.lua".source  = files/config/wezterm/themes/no_image.lua;
-    ".config/wezterm/themes/use_image.lua".source = files/config/wezterm/themes/use_image.lua;
-    ".config/zellij/config.kdl".source            = files/config/zellij/config.kdl;
-    ".config/zellij/completion.zsh".source        = files/config/zellij/completion.zsh;
-    ".config/zsh/alias.zsh".source                = files/config/zsh/alias.zsh;
-    ".config/zsh/completion.zsh".source           = files/config/zsh/completion.zsh;
-    ".config/zsh/option.zsh".source               = files/config/zsh/option.zsh;
-    ".config/zsh/ssh-agent.zsh".source            = files/config/zsh/ssh-agent.zsh;
-    ".config/zsh/style.zsh".source                = files/config/zsh/style.zsh;
-  } // (import ./nvim-config/nix/deploy_list.nix) {
-    src = ./nvim-config;
-  };
+  home.file = dtfls_files // nvim_config_files;
 
   # Environment variables
   home.sessionVariables = {};
