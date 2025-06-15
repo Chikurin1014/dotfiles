@@ -12,11 +12,11 @@
   # Nix settings (that will generate ~/.config/nix/nix.conf)
   nix = {
     package = pkgs.nix;
-    settings.experimental-features = [ "nix-command" "flakes" ];
   };
 
   # Packages to be installed
   home.packages = with pkgs; [
+    cachix
     systemd
     # japanese input system
     ibus-engines.mozc
