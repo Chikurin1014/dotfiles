@@ -36,15 +36,18 @@
     wget
     # shell tools
     bat
+    bottom
+    broot
     dust
     eza
     fd
+    fzf
     lazygit
+    navi
     ripgrep
     sd
     sheldon
     starship
-    xplr
     zellij
     # runtime manager
     mise
