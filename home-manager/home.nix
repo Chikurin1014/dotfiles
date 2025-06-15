@@ -76,6 +76,8 @@
     ".config/zsh/option.zsh".source               = files/config/zsh/option.zsh;
     ".config/zsh/ssh-agent.zsh".source            = files/config/zsh/ssh-agent.zsh;
     ".config/zsh/style.zsh".source                = files/config/zsh/style.zsh;
+  } // (import ./nvim-config/nix/deploy_list.nix) {
+    src = ./nvim-config;
   };
 
   # Environment variables
