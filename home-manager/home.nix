@@ -1,7 +1,8 @@
-{ configm, lib, pkgs, ... }:
+{ config, lib, pkgs, nixgl, ... }:
 let
   dtfls_files = import ./dtfls/nix/deploy_list.nix { src = ./dtfls; };
   nvim_config_files = import ./nvim-config/nix/deploy_list.nix { src = ./nvim-config; };
+  ghostty_config = import ../ghostty/config.nix;
 in
 {
   # User name and Home directory
@@ -25,6 +26,8 @@ in
     ibus-engines.mozc
     # shell
     zsh
+    # terminal emulator
+    (config.lib.nixGL.wrap ghostty)
     # editor
     neovim
     # essential tools
@@ -70,6 +73,12 @@ in
       };
     };
   };
+
+  nixGL.packages = import nixgl {
+    inherit pkgs;
+  };
+  nixGL.defaultWrapper = "mesa";
+  nixGL.installScripts = [ "mesa" ];
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

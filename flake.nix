@@ -9,14 +9,16 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    dtfls-files = {
-      flake = false;
-      url = "path:./files";
+
+    # nixGL is required if you are not using NixOS
+    nixgl = {
+      url = "github:nix-community/nixgl";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
   outputs =
-    { nixpkgs, flake-utils, home-manager, ... }:
+    { nixpkgs, flake-utils, home-manager, nixgl, ... }:
     flake-utils.lib.eachDefaultSystem(system:
     let
       inherit system;
@@ -29,6 +31,10 @@
         inherit (pkgs) home-manager;
         homeConfigurations.chikurin = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
+
+          extraSpecialArgs = {
+            inherit nixgl;
+          };
 
           # Specify your home configuration modules here, for example,
           # the path to your home.nix.
