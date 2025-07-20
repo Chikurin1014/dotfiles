@@ -3,6 +3,7 @@ let
   dtfls_files = import ./dtfls/nix/deploy_list.nix { src = ./dtfls; };
   nvim_config_files = import ./nvim-config/nix/deploy_list.nix { src = ./nvim-config; };
   ghostty_config = import ../ghostty/config.nix;
+  inherit (pkgs) firge-nerd;
 in
 {
   # User name and Home directory
@@ -24,6 +25,8 @@ in
     systemd
     # japanese input system
     ibus-engines.mozc
+    # fonts
+    firge-nerd
     # shell
     zsh
     # terminal emulator

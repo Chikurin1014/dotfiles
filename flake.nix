@@ -18,17 +18,26 @@
   };
 
   outputs =
-    { nixpkgs, flake-utils, home-manager, nixgl, ... }:
-    flake-utils.lib.eachDefaultSystem(system:
+    { self, nixpkgs, flake-utils, home-manager, nixgl, ... }:
+    {
+      overlays = {
+        firge-nerd = final: prev: {
+          firge-nerd = prev.callPackage ./packages/firge-nerd.nix {};
+        };
+      };    
+    } // flake-utils.lib.eachDefaultSystem(system:
     let
       inherit system;
       pkgs = import nixpkgs {
         inherit system;
+        overlays = [
+          self.overlays.firge-nerd
+        ];
       };
     in
     {
       legacyPackages = {
-        inherit (pkgs) home-manager;
+        inherit (pkgs) home-manager firge-nerd;
         homeConfigurations.chikurin = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
 
