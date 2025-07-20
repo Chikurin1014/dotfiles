@@ -25,7 +25,7 @@ pkgs.stdenvNoCC.mkDerivation rec {
 
   installPhase = ''
     runHook preInstall
-    install -Dm644 *.ttf -t $out/share/fonts/FirgeNerd
+    install -Dm644 *.ttf -t $out/share/fonts/firge-nerd
     runHook postInstall
   '';
 
