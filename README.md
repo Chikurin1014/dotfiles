@@ -31,11 +31,6 @@ Initialize & update the submodules.
 git submodule init && git submodule update
 ```
 
-### Packages you need to install manually
-
-- [WezTerm](https://wezfurlong.org/wezterm/installation.html)
-- [FirgeNerd Font](https://github.com/yuru7/Firge/releases)
-
 ### Usage
 
 At the first time, run the following command at the root of this repository:
