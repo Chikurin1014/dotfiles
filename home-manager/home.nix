@@ -42,9 +42,10 @@ in
     wget
     # shell tools
     bat
-    bottom
+    btop
     broot
     dust
+    difftastic
     eza
     fd
     fzf
