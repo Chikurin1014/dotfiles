@@ -31,14 +31,21 @@ Initialize & update the submodules.
 git submodule init && git submodule update
 ```
 
-### Usage
-
 At the first time, run the following command at the root of this repository:
 
 ```shell
-nix run home-manager -- switch --flake .?submodules=1
+nix run home-manager -- switch --flake .?submodules=1 -b old
+```
+
+### Usage
+
+Just run:
+
+```shell
+deploy-dotfiles
 ```
 
 ## `minimal` branch
 
 Look out for `README.md` in [`minimal`](https://github.com/Chikurin1014/dotfiles/tree/minimal) branch.
+
