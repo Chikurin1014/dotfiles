@@ -18,13 +18,13 @@ end
 -- This is where you actually apply your config choices
 
 config.default_prog = { 'nu', '-l' }
-config.initial_rows = 35
-config.initial_cols = 120
+config.initial_rows = 25
+config.initial_cols = 100
 config.window_decorations = 'RESIZE'
 config.inactive_pane_hsb = { hue = 1.0, saturation = 0.8, brightness = 0.8 }
 
 config.font = font.property
-config.font_size = font.size
+config.font_size = 10.5
 config.color_scheme = theme.color_scheme
 config.use_fancy_tab_bar = theme.use_fancy_tab_bar
 config.window_frame = theme.window_frame
