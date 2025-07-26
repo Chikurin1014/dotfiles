@@ -1,4 +1,10 @@
-{ config, lib, pkgs, nixgl, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  nixgl,
+  ...
+}:
 let
   dtfls_files = import ./dtfls/nix/deploy_list.nix { src = ./dtfls; };
   nvim_config_files = import ./nvim-config/nix/deploy_list.nix { src = ./nvim-config; };
@@ -21,8 +27,8 @@ in
 
   # Packages to be installed
   home.packages = with pkgs; [
+    nixfmt-rfc-style
     cachix
-    systemd
     # japanese input system
     ibus-engines.mozc
     # fonts
@@ -38,6 +44,7 @@ in
     dbus
     git
     openssh
+    systemd
     tmux
     tree
     unzip
@@ -48,6 +55,7 @@ in
     btop
     broot
     dust
+    direnv
     difftastic
     eza
     fd
@@ -67,7 +75,7 @@ in
   home.file = dtfls_files // nvim_config_files;
 
   # Environment variables
-  home.sessionVariables = {};
+  home.sessionVariables = { };
 
   programs = {
     zsh = {
