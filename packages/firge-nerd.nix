@@ -16,7 +16,7 @@ let
 in
 pkgs.stdenvNoCC.mkDerivation rec {
   pname = "firge-nerd-font";
-  version = "0.2.0";
+  version = "0.3.0";
 
   src = pkgs.fetchzip {
     url = "${repository-url}/releases/download/v${version}/FirgeNerd_v${version}.zip";
