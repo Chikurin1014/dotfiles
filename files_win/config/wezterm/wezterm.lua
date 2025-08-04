@@ -17,6 +17,7 @@ end
 
 -- This is where you actually apply your config choices
 
+config.front_end = "WebGpu"
 config.default_prog = { 'nu', '-l' }
 config.initial_rows = 25
 config.initial_cols = 100
