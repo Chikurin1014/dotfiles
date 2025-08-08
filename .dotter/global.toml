@@ -1,21 +1,21 @@
 [git.files]
-"files/gitconfig" = "~/.gitconfig"
-"files/config/git/commit_template" = "~/.config/git/commit_template"
+"files/files/gitconfig" = "~/.gitconfig"
+"files/files/config/git/commit_template" = "~/.config/git/commit_template"
 
 [clang-format.files]
-"files/clang-format" = "~/.clang-format"
+"files/files/clang-format" = "~/.clang-format"
 
 [mise.files]
-"files/config/mise/config.toml" = "~/.config/mise/config.toml"
+"files/files/config/mise/config.toml" = "~/.config/mise/config.toml"
 
 [wezterm.files]
 "files_win/config/wezterm/wezterm.lua" = "~/.config/wezterm/wezterm.lua"
-"files/config/wezterm/font.lua" = "~/.config/wezterm/font.lua"
-"files/config/wezterm/keybindings/init.lua" = "~/.config/wezterm/keybindings/init.lua"
-"files/config/wezterm/keybindings/keys.lua" = "~/.config/wezterm/keybindings/keys.lua"
-"files/config/wezterm/themes/init.lua" = "~/.config/wezterm/themes/init.lua"
-"files/config/wezterm/themes/no_image.lua" = "~/.config/wezterm/themes/no_image.lua"
-"files/config/wezterm/themes/use_image.lua" = "~/.config/wezterm/themes/use_image.lua"
+"files/files/config/wezterm/font.lua" = "~/.config/wezterm/font.lua"
+"files/files/config/wezterm/keybindings/init.lua" = "~/.config/wezterm/keybindings/init.lua"
+"files/files/config/wezterm/keybindings/keys.lua" = "~/.config/wezterm/keybindings/keys.lua"
+"files/files/config/wezterm/themes/init.lua" = "~/.config/wezterm/themes/init.lua"
+"files/files/config/wezterm/themes/no_image.lua" = "~/.config/wezterm/themes/no_image.lua"
+"files/files/config/wezterm/themes/use_image.lua" = "~/.config/wezterm/themes/use_image.lua"
 
 [nushell.files]
 "files_win/AppDataRoaming/nushell/config.nu" = "~/AppData/Roaming/nushell/config.nu"
