@@ -1,5 +1,5 @@
 {
-  description = "Home Manager configuration of Jane Doe";
+  description = "A Nix flake for managing environments and configurations for systems which is used by Chikurin1014";
 
   inputs = {
     # Specify the source of Home Manager and Nixpkgs.
