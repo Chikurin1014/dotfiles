@@ -20,7 +20,7 @@ pkgs.stdenvNoCC.mkDerivation rec {
 
   src = pkgs.fetchzip {
     url = "${repository-url}/releases/download/v${version}/FirgeNerd_v${version}.zip";
-    hash = "sha256-KZHTWGJCE8bPdcKGRYV92hGArgY7uvZ+v75vz0I7Oqg=";
+    hash = "sha256-Zb95RroGitkOetmLPa4r8EsIKnKiYw7pAlVg6j9lgoc=";
   };
 
   installPhase = ''
