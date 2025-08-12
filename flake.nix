@@ -43,7 +43,7 @@
 
       overlays = {
         firge-nerd = final: prev: {
-          firge-nerd = prev.callPackage ./packages/firge-nerd.nix { };
+          firge-nerd = prev.callPackage ./nix-packages/firge-nerd.nix { };
         };
       };
     }

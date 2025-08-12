@@ -1,3 +1,5 @@
+# Configuration for host ChNix-WSL
+
 { ... }:
 
 {
