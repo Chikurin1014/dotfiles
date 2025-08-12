@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 
-home-manager switch --flake ~/dotfiles?submodules=1 -b old
+home-manager switch --flake ~/dotfiles?submodules=1 -b bak
 
