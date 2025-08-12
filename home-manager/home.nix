@@ -42,6 +42,7 @@ in
     # essential tools
     curl
     dbus
+    ed
     git
     openssh
     systemd
