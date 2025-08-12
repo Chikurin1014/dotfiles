@@ -68,8 +68,9 @@ in
     sheldon
     starship
     zellij
-    # runtime manager
+    # runtime / package manager
     mise
+    nodePackages.npm
   ];
 
   # Files to be linked to certain directories
