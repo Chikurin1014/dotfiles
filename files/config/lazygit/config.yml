@@ -1,0 +1,6 @@
+git:
+  paging:
+    externalDiffCommand: difft --color=always --display=side-by-side
+gui:
+  nerdFontsVersion: "3"
+

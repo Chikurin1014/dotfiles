@@ -35,11 +35,7 @@
       ...
     }:
     {
-      nixosConfigurations = import ./nixos {
-        inherit nixpkgs;
-        inherit nixos-wsl;
-        inherit vscode-server;
-      };
+      nixosConfigurations = import ./nixos { inherit nixpkgs nixos-wsl vscode-server; };
 
       overlays = {
         firge-nerd = final: prev: {
@@ -61,20 +57,7 @@
       {
         legacyPackages = {
           inherit (pkgs) home-manager firge-nerd;
-          homeConfigurations.chikurin = home-manager.lib.homeManagerConfiguration {
-            inherit pkgs;
-
-            extraSpecialArgs = {
-              inherit nixgl;
-            };
-
-            # Specify your home configuration modules here, for example,
-            # the path to your home.nix.
-            modules = [ ./home-manager/home.nix ];
-
-            # Optionally use extraSpecialArgs
-            # to pass through arguments to home.nix
-          };
+          homeConfigurations.chikurin = import ./home-manager { inherit pkgs home-manager nixgl; };
         };
       }
     );

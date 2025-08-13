@@ -1,6 +1,0 @@
-[submodule "dtfls"]
-	path = home-manager/dtfls
-	url = git@github.com:Chikurin1014/dtfls
-[submodule "nvim-config"]
-	path = home-manager/nvim-config
-	url = git@github.com:Chikurin1014/nvim-config.git

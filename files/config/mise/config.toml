@@ -1,0 +1,9 @@
+[tools]
+uv = 'latest'
+rust = 'latest'
+zig = 'latest'
+
+[settings]
+python.uv_venv_auto = true
+
+plugin_autoupdate_last_check_duration = '1 week'

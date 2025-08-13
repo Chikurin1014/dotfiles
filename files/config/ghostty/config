@@ -1,0 +1,65 @@
+title = "Ghostty"
+
+# window
+window-subtitle = working-directory
+window-theme = "ghostty"
+window-padding-x = 10
+window-padding-y = 5
+window-padding-balance = true
+
+background-opacity = 0.9
+
+unfocused-split-fill = "#0F0F0F"
+
+command = "zsh -l"
+
+# font
+font-family = "FirgeNerd Console"
+
+# keybindingsex
+keybind = "clear"
+keybind = "ctrl+shift+a=select_all"
+keybind = "ctrl+shift+c=copy_to_clipboard"
+keybind = "ctrl+shift+v=paste_from_clipboard"
+keybind = "ctrl+shift+n=new_window"
+keybind = "ctrl+shift+t=new_tab"
+keybind = "ctrl+shift+w=close_tab"
+keybind = "ctrl+shift+q=quit"
+keybind = "ctrl+shift+h=new_split:left"
+keybind = "ctrl+shift+j=new_split:down"
+keybind = "ctrl+shift+k=new_split:up"
+keybind = "ctrl+shift+l=new_split:right"
+keybind = "ctrl+shift+left_bracket=previous_tab"
+keybind = "ctrl+shift+right_bracket=next_tab"
+keybind = "ctrl+shift+i=inspector:toggle"
+keybind = "ctrl+shift+tab=toggle_tab_overview"
+keybind = "ctrl+shift+space=toggle_fullscreen"
+
+keybind = "ctrl+h=goto_split:left"
+keybind = "ctrl+j=goto_split:down"
+keybind = "ctrl+k=goto_split:up"
+keybind = "ctrl+l=goto_split:right"
+keybind = "ctrl+o=goto_split:next"
+keybind = "ctrl+n=next_tab"
+keybind = "ctrl+p=previous_tab"
+keybind = "ctrl+semicolon=goto_split:previous"
+keybind = "ctrl+space=toggle_split_zoom"
+
+keybind = "alt+j=scroll_page_down"
+keybind = "alt+k=scroll_page_up"
+keybind = "shift+alt+j=jump_to_prompt:-1"
+keybind = "shift+alt+k=jump_to_prompt:1"
+
+keybind = "alt+h=resize_split:left,10"
+keybind = "alt+j=resize_split:down,10"
+keybind = "alt+k=resize_split:up,10"
+keybind = "alt+l=resize_split:right,10"
+keybind = "alt+equal=equalize_splits"
+keybind = "alt+e=equalize_splits"
+keybind = "alt+plus=increase_font_size:1"
+keybind = "alt+semicolon=increase_font_size:1"
+keybind = "alt+minus=decrease_font_size:1"
+keybind = "alt+0=reset_font_size"
+keybind = "alt+r=reload_config"
+
+keybind = "ctrl+super+alt+r=reset"
