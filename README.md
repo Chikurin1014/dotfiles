@@ -19,15 +19,17 @@ or [Determinate Nix](https://docs.determinate.systems/determinate-nix#getting-st
 
 ### Installatioin
 
-Clone `main` branch of this repository to `~/.config/home-manager`.
+Clone `main` branch of this repository to home directory.
 
 ```shell
+cd ~
 git clone git@github.com:Chikurin1014/dotfiles.git -b main
 ```
 
 Initialize & update the submodules.
 
 ```shell
+cd dotfiles
 git submodule init && git submodule update
 ```
 
@@ -39,7 +41,7 @@ nix run home-manager -- switch --flake .?submodules=1 -b old
 
 ### Usage
 
-Just run:
+After you run the first-time command (`nix run home-manager ..`), you can use the following command to apply the configuration:
 
 ```shell
 deploy-dotfiles
