@@ -9,10 +9,9 @@
 - **Dotter** (optional)
 
 > [!NOTE]
-> You can choose a deployment tool from **Nix**, **Dotter** or nothing. If you don't use any external tool, you will use the shellscripts in [`sl-maker-for-dotfiles`](https://github.com/Chikurin1014/sl-maker-for-dotfiles), which is a repository hosted by me.
-
-> [!NOTE]
-> If you use **Nix**, you can deploy the dotfiles and install packages with a single command. If you use **Dotter** or nothing, you need to install packages manually.
+> You can choose a deployment tool from **Nix**, **Dotter** or nothing. If you use no external tools, you will use the shellscripts in [`sl-maker-for-dotfiles`](https://github.com/Chikurin1014/sl-maker-for-dotfiles), which is a repository hosted by me.
+>
+> If you use **Nix**, you can deploy the dotfiles and install packages with a single command. But if you use **Dotter** or nothing, you need to install packages manually.
 
 ### Installation of Nix (optional)
 
