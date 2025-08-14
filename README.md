@@ -76,7 +76,7 @@ deploy-packages
 
 You need to install packages manually.
 
-Check the `home-manager/home/packages.nix` file for the list of packages to install.
+Check the [`home-manager/home/packages.nix`](https://github.com/Chikurin1014/dotfiles/blob/main/home-manager/home/packages.nix) file for the list of packages to install.
 
 ##### Exapmple for Debian/Ubuntu
 
