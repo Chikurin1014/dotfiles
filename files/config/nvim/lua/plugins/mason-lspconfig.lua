@@ -4,6 +4,7 @@ return {
         dependencies = {
             'williamboman/mason.nvim',
             'neovim/nvim-lspconfig',
+            'simrat39/rust-tools.nvim' -- for rust_analyzer
         },
         config = function()
             require('mason').setup()
