@@ -1,5 +1,9 @@
+# Nix build results
 /result
+
+# VSCode workspace settings
 /.vscode
-/.dotter/local.toml
+
+# Dotter local files
 /.dotter/cache.toml
-/.dotter/cache
+/.dotter/local.toml

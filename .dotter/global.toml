@@ -1,39 +1,59 @@
-[git.files]
-"files/files/gitconfig" = "~/.gitconfig"
-"files/files/config/git/commit_template" = "~/.config/git/commit_template"
+[helpers]
 
-[clang-format.files]
-"files/files/clang-format" = "~/.clang-format"
+[default]
+depends = []
 
-[mise.files]
-"files/files/config/mise/config.toml" = "~/.config/mise/config.toml"
+[default.files]
+"files/zshrc"                                       = "~/.zshrc"
+"files/clang-format"                                = "~/.clang-format"
+"files/gitconfig"                                   = "~/.gitconfig"
+"files/config/starship.toml"                        = "~/.config/starship.toml"
+"files/config/ghostty/config"                       = "~/.config/ghostty/config"
+"files/config/git/commit_template"                  = "~/.config/git/commit_template"
+"files/config/lazygit/config.yml"                   = "~/.config/lazygit/config.yml"
+"files/config/mise/config.toml"                     = "~/.config/mise/config.toml"
+"files/config/nvim/init.lua"                        = "~/.config/nvim/init.lua"
+"files/config/nvim/lua/base.lua"                    = "~/.config/nvim/lua/base.lua"
+"files/config/nvim/lua/lazy_nvim.lua"               = "~/.config/nvim/lua/lazy_nvim.lua"
+"files/config/nvim/lua/plugins/alpha.lua"           = "~/.config/nvim/lua/plugins/alpha.lua"
+"files/config/nvim/lua/plugins/autopairs.lua"       = "~/.config/nvim/lua/plugins/autopairs.lua"
+"files/config/nvim/lua/plugins/bufferline.lua"      = "~/.config/nvim/lua/plugins/bufferline.lua"
+"files/config/nvim/lua/plugins/bufresize.lua"       = "~/.config/nvim/lua/plugins/bufresize.lua"
+"files/config/nvim/lua/plugins/comment.lua"         = "~/.config/nvim/lua/plugins/comment.lua"
+"files/config/nvim/lua/plugins/copilot.lua"         = "~/.config/nvim/lua/plugins/copilot.lua"
+"files/config/nvim/lua/plugins/fm.lua"              = "~/.config/nvim/lua/plugins/fm.lua"
+"files/config/nvim/lua/plugins/kanagawa.lua"        = "~/.config/nvim/lua/plugins/kanagawa.lua"
+"files/config/nvim/lua/plugins/lsp-colors.lua"      = "~/.config/nvim/lua/plugins/lsp-colors.lua"
+"files/config/nvim/lua/plugins/lualine.lua"         = "~/.config/nvim/lua/plugins/lualine.lua"
+"files/config/nvim/lua/plugins/mason-lspconfig.lua" = "~/.config/nvim/lua/plugins/mason-lspconfig.lua"
+"files/config/nvim/lua/plugins/modes.lua"           = "~/.config/nvim/lua/plugins/modes.lua"
+"files/config/nvim/lua/plugins/neo-tree.lua"        = "~/.config/nvim/lua/plugins/neo-tree.lua"
+"files/config/nvim/lua/plugins/noice.lua"           = "~/.config/nvim/lua/plugins/noice.lua"
+"files/config/nvim/lua/plugins/notify.lua"          = "~/.config/nvim/lua/plugins/notify.lua"
+"files/config/nvim/lua/plugins/remote-nvim.lua"     = "~/.config/nvim/lua/plugins/remote-nvim.lua"
+"files/config/nvim/lua/plugins/scrollbar.lua"       = "~/.config/nvim/lua/plugins/scrollbar.lua"
+"files/config/nvim/lua/plugins/sidebar.lua"         = "~/.config/nvim/lua/plugins/sidebar.lua"
+"files/config/nvim/lua/plugins/telescope.lua"       = "~/.config/nvim/lua/plugins/telescope.lua"
+"files/config/nvim/lua/plugins/toggleterm.lua"      = "~/.config/nvim/lua/plugins/toggleterm.lua"
+"files/config/nvim/lua/plugins/which_key.lua"       = "~/.config/nvim/lua/plugins/which_key.lua"
+"files/config/sheldon/plugins.toml"                 = "~/.config/sheldon/plugins.toml"
+"files/config/wezterm/wezterm.lua"                  = "~/.config/wezterm/wezterm.lua"
+"files/config/wezterm/font.lua"                     = "~/.config/wezterm/font.lua"
+"files/config/wezterm/keybindings/init.lua"         = "~/.config/wezterm/keybindings/init.lua"
+"files/config/wezterm/keybindings/keys.lua"         = "~/.config/wezterm/keybindings/keys.lua"
+"files/config/wezterm/themes/init.lua"              = "~/.config/wezterm/themes/init.lua"
+"files/config/wezterm/themes/no_image.lua"          = "~/.config/wezterm/themes/no_image.lua"
+"files/config/wezterm/themes/use_image.lua"         = "~/.config/wezterm/themes/use_image.lua"
+"files/config/zellij/config.kdl"                    = "~/.config/zellij/config.kdl"
+"files/config/zellij/completion.zsh"                = "~/.config/zellij/completion.zsh"
+"files/config/zsh/alias.zsh"                        = "~/.config/zsh/alias.zsh"
+"files/config/zsh/completion.zsh"                   = "~/.config/zsh/completion.zsh"
+"files/config/zsh/hook.zsh"                         = "~/.config/zsh/hook.zsh"
+"files/config/zsh/option.zsh"                       = "~/.config/zsh/option.zsh"
+"files/config/zsh/ssh-agent.zsh"                    = "~/.config/zsh/ssh-agent.zsh"
+"files/config/zsh/style.zsh"                        = "~/.config/zsh/style.zsh"
 
-[wezterm.files]
-"files_win/config/wezterm/wezterm.lua" = "~/.config/wezterm/wezterm.lua"
-"files/files/config/wezterm/font.lua" = "~/.config/wezterm/font.lua"
-"files/files/config/wezterm/keybindings/init.lua" = "~/.config/wezterm/keybindings/init.lua"
-"files/files/config/wezterm/keybindings/keys.lua" = "~/.config/wezterm/keybindings/keys.lua"
-"files/files/config/wezterm/themes/init.lua" = "~/.config/wezterm/themes/init.lua"
-"files/files/config/wezterm/themes/no_image.lua" = "~/.config/wezterm/themes/no_image.lua"
-"files/files/config/wezterm/themes/use_image.lua" = "~/.config/wezterm/themes/use_image.lua"
-
-[nushell.files]
-"files_win/AppDataRoaming/nushell/config.nu" = "~/AppData/Roaming/nushell/config.nu"
-"files_win/AppDataRoaming/nushell/cfg.nu" = "~/AppData/Roaming/nushell/cfg.nu"
-"files_win/AppDataRoaming/nushell/color.nu" = "~/AppData/Roaming/nushell/color.nu"
-"files_win/AppDataRoaming/nushell/detail.nu" = "~/AppData/Roaming/nushell/detail.nu"
-"files_win/AppDataRoaming/nushell/env.nu" = "~/AppData/Roaming/nushell/env.nu"
-"files_win/AppDataRoaming/nushell/hooks.nu" = "~/AppData/Roaming/nushell/hooks.nu"
-"files_win/AppDataRoaming/nushell/key.nu" = "~/AppData/Roaming/nushell/key.nu"
-"files_win/AppDataRoaming/nushell/mise.nu" = "~/AppData/Roaming/nushell/mise.nu"
-
-[wsl.files]
-"files_win/wslconfig" = "~/.wslconfig"
-
-[latex.files]
-"files_win/latexmkrc" = "~/.latexmkrc"
-"files_win/indentconfig.yaml" = "~/.indentconfig.yaml"
-"files_win/latexindentconfig/default.yaml" = "~/.latexindentconfig/default.yaml"
+[default.variables]
 
 [settings]
 default_target_type = "symbolic"

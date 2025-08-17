@@ -1,0 +1,21 @@
+BasedOnStyle: Mozilla
+AccessModifierOffset: -4
+AlignTrailingComments: true
+AlignConsecutiveShortCaseStatements:
+  Enabled: true
+  AlignCaseColons: true
+AlwaysBreakAfterDefinitionReturnType: None
+AlwaysBreakAfterReturnType: None
+AllowShortBlocksOnASingleLine: Empty
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: Empty
+BreakBeforeBraces: Attach
+ColumnLimit: 100
+Cpp11BracedListStyle: true
+IncludeBlocks: Preserve
+IndentWidth: 4
+PointerAlignment: Right
+ReferenceAlignment: Pointer
+SortIncludes: CaseSensitive
+SortUsingDeclarations: true
+SpacesBeforeTrailingComments: 1
