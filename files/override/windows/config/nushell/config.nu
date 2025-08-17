@@ -8,6 +8,7 @@ $env.config = {
 $env.EDITOR = "code"
 $env.FZF_DEFAULT_COMMAND = "fd"
 
+alias deploy-dotfiles = nu -c "cd ~/dotfiles; sudo dotter deploy -fy"
 alias ls! = ls
 alias ls = eza --icons --git
 alias cat = bat

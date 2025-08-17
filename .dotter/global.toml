@@ -1,7 +1,7 @@
 [helpers]
 
 [default]
-depends = ["clang-format", "ghostty", "git", "mise", "neovim", "nushell", "wezterm", "zellij", "zsh"]
+depends = ["clang-format", "ghostty", "git", "mise", "neovim", "wezterm", "zellij", "zsh"]
 
 [clang-format.files]
 "files/clang-format" = "~/.clang-format"
@@ -42,11 +42,6 @@ depends = ["clang-format", "ghostty", "git", "mise", "neovim", "nushell", "wezte
 "files/config/nvim/lua/plugins/telescope.lua"       = "~/.config/nvim/lua/plugins/telescope.lua"
 "files/config/nvim/lua/plugins/toggleterm.lua"      = "~/.config/nvim/lua/plugins/toggleterm.lua"
 "files/config/nvim/lua/plugins/which_key.lua"       = "~/.config/nvim/lua/plugins/which_key.lua"
-
-[nushell.files]
-"files/config/nushell/config.nu"                   = "~/.config/nushell/config.nu"
-"files/config/nushell/vendor/autoload/mise.nu"     = "~/.config/nushell/vendor/autoload/mise.nu"
-"files/config/nushell/vendor/autoload/starship.nu" = "~/.config/nushell/vendor/autoload/starship.nu"
 
 [wezterm.files]
 "files/config/wezterm/wezterm.lua"          = "~/.config/wezterm/wezterm.lua"

@@ -6,6 +6,11 @@
 "files/override/windows/indentconfig.yaml"              = "~/.indentconfig.yaml"
 "files/override/windows/latexindentconfig/default.yaml" = "~/.latexindentconfig/default.yaml"
 
+[nushell.files]
+"files/override/windows/config/nushell/config.nu"                   = "~/AppData/Roaming/nushell/config.nu"
+"files/override/windows/config/nushell/vendor/autoload/mise.nu"     = "~/AppData/Roaming/nushell/vendor/autoload/mise.nu"
+"files/override/windows/config/nushell/vendor/autoload/starship.nu" = "~/AppData/Roaming/nushell/vendor/autoload/starship.nu"
+
 # override
 [neovim]
 depends = ["neovim"]
@@ -35,15 +40,6 @@ depends = ["neovim"]
 "files/config/nvim/lua/plugins/telescope.lua"                   = "~/AppData/Local/nvim/lua/plugins/telescope.lua"
 "files/config/nvim/lua/plugins/which_key.lua"                   = "~/AppData/Local/nvim/lua/plugins/which_key.lua"
 "files/override/windows/config/nvim/lua/plugins/toggleterm.lua" = "~/AppData/Local/nvim/lua/plugins/toggleterm.lua"
-
-# override
-[nushell]
-depends = ["nushell"]
-
-[nushell.files]
-"files/config/nushell/config.nu"                   = "~/AppData/Roaming/nushell/config.nu"
-"files/config/nushell/vendor/autoload/mise.nu"     = "~/AppData/Roaming/nushell/vendor/autoload/mise.nu"
-"files/config/nushell/vendor/autoload/starship.nu" = "~/AppData/Roaming/nushell/vendor/autoload/starship.nu"
 
 # override
 [wezterm]
