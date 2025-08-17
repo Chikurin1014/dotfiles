@@ -1,0 +1,23 @@
+[wsl.files]
+"files/override/windows/wslconfig" = "~/.wslconfig"
+
+[latex.files]
+"files/override/windows/latexmkrc"                      = "~/.latexmkrc"
+"files/override/windows/indentconfig.yaml"              = "~/.indentconfig.yaml"
+"files/override/windows/latexindentconfig/default.yaml" = "~/.latexindentconfig/default.yaml"
+
+# override
+[nushell]
+depends = ["nushell"]
+
+[nushell.files]
+"files/config/nushell/config.nu"                   = "~/AppData/Roaming/nushell/config.nu"
+"files/config/nushell/vendor/autoload/mise.nu"     = "~/AppData/Roaming/nushell/vendor/autoload/mise.nu"
+"files/config/nushell/vendor/autoload/starship.nu" = "~/AppData/Roaming/nushell/vendor/autoload/starship.nu"
+
+# override
+[wezterm]
+depends = ["wezterm"]
+
+[wezterm.files]
+"files/override/windows/config/wezterm/wezterm.lua" = "~/.config/wezterm/wezterm.lua"
