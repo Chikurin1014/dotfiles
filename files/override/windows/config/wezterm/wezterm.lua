@@ -24,6 +24,7 @@ config.initial_cols = 80
 config.window_decorations = 'INTEGRATED_BUTTONS|RESIZE'
 config.inactive_pane_hsb = { hue = 1.0, saturation = 1.0, brightness = 0.9 }
 config.hide_tab_bar_if_only_one_tab = false
+config.default_cursor_style = 'BlinkingBar'
 
 config.font = font.property
 config.font_size = font.size
