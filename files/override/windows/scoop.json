@@ -16,13 +16,6 @@
         },
         {
             "Info": "",
-            "Name": "dark",
-            "Version": "3.14.1",
-            "Source": "main",
-            "Updated": "2025-04-26T23:51:03.6555541+09:00"
-        },
-        {
-            "Info": "",
             "Name": "discord",
             "Version": "1.0.9188-21",
             "Source": "extras",
@@ -44,24 +37,10 @@
         },
         {
             "Info": "",
-            "Name": "ghcup",
-            "Version": "0.1.50.2",
-            "Source": "main",
-            "Updated": "2025-06-13T13:24:51.8913654+09:00"
-        },
-        {
-            "Info": "",
             "Name": "git",
             "Version": "2.49.0",
             "Source": "main",
             "Updated": "2025-03-29T22:54:38.1772028+09:00"
-        },
-        {
-            "Info": "",
-            "Name": "kicad",
-            "Version": "9.0.2",
-            "Source": "extras",
-            "Updated": "2025-06-13T13:29:25.5837995+09:00"
         },
         {
             "Info": "",
@@ -114,13 +93,6 @@
         },
         {
             "Info": "",
-            "Name": "postman",
-            "Version": "11.49.0",
-            "Source": "extras",
-            "Updated": "2025-06-13T13:30:14.3707586+09:00"
-        },
-        {
-            "Info": "",
             "Name": "powertoys",
             "Version": "0.91.1",
             "Source": "extras",
@@ -170,13 +142,6 @@
         },
         {
             "Info": "",
-            "Name": "vcredist2022",
-            "Version": "14.44.35208.0",
-            "Source": "extras",
-            "Updated": "2025-06-13T13:36:27.8253224+09:00"
-        },
-        {
-            "Info": "",
             "Name": "vcxsrv",
             "Version": "21.1.16.1",
             "Source": "extras",
@@ -202,20 +167,6 @@
             "Version": "2.20",
             "Source": "main",
             "Updated": "2025-02-26T02:15:17.6177311+09:00"
-        },
-        {
-            "Info": "",
-            "Name": "zig",
-            "Version": "0.14.1",
-            "Source": "main",
-            "Updated": "2025-06-13T13:38:09.9441868+09:00"
-        },
-        {
-            "Info": "",
-            "Name": "zls",
-            "Version": "0.14.0",
-            "Source": "main",
-            "Updated": "2025-03-21T15:45:12.2206022+09:00"
         },
         {
             "Info": "",
