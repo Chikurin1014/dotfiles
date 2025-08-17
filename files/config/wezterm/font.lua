@@ -9,6 +9,6 @@ font.property = wezterm.font_with_fallback {
     { family = 'HackGen Console NF', weight = 'Regular', assume_emoji_presentation = true },
     'DefaVu Sans Mono'
 }
-font.size = 14.0
+font.size = 11.0
 
 return font
