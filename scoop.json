@@ -170,13 +170,6 @@
         },
         {
             "Source": "main",
-            "Updated": "2025-06-13T13:35:35.4750821+09:00",
-            "Info": "",
-            "Name": "rustup",
-            "Version": "1.28.2"
-        },
-        {
-            "Source": "main",
             "Updated": "2025-08-17T21:19:31.7569076+09:00",
             "Info": "",
             "Name": "sd",
@@ -195,6 +188,13 @@
             "Info": "",
             "Name": "spotify",
             "Version": "1.2.65.255.g85e641b4"
+        },
+        {
+            "Source": "main",
+            "Updated": "2025-08-17T22:08:35.0233493+09:00",
+            "Info": "",
+            "Name": "starship",
+            "Version": "1.23.0"
         },
         {
             "Source": "main",
