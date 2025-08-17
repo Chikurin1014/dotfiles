@@ -10,9 +10,11 @@ depends = ["clang-format", "ghostty", "git", "mise", "neovim", "wezterm", "zelli
 "files/config/ghostty/config" = "~/.config/ghostty/config"
 
 [git.files]
-"files/gitconfig"                  = "~/.gitconfig"
-"files/config/git/commit_template" = "~/.config/git/commit_template"
-"files/config/lazygit/config.yml"  = "~/.config/lazygit/config.yml"
+"files/gitconfig"                      = "~/.gitconfig"
+"files/config/git/commit_template"     = "~/.config/git/commit_template"
+"files/config/git/commit_template.txt" = "~/.config/git/commit_template.txt"
+"files/config/git/diff"                = "~/.config/git/diff"
+"files/config/lazygit/config.yml"      = "~/.config/lazygit/config.yml"
 
 [mise.files]
 "files/config/mise/config.toml" = "~/.config/mise/config.toml"
