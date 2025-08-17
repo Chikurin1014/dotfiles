@@ -1,4 +1,8 @@
-$env.Path = ($env.Path | prepend 'C:\Users\Chikurin\scoop\apps\mise\current\bin')
+let mise_path = $env.USERPROFILE | path join "scoop" "apps" "mise" "current" "bin"
+let mise_exe = $mise_path | path join "mise.exe"
+
+$env.Path = ($env.Path | prepend $mise_path)
+
 export-env {
   $env.MISE_SHELL = "nu"
   let mise_hook = {
@@ -23,15 +27,15 @@ export def --env --wrapped main [command?: string, --help, ...rest: string] {
   let commands = ["deactivate", "shell", "sh"]
 
   if ($command == null) {
-    ^"C:\\Users\\Chikurin\\scoop\\apps\\mise\\current\\bin\\mise.exe"
+    ^($mise_exe)
   } else if ($command == "activate") {
     $env.MISE_SHELL = "nu"
   } else if ($command in $commands) {
-    ^"C:\\Users\\Chikurin\\scoop\\apps\\mise\\current\\bin\\mise.exe" $command ...$rest
+    ^($mise_exe) $command ...$rest
     | parse vars
     | update-env
   } else {
-    ^"C:\\Users\\Chikurin\\scoop\\apps\\mise\\current\\bin\\mise.exe" $command ...$rest
+    ^($mise_exe) $command ...$rest
   }
 }
 
@@ -50,7 +54,7 @@ def --env "update-env" [] {
 }
 
 def --env mise_hook [] {
-  ^"C:\\Users\\Chikurin\\scoop\\apps\\mise\\current\\bin\\mise.exe" hook-env -s nu
+  ^($mise_exe) hook-env -s nu
     | parse vars
     | update-env
 }
