@@ -1,0 +1,23 @@
+[wsl.files]
+"files/override/windows/wslconfig" = "~/.wslconfig"
+
+[latex.files]
+"files/override/windows/latexmkrc"                      = "~/.latexmkrc"
+"files/override/windows/indentconfig.yaml"              = "~/.indentconfig.yaml"
+"files/override/windows/latexindentconfig/default.yaml" = "~/.latexindentconfig/default.yaml"
+
+[nu.files]
+"files/override/windows/AppData/Roaming/nushell/config.nu" = "~/AppData/Roaming/nushell/config.nu"
+"files/override/windows/AppData/Roaming/nushell/cfg.nu"    = "~/AppData/Roaming/nushell/cfg.nu"
+"files/override/windows/AppData/Roaming/nushell/color.nu"  = "~/AppData/Roaming/nushell/color.nu"
+"files/override/windows/AppData/Roaming/nushell/detail.nu" = "~/AppData/Roaming/nushell/detail.nu"
+"files/override/windows/AppData/Roaming/nushell/env.nu"    = "~/AppData/Roaming/nushell/env.nu"
+"files/override/windows/AppData/Roaming/nushell/hooks.nu"  = "~/AppData/Roaming/nushell/hooks.nu"
+"files/override/windows/AppData/Roaming/nushell/key.nu"    = "~/AppData/Roaming/nushell/key.nu"
+"files/override/windows/AppData/Roaming/nushell/mise.nu"   = "~/AppData/Roaming/nushell/mise.nu"
+
+[wezterm]
+depends = ["wezterm"]
+
+[wezterm.files] # override
+"files/override/windows/config/wezterm/wezterm.lua" = "~/.config/wezterm/wezterm.lua"
