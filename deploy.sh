@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-if which -s nix; then
+if which nix > /dev/null 2>&1; then
     home-manager switch --flake ~/dotfiles -b bak
     exit $?
 fi
 
-if which -s dotter; then
+if which dotter > /dev/null 2>&1; then
     dotter deploy --force
     exit $?
 fi
