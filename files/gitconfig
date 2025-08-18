@@ -10,5 +10,5 @@
     defaultBranch = "main"
 
 [include]
-    path = "~/.config/git/commit_template"
-    path = "~/.config/git/diff"
+    path = "~/.config/git/commit_template.gitconfig"
+    path = "~/.config/git/diff.gitconfig"

@@ -6,9 +6,9 @@
   ".gitconfig".source                                   = ../../files/gitconfig;
   ".config/starship.toml".source                        = ../../files/config/starship.toml;
   ".config/ghostty/config".source                       = ../../files/config/ghostty/config;
-  ".config/git/commit_template".source                  = ../../files/config/git/commit_template;
+  ".config/git/commit_template.gitconfig".source        = ../../files/config/git/commit_template.gitconfig;
   ".config/git/commit_template.txt".source              = ../../files/config/git/commit_template.txt;
-  ".config/git/diff".source                             = ../../files/config/git/diff;
+  ".config/git/diff.gitconfig".source                   = ../../files/config/git/diff.gitconfig;
   ".config/lazygit/config.yml".source                   = ../../files/config/lazygit/config.yml;
   ".config/mise/config.toml".source                     = ../../files/config/mise/config.toml;
   ".config/nvim/init.lua".source                        = ../../files/config/nvim/init.lua;
