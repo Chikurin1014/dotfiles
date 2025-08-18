@@ -3,7 +3,6 @@
     email = "chikurin1014@gmail.com"
 
 [core]
-    autocrlf = true
     editor = "code --wait"
 
 [init]
