@@ -48,6 +48,7 @@ with pkgs;
   sd
   sheldon
   starship
+  tealdeer
   zellij
   # runtime / package manager
   mise
