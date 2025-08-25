@@ -1,6 +1,4 @@
 [wsl2]
 memory=4GB
-
-[interop]
-appendWindowsPath = false
+networkingMode=mirrored
 
