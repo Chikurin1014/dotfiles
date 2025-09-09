@@ -27,6 +27,10 @@
         "nix-command"
         "flakes"
       ];
+      trusted-users = [
+        "root"
+        "chikurin"
+      ];
     };
 
     gc = {
