@@ -27,7 +27,7 @@ theme.show_new_tab_button_in_tab_bar = false
 theme.show_close_tab_button_in_tabs = false
 theme.background = {
     {
-        source = { File = home .. '/Pictures/wezterm/bg.png' },
+        source = { File = '~/Pictures/wezterm/bg.png' },
         hsb = {
             hue = 0.95,
             saturation = 1.0,
