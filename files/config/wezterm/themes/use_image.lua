@@ -4,6 +4,10 @@ local os = require 'os'
 
 local theme = {}
 
+local unix_home = os.getenv("HOME")
+local windows_home = "C:\\Users\\chikurin"
+local home = unix_home and unix_home or windows_home
+
 theme.use_fancy_tab_bar = true
 theme.window_frame = {
     font = wezterm.font_with_fallback {
@@ -27,7 +31,7 @@ theme.show_new_tab_button_in_tab_bar = false
 theme.show_close_tab_button_in_tabs = false
 theme.background = {
     {
-        source = { File = '~/Pictures/wezterm/bg.png' },
+        source = { File = home .. '/Pictures/wezterm/bg.png' },
         hsb = {
             hue = 0.95,
             saturation = 1.0,
