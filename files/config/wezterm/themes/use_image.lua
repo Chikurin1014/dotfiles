@@ -2,9 +2,6 @@ local wezterm = require 'wezterm'
 
 local os = require 'os'
 
-local user = os.getenv("USER")
-local home = os.getenv("HOME") or ("/home/" .. user)
-
 local theme = {}
 
 theme.use_fancy_tab_bar = true
