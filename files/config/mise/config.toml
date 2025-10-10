@@ -1,6 +1,5 @@
 [tools]
 uv = 'latest'
-rust = 'latest'
 zig = 'latest'
 
 [settings]

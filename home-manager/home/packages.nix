@@ -52,5 +52,6 @@ with pkgs;
   zellij
   # runtime / package manager
   mise
+  rustup
   nodePackages.npm
 ]
