@@ -4,21 +4,21 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main",
             "Updated": {
-                "value": "\/Date(1760070579000)\/",
+                "value": "\/Date(1760387340000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2025年10月10日 13:29:39"
+                "DateTime": "2025年10月14日 5:29:00"
             },
-            "Manifests": 1404
+            "Manifests": 1406
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1760070645000)\/",
+                "value": "\/Date(1760387343000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2025年10月10日 13:30:45"
+                "DateTime": "2025年10月14日 5:29:03"
             },
-            "Manifests": 2194
+            "Manifests": 2196
         }
     ],
     "apps": [
@@ -112,6 +112,13 @@
             "Name": "git",
             "Version": "2.51.0.2",
             "Updated": "\/Date(1759975437544)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "latexindent",
+            "Version": "3.24.7",
+            "Updated": "\/Date(1760398740322)\/"
         },
         {
             "Info": "",
