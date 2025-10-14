@@ -115,13 +115,6 @@
         },
         {
             "Info": "",
-            "Source": "main",
-            "Name": "latexindent",
-            "Version": "3.24.7",
-            "Updated": "\/Date(1760398740322)\/"
-        },
-        {
-            "Info": "",
             "Source": "extras",
             "Name": "lazygit",
             "Version": "0.55.1",
@@ -252,6 +245,13 @@
             "Name": "tectonic",
             "Version": "0.15.0",
             "Updated": "\/Date(1759975631302)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "tex-fmt",
+            "Version": "0.5.6",
+            "Updated": "\/Date(1760406937052)\/"
         },
         {
             "Info": "",
