@@ -69,7 +69,7 @@ If you don't use **Nix**, you can use **Dotter** to manage your dotfiles. You ca
   >
   > ```toml
   > includes = [".dotter/windows.toml"]
-  > packages = ["default", "wsl", "latex"]
+  > packages = ["default", "wsl", "latex", "nushell"]
   > ```
 
 - **Nothing**
