@@ -3,20 +3,20 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2025-10-16T21:31:53+09:00",
-            "Manifests": 1406
+            "Updated": "2025-10-26T17:29:25+09:00",
+            "Manifests": 1407
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2025-10-16T21:31:24+09:00",
-            "Manifests": 2197
+            "Updated": "2025-10-26T17:29:20+09:00",
+            "Manifests": 2206
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2025-10-16T22:03:19+09:00",
-            "Manifests": 526
+            "Updated": "2025-10-26T17:38:46+09:00",
+            "Manifests": 529
         }
     ],
     "apps": [
@@ -96,6 +96,13 @@
             "Info": "",
             "Source": "main",
             "Updated": "2025-10-16T23:23:52.0138693+09:00"
+        },
+        {
+            "Name": "gh",
+            "Version": "2.82.1",
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-10-23T21:44:23.2015152+09:00"
         },
         {
             "Name": "git",
