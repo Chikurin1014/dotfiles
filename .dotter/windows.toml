@@ -39,6 +39,7 @@ depends = ["neovim"]
 "files/config/nvim/lua/plugins/scrollbar.lua"                   = "~/AppData/Local/nvim/lua/plugins/scrollbar.lua"
 "files/config/nvim/lua/plugins/sidebar.lua"                     = "~/AppData/Local/nvim/lua/plugins/sidebar.lua"
 "files/config/nvim/lua/plugins/telescope.lua"                   = "~/AppData/Local/nvim/lua/plugins/telescope.lua"
+"files/config/nvim/lua/plugins/treesitter.lua"                  = "~/AppData/Local/nvim/lua/plugins/treesitter.lua"
 "files/config/nvim/lua/plugins/which_key.lua"                   = "~/AppData/Local/nvim/lua/plugins/which_key.lua"
 "files/override/windows/config/nvim/lua/plugins/toggleterm.lua" = "~/AppData/Local/nvim/lua/plugins/toggleterm.lua"
 

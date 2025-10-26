@@ -7,9 +7,7 @@ return {
             vim.o.timeoutlen = 300
         end,
         config = function()
-            local map = vim.api.nvim_set_keymap
-            local opts = { noremap = true, silent = true }
-            map('n', '<F1>', '<cmd>WhichKey<cr>', opts)
+            vim.keymap.set('n', '<F1>', '<cmd>WhichKey<cr>', { noremap = true, silent = true })
         end,
         opts = {
             -- your configuration comes here

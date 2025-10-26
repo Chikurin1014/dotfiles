@@ -6,13 +6,12 @@ return {
         config = function()
             local shell = 'nu'
             local map = vim.api.nvim_set_keymap
-            local opts = {}
             local Terminal = require('toggleterm.terminal').Terminal
             local sh = Terminal:new({ cmd = shell .. ' -l', hidden = true, direction = 'float' })
             function _sh_toggle()
                 sh:toggle()
             end
-            map('n', '<leader>t', '<CMD>lua _sh_toggle()<CR>', opts)
+            vim.keymap.set('n', '<leader>tt', _sh_toggle, { desc = 'Toggle Terminal' })
         end
     }
 }

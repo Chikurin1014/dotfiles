@@ -12,10 +12,6 @@ return {
                 debounce_text_change = 150,
             }
 
-            vim.keymap.set('n', '<leader>n', function()
-                notify.dissmiss { silent = true }
-            end, { desc = 'Close all notifications' })
-
             notify.setup({
                 on_attach = on_attach,
                 lsp_flags = lsp_flags,
@@ -28,4 +24,3 @@ return {
         end
     }
 }
-

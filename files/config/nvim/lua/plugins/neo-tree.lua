@@ -21,10 +21,7 @@ return {
                     },
                 }
             })
-            local map = vim.api.nvim_set_keymap
-            local opts = { noremap = true, silent = true }
-            map('n', '<leader><C-b>', '<cmd>Neotree toggle<cr>', opts)
+            vim.keymap.set('n', '<leader>tb', '<cmd>Neotree toggle<cr>', { noremap = true, silent = true, desc = 'Toggle Neotree' })
         end
     }
 }
-

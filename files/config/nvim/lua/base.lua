@@ -22,7 +22,6 @@ vim.opt.smarttab = true
 vim.opt.breakindent = true
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
-vim.opt.wrap = true
 vim.opt.helplang = 'ja', 'en'
 vim.opt.updatetime = 300
 vim.opt.showtabline = 2
@@ -31,12 +30,19 @@ vim.opt.termguicolors = true
 vim.opt.signcolumn = 'yes' --行数表示の横に余白を追加
 vim.opt.hidden = true
 vim.opt.swapfile = false --スワップファイルを生成しない
-vim.opt.wrap = true --端までコードが届いた際に折り返す
+vim.opt.wrap = false --端までコードが届いた際に折り返さない
 
 -- float-transparent
 vim.opt.winblend = 5 --フロートウィンドウなどを若干透明に
+
+-- keymap
+vim.g.mapleader = ' '
+vim.keymap.set('n', '<leader>t', '', { desc = 'Toggle' })
+vim.keymap.set('n', '<leader>f', '', { desc = 'Find' })
+vim.keymap.set('n', '<leader>b', '', { desc = 'Buffer' })
+vim.keymap.set('n', '<leader>w', '', { desc = 'Close Window' })
+
 -- Python3
 vim.cmd([[
     let g:python3_host_prog = '/usr/bin/python3'
 ]])
-

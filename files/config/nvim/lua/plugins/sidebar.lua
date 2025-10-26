@@ -4,7 +4,7 @@ return {
         config = function()
             sidebar = require('sidebar-nvim')
 
-            vim.keymap.set('n', '<leader>sb', sidebar.toggle, { desc = 'Toggle Sidebar' })
+            vim.keymap.set('n', '<leader>ts', sidebar.toggle, { desc = 'Toggle Sidebar' })
 
             sidebar.setup({
                 open = false,
@@ -15,4 +15,3 @@ return {
         end
     }
 }
-
