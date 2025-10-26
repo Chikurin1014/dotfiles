@@ -121,6 +121,8 @@ deploy-dotfiles
 > ```shell
 > scoop import scoop.json
 > ```
+>
+> You should install Firge Nerd Font **manually** from [Releases · yuru7/Firge](https://github.com/yuru7/Firge/releases).
 
 After installing packages, you can install language runtimes by the following command:
 
