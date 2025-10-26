@@ -5,7 +5,7 @@ local os = require 'os'
 local theme = {}
 
 local unix_home = os.getenv("HOME")
-local windows_home = "C:\\Users\\" .. os.getenv("USERNAME")
+local windows_home = os.getenv("USERPROFILE")
 local home = unix_home and unix_home or windows_home
 
 theme.use_fancy_tab_bar = true
