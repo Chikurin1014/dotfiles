@@ -13,7 +13,8 @@ local keys = {
 
     { key = 'c', mods = 'SHIFT|CTRL', action = act.CopyTo 'Clipboard' },
     { key = 'v', mods = 'SHIFT|CTRL', action = act.PasteFrom 'Clipboard' },
-    { key = 'phys:Space', mods = 'SHIFT|CTRL', action = act.TogglePaneZoomState },
+    { key = 'p', mods = 'SHIFT|CTRL', action = act.ActivateCommandPalette },
+    { key = 'z', mods = 'SHIFT|CTRL', action = act.TogglePaneZoomState },
 
     { key = 'h', mods = 'ALT|CTRL', action = act.AdjustPaneSize{ 'Left', 1 } },
     { key = 'j', mods = 'ALT|CTRL', action = act.AdjustPaneSize{ 'Down', 1 } },
@@ -21,7 +22,7 @@ local keys = {
     { key = 'l', mods = 'ALT|CTRL', action = act.AdjustPaneSize{ 'Right', 1 } },
 
     { key = 'm', mods = 'ALT|SHIFT|CTRL', action = act.Hide },
-    { key = 'phys:Space', mods = 'ALT|SHIFT|CTRL', action = act.ToggleFullScreen },
+    { key = 'z', mods = 'ALT|SHIFT|CTRL', action = act.ToggleFullScreen },
 
     { key = 'h', mods = 'LEADER', action = act.ActivatePaneDirection 'Left' },
     { key = 'j', mods = 'LEADER', action = act.ActivatePaneDirection 'Down' },
@@ -35,8 +36,8 @@ local keys = {
     { key = '<', mods = 'LEADER', action = act.ActivateTabRelative(-1) },
     { key = 't', mods = 'LEADER', action = act.SpawnTab 'CurrentPaneDomain' },
     { key = 'w', mods = 'LEADER', action = act.CloseCurrentTab{ confirm = true } },
-    { key = 'n', mods = 'LEADER', action = act.SpawnWindow },
-    { key = 'p', mods = 'LEADER', action = act.ActivateCommandPalette },
+    { key = 'n', mods = 'LEADER', action = act.MoveTabRelative(1) },
+    { key = 'p', mods = 'LEADER', action = act.MoveTabRelative(-1) },
     { key = 'r', mods = 'LEADER', action = act.ReloadConfiguration },
     { key = '[', mods = 'LEADER', action = act.ActivateCopyMode },
     { key = '/', mods = 'LEADER', action = act.Search 'CurrentSelectionOrEmptyString' },
@@ -45,8 +46,8 @@ local keys = {
     { key = 'j', mods = 'LEADER|SHIFT', action = act.SplitPane{ direction =  'Down' } },
     { key = 'k', mods = 'LEADER|SHIFT', action = act.SplitPane{ direction =  'Up' } },
     { key = 'l', mods = 'LEADER|SHIFT', action = act.SplitPane{ direction =  'Right' } },
-    { key = 'n', mods = 'LEADER|SHIFT|CTRL', action = act.MoveTabRelative(1) },
-    { key = 'p', mods = 'LEADER|SHIFT|CTRL', action = act.MoveTabRelative(-1) },
+
+    { key = 'n', mods = 'LEADER|SHIFT|CTRL', action = act.SpawnWindow },
 }
 
 return keys
