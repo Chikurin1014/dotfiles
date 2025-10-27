@@ -2,6 +2,9 @@ return {
     {
         'rebelot/kanagawa.nvim',
         lazy = false,
+        dependencies = {
+            'akinsho/bufferline.nvim',
+        },
         config = function()
             local kanagawa = require('kanagawa')
             kanagawa.setup({

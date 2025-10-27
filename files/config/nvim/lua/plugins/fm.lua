@@ -1,6 +1,7 @@
 return {
     {
         'is0n/fm-nvim',
+        lazy = true,
         config = function()
             require('fm-nvim').setup({
                 default = 'float',

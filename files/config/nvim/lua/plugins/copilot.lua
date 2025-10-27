@@ -1,6 +1,6 @@
 return {
     {
         'github/copilot.vim',
-        lazy=false,
+        lazy=true,
     }
 }
