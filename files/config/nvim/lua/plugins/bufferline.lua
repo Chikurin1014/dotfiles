@@ -6,15 +6,16 @@ return {
         config = function()
             vim.opt.termguicolors = true
             local bufferline = require('bufferline')
-            bufferline.setup {
+            bufferline.setup({
                 options = {
                     mode = 'buffers',
                     style_preset = bufferline.style_preset.default,
+                    themable = true,
                     numbers = 'none',
                     color_icons = true,
                     separator_style = 'slant'
                 },
-            }
+            })
             vim.keymap.set('n', '<leader>b', '', { desc = 'Buffer' })
             vim.keymap.set('n', '<leader>bh', '<cmd>BufferLineCyclePrev<cr>', { noremap = true, silent = true, desc = 'Go to Prev' })
             vim.keymap.set('n', '<leader>bl', '<cmd>BufferLineCycleNext<cr>', { noremap = true, silent = true, desc = 'Go to Next' })

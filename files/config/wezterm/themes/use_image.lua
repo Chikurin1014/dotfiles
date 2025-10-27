@@ -35,7 +35,7 @@ theme.background = {
         hsb = {
             hue = 0.95,
             saturation = 1.0,
-            brightness = 0.6,
+            brightness = 0.3,
         },
         height = 'Cover',
         width = 'Cover',
