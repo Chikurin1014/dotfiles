@@ -26,7 +26,7 @@ customCommands:
           - name: ":bug:"
             description: "🐛 Fix bugs"
             value: ":bug:"
-          - name: "adhesive_bandage:"
+          - name: ":adhesive_bandage:"
             description: "🩹 Simple fix for a non-critical issue"
             value: ":adhesive_bandage:"
           - name: ":ambulance:"
@@ -65,9 +65,6 @@ customCommands:
       - type: "input"
         title: "Enter the Message"
         key: "Message"
-        initialValue: ""
-      - type: "confirm"
-        title: "Commit"
-        body: "Commit with the message '{{.Form.Emoji}} {{.Form.Message}}'. Is this okay?"
-    command: 'git commit -m "{{.Form.Emoji}} {{.Form.Message}}"'
+        initialValue: "{{.Form.Emoji}} "
+    command: 'git commit -m "{{.Form.Message}}"'
     loadingText: "Commiting..."
