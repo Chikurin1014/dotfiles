@@ -1,7 +1,7 @@
 [helpers]
 
 [default]
-depends = ["clang-format", "ghostty", "git", "mise", "neovim", "wezterm", "zellij", "zsh"]
+depends = ["clang-format", "ghostty", "git", "lazygit", "mise", "neovim", "wezterm", "zellij", "zsh"]
 
 [clang-format.files]
 "files/clang-format" = "~/.clang-format"
@@ -14,6 +14,8 @@ depends = ["clang-format", "ghostty", "git", "mise", "neovim", "wezterm", "zelli
 "files/config/git/commit_template.gitconfig" = "~/.config/git/commit_template.gitconfig"
 "files/config/git/commit_template.txt"       = "~/.config/git/commit_template.txt"
 "files/config/git/diff.gitconfig"            = "~/.config/git/diff.gitconfig"
+
+[lazygit.files]
 "files/config/lazygit/config.yml"            = "~/.config/lazygit/config.yml"
 
 [mise.files]

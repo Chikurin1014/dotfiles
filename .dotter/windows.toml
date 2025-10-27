@@ -7,6 +7,13 @@
 "files/override/windows/latexindentconfig/default.yaml" = "~/.latexindentconfig/default.yaml"
 "files/override/windows/config/tex-fmt/tex-fmt.toml"    = "~/AppData/Roaming/tex-fmt/tex-fmt.toml"
 
+# override
+[lazygit]
+depends = ["lazygit"]
+
+[lazygit.files]
+"files/config/lazygit/config.yml" = "~/AppData/Local/lazygit/config.yml"
+
 [nushell.files]
 "files/override/windows/config/nushell/config.nu"                   = "~/AppData/Roaming/nushell/config.nu"
 "files/override/windows/config/nushell/vendor/autoload/mise.nu"     = "~/AppData/Roaming/nushell/vendor/autoload/mise.nu"

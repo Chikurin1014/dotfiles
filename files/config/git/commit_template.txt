@@ -4,7 +4,7 @@
 #   :sparkles:                  ✨ Introduce new features.
 #   :zap:                       ⚡️ Improve performance.
 #   :fire:                      🔥 Remove code or files.
-#   :bug:                       🐛 Fix a bug.
+#   :bug:                       🐛 Fix bugs.
 # Modification
 #   :adhesive_bandage:          🩹 Simple fix for a non-critical issue.
 #   :ambulance:                 🚑️ Critical hotfix.
