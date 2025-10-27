@@ -41,8 +41,9 @@ return {
                     vim.treesitter.start()
                     -- folds, provided by Neovim
                     vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
-                    -- indentation, provided by nvim-treesitter
-                    vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+                    -- indentation, provided by nvim-treesitter 
+                    -- NOTE: commented out due to disturbing autoindent
+                    -- vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
                 end,
             })
         end
