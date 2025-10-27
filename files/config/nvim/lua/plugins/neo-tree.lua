@@ -21,7 +21,7 @@ return {
                     },
                 }
             })
-            vim.keymap.set('n', '<leader>tb', '<cmd>Neotree toggle<cr>', { noremap = true, silent = true, desc = 'Toggle Neotree' })
+            vim.keymap.set('n', '<leader>te', '<cmd>Neotree toggle<cr>', { desc = 'Toggle Explorer' })
         end
     }
 }

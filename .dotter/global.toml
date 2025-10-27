@@ -22,6 +22,7 @@ depends = ["clang-format", "ghostty", "git", "mise", "neovim", "wezterm", "zelli
 [neovim.files]
 "files/config/nvim/init.lua"                        = "~/.config/nvim/init.lua"
 "files/config/nvim/lua/base.lua"                    = "~/.config/nvim/lua/base.lua"
+"files/config/nvim/lua/keymaps.lua"                 = "~/.config/nvim/lua/keymaps.lua"
 "files/config/nvim/lua/lazy_nvim.lua"               = "~/.config/nvim/lua/lazy_nvim.lua"
 "files/config/nvim/lua/plugins/alpha.lua"           = "~/.config/nvim/lua/plugins/alpha.lua"
 "files/config/nvim/lua/plugins/autopairs.lua"       = "~/.config/nvim/lua/plugins/autopairs.lua"

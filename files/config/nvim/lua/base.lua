@@ -35,21 +35,6 @@ vim.opt.wrap = false --端までコードが届いた際に折り返さない
 -- float-transparent
 vim.opt.winblend = 5 --フロートウィンドウなどを若干透明に
 
--- keymap
-vim.g.mapleader = ' '
-vim.keymap.set('n', '<leader>t', '', { desc = 'Toggle' })
-vim.keymap.set('n', '<leader>w', '<C-w>', { noremap = true, desc = 'Window' })
-
-vim.keymap.set('n', '<leader>wh', '<C-w>h', { noremap = true, desc = 'Go to the left window' })
-vim.keymap.set('n', '<leader>wj', '<C-w>j', { noremap = true, desc = 'Go to the down window' })
-vim.keymap.set('n', '<leader>wk', '<C-w>k', { noremap = true, desc = 'Go to the up window' })
-vim.keymap.set('n', '<leader>wl', '<C-w>l', { noremap = true, desc = 'Go to the right window' })
-vim.keymap.set('n', '<leader>wH', '<C-w>H', { noremap = true, desc = 'Move window to far left' })
-vim.keymap.set('n', '<leader>wJ', '<C-w>J', { noremap = true, desc = 'Move window to far bottom' })
-vim.keymap.set('n', '<leader>wK', '<C-w>K', { noremap = true, desc = 'Move window to far top' })
-vim.keymap.set('n', '<leader>wL', '<C-w>L', { noremap = true, desc = 'Move window to far right' })
-vim.keymap.set('n', '<leader>wo', '<C-w>o', { noremap = true, desc = 'Close all other windows' })
-
 -- Python3
 vim.cmd([[
     let g:python3_host_prog = '/usr/bin/python3'

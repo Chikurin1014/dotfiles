@@ -19,6 +19,7 @@ depends = ["neovim"]
 [neovim.files]
 "files/config/nvim/init.lua"                                    = "~/AppData/Local/nvim/init.lua"
 "files/config/nvim/lua/base.lua"                                = "~/AppData/Local/nvim/lua/base.lua"
+"files/config/nvim/lua/keymaps.lua"                             = "~/AppData/Local/nvim/lua/keymaps.lua"
 "files/config/nvim/lua/lazy_nvim.lua"                           = "~/AppData/Local/nvim/lua/lazy_nvim.lua"
 "files/config/nvim/lua/plugins/alpha.lua"                       = "~/AppData/Local/nvim/lua/plugins/alpha.lua"
 "files/config/nvim/lua/plugins/autopairs.lua"                   = "~/AppData/Local/nvim/lua/plugins/autopairs.lua"
