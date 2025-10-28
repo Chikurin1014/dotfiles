@@ -35,7 +35,6 @@ with pkgs;
   # shell tools
   bat
   btop
-  broot
   dust
   direnv
   difftastic
@@ -49,6 +48,7 @@ with pkgs;
   sheldon
   starship
   tealdeer
+  yazi
   zellij
   # runtime / package manager
   mise

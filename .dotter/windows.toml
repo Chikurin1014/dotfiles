@@ -18,6 +18,7 @@ depends = ["lazygit"]
 "files/override/windows/config/nushell/config.nu"                   = "~/AppData/Roaming/nushell/config.nu"
 "files/override/windows/config/nushell/vendor/autoload/mise.nu"     = "~/AppData/Roaming/nushell/vendor/autoload/mise.nu"
 "files/override/windows/config/nushell/vendor/autoload/starship.nu" = "~/AppData/Roaming/nushell/vendor/autoload/starship.nu"
+"files/override/windows/config/nushell/vendor/autoload/yazi.nu"     = "~/AppData/Roaming/nushell/vendor/autoload/yazi.nu"
 
 # override
 [neovim]
