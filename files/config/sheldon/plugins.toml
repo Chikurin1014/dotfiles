@@ -80,7 +80,7 @@ inline = "export FZF_DEFAULT_COMMAND='fd'"
 inline = 'eval "$(starship init zsh)"'
 
 [plugins.yazi]
-inline = 'function y() { local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd; yazi "$@" --cwd-file="$tmp"; IFS= read -r -d '' cwd < "$tmp"; [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"; rm -f -- "$tmp" }'
+inline = 'function y() { local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd; yazi "$@" --cwd-file="$tmp"; IFS= read -r -d \"\" cwd < "$tmp"; [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"; rm -f -- "$tmp" }'
 
 [plugins.zellij_completions]
 inline = "source ~/.config/zellij/completion.zsh"
