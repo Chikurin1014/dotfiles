@@ -1,6 +1,7 @@
 [tools]
 uv = 'latest'
 zig = 'latest'
+zls = 'latest'
 
 [settings]
 python.uv_venv_auto = true
