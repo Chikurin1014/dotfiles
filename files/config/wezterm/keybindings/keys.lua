@@ -36,8 +36,6 @@ local keys = {
     { key = '<', mods = 'LEADER', action = act.ActivateTabRelative(-1) },
     { key = 't', mods = 'LEADER', action = act.SpawnTab 'CurrentPaneDomain' },
     { key = 'w', mods = 'LEADER', action = act.CloseCurrentTab{ confirm = true } },
-    { key = 'n', mods = 'LEADER', action = act.MoveTabRelative(1) },
-    { key = 'p', mods = 'LEADER', action = act.MoveTabRelative(-1) },
     { key = 'r', mods = 'LEADER', action = act.ReloadConfiguration },
     { key = '[', mods = 'LEADER', action = act.ActivateCopyMode },
     { key = '/', mods = 'LEADER', action = act.Search 'CurrentSelectionOrEmptyString' },
@@ -46,6 +44,11 @@ local keys = {
     { key = 'j', mods = 'LEADER|SHIFT', action = act.SplitPane{ direction =  'Down' } },
     { key = 'k', mods = 'LEADER|SHIFT', action = act.SplitPane{ direction =  'Up' } },
     { key = 'l', mods = 'LEADER|SHIFT', action = act.SplitPane{ direction =  'Right' } },
+    { key = 'n', mods = 'LEADER|SHIFT', action = act.MoveTabRelative(1) },
+    { key = 'p', mods = 'LEADER|SHIFT', action = act.MoveTabRelative(-1) },
+
+    { key = 'l', mods = 'LEADER|ALT', action = act.ActivateTabRelative(1) },
+    { key = 'h', mods = 'LEADER|ALT', action = act.ActivateTabRelative(-1) },
 
     { key = 'n', mods = 'LEADER|SHIFT|CTRL', action = act.SpawnWindow },
 }
