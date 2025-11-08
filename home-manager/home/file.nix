@@ -13,6 +13,7 @@
   ".config/mise/config.toml".source                     = ../../files/config/mise/config.toml;
   ".config/nvim/init.lua".source                        = ../../files/config/nvim/init.lua;
   ".config/nvim/lua/base.lua".source                    = ../../files/config/nvim/lua/base.lua;
+  ".config/nvim/lua/keymaps.lua".source                 = ../../files/config/nvim/lua/keymaps.lua;
   ".config/nvim/lua/lazy_nvim.lua".source               = ../../files/config/nvim/lua/lazy_nvim.lua;
   ".config/nvim/lua/plugins/alpha.lua".source           = ../../files/config/nvim/lua/plugins/alpha.lua;
   ".config/nvim/lua/plugins/autopairs.lua".source       = ../../files/config/nvim/lua/plugins/autopairs.lua;
