@@ -9,7 +9,10 @@ let
     };
   };
 in
-{ pkgs ? flakeInput, lib ? pkgs.lib }:
+{
+  pkgs ? flakeInput,
+  lib ? pkgs.lib,
+}:
 
 let
   repository-url = "https://github.com/yuru7/Firge";

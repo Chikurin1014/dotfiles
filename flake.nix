@@ -59,6 +59,8 @@
           inherit (pkgs) home-manager firge-nerd;
           homeConfigurations.chikurin = import ./home-manager { inherit pkgs home-manager nixgl; };
         };
+
+        formatter = nixpkgs.legacyPackages.x86_64-linux.nixfmt-tree;
       }
     );
 }
