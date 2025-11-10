@@ -9,53 +9,66 @@
 #     bg: #282C34
 
 format = """
-$username[@](fg:#AAB2BF)$hostname$directory\
-$git_branch$git_commit$git_state$git_status$hg_branch\n\
+$username[@](fg:#AAB2BF)$hostname$localip$directory\
+$git_branch$git_commit$git_state$git_status\
+$nix_shell\
+\n\
 $character
 """
 add_newline = false
 
 [username]
-show_always = true
+format = "[$user]($style)"
 style_user = "fg:#66CDAA"
 style_root = "fg:#E9967A"
-format = "[$user]($style)"
+show_always = true
 
 [hostname]
+format = "[$hostname]($style)"
 style = "fg:#66CDAA"
 ssh_only = false
-format = "[$hostname]($style)"
+
+[localip]
+format = "([$localipv4]($style))"
+style = "fig:#66CDAA"
+ssh_only = true
+disabled = false
 
 [directory]
+format = "[$read_only]($read_only_style) [$path]($style) "
 style = "fg:#FFB6C1"
 read_only = "\uf023 "                                      #  (nf-fa-lock)
 read_only_style = "fg:#ABB2BF"
-format = "[$read_only]($read_only_style) [$path]($style) "
 truncate_to_repo = true
 truncation_length = 0
 
+[character]
+format = "$symbol "
+success_symbol = "[\uf00c \uf054](green)" #     (nf-fa-check nf-fa-chevron_right)
+error_symbol = "[\uf00d \uf054](red)"     #   (nf-fa-remove nf-fa-chevron_right)
+
 [git_branch]
-always_show_remote = false
 format = "[$symbol$branch(:$remote_branch)]($style) "
-symbol = "\ue725 "                                    #  (nf-dev-git_branch)
 style = "fg:#98C379"
+symbol = "\ue725 "                                    #  (nf-dev-git_branch)
+always_show_remote = false
 truncation_length = 9223372036854775807
 truncation_symbol = "…"
 only_attached = false
 ignore_branches = []
-disabled = false
 
 [git_commit]
-commit_hash_length = 7
 format = '[\($tag$hash\)]($style) '
+style = "fg:#98C379"
 only_detached = true
 tag_disabled = true
 tag_max_candidates = 0
 tag_symbol = "\uf412 "              #  (nf-oct-tag)
-disabled = false
-style = "fg:#98C379"
+commit_hash_length = 7
 
 [git_state]
+format = '[\($state( $progress_current/$progress_total)\) ]($style)'
+style = "fg:#98C379"
 rebase = "REBASING"
 merge = "MERGING"
 revert = "REVERTING"
@@ -63,12 +76,10 @@ cherry_pick = "CHERRY-PICKING"
 bisect = "BISECTING"
 am = "AM"
 am_or_rebase = "AM/REBASE"
-style = "fg:#98C379"
-format = '[\($state( $progress_current/$progress_total)\) ]($style)'
-disabled = false
 
 [git_status]
 format = '[$ahead_behind  $all_status]($style)'
+style = "fg:#98C379"
 conflicted = "= "
 ahead = "\u21e1 "                               # ⇡
 behind = "\u21e3 "                              # ⇣
@@ -80,11 +91,7 @@ modified = "\uf044 "                            #  (nf-fa-edit)
 renamed = "\uf45a "                             #  (nf-oct-diff_renamed)
 deleted = "\u2718 "                             # ✘
 staged = "\uf067 "                              #  (nf-fa-plus)
-style = "fg:#98C379"
 ignore_submodules = false
-disabled = false
 
-[character]
-format = "$symbol "
-success_symbol = "[\uf00c \uf054](green)" #     (nf-fa-check nf-fa-chevron_right)
-error_symbol = "[\uf00d \uf054](red)"     #   (nf-fa-remove nf-fa-chevron_right)
+[nix_shell]
+heuristic = true
