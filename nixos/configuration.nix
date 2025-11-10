@@ -40,8 +40,13 @@
     };
   };
 
+  virtualisation.docker = {
+    enable = true;
+  };
+
   users.users.chikurin = {
     shell = pkgs.zsh;
+    extraGroups = [ "docker" ];
   };
 
   programs = {
