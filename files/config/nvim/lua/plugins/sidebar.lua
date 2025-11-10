@@ -1,7 +1,7 @@
 return {
     {
         'sidebar-nvim/sidebar.nvim',
-        lazy = true,
+        lazy = false,
         config = function()
             sidebar = require('sidebar-nvim')
 
