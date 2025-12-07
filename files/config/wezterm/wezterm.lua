@@ -27,6 +27,7 @@ config.default_cursor_style = 'BlinkingBar'
 
 config.font = font.property
 config.font_size = font.size
+config.warn_about_missing_glyphs = false
 config.color_scheme = theme.color_scheme
 config.colors = theme.colors
 config.use_fancy_tab_bar = theme.use_fancy_tab_bar
