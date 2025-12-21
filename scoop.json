@@ -2,21 +2,33 @@
     "buckets": [
         {
             "Name": "main",
-            "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2025-10-26T17:29:25+09:00",
-            "Manifests": 1407
+            "Source": "https://github.com/ScoopInstaller/Main",
+            "Updated": {
+                "value": "\/Date(1766277999000)\/",
+                "DisplayHint": 2,
+                "DateTime": "2025年12月21日 9:46:39"
+            },
+            "Manifests": 1412
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2025-10-26T17:29:20+09:00",
-            "Manifests": 2206
+            "Updated": {
+                "value": "\/Date(1766273236000)\/",
+                "DisplayHint": 2,
+                "DateTime": "2025年12月21日 8:27:16"
+            },
+            "Manifests": 2234
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2025-10-26T17:38:46+09:00",
-            "Manifests": 529
+            "Updated": {
+                "value": "\/Date(1766284459000)\/",
+                "DisplayHint": 2,
+                "DateTime": "2025年12月21日 11:34:19"
+            },
+            "Manifests": 544
         }
     ],
     "apps": [
@@ -25,266 +37,266 @@
             "Version": "25.01",
             "Info": "",
             "Source": "main",
-            "Updated": "2025-09-06T11:37:13.2440323+09:00"
+            "Updated": "\/Date(1766287532534)\/"
         },
         {
             "Name": "bat",
-            "Version": "0.25.0",
+            "Version": "0.26.1",
             "Info": "",
             "Source": "main",
-            "Updated": "2025-02-26T21:31:25.4603535+09:00"
+            "Updated": "\/Date(1766287970745)\/"
         },
         {
             "Name": "bun",
-            "Version": "1.3.0",
+            "Version": "1.3.5",
             "Info": "",
             "Source": "main",
-            "Updated": "2025-10-16T23:23:39.9499112+09:00"
+            "Updated": "\/Date(1766287980459)\/"
         },
         {
             "Name": "dark",
             "Version": "3.14.1",
             "Info": "",
             "Source": "main",
-            "Updated": "2025-09-06T11:48:03.4331966+09:00"
+            "Updated": "\/Date(1766287982156)\/"
         },
         {
             "Name": "difftastic",
-            "Version": "0.65.0",
+            "Version": "0.67.0",
             "Info": "",
             "Source": "main",
-            "Updated": "2025-10-16T23:23:46.4549245+09:00"
+            "Updated": "\/Date(1766287984111)\/"
         },
         {
             "Name": "direnv",
             "Version": "2.37.1",
             "Info": "",
             "Source": "main",
-            "Updated": "2025-10-16T23:23:48.0790168+09:00"
+            "Updated": "\/Date(1766287985335)\/"
         },
         {
             "Name": "dotter",
             "Version": "0.13.4",
             "Info": "",
             "Source": "main",
-            "Updated": "2025-09-06T11:37:26.4077261+09:00"
+            "Updated": "\/Date(1766287986384)\/"
         },
         {
             "Name": "dust",
             "Version": "1.2.3",
             "Info": "",
             "Source": "main",
-            "Updated": "2025-08-17T21:19:20.4690341+09:00"
+            "Updated": "\/Date(1766287987493)\/"
         },
         {
             "Name": "eza",
             "Version": "0.23.4",
             "Info": "",
             "Source": "main",
-            "Updated": "2025-10-16T23:23:49.9457034+09:00"
+            "Updated": "\/Date(1766287988618)\/"
         },
         {
             "Name": "fd",
             "Version": "10.3.0",
             "Info": "",
             "Source": "main",
-            "Updated": "2025-09-06T11:37:30.4098779+09:00"
+            "Updated": "\/Date(1766287989725)\/"
         },
         {
             "Name": "fzf",
-            "Version": "0.66.0",
+            "Version": "0.67.0",
             "Info": "",
             "Source": "main",
-            "Updated": "2025-10-16T23:23:52.0138693+09:00"
+            "Updated": "\/Date(1766287990655)\/"
         },
         {
             "Name": "gh",
-            "Version": "2.82.1",
+            "Version": "2.83.2",
             "Info": "",
             "Source": "main",
-            "Updated": "2025-10-23T21:44:23.2015152+09:00"
+            "Updated": "\/Date(1766287993062)\/"
         },
         {
             "Name": "git",
-            "Version": "2.51.0.2",
+            "Version": "2.52.0",
             "Info": "",
             "Source": "main",
-            "Updated": "2025-10-16T23:24:56.9596213+09:00"
+            "Updated": "\/Date(1766287583548)\/"
+        },
+        {
+            "Name": "innounp",
+            "Version": "2.66.1",
+            "Info": "",
+            "Source": "main",
+            "Updated": "\/Date(1766288682194)\/"
         },
         {
             "Name": "lazygit",
-            "Version": "0.55.1",
+            "Version": "0.57.0",
             "Info": "",
             "Source": "extras",
-            "Updated": "2025-10-16T23:24:59.0438072+09:00"
+            "Updated": "\/Date(1766287994789)\/"
         },
         {
             "Name": "less",
             "Version": "685",
             "Info": "",
             "Source": "main",
-            "Updated": "2025-10-16T23:25:01.5585813+09:00"
+            "Updated": "\/Date(1766287996124)\/"
         },
         {
             "Name": "mingw",
             "Version": "15.2.0-rt_v13-rev0",
             "Info": "",
             "Source": "main",
-            "Updated": "2025-09-06T11:43:05.9251831+09:00"
+            "Updated": "\/Date(1766288242395)\/"
         },
         {
             "Name": "mingw-winlibs-llvm-msvcrt",
             "Version": "14.2.0-19.1.7-12.0.0-r3",
             "Info": "",
             "Source": "versions",
-            "Updated": "2025-09-13T00:25:12.8254891+09:00"
+            "Updated": "\/Date(1766288424413)\/"
         },
         {
             "Name": "mise",
-            "Version": "2025.10.9",
+            "Version": "2025.12.12",
             "Info": "",
             "Source": "main",
-            "Updated": "2025-10-16T23:25:11.8684044+09:00"
+            "Updated": "\/Date(1766288427882)\/"
         },
         {
             "Name": "msys2",
-            "Version": "2025-08-30",
+            "Version": "2025-12-13",
             "Info": "",
             "Source": "main",
-            "Updated": "2025-09-06T11:44:07.5382832+09:00"
+            "Updated": "\/Date(1766288606137)\/"
         },
         {
             "Name": "navi",
             "Version": "2.24.0",
             "Info": "",
             "Source": "main",
-            "Updated": "2025-08-17T21:19:29.3522633+09:00"
+            "Updated": "\/Date(1766288610355)\/"
         },
         {
             "Name": "neovim",
-            "Version": "0.11.4",
+            "Version": "0.11.5",
             "Info": "",
             "Source": "main",
-            "Updated": "2025-09-06T11:44:17.7801129+09:00"
+            "Updated": "\/Date(1766288639049)\/"
         },
         {
             "Name": "nodejs",
-            "Version": "25.0.0",
+            "Version": "25.2.1",
             "Info": "",
             "Source": "main",
-            "Updated": "2025-10-16T15:04:38.5753505+09:00"
+            "Updated": "\/Date(1766288676762)\/"
         },
         {
             "Name": "nu",
-            "Version": "0.107.0",
+            "Version": "0.109.1",
             "Info": "",
             "Source": "main",
-            "Updated": "2025-09-06T11:44:20.841085+09:00"
+            "Updated": "\/Date(1766288680916)\/"
         },
         {
             "Name": "openssl",
             "Version": "3.6.0",
             "Info": "",
             "Source": "main",
-            "Updated": "2025-10-16T23:32:29.9459271+09:00"
+            "Updated": "\/Date(1766288792207)\/"
         },
         {
             "Name": "ripgrep",
-            "Version": "15.0.0",
+            "Version": "15.1.0",
             "Info": "",
             "Source": "main",
-            "Updated": "2025-10-16T23:32:32.4414957+09:00"
+            "Updated": "\/Date(1766288794991)\/"
         },
         {
             "Name": "rustup",
             "Version": "1.28.2",
             "Info": "",
             "Source": "main",
-            "Updated": "2025-09-09T14:28:06.9178216+09:00"
+            "Updated": "\/Date(1766288904449)\/"
         },
         {
             "Name": "sd",
             "Version": "1.0.0",
             "Info": "",
             "Source": "main",
-            "Updated": "2025-08-17T21:19:31.7569076+09:00"
+            "Updated": "\/Date(1766288905896)\/"
         },
         {
             "Name": "starship",
-            "Version": "1.23.0",
+            "Version": "1.24.1",
             "Info": "",
             "Source": "main",
-            "Updated": "2025-08-17T22:08:35.0233493+09:00"
-        },
-        {
-            "Name": "sudo",
-            "Version": "0.2020.01.26",
-            "Info": "",
-            "Source": "main",
-            "Updated": "2025-02-26T01:00:50.6326342+09:00"
+            "Updated": "\/Date(1766288908714)\/"
         },
         {
             "Name": "tealdeer",
-            "Version": "1.8.0",
+            "Version": "1.8.1",
             "Info": "",
             "Source": "main",
-            "Updated": "2025-10-16T23:32:34.2068249+09:00"
+            "Updated": "\/Date(1766288910432)\/"
         },
         {
             "Name": "tectonic",
             "Version": "0.15.0",
             "Info": "",
             "Source": "main",
-            "Updated": "2025-02-26T22:40:29.1411402+09:00"
+            "Updated": "\/Date(1766288913904)\/"
         },
         {
             "Name": "tex-fmt",
             "Version": "0.5.6",
             "Info": "",
             "Source": "extras",
-            "Updated": "2025-10-16T15:04:41.8022184+09:00"
+            "Updated": "\/Date(1766288916622)\/"
         },
         {
             "Name": "typst",
-            "Version": "0.13.1",
+            "Version": "0.14.2",
             "Info": "",
             "Source": "main",
-            "Updated": "2025-03-29T22:56:33.185851+09:00"
+            "Updated": "\/Date(1766288920941)\/"
         },
         {
             "Name": "vcredist2022",
-            "Version": "14.44.35211.0",
+            "Version": "14.50.35719.0",
             "Info": "",
             "Source": "extras",
-            "Updated": "2025-09-06T12:39:44.6291686+09:00"
+            "Updated": "\/Date(1766288939680)\/"
         },
         {
             "Name": "vcxsrv",
             "Version": "21.1.16.1",
             "Info": "",
             "Source": "extras",
-            "Updated": "2025-04-26T19:05:50.3073565+09:00"
-        },
-        {
-            "Name": "vscode",
-            "Version": "1.105.1",
-            "Info": "",
-            "Source": "extras",
-            "Updated": "2025-10-16T23:33:59.4924608+09:00"
+            "Updated": "\/Date(1766288963181)\/"
         },
         {
             "Name": "wezterm",
             "Version": "20240203-110809-5046fc22",
             "Info": "",
             "Source": "extras",
-            "Updated": "2025-02-26T21:11:16.394371+09:00"
+            "Updated": "\/Date(1766288971233)\/"
         },
         {
             "Name": "which",
             "Version": "2.20",
             "Info": "",
             "Source": "main",
-            "Updated": "2025-02-26T02:15:17.6177311+09:00"
+            "Updated": "\/Date(1766288973688)\/"
+        },
+        {
+            "Name": "yazi",
+            "Version": "25.5.31",
+            "Info": "",
+            "Source": "main",
+            "Updated": "\/Date(1766289215440)\/"
         }
     ]
 }
