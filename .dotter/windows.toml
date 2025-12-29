@@ -1,6 +1,9 @@
 [wsl.files]
 "files/override/windows/wslconfig" = "~/.wslconfig"
 
+[vcxsrv.files]
+"files/override/windows/config.xlaunch" = "~/.config.xlaunch"
+
 [latex.files]
 "files/override/windows/latexmkrc"                      = "~/.latexmkrc"
 "files/override/windows/indentconfig.yaml"              = "~/.indentconfig.yaml"
