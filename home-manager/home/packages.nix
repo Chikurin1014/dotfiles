@@ -8,6 +8,7 @@ let
 in
 with pkgs;
 [
+  nixd
   nixfmt-rfc-style
   cachix
   # japanese input system
