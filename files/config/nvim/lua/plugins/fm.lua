@@ -1,7 +1,9 @@
 return {
     {
         'is0n/fm-nvim',
-        lazy = true,
+        keys = {
+            { '<leader>g', '<cmd>Lazygit<cr>', desc = 'Git' }
+        },
         config = function()
             require('fm-nvim').setup({
                 default = 'float',
@@ -16,9 +18,6 @@ return {
                     size = 30, -- Size of the split window
                 },
             })
-        end,
-        keys = {
-            { '<leader>g', '<cmd>Lazygit<cr>', desc = 'Git' }
-        }
+        end
     }
 }

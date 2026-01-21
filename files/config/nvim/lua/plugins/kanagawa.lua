@@ -1,7 +1,7 @@
 return {
     {
         'rebelot/kanagawa.nvim',
-        lazy = false,
+        event = 'UIEnter',
         dependencies = {
             'akinsho/bufferline.nvim',
         },
@@ -60,6 +60,6 @@ return {
                 -- DiagnosticVirtualTextWarn  = makeDiagnosticColor(theme.diag.warning),
                 -- DiagnosticVirtualTextError = makeDiagnosticColor(theme.diag.error),
             }
-        end,
+        end
     }
 }

@@ -1,7 +1,9 @@
 return {
     {
         "nvim-neo-tree/neo-tree.nvim",
-        lazy = false,
+        keys = {
+            { '<leader>te', '<cmd>Neotree toggle<cr>', mode = 'n', desc = 'Toggle Explorer' }
+        },
         branch = "v3.x",
         dependencies = {
           "nvim-lua/plenary.nvim",
@@ -22,7 +24,6 @@ return {
                     },
                 }
             })
-            vim.keymap.set('n', '<leader>te', '<cmd>Neotree toggle<cr>', { desc = 'Toggle Explorer' })
         end
     }
 }

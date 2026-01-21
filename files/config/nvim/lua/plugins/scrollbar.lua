@@ -1,7 +1,7 @@
 return {
     {
         'petertriho/nvim-scrollbar',
-        lazy = false,
+        event = 'UIEnter',
         config = function()
             require('scrollbar').setup()
         end

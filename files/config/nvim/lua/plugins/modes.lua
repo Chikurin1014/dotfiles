@@ -1,7 +1,7 @@
 return {
     {
         'mvllow/modes.nvim',
-        lazy = false,
+        event = 'UIEnter',
         tag = 'v0.2.0',
         config = function()
             require('modes').setup({

@@ -8,6 +8,6 @@ return {
            "MunifTanjim/nui.nvim", -- To build the plugin UI
            "nvim-telescope/telescope.nvim", -- For picking b/w different remote methods
        },
-       config = true,
+       config = true
     }
 }

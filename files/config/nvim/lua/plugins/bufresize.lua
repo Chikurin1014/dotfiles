@@ -1,7 +1,7 @@
 return {
     {
         'kwkarlwang/bufresize.nvim',
-        lazy = true,
+        event = 'VeryLazy',
         config = function()
             require('bufresize').setup()
         end

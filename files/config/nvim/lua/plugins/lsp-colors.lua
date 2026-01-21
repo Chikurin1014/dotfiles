@@ -1,7 +1,7 @@
 return {
     {
         'folke/lsp-colors.nvim',
-        lazy = false,
+        lazy = true,
         config = function()
             require('lsp-colors').setup({
                 Error = "#db4b4b",

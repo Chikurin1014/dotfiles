@@ -1,7 +1,9 @@
 return {
     {
         'akinsho/toggleterm.nvim',
-        lazy = false,
+        keys = {
+            { '<leader>tt', mode = 'n', desc = 'Toggle Terminal' }
+        },
         version = "*",
         opts = {},
         config = function()
@@ -12,7 +14,7 @@ return {
             function _sh_toggle()
                 sh:toggle()
             end
-            vim.keymap.set('n', '<leader>tt', _sh_toggle, { desc = 'Toggle Terminal' })
+            vim.keymap.set('n', '<leader>tt', _sh_toggle)
         end
     }
 }
