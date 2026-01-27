@@ -1,6 +1,7 @@
 return {
     {
         'folke/which-key.nvim',
+        event = 'VimEnter',
         keys = {
             { '<F1>', '<cmd>WhichKey<cr>', mode = 'n', noremap = true, silent = true }
         },

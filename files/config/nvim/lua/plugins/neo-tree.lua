@@ -2,7 +2,7 @@ return {
     {
         "nvim-neo-tree/neo-tree.nvim",
         keys = {
-            { '<leader>te', '<cmd>Neotree toggle<cr>', mode = 'n', desc = 'Toggle Explorer' }
+            { '<leader>tn', '<cmd>Neotree toggle<cr>', mode = 'n', desc = 'Toggle Neotree' }
         },
         branch = "v3.x",
         dependencies = {

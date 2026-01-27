@@ -1,7 +1,6 @@
 return {
      'nvim-telescope/telescope.nvim',
      keys = {
-         { '<leader>f', '', mode = 'n', desc = 'Find' },
          { '<leader>ff', mode = 'n', desc = 'Find files' },
          { '<leader>fb', mode = 'n', desc = 'Find buffers' },
          { '<leader>fh', mode = 'n', desc = 'Find help tags' }

@@ -15,6 +15,7 @@ with pkgs;
   ibus-engines.mozc
   # fonts
   firge-nerd
+  udev-gothic-nf
   # shell
   zsh
   # terminal emulator

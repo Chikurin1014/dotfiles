@@ -12,14 +12,14 @@ return {
             -- -LHS of toggle mappings in NORMAL mode
             toggler = {
                 ---Line-comment toggle keymap
-                line = '<leader>/'
+                line = '<leader>t/'
                 ---Block-comment toggle keymap
                 -- block = '<C-b>',
             },
             ---LHS of operator-pending mappings in NORMAL and VISUAL mode
             opleader = {
                 ---Line-comment keymap
-                line = '<leader>/',
+                line = '<leader>t/',
                 ---Block-comment keymap
                 -- block = '<C-b>',
             },
@@ -45,6 +45,5 @@ return {
             ---Function to call after (un)comment
             post_hook = nil,
         },
-        lazy = false,
     }
 }

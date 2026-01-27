@@ -1,10 +1,11 @@
 return {
     {
         'akinsho/toggleterm.nvim',
-        keys = {
-            { '<leader>tt', mode = 'n', desc = 'Toggle Terminal' }
-        },
         version = "*",
+        keys = {
+            { '<leader>ot', mode = 'n', desc = 'Open Terminal' },
+            { '<esc>', mode = 't', desc = 'Close Terminal' }
+        },
         opts = {},
         config = function()
             local shell = 'zsh'
@@ -14,7 +15,8 @@ return {
             function _sh_toggle()
                 sh:toggle()
             end
-            vim.keymap.set('n', '<leader>tt', _sh_toggle)
+            vim.keymap.set('n', '<leader>ot', _sh_toggle)
+            vim.keymap.set('t', '<esc>', _sh_toggle)
         end
     }
 }
