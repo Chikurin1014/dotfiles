@@ -59,7 +59,7 @@ return {
             nvim_treesitter.setup({
                 install_dir = vim.fs.joinpath(vim.fn.stdpath('data'), 'site')
             })
-            -- nvim_treesitter.install(languages)
+            nvim_treesitter.install(languages)
 
             vim.api.nvim_create_autocmd('FileType', {
                 group = vim.api.nvim_create_augroup('TreesitterSetup', { clear = true }),
