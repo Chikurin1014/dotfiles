@@ -37,6 +37,7 @@
   ".config/nvim/lua/plugins/startuptime.lua".source     = ../../files/config/nvim/lua/plugins/startuptime.lua;
   ".config/nvim/lua/plugins/telescope.lua".source       = ../../files/config/nvim/lua/plugins/telescope.lua;
   ".config/nvim/lua/plugins/toggleterm.lua".source      = ../../files/config/nvim/lua/plugins/toggleterm.lua;
+  ".config/nvim/lua/plugins/treesitter.lua".source      = ../../files/config/nvim/lua/plugins/treesitter.lua;
   ".config/nvim/lua/plugins/which_key.lua".source       = ../../files/config/nvim/lua/plugins/which_key.lua;
   ".config/nvim/lua/plugins/yazi.lua".source            = ../../files/config/nvim/lua/plugins/yazi.lua;
   ".config/sheldon/plugins.toml".source                 = ../../files/config/sheldon/plugins.toml;

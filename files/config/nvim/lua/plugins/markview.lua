@@ -1,7 +1,7 @@
 return {
     {
         "OXY2DEV/markview.nvim",
-        event = 'VimEnter',
+        event = 'VeryLazy',
         -- Completion for `blink.cmp`
         dependencies = { "saghen/blink.cmp" },
         keys = {

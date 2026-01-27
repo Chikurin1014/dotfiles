@@ -3,8 +3,8 @@ return {
         'akinsho/toggleterm.nvim',
         version = "*",
         keys = {
-            { '<C-t>', mode = 'n', desc = 'Toggle Terminal' },
-            { '<C-t>', mode = 't', desc = 'Toggle Terminal' }
+            { '<leader>ot', mode = 'n', desc = 'Toggle Terminal' },
+            { '<esc>', mode = 't', desc = 'Toggle Terminal' }
         },
         opts = {},
         config = function()
@@ -15,8 +15,8 @@ return {
             function _sh_toggle()
                 sh:toggle()
             end
-            vim.keymap.set('n', '<C-t>', _sh_toggle)
-            vim.keymap.set('t', '<C-t>', _sh_toggle)
+            vim.keymap.set('n', '<leader>ot', _sh_toggle)
+            vim.keymap.set('t', '<esc>', _sh_toggle)
         end
     }
 }

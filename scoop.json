@@ -145,13 +145,6 @@
             "Updated": "\/Date(1766287996124)\/"
         },
         {
-            "Name": "mingw",
-            "Version": "15.2.0-rt_v13-rev0",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1766288242395)\/"
-        },
-        {
             "Name": "mingw-winlibs-llvm-msvcrt",
             "Version": "14.2.0-19.1.7-12.0.0-r3",
             "Info": "",
