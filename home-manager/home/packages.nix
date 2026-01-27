@@ -22,10 +22,12 @@ with pkgs;
   (config.lib.nixGL.wrap ghostty)
   # editor
   neovim
+  tree-sitter
   # essential tools
   curl
   dbus
   ed
+  gcc
   git
   openssh
   systemd
