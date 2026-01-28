@@ -30,10 +30,12 @@
   ".config/nvim/lua/plugins/mason-lspconfig.lua".source = ../../files/config/nvim/lua/plugins/mason-lspconfig.lua;
   ".config/nvim/lua/plugins/modes.lua".source           = ../../files/config/nvim/lua/plugins/modes.lua;
   ".config/nvim/lua/plugins/neo-tree.lua".source        = ../../files/config/nvim/lua/plugins/neo-tree.lua;
+  ".config/nvim/lua/plugins/neoscroll.lua".source       = ../../files/config/nvim/lua/plugins/neoscroll.lua;
   ".config/nvim/lua/plugins/noice.lua".source           = ../../files/config/nvim/lua/plugins/noice.lua;
   ".config/nvim/lua/plugins/notify.lua".source          = ../../files/config/nvim/lua/plugins/notify.lua;
   ".config/nvim/lua/plugins/remote-nvim.lua".source     = ../../files/config/nvim/lua/plugins/remote-nvim.lua;
   ".config/nvim/lua/plugins/scrollbar.lua".source       = ../../files/config/nvim/lua/plugins/scrollbar.lua;
+  ".config/nvim/lua/plugins/smear-cursor.lua".source    = ../../files/config/nvim/lua/plugins/smear-cursor.lua;
   ".config/nvim/lua/plugins/startuptime.lua".source     = ../../files/config/nvim/lua/plugins/startuptime.lua;
   ".config/nvim/lua/plugins/telescope.lua".source       = ../../files/config/nvim/lua/plugins/telescope.lua;
   ".config/nvim/lua/plugins/toggleterm.lua".source      = ../../files/config/nvim/lua/plugins/toggleterm.lua;
