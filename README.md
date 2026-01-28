@@ -56,9 +56,9 @@ cd dotfiles
   ```
 
   > [!NOTE]
-  > You may also need to change the values in [`.env`](.env):
+  > You may need to change the values in [`.env`](.env):
   >
-  > ```nix
+  > ```env
   > # .env
   >
   > USER="<your-user-name>"
