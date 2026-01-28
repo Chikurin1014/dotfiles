@@ -111,7 +111,7 @@ After the installation, you can use the following command to deploy the dotfiles
 deploy-dotfiles
 ```
 
-## Installing packages
+### Installing packages
 
 - **Nix**
 
