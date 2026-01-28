@@ -3,7 +3,7 @@
     email = "chikurin1014@gmail.com"
 
 [core]
-    editor = "$EDITOR"
+    editor = "nvim"
 
 [init]
     defaultBranch = "main"
