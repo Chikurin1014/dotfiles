@@ -37,7 +37,7 @@ return {
                 'lua',
                 'luadoc',
                 'markdown',
-                'markdown-inline',
+                'markdown_inline',
                 'matlab',
                 'nix',
                 'nu',
