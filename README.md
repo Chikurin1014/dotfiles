@@ -39,11 +39,20 @@ If you don't use **Nix**, you can use **Dotter** to manage your dotfiles. You ca
 
 ### 1. Clone this repository to home directory
 
-   ```shell
-   cd ~
-   git clone git@github.com:Chikurin1014/dotfiles.git
-   cd dotfiles
-   ```
+```shell
+cd ~
+git clone git@github.com:Chikurin1014/dotfiles.git
+cd dotfiles
+```
+
+> [!NOTE]
+> If you want to use Git, you should set `user.name` and `user.email` in [`files/gitconfig`](files/gitconfig)
+>
+> ```gitconfig
+> [user]
+>   name = "Chikurin1014" # -> Your git user name
+>   email = "chikurin1014@gmail.com" # -> Your email 
+> ```
 
 ### 2. Set up a deployment tool
 
@@ -54,6 +63,18 @@ If you don't use **Nix**, you can use **Dotter** to manage your dotfiles. You ca
   ```shell
   nix run home-manager -- switch --flake . -b bak
   ```
+
+  > [!NOTE]
+  > You may also need to change the `username` and `homeDirectory` in [`home-manager/home/default.nix`](home-manager/home/default.nix):
+  >
+  > ```nix
+  > # home-manager/home/default.nix
+  >
+  > ...
+  > username = "chikurin";            # -> "<Your name>"
+  > homeDirectory = "/home/chikurin"; # -> "/home/<Your name>"
+  > ...
+  > ```
 
 - **Dotter**
 
