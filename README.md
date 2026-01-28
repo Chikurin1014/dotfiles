@@ -45,15 +45,6 @@ git clone git@github.com:Chikurin1014/dotfiles.git
 cd dotfiles
 ```
 
-> [!NOTE]
-> If you want to use Git, you should set `user.name` and `user.email` in [`files/gitconfig`](files/gitconfig)
->
-> ```gitconfig
-> [user]
->   name = "Chikurin1014" # -> Your git user name
->   email = "chikurin1014@gmail.com" # -> Your email 
-> ```
-
 ### 2. Set up a deployment tool
 
 - **Nix**
@@ -65,15 +56,15 @@ cd dotfiles
   ```
 
   > [!NOTE]
-  > You may also need to change the `username` and `homeDirectory` in [`home-manager/home/default.nix`](home-manager/home/default.nix):
+  > You may also need to change the values in [`.env`](.env):
   >
   > ```nix
-  > # home-manager/home/default.nix
+  > # .env
   >
-  > ...
-  > username = "chikurin";            # -> "<Your name>"
-  > homeDirectory = "/home/chikurin"; # -> "/home/<Your name>"
-  > ...
+  > USER="<your-user-name>"
+  > GIT_USER_NAME="<your-git-user-name>"
+  > GIT_USER_EMAIL="<your-git-user-email>"
+  > EDITOR="<your-favorite-editor>"
   > ```
 
 - **Dotter**

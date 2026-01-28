@@ -34,9 +34,11 @@
       nixgl,
       ...
     }:
+     let
+       inherit (builtins) fromTOML readFile;
+       env = fromTOML (readFile ./.env);
+     in
     {
-      nixosConfigurations = import ./nixos { inherit nixpkgs nixos-wsl vscode-server; };
-
       overlays = {
         firge-nerd = final: prev: {
           firge-nerd = prev.callPackage ./nix-packages/firge-nerd.nix { };
@@ -46,7 +48,7 @@
     // flake-utils.lib.eachDefaultSystem (
       system:
       let
-        inherit system;
+        inherit env system;
         pkgs = import nixpkgs {
           inherit system;
           overlays = [
@@ -57,10 +59,11 @@
       {
         legacyPackages = {
           inherit (pkgs) home-manager firge-nerd;
-          homeConfigurations.chikurin = import ./home-manager { inherit pkgs home-manager nixgl; };
+          homeConfigurations.${env.USER} = import ./home-manager { inherit env pkgs home-manager nixgl; };
+          nixosConfigurations = import ./nixos { inherit env system nixpkgs nixos-wsl vscode-server; };
         };
 
-        formatter = nixpkgs.legacyPackages.x86_64-linux.nixfmt-tree;
+        formatter = nixpkgs.legacyPackages.${system}.nixfmt-tree;
       }
     );
 }

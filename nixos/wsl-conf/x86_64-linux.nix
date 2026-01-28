@@ -1,6 +1,6 @@
-{ }:
+{ user }:
 
 {
   enable = true;
-  defaultUser = "chikurin";
+  defaultUser = user;
 }

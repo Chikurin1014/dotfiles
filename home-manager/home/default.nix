@@ -1,4 +1,5 @@
 {
+  env,
   config,
   lib,
   pkgs,
@@ -7,8 +8,8 @@
 
 {
   # User name and Home directory
-  username = "chikurin";
-  homeDirectory = "/home/chikurin";
+  username = env.USER;
+  homeDirectory = "/home/${env.USER}";
 
   # !!MUST NOT BE CHANGED!!
   # Home Manager version

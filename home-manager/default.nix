@@ -1,4 +1,5 @@
 {
+  env,
   pkgs,
   home-manager,
   nixgl,
@@ -15,6 +16,6 @@ home-manager.lib.homeManagerConfiguration {
   # Optionally use extraSpecialArgs
   # to pass through arguments to home.nix
   extraSpecialArgs = {
-    inherit nixgl;
+    inherit env nixgl;
   };
 }

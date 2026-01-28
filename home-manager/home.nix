@@ -1,4 +1,5 @@
 {
+  env,
   config,
   lib,
   pkgs,
@@ -22,7 +23,17 @@ in
     zsh = {
       enable = true;
       sessionVariables = {
-        EDITOR = "nvim";
+        inherit (env) EDITOR;
+      };
+    };
+    git = {
+      enable = true;
+      extraConfig = {
+        user = {
+          name = env.GIT_USER_NAME;
+          email = env.GIT_USER_EMAIL;
+        };
+        core.editor = env.EDITOR;
       };
     };
   };

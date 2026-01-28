@@ -1,13 +1,7 @@
-[user]
-    name = "Chikurin1014"
-    email = "chikurin1014@gmail.com"
-
-[core]
-    editor = "nvim"
-
 [init]
     defaultBranch = "main"
 
 [include]
     path = "~/.config/git/commit_template.gitconfig"
     path = "~/.config/git/diff.gitconfig"
+    path = "~/.config/git/local_settings.gitconfig" # Not managed in dotfiles

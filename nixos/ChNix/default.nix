@@ -1,5 +1,4 @@
 {
-  env,
   system,
   nixpkgs,
   nixos-wsl,
@@ -13,11 +12,6 @@ nixpkgs.lib.nixosSystem {
   modules = [
     ../configuration.nix
     ./configuration.nix
-
-    nixos-wsl.nixosModules.default
-    {
-      wsl = import ../wsl-conf/${system}.nix { user = env.USER; };
-    }
 
     vscode-server.nixosModules.default
     (
