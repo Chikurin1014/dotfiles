@@ -5,7 +5,7 @@ $env.config = {
     }
 }
 
-$env.EDITOR = "code"
+$env.EDITOR = "nvim"
 $env.FZF_DEFAULT_COMMAND = "fd"
 
 alias deploy-dotfiles = nu -c "cd ~/dotfiles; sudo dotter deploy -fy"

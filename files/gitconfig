@@ -3,7 +3,7 @@
     email = "chikurin1014@gmail.com"
 
 [core]
-    editor = "code --wait"
+    editor = "$EDITOR"
 
 [init]
     defaultBranch = "main"

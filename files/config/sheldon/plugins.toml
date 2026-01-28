@@ -34,7 +34,7 @@ apply = ['source']
 
 [plugins.zsh-syntax-highlighting]
 github = "zsh-users/zsh-syntax-highlighting"
-apply = ['source']
+apply = ['defer']
 
 [plugins.zsh-completions]
 github = "zsh-users/zsh-completions"
@@ -44,16 +44,12 @@ apply = ['defer']
 github = "zsh-users/zsh-autosuggestions"
 apply = ['defer']
 
-[plugins.zsh-abbr]
-github = "olets/zsh-abbr"
-apply = ['source']
-
-[plugins.zsh-autosuggestions-strategy]
-inline = "export ZSH_AUTOSUGGEST_STRATEGY=(history completion)"
-
 [plugins.rust-zsh-completions]
 github = "ryutok/rust-zsh-completions"
 apply = ['defer']
+
+[plugins.zsh-autosuggestions-strategy]
+inline = "export ZSH_AUTOSUGGEST_STRATEGY=(history completion)"
 
 [plugins.mise]
 inline = 'eval "$(mise activate zsh)"'
