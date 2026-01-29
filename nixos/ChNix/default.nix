@@ -1,4 +1,5 @@
 {
+  env,
   system,
   nixpkgs,
   nixos-wsl,

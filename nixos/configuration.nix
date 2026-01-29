@@ -5,6 +5,7 @@
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
 {
+  env,
   config,
   lib,
   pkgs,
@@ -29,7 +30,7 @@
       ];
       trusted-users = [
         "root"
-        "chikurin"
+        "${env.USER}"
       ];
     };
 
@@ -44,7 +45,7 @@
     enable = true;
   };
 
-  users.users.chikurin = {
+  users.users.${env.USER} = {
     shell = pkgs.zsh;
     extraGroups = [ "docker" ];
   };
