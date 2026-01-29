@@ -3,28 +3,23 @@
   system,
   nixpkgs,
   nixos-wsl,
-  vscode-server,
+  commonModules,
   ...
 }:
 
 nixpkgs.lib.nixosSystem {
   inherit system;
 
-  modules = [
-    ../configuration.nix
+  modules = commonModules ++ [
     ./configuration.nix
 
     nixos-wsl.nixosModules.default
     {
-      wsl = import ../wsl-conf/${system}.nix { user = env.USER; };
+      wsl = import ../wsl-conf/${system}.nix { inherit env; };
     }
-
-    vscode-server.nixosModules.default
-    (
-      { ... }:
-      {
-        services.vscode-server.enable = true;
-      }
-    )
   ];
+
+  specialArgs = {
+    inherit env;
+  };
 }

@@ -30,7 +30,7 @@
       ];
       trusted-users = [
         "root"
-        "${env.USER}"
+        env.USER
       ];
     };
 

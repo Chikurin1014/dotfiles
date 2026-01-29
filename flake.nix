@@ -55,12 +55,31 @@
             self.overlays.firge-nerd
           ];
         };
+        homeModules.${env.USER} = import ./home-manager {
+          inherit env nixgl;
+        };
       in
       {
         legacyPackages = {
           inherit (pkgs) home-manager firge-nerd;
-          homeConfigurations.${env.USER} = import ./home-manager { inherit env pkgs home-manager nixgl; };
-          nixosConfigurations = import ./nixos { inherit env system nixpkgs nixos-wsl vscode-server; };
+
+          nixosConfigurations = import ./nixos {
+            inherit env system;
+            inherit nixpkgs;
+            inherit vscode-server nixos-wsl;
+          };
+
+          homeConfigurations.${env.USER} = home-manager.lib.homeManagerConfiguration {
+            inherit pkgs;
+  
+            # Specify your home configuration modules here, for example,
+            # the path to your home.nix.
+            modules = [ homeModules.${env.USER} ];
+  
+            # Optionally use extraSpecialArgs
+            # to pass through arguments to home.nix
+            extraSpecialArgs = {};
+          };
         };
 
         formatter = nixpkgs.legacyPackages.${system}.nixfmt-tree;

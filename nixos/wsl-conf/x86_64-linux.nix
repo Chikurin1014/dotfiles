@@ -1,6 +1,6 @@
-{ user }:
+{ env }:
 
 {
   enable = true;
-  defaultUser = user;
+  defaultUser = env.USER;
 }

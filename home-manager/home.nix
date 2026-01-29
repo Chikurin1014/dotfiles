@@ -1,7 +1,7 @@
 {
   env,
-  config,
   lib,
+  config,
   pkgs,
   nixgl,
   ...
