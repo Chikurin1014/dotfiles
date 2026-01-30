@@ -44,7 +44,6 @@ depends = ["neovim"]
 "files/config/nvim/lua/plugins/lsp-colors.lua"                  = "~/AppData/Local/nvim/lua/plugins/lsp-colors.lua"
 "files/config/nvim/lua/plugins/lualine.lua"                     = "~/AppData/Local/nvim/lua/plugins/lualine.lua"
 "files/config/nvim/lua/plugins/markview.lua"                    = "~/AppData/Local/nvim/lua/plugins/markview.lua"
-"files/config/nvim/lua/plugins/mason-lspconfig.lua"             = "~/AppData/Local/nvim/lua/plugins/mason-lspconfig.lua"
 "files/config/nvim/lua/plugins/modes.lua"                       = "~/AppData/Local/nvim/lua/plugins/modes.lua"
 "files/config/nvim/lua/plugins/neo-tree.lua"                    = "~/AppData/Local/nvim/lua/plugins/neo-tree.lua"
 "files/config/nvim/lua/plugins/neoscroll.lua"                   = "~/AppData/Local/nvim/lua/plugins/neoscroll.lua"
@@ -57,6 +56,8 @@ depends = ["neovim"]
 "files/config/nvim/lua/plugins/treesitter.lua"                  = "~/AppData/Local/nvim/lua/plugins/treesitter.lua"
 "files/config/nvim/lua/plugins/which_key.lua"                   = "~/AppData/Local/nvim/lua/plugins/which_key.lua"
 "files/config/nvim/lua/plugins/yazi.lua"                        = "~/AppData/Local/nvim/lua/plugins/yazi.lua"
+"files/config/nvim/lua/plugins/lsp/init.lua"                    = "~/AppData/Local/nvim/lua/plugins/lsp/init.lua"
+"files/config/nvim/lua/plugins/lsp/lua_ls.lua"                  = "~/AppData/Local/nvim/lua/plugins/lsp/lua_ls.lua"
 "files/override/windows/config/nvim/lua/plugins/toggleterm.lua" = "~/AppData/Local/nvim/lua/plugins/toggleterm.lua"
 
 # override

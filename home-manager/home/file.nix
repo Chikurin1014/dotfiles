@@ -27,7 +27,6 @@
   ".config/nvim/lua/plugins/lsp-colors.lua".source      = ../../files/config/nvim/lua/plugins/lsp-colors.lua;
   ".config/nvim/lua/plugins/lualine.lua".source         = ../../files/config/nvim/lua/plugins/lualine.lua;
   ".config/nvim/lua/plugins/markview.lua".source        = ../../files/config/nvim/lua/plugins/markview.lua;
-  ".config/nvim/lua/plugins/mason-lspconfig.lua".source = ../../files/config/nvim/lua/plugins/mason-lspconfig.lua;
   ".config/nvim/lua/plugins/modes.lua".source           = ../../files/config/nvim/lua/plugins/modes.lua;
   ".config/nvim/lua/plugins/neo-tree.lua".source        = ../../files/config/nvim/lua/plugins/neo-tree.lua;
   ".config/nvim/lua/plugins/neoscroll.lua".source       = ../../files/config/nvim/lua/plugins/neoscroll.lua;
@@ -42,6 +41,8 @@
   ".config/nvim/lua/plugins/treesitter.lua".source      = ../../files/config/nvim/lua/plugins/treesitter.lua;
   ".config/nvim/lua/plugins/which_key.lua".source       = ../../files/config/nvim/lua/plugins/which_key.lua;
   ".config/nvim/lua/plugins/yazi.lua".source            = ../../files/config/nvim/lua/plugins/yazi.lua;
+  ".config/nvim/lua/plugins/lsp/init.lua".source        = ../../files/config/nvim/lua/plugins/lsp/init.lua;
+  ".config/nvim/lua/plugins/lsp/lua_ls.lua".source      = ../../files/config/nvim/lua/plugins/lsp/lua_ls.lua;
   ".config/sheldon/plugins.toml".source                 = ../../files/config/sheldon/plugins.toml;
   ".config/wezterm/wezterm.lua".source                  = ../../files/config/wezterm/wezterm.lua;
   ".config/wezterm/font.lua".source                     = ../../files/config/wezterm/font.lua;

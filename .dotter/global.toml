@@ -38,7 +38,6 @@ depends = ["clang-format", "ghostty", "git", "lazygit", "mise", "neovim", "wezte
 "files/config/nvim/lua/plugins/lsp-colors.lua"      = "~/.config/nvim/lua/plugins/lsp-colors.lua"
 "files/config/nvim/lua/plugins/lualine.lua"         = "~/.config/nvim/lua/plugins/lualine.lua"
 "files/config/nvim/lua/plugins/markview.lua"        = "~/.config/nvim/lua/plugins/markview.lua"
-"files/config/nvim/lua/plugins/mason-lspconfig.lua" = "~/.config/nvim/lua/plugins/mason-lspconfig.lua"
 "files/config/nvim/lua/plugins/modes.lua"           = "~/.config/nvim/lua/plugins/modes.lua"
 "files/config/nvim/lua/plugins/neo-tree.lua"        = "~/.config/nvim/lua/plugins/neo-tree.lua"
 "files/config/nvim/lua/plugins/neoscroll.lua"       = "~/.config/nvim/lua/plugins/neoscroll.lua"
@@ -53,6 +52,8 @@ depends = ["clang-format", "ghostty", "git", "lazygit", "mise", "neovim", "wezte
 "files/config/nvim/lua/plugins/treesitter.lua"      = "~/.config/nvim/lua/plugins/treesitter.lua"
 "files/config/nvim/lua/plugins/which_key.lua"       = "~/.config/nvim/lua/plugins/which_key.lua"
 "files/config/nvim/lua/plugins/yazi.lua"            = "~/.config/nvim/lua/plugins/yazi.lua"
+"files/config/nvim/lua/plugins/lsp/init.lua"        = "~/.config/nvim/lua/plugins/lsp/init.lua"
+"files/config/nvim/lua/plugins/lsp/lua_ls.lua"      = "~/.config/nvim/lua/plugins/lsp/lua_ls.lua"
 
 [wezterm.files]
 "files/config/wezterm/wezterm.lua"          = "~/.config/wezterm/wezterm.lua"
