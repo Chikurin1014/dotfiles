@@ -27,6 +27,15 @@ return {
         config = function(_, opts)
             require('mason').setup()
             require('mason-lspconfig').setup(opts)
+
+            vim.api.nvim_create_autocmd('LspAttach', {
+                group = vim.api.nvim_create_augroup('UserLspConfig', {}),
+                callback = function(event)
+                    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { buffer = event.buf, desc = 'Go to definition' })
+                    vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { buffer = event.buf, desc = 'Go to declaration' })
+                    vim.keymap.set('n', 'gr', vim.lsp.buf.references, { buffer = event.buf, desc = 'Go to references' })
+                end,
+            })
         end
     }
 }

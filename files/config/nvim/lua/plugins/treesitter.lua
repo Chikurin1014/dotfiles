@@ -38,7 +38,6 @@ return {
                 'luadoc',
                 'markdown',
                 'markdown_inline',
-                'matlab',
                 'nix',
                 'nu',
                 'python',

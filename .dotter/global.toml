@@ -56,6 +56,7 @@ depends = ["clang-format", "ghostty", "git", "lazygit", "mise", "neovim", "wezte
 "files/config/nvim/lua/plugins/util/autopairs.lua"   = "~/.config/nvim/lua/plugins/util/autopairs.lua"
 "files/config/nvim/lua/plugins/util/bufferline.lua"  = "~/.config/nvim/lua/plugins/util/bufferline.lua"
 "files/config/nvim/lua/plugins/util/comment.lua"     = "~/.config/nvim/lua/plugins/util/comment.lua"
+"files/config/nvim/lua/plugins/util/hop.lua"         = "~/.config/nvim/lua/plugins/util/hop.lua"
 "files/config/nvim/lua/plugins/util/markview.lua"    = "~/.config/nvim/lua/plugins/util/markview.lua"
 "files/config/nvim/lua/plugins/util/startuptime.lua" = "~/.config/nvim/lua/plugins/util/startuptime.lua"
 "files/config/nvim/lua/plugins/util/which_key.lua"   = "~/.config/nvim/lua/plugins/util/which_key.lua"
