@@ -1,3 +1,3 @@
 require('base')
 require('keymaps')
-require('lazy_nvim')
+require('lazy-nvim')
