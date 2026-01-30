@@ -43,6 +43,7 @@
   ".config/nvim/lua/plugins/util/bufferline.lua".source    = ../../files/config/nvim/lua/plugins/util/bufferline.lua;
   ".config/nvim/lua/plugins/util/comment.lua".source       = ../../files/config/nvim/lua/plugins/util/comment.lua;
   ".config/nvim/lua/plugins/util/hop.lua".source           = ../../files/config/nvim/lua/plugins/util/hop.lua;
+  ".config/nvim/lua/plugins/util/inc-rename.lua".source    = ../../files/config/nvim/lua/plugins/util/inc-rename.lua;
   ".config/nvim/lua/plugins/util/markview.lua".source      = ../../files/config/nvim/lua/plugins/util/markview.lua;
   ".config/nvim/lua/plugins/util/startuptime.lua".source   = ../../files/config/nvim/lua/plugins/util/startuptime.lua;
   ".config/nvim/lua/plugins/util/which_key.lua".source     = ../../files/config/nvim/lua/plugins/util/which_key.lua;

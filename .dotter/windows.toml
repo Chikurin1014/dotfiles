@@ -64,6 +64,7 @@ depends = ["neovim"]
 "files/config/nvim/lua/plugins/util/bufferline.lua" = "~/AppData/Local/nvim/lua/plugins/util/bufferline.lua"
 "files/config/nvim/lua/plugins/util/comment.lua" = "~/AppData/Local/nvim/lua/plugins/util/comment.lua"
 "files/config/nvim/lua/plugins/util/hop.lua" = "~/AppData/Local/nvim/lua/plugins/util/hop.lua"
+"files/config/nvim/lua/plugins/util/inc-rename.lua" = "~/AppData/Local/nvim/lua/plugins/util/inc-rename.lua"
 "files/config/nvim/lua/plugins/util/markview.lua" = "~/AppData/Local/nvim/lua/plugins/util/markview.lua"
 "files/config/nvim/lua/plugins/util/startuptime.lua" = "~/AppData/Local/nvim/lua/plugins/util/startuptime.lua"
 "files/config/nvim/lua/plugins/util/which_key.lua" = "~/AppData/Local/nvim/lua/plugins/util/which_key.lua"
