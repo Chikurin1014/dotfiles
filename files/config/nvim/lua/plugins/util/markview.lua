@@ -7,10 +7,8 @@ return {
         keys = {
             { '<leader>tm', '<cmd>Markview<cr>', mode = 'n', desc = 'Toggle Markview' }
         },
-        config = function()
-            require('markview').setup({
-                preview = { enable = true }
-            })
-        end
+        opts = {
+            preview = { enable = true }
+        }
     }
 }

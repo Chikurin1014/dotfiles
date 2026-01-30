@@ -6,7 +6,6 @@ return {
             { '<leader>ot', mode = 'n', desc = 'Open Terminal' },
             { '<esc>', mode = 't', desc = 'Close Terminal' }
         },
-        opts = {},
         config = function()
             local shell = 'zsh'
             local map = vim.api.nvim_set_keymap

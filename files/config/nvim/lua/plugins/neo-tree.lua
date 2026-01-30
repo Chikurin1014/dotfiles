@@ -11,19 +11,17 @@ return {
           "MunifTanjim/nui.nvim",
           -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
         },
-        config = function()
-            require('neo-tree').setup({
-                default_component_configs = {
-                    window = {
-                        position = 'left',
-                        width = 30,
-                        mapping_options = {
-                            noremap = true,
-                            nowait = true,
-                        },
-                    },
+        opts = {
+            default_component_configs = {
+                window = {
+                    position = 'left',
+                    with = 30,
+                    mapping_options = {
+                        noremap = true,
+                        nowait = true
+                    }
                 }
-            })
-        end
+            }
+        }
     }
 }
