@@ -14,12 +14,12 @@ return {
 
             dashboard.section.buttons.val = {
                 dashboard.button('n', 'New file', '<cmd>ene<BAR>startinsert<cr>'),
-                dashboard.button('o', 'Open a file', '<cmd>lua require("telescope.builtin").find_files()<cr><esc>'),
-                dashboard.button('r', 'Open a recent file', '<cmd>lua require("telescope.builtin").oldfiles()<cr><esc>'),
+                dashboard.button('o', 'Open a file', '<cmd>lua require("telescope.builtin").find_files()<cr>'),
+                dashboard.button('r', 'Open a recent file', '<cmd>lua require("telescope.builtin").oldfiles()<cr>'),
                 dashboard.button('e', 'Explorer', '<cmd>lua require("yazi").yazi()<cr>'),
                 dashboard.button('g', 'Git source control', '<cmd>LazyGit<cr>'),
                 dashboard.button('p', 'Manage plugins', '<cmd>Lazy<cr>'),
-                dashboard.button('h', 'Help', '<cmd>lua reqire("telescope.builtin").help_tags()<cr><esc>'),
+                dashboard.button('h', 'Help', '<cmd>lua reqire("telescope.builtin").help_tags()<cr>'),
                 dashboard.button('q', 'Quit', '<cmd>qa<cr>')
             }
 
