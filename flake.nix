@@ -34,10 +34,10 @@
       nixgl,
       ...
     }:
-     let
-       inherit (builtins) fromTOML readFile;
-       env = fromTOML (readFile ./.env);
-     in
+    let
+      inherit (builtins) fromTOML readFile;
+      env = fromTOML (readFile ./.env);
+    in
     {
       overlays = {
         firge-nerd = final: prev: {
@@ -71,14 +71,14 @@
 
           homeConfigurations.${env.USER} = home-manager.lib.homeManagerConfiguration {
             inherit pkgs;
-  
+
             # Specify your home configuration modules here, for example,
             # the path to your home.nix.
             modules = [ homeModules.${env.USER} ];
-  
+
             # Optionally use extraSpecialArgs
             # to pass through arguments to home.nix
-            extraSpecialArgs = {};
+            extraSpecialArgs = { };
           };
         };
 
