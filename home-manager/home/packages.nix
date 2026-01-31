@@ -46,7 +46,6 @@ with pkgs;
   fd
   fzf
   lazygit
-  navi
   ripgrep
   sd
   sheldon
