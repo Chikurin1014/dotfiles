@@ -9,7 +9,8 @@ return {
         config = function()
             local kanagawa = require('kanagawa')
             kanagawa.setup({
-                transparent = true,
+                -- transparent = true,
+                dimInactive = true,
                 colors = {
                     theme = {
                         all = {
@@ -29,9 +30,9 @@ return {
             --   return { fg = color, bg = c(color):blend(theme.ui.bg, 0.95):to_hex() }
             -- end
             return {
-                NormalFloat = { bg = "none" },
-                FloatBorder = { bg = "none" },
-                FloatTitle = { bg = "none" },
+                NormalFloat = { bg = 'none' },
+                FloatBorder = { bg = 'none' },
+                FloatTitle = { bg = 'none' },
 
                 -- Save an hlgroup with dark background and dimmed foreground
                 -- so that you can use it where your still want darker windows.
@@ -40,8 +41,8 @@ return {
 
                 -- Popular plugins that open floats will link to NormalFloat by default;
                 -- set their background accordingly if you wish to keep them dark and borderless
-                LazyNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
-                MasonNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
+                LazyNormal = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
+                MasonNormal = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
 
                 TelescopeTitle = { fg = theme.ui.special, bold = true },
                 TelescopePromptNormal = { bg = theme.ui.bg_p1 },

@@ -2,7 +2,7 @@ return {
     {
         'petertriho/nvim-scrollbar',
         lazy = true,
-        event = 'VeryLazy',
+        event = 'WinScrolled',
         opts = {}
     }
 }

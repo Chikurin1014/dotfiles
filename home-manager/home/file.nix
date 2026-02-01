@@ -33,7 +33,7 @@
   ".config/nvim/lua/plugins/lsp/init.lua".source = ../../files/config/nvim/lua/plugins/lsp/init.lua;
   ".config/nvim/lua/plugins/lsp/lua_ls.lua".source =
     ../../files/config/nvim/lua/plugins/lsp/lua_ls.lua;
-  ".config/nvim/lua/plugins/ui/alpha.lua".source = ../../files/config/nvim/lua/plugins/ui/alpha.lua;
+  ".config/nvim/lua/plugins/ui/bg.lua".source = ../../files/config/nvim/lua/plugins/ui/bg.lua;
   ".config/nvim/lua/plugins/ui/bufferline.lua".source =
     ../../files/config/nvim/lua/plugins/ui/bufferline.lua;
   ".config/nvim/lua/plugins/ui/bufresize.lua".source =

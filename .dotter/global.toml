@@ -54,6 +54,7 @@ depends = [
 "files/config/nvim/lua/plugins/lsp/lua_ls.lua" = "~/.config/nvim/lua/plugins/lsp/lua_ls.lua"
 
 "files/config/nvim/lua/plugins/ui/bufferline.lua" = "~/.config/nvim/lua/plugins/ui/bufferline.lua"
+"files/config/nvim/lua/plugins/ui/bg.lua" = "~/.config/nvim/lua/plugins/ui/bg.lua"
 "files/config/nvim/lua/plugins/ui/bufresize.lua" = "~/.config/nvim/lua/plugins/ui/bufresize.lua"
 "files/config/nvim/lua/plugins/ui/kanagawa.lua" = "~/.config/nvim/lua/plugins/ui/kanagawa.lua"
 "files/config/nvim/lua/plugins/ui/lsp-colors.lua" = "~/.config/nvim/lua/plugins/ui/lsp-colors.lua"
