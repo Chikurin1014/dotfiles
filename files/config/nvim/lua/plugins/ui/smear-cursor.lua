@@ -1,7 +1,8 @@
 return {
     {
         "sphamba/smear-cursor.nvim",
-        lazy = false,
+        lazy = true,
+        event = 'VeryLazy',
         opts = {
             stiffness = 0.7,
             trailing_stiffness = 0.65,

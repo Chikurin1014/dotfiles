@@ -3,10 +3,11 @@ return {
         'nvim-treesitter/nvim-treesitter',
         branch = 'main',
         build = ':TSUpdate',
-        lazy = false,
         -- To avoid conflicts with markview
         -- See: https://github.com/OXY2DEV/markview.nvim/issues/365
         dependencies = { 'OXY2DEV/markview.nvim' },
+        lazy = true,
+        event = 'BufReadPre',
         config = function()
             local nvim_treesitter = require('nvim-treesitter')
             local languages = {

@@ -21,6 +21,16 @@ return {
             'neovim/nvim-lspconfig',
             'simrat39/rust-tools.nvim' -- for rust_analyzer
         },
+        lazy = true,
+        event = 'BufReadPre',
+        cmd = {
+            "Mason",
+            "MasonInstall",
+            "MasonUninstall",
+            "MasonUninstallAll",
+            "MasonLog",
+            "MasonUpdate",
+        },
         opts = {
             ensure_installed = servers
         },

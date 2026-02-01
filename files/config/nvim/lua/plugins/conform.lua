@@ -1,6 +1,8 @@
 return {
     {
         'stevearc/conform.nvim',
+        lazy = true,
+        event = 'BufReadPost',
         opts = {
             formatters_by_ft = {
                 c = { 'clang-format' },

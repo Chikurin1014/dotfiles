@@ -1,8 +1,9 @@
 return {
     {
         'nvim-lualine/lualine.nvim',
-        event = 'UIEnter',
         dependencies = { 'nvim-tree/nvim-web-devicons' },
+        lazy = true,
+        event = 'BufEnter',
         opts = {
             options = {
                 theme = 'gruvbox',

@@ -2,6 +2,7 @@ return {
     {
         'nvim-treesitter/nvim-treesitter-context',
         dependencies = { 'nvim-treesitter' },
+        lazy = true,
         opts = {
             enable = true,            -- Enable this plugin (Can be enabled/disabled later via commands)
             multiwindow = false,      -- Enable multiwindow support.

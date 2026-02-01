@@ -1,7 +1,8 @@
 return {
     {
         'petertriho/nvim-scrollbar',
-        event = 'UIEnter',
+        lazy = true,
+        event = 'VeryLazy',
         opts = {}
     }
 }

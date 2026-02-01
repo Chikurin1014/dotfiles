@@ -2,6 +2,9 @@ vim.scriptencoding = 'utf-8'
 vim.opt.encoding = 'utf-8'
 vim.opt.fileencoding = 'utf-8'
 
+-- Enable config cache
+vim.loader.enable()
+
 vim.opt.number = true
 vim.wo.number = true
 vim.wo.relativenumber = false
@@ -31,7 +34,6 @@ vim.opt.hidden = true
 vim.opt.swapfile = false
 vim.opt.wrap = false
 vim.opt.breakindent = true
-vim.opt.foldlevelstart = 99
 
 -- float-transparent
 vim.opt.winblend = 5 -- transparent floating windows

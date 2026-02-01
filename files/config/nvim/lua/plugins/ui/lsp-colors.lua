@@ -1,6 +1,7 @@
 return {
     {
         'folke/lsp-colors.nvim',
+        lazy = true,
         opts = {
             Error = "#db4b4b",
             Warning = "#e0af68",

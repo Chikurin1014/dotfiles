@@ -21,7 +21,6 @@ depends = ["lazygit"]
 "files/override/windows/config/nushell/config.nu" = "~/AppData/Roaming/nushell/config.nu"
 "files/override/windows/config/nushell/vendor/autoload/mise.nu" = "~/AppData/Roaming/nushell/vendor/autoload/mise.nu"
 "files/override/windows/config/nushell/vendor/autoload/starship.nu" = "~/AppData/Roaming/nushell/vendor/autoload/starship.nu"
-"files/override/windows/config/nushell/vendor/autoload/yazi.nu" = "~/AppData/Roaming/nushell/vendor/autoload/yazi.nu"
 
 # override
 [neovim]
@@ -37,37 +36,37 @@ depends = ["neovim"]
 "files/config/nvim/lua/plugins/blink-cmp.lua" = "~/AppData/Local/nvim/lua/plugins/blink-cmp.lua"
 "files/config/nvim/lua/plugins/copilot.lua" = "~/AppData/Local/nvim/lua/plugins/copilot.lua"
 "files/config/nvim/lua/plugins/conform.lua" = "~/AppData/Local/nvim/lua/plugins/conform.lua"
+"files/config/nvim/lua/plugins/dashboard.lua" = "~/AppData/Local/nvim/lua/plugins/dashboard.lua"
+"files/config/nvim/lua/plugins/fyler.lua" = "~/AppData/Local/nvim/lua/plugins/fyler.lua"
 "files/config/nvim/lua/plugins/lazygit.lua" = "~/AppData/Local/nvim/lua/plugins/lazygit.lua"
-"files/config/nvim/lua/plugins/neo-tree.lua" = "~/AppData/Local/nvim/lua/plugins/neo-tree.lua"
 "files/config/nvim/lua/plugins/remote-nvim.lua" = "~/AppData/Local/nvim/lua/plugins/remote-nvim.lua"
 "files/config/nvim/lua/plugins/telescope.lua" = "~/AppData/Local/nvim/lua/plugins/telescope.lua"
 "files/config/nvim/lua/plugins/treesitter.lua" = "~/AppData/Local/nvim/lua/plugins/treesitter.lua"
 "files/config/nvim/lua/plugins/treesitter-context.lua" = "~/AppData/Local/nvim/lua/plugins/treesitter-context.lua"
-"files/config/nvim/lua/plugins/yazi.lua" = "~/AppData/Local/nvim/lua/plugins/yazi.lua"
 
 "files/config/nvim/lua/plugins/lsp/init.lua" = "~/AppData/Local/nvim/lua/plugins/lsp/init.lua"
 "files/config/nvim/lua/plugins/lsp/lua_ls.lua" = "~/AppData/Local/nvim/lua/plugins/lsp/lua_ls.lua"
 
-"files/config/nvim/lua/plugins/ui/alpha.lua" = "~/AppData/Local/nvim/lua/plugins/ui/alpha.lua"
+"files/config/nvim/lua/plugins/ui/bufferline.lua" = "~/AppData/Local/nvim/lua/plugins/ui/bufferline.lua"
 "files/config/nvim/lua/plugins/ui/bufresize.lua" = "~/AppData/Local/nvim/lua/plugins/ui/bufresize.lua"
 "files/config/nvim/lua/plugins/ui/kanagawa.lua" = "~/AppData/Local/nvim/lua/plugins/ui/kanagawa.lua"
 "files/config/nvim/lua/plugins/ui/lsp-colors.lua" = "~/AppData/Local/nvim/lua/plugins/ui/lsp-colors.lua"
 "files/config/nvim/lua/plugins/ui/lualine.lua" = "~/AppData/Local/nvim/lua/plugins/ui/lualine.lua"
-"files/config/nvim/lua/plugins/ui/modes.lua" = "~/AppData/Local/nvim/lua/plugins/ui/modes.lua"
-"files/config/nvim/lua/plugins/ui/neoscroll.lua" = "~/AppData/Local/nvim/lua/plugins/ui/neoscroll.lua"
 "files/config/nvim/lua/plugins/ui/noice.lua" = "~/AppData/Local/nvim/lua/plugins/ui/noice.lua"
 "files/config/nvim/lua/plugins/ui/notify.lua" = "~/AppData/Local/nvim/lua/plugins/ui/notify.lua"
 "files/config/nvim/lua/plugins/ui/scrollbar.lua" = "~/AppData/Local/nvim/lua/plugins/ui/scrollbar.lua"
 "files/config/nvim/lua/plugins/ui/smear-cursor.lua" = "~/AppData/Local/nvim/lua/plugins/ui/smear-cursor.lua"
 
 "files/config/nvim/lua/plugins/util/autopairs.lua" = "~/AppData/Local/nvim/lua/plugins/util/autopairs.lua"
-"files/config/nvim/lua/plugins/util/bufferline.lua" = "~/AppData/Local/nvim/lua/plugins/util/bufferline.lua"
+"files/config/nvim/lua/plugins/util/colorizer.lua" = "~/AppData/Local/nvim/lua/plugins/util/colorizer.lua"
 "files/config/nvim/lua/plugins/util/comment.lua" = "~/AppData/Local/nvim/lua/plugins/util/comment.lua"
-"files/config/nvim/lua/plugins/util/hop.lua" = "~/AppData/Local/nvim/lua/plugins/util/hop.lua"
+"files/config/nvim/lua/plugins/util/flash.lua" = "~/AppData/Local/nvim/lua/plugins/util/flash.lua"
+"files/config/nvim/lua/plugins/util/hlslens.lua" = "~/AppData/Local/nvim/lua/plugins/util/hlslens.lua"
 "files/config/nvim/lua/plugins/util/inc-rename.lua" = "~/AppData/Local/nvim/lua/plugins/util/inc-rename.lua"
 "files/config/nvim/lua/plugins/util/markview.lua" = "~/AppData/Local/nvim/lua/plugins/util/markview.lua"
+"files/config/nvim/lua/plugins/util/origami.lua" = "~/AppData/Local/nvim/lua/plugins/util/origami.lua"
 "files/config/nvim/lua/plugins/util/startuptime.lua" = "~/AppData/Local/nvim/lua/plugins/util/startuptime.lua"
-"files/config/nvim/lua/plugins/util/which_key.lua" = "~/AppData/Local/nvim/lua/plugins/util/which_key.lua"
+"files/config/nvim/lua/plugins/util/which-key.lua" = "~/AppData/Local/nvim/lua/plugins/util/which-key.lua"
 
 "files/override/windows/config/nvim/lua/plugins/toggleterm.lua" = "~/AppData/Local/nvim/lua/plugins/toggleterm.lua"
 

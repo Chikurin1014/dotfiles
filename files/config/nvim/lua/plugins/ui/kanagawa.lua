@@ -1,6 +1,7 @@
 return {
     {
         'rebelot/kanagawa.nvim',
+        lazy = true,
         event = 'UIEnter',
         dependencies = {
             'akinsho/bufferline.nvim',
@@ -51,7 +52,8 @@ return {
                 TelescopePreviewBorder = { bg = theme.ui.bg_dim, fg = theme.ui.bg_dim },
 
                 -- add `blend = vim.o.pumblend` to enable transparency
-                Pmenu = { fg = theme.ui.shade0, bg = theme.ui.bg_p1, blend = vim.o.pumblend },                  PmenuSel = { fg = "NONE", bg = theme.ui.bg_p2 },
+                Pmenu = { fg = theme.ui.shade0, bg = theme.ui.bg_p1, blend = vim.o.pumblend },
+                PmenuSel = { fg = "NONE", bg = theme.ui.bg_p2 },
                 PmenuSbar = { bg = theme.ui.bg_m1, blend = vim.o.pumblend },
                 PmenuThumb = { bg = theme.ui.bg_p2, blend = vim.o.pumblend },
 
