@@ -11,11 +11,13 @@
   ".config/git/diff.gitconfig".source = ../../files/config/git/diff.gitconfig;
   ".config/lazygit/config.yml".source = ../../files/config/lazygit/config.yml;
   ".config/mise/config.toml".source = ../../files/config/mise/config.toml;
+  ".config/neovide/config.toml".source = ../../files/config/neovide/config.toml;
   ".config/nvim/init.lua".source = ../../files/config/nvim/init.lua;
   ".config/nvim/lua/base.lua".source = ../../files/config/nvim/lua/base.lua;
   ".config/nvim/lua/keymaps.lua".source = ../../files/config/nvim/lua/keymaps.lua;
   ".config/nvim/lua/lazy-nvim.lua".source = ../../files/config/nvim/lua/lazy-nvim.lua;
   ".config/nvim/lua/plugins/blink-cmp.lua".source = ../../files/config/nvim/lua/plugins/blink-cmp.lua;
+  ".config/nvim/lua/plugins/copilot-chat.lua".source = ../../files/config/nvim/lua/plugins/copilot-chat.lua;
   ".config/nvim/lua/plugins/copilot.lua".source = ../../files/config/nvim/lua/plugins/copilot.lua;
   ".config/nvim/lua/plugins/conform.lua".source = ../../files/config/nvim/lua/plugins/conform.lua;
   ".config/nvim/lua/plugins/dashboard.lua".source = ../../files/config/nvim/lua/plugins/dashboard.lua;

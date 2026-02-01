@@ -7,6 +7,7 @@ depends = [
     "git",
     "lazygit",
     "mise",
+    "neovide",
     "neovim",
     "wezterm",
     "zellij",
@@ -31,6 +32,9 @@ depends = [
 [mise.files]
 "files/config/mise/config.toml" = "~/.config/mise/config.toml"
 
+[neovide.files]
+"files/config/neovide/config.toml" = "~/.config/neovide/config.toml"
+
 [neovim.files]
 "files/config/nvim/init.lua" = "~/.config/nvim/init.lua"
 
@@ -39,6 +43,7 @@ depends = [
 "files/config/nvim/lua/lazy-nvim.lua" = "~/.config/nvim/lua/lazy-nvim.lua"
 
 "files/config/nvim/lua/plugins/blink-cmp.lua" = "~/.config/nvim/lua/plugins/blink-cmp.lua"
+"files/config/nvim/lua/plugins/copilot-chat.lua" = "~/.config/nvim/lua/plugins/copilot-chat.lua"
 "files/config/nvim/lua/plugins/copilot.lua" = "~/.config/nvim/lua/plugins/copilot.lua"
 "files/config/nvim/lua/plugins/conform.lua" = "~/.config/nvim/lua/plugins/conform.lua"
 "files/config/nvim/lua/plugins/dashboard.lua" = "~/.config/nvim/lua/plugins/dashboard.lua"

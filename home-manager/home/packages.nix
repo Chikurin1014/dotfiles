@@ -22,6 +22,7 @@ with pkgs;
   (config.lib.nixGL.wrap ghostty)
   # editor
   neovim
+  neovide
   tree-sitter
   # essential tools
   curl

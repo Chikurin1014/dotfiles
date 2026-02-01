@@ -23,6 +23,13 @@ depends = ["lazygit"]
 "files/override/windows/config/nushell/vendor/autoload/starship.nu" = "~/AppData/Roaming/nushell/vendor/autoload/starship.nu"
 
 # override
+[neovide]
+depends = ["neovide"]
+
+[neovide.files]
+"files/config/neovide/config.toml" = "~/AppData/Roaming/neovide/config.toml"
+
+# override
 [neovim]
 depends = ["neovim"]
 
@@ -70,6 +77,7 @@ depends = ["neovim"]
 "files/config/nvim/lua/plugins/util/which-key.lua" = "~/AppData/Local/nvim/lua/plugins/util/which-key.lua"
 
 "files/override/windows/config/nvim/lua/plugins/toggleterm.lua" = "~/AppData/Local/nvim/lua/plugins/toggleterm.lua"
+"files/override/windows/config/nvim/lua/plugins/copilot-chat.lua" = "~/AppData/Local/nvim/lua/plugins/copilot-chat.lua"
 
 # override
 [wezterm]
