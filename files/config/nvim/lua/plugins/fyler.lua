@@ -7,10 +7,18 @@ return {
         opts = {
             views = {
                 finder = {
-                    default_explorer = true
-                }
-            }
+                    close_on_select = true,
+                    default_explorer = true,
+                    columns = {
+                        git = {
+                            enabled = true,
+                        },
+                    },
+                    follow_current_file = true,
+                },
+            },
         },
+        cmd = { 'Fyler' },
         keys = {
             {
                 '<leader>oe',
@@ -20,19 +28,16 @@ return {
                         and buffer_name
                         or vim.fs.joinpath(vim.fn.getcwd(), buffer_name)
                     local parent_dir_fs = vim.fs.dirname(full_path)
-                    require('fyler').open({ dir = parent_dir_fs, kind = 'float' })
+                    local opts = {
+                        dir = parent_dir_fs,
+                        kind = 'float',
+                    }
+                    require('fyler').open(opts)
                 end,
                 mode = 'n',
                 desc = 'Open Fyler explorer'
             },
-            {
-                '<leader>oE',
-                function()
-                    require('fyler').open({ follow_current_file = true, kind = 'split_left_most' })
-                end,
-                mode = 'n',
-                desc = 'Open Fyler file tree'
-            }
+            { '<leader>oE', '<cmd>Fyler kind=split_left_most<cr>', mode = 'n', desc = 'Open Fyler file tree' }
         }
     }
 }

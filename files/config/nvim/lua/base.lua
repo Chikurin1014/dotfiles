@@ -8,7 +8,6 @@ vim.loader.enable()
 -- Global variables
 vim.g.is_unix = package.config:sub(1, 1) == '/'
 vim.g.shell = vim.g.is_unix and 'zsh' or 'nu'
-vim.g.home = vim.g.is_unix and os.getenv('HOME') or os.getenv('USERPROFILE')
 
 vim.opt.number = true
 vim.wo.number = true

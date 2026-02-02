@@ -12,9 +12,9 @@ return {
                 },
                 shortcut = {
                     { key = 'P', desc = 'Plugins',  group = 'Label', action = 'Lazy' },
-                    { key = 'F', desc = 'File',     group = 'Label', action = string.format('Telescope find_files cwd=%s', vim.g.home) },
-                    { key = 'E', desc = 'Explorer', group = 'Label', action = string.format('Fyler %s', vim.g.home) },
-                    { key = 'T', desc = 'Terminal', group = 'Label', action = string.format('TermNew layout=float dir=%s', vim.g.home) },
+                    { key = 'F', desc = 'File',     group = 'Label', action = 'Telescope find_files' },
+                    { key = 'E', desc = 'Explorer', group = 'Label', action = 'Fyler kind=split_left_most' },
+                    { key = 'T', desc = 'Terminal', group = 'Label', action = 'TermNew layout=float' },
                     { key = 'H', desc = 'Help',     group = 'Label', action = 'Telescope help_tags' },
                     { key = 'Q', desc = 'Quit',     group = 'Label', action = 'qa' },
                 },
