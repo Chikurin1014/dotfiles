@@ -6,7 +6,7 @@ return {
             'nvim-tree/nvim-web-devicons',
         },
         lazy = true,
-        event = 'BufEnter',
+        event = 'BufCreate',
         config = function()
             vim.opt.termguicolors = true
             local bufferline = require('bufferline')

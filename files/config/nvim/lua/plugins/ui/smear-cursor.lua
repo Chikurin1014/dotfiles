@@ -2,7 +2,7 @@ return {
     {
         "sphamba/smear-cursor.nvim",
         lazy = true,
-        event = 'VeryLazy',
+        event = { 'CursorMoved', 'CursorMovedC', 'CursorMovedI' },
         opts = {
             stiffness = 0.7,
             trailing_stiffness = 0.65,

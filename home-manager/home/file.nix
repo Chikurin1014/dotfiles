@@ -16,11 +16,13 @@
   ".config/nvim/lua/base.lua".source = ../../files/config/nvim/lua/base.lua;
   ".config/nvim/lua/keymaps.lua".source = ../../files/config/nvim/lua/keymaps.lua;
   ".config/nvim/lua/lazy-nvim.lua".source = ../../files/config/nvim/lua/lazy-nvim.lua;
+  ".config/nvim/lua/neovide.lua".source = ../../files/config/nvim/lua/neovide.lua;
   ".config/nvim/lua/plugins/blink-cmp.lua".source = ../../files/config/nvim/lua/plugins/blink-cmp.lua;
   ".config/nvim/lua/plugins/copilot-chat.lua".source = ../../files/config/nvim/lua/plugins/copilot-chat.lua;
   ".config/nvim/lua/plugins/copilot.lua".source = ../../files/config/nvim/lua/plugins/copilot.lua;
   ".config/nvim/lua/plugins/conform.lua".source = ../../files/config/nvim/lua/plugins/conform.lua;
   ".config/nvim/lua/plugins/dashboard.lua".source = ../../files/config/nvim/lua/plugins/dashboard.lua;
+  ".config/nvim/lua/plugins/fidget.lua".source = ../../files/config/nvim/lua/plugins/fidget.lua;
   ".config/nvim/lua/plugins/fyler.lua".source = ../../files/config/nvim/lua/plugins/fyler.lua;
   ".config/nvim/lua/plugins/lazygit.lua".source = ../../files/config/nvim/lua/plugins/lazygit.lua;
   ".config/nvim/lua/plugins/remote-nvim.lua".source =
@@ -35,7 +37,6 @@
   ".config/nvim/lua/plugins/lsp/init.lua".source = ../../files/config/nvim/lua/plugins/lsp/init.lua;
   ".config/nvim/lua/plugins/lsp/lua_ls.lua".source =
     ../../files/config/nvim/lua/plugins/lsp/lua_ls.lua;
-  ".config/nvim/lua/plugins/ui/bg.lua".source = ../../files/config/nvim/lua/plugins/ui/bg.lua;
   ".config/nvim/lua/plugins/ui/bufferline.lua".source =
     ../../files/config/nvim/lua/plugins/ui/bufferline.lua;
   ".config/nvim/lua/plugins/ui/bufresize.lua".source =
@@ -46,8 +47,6 @@
     ../../files/config/nvim/lua/plugins/ui/lsp-colors.lua;
   ".config/nvim/lua/plugins/ui/lualine.lua".source =
     ../../files/config/nvim/lua/plugins/ui/lualine.lua;
-  ".config/nvim/lua/plugins/ui/noice.lua".source = ../../files/config/nvim/lua/plugins/ui/noice.lua;
-  ".config/nvim/lua/plugins/ui/notify.lua".source = ../../files/config/nvim/lua/plugins/ui/notify.lua;
   ".config/nvim/lua/plugins/ui/scrollbar.lua".source =
     ../../files/config/nvim/lua/plugins/ui/scrollbar.lua;
   ".config/nvim/lua/plugins/ui/smear-cursor.lua".source =

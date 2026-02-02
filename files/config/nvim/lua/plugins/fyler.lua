@@ -4,7 +4,13 @@ return {
         dependencies = { "nvim-mini/mini.icons" },
         branch = "stable", -- Use stable branch for production
         lazy = false,      -- Necessary for `default_explorer` to work properly
-        opts = {},
+        opts = {
+            views = {
+                finder = {
+                    default_explorer = true
+                }
+            }
+        },
         keys = {
             {
                 '<leader>oe',

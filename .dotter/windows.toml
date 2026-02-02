@@ -39,11 +39,13 @@ depends = ["neovim"]
 "files/config/nvim/lua/base.lua" = "~/AppData/Local/nvim/lua/base.lua"
 "files/config/nvim/lua/keymaps.lua" = "~/AppData/Local/nvim/lua/keymaps.lua"
 "files/config/nvim/lua/lazy-nvim.lua" = "~/AppData/Local/nvim/lua/lazy-nvim.lua"
+"files/config/nvim/lua/neovide.lua" = "~/AppData/Local/nvim/lua/neovide.lua"
 
 "files/config/nvim/lua/plugins/blink-cmp.lua" = "~/AppData/Local/nvim/lua/plugins/blink-cmp.lua"
 "files/config/nvim/lua/plugins/copilot.lua" = "~/AppData/Local/nvim/lua/plugins/copilot.lua"
 "files/config/nvim/lua/plugins/conform.lua" = "~/AppData/Local/nvim/lua/plugins/conform.lua"
 "files/config/nvim/lua/plugins/dashboard.lua" = "~/AppData/Local/nvim/lua/plugins/dashboard.lua"
+"files/config/nvim/lua/plugins/fidget.lua" = "~/AppData/Local/nvim/lua/plugins/fidget.lua"
 "files/config/nvim/lua/plugins/fyler.lua" = "~/AppData/Local/nvim/lua/plugins/fyler.lua"
 "files/config/nvim/lua/plugins/lazygit.lua" = "~/AppData/Local/nvim/lua/plugins/lazygit.lua"
 "files/config/nvim/lua/plugins/remote-nvim.lua" = "~/AppData/Local/nvim/lua/plugins/remote-nvim.lua"
@@ -55,13 +57,10 @@ depends = ["neovim"]
 "files/config/nvim/lua/plugins/lsp/lua_ls.lua" = "~/AppData/Local/nvim/lua/plugins/lsp/lua_ls.lua"
 
 "files/config/nvim/lua/plugins/ui/bufferline.lua" = "~/AppData/Local/nvim/lua/plugins/ui/bufferline.lua"
-"files/config/nvim/lua/plugins/ui/bg.lua" = "~/AppData/Local/nvim/lua/plugins/ui/bg.lua"
 "files/config/nvim/lua/plugins/ui/bufresize.lua" = "~/AppData/Local/nvim/lua/plugins/ui/bufresize.lua"
 "files/config/nvim/lua/plugins/ui/kanagawa.lua" = "~/AppData/Local/nvim/lua/plugins/ui/kanagawa.lua"
 "files/config/nvim/lua/plugins/ui/lsp-colors.lua" = "~/AppData/Local/nvim/lua/plugins/ui/lsp-colors.lua"
 "files/config/nvim/lua/plugins/ui/lualine.lua" = "~/AppData/Local/nvim/lua/plugins/ui/lualine.lua"
-"files/config/nvim/lua/plugins/ui/noice.lua" = "~/AppData/Local/nvim/lua/plugins/ui/noice.lua"
-"files/config/nvim/lua/plugins/ui/notify.lua" = "~/AppData/Local/nvim/lua/plugins/ui/notify.lua"
 "files/config/nvim/lua/plugins/ui/scrollbar.lua" = "~/AppData/Local/nvim/lua/plugins/ui/scrollbar.lua"
 "files/config/nvim/lua/plugins/ui/smear-cursor.lua" = "~/AppData/Local/nvim/lua/plugins/ui/smear-cursor.lua"
 

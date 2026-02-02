@@ -2,12 +2,13 @@ return {
     {
         'folke/which-key.nvim',
         lazy = true,
-        event = 'VeryLazy',
+        event = 'SafeState',
         opts = {
             preset = 'helix'
         },
         cmd = { 'WhichKey' },
         keys = {
+            { '<leader>' },
             {
                 '<F1>',
                 function()

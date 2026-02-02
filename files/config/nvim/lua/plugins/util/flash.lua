@@ -8,8 +8,8 @@ return {
             }
         },
         lazy = true,
-        event = 'VeryLazy',
         keys = {
+            { '/', desc = 'Search' },
             { '<leader>j',  function() require('flash').jump() end,              mode = { 'n', 'x', 'o' }, desc = 'Jump cursor' },
             { '<leader>v',  function() require('flash').treesitter() end,        mode = { 'n', 'x', 'o' }, desc = 'Select block' },
             { 'r',          function() require('flash').remote() end,            mode = 'o',               desc = 'Remote Flash' },

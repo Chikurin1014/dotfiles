@@ -3,7 +3,15 @@ return {
         "chrisgrieser/nvim-origami",
         lazy = true,
         event = "BufReadPost",
-        opts = {}, -- needed even when using default config
+        opts = {
+            autoFold = {
+                enable = false,
+            },
+            foldKeymaps = {
+                closeOnlyOnFirstColumn = true,
+                scrollLeftOnCaret = true,
+            },
+        }, -- needed even when using default config
 
         -- recommended: disable vim's auto-folding
         init = function()

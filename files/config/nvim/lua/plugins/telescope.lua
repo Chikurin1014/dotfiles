@@ -1,31 +1,37 @@
 return {
     {
         'nvim-telescope/telescope.nvim',
-        dependencies = { 'nvim-lua/plenary.nvim' },
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+            'jonarrien/telescope-cmdline.nvim',
+        },
         lazy = true,
         cmd = { 'Telescope' },
         keys = {
-            { '<leader>ff', mode = 'n', desc = 'Find a file' },
-            { '<leader>fr', mode = 'n', desc = 'Find a recent file' },
-            { '<leader>f/', mode = 'n', desc = 'Find a word (live grep)' },
-            { '<leader>fb', mode = 'n', desc = 'Find a buffer' },
-            { '<leader>fh', mode = 'n', desc = 'Find a help' },
-            { '<leader>ft', mode = 'n', desc = 'Find a function, variable, etc.' },
-            { '<leader>fn', mode = 'n', desc = 'Find a notification' }
+            { '<leader>ff', '<cmd>Telescope find_files<cr>', mode = 'n', desc = 'Find a file' },
+            { '<leader>fr', '<cmd>Telescope oldfiles<cr>',   mode = 'n', desc = 'Find a recent file' },
+            { '<leader>f/', '<cmd>Telescope live_grep<cr>',  mode = 'n', desc = 'Find a word (live grep)' },
+            { '<leader>fb', '<cmd>Telescope buffers<cr>',    mode = 'n', desc = 'Find a buffer' },
+            { '<leader>fh', '<cmd>Telescope help_tags<cr>',  mode = 'n', desc = 'Find a help' },
+            { '<leader>ft', '<cmd>Telescope treesitter<cr>', mode = 'n', desc = 'Find a function, variable, etc.' },
+            { '<leader>fn', '<cmd>Telescope fidget<cr>',     mode = 'n', desc = 'Find a notification' },
+            { '<leader>:',  '<cmd>Telescope cmdline<cr>',    mode = 'n', desc = 'Telescope Cmdline' },
         },
-        config = function()
+        opts = {
+            extensions = {
+                fidget = {},
+                cmdline = {},
+            },
+        },
+        config = function(_, opts)
             local telescope = require('telescope')
-            local builtin = require('telescope.builtin')
-            vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-            vim.keymap.set('n', '<leader>fr', builtin.oldfiles, {})
-            vim.keymap.set('n', '<leader>f/', builtin.live_grep, {})
-            vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-            vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
-            vim.keymap.set('n', '<leader>ft', builtin.treesitter, {})
-            vim.keymap.set('n', '<leader>fn', telescope.extensions.notify.notify, {})
-        end
+            telescope.setup(opts)
+            telescope.load_extension('fidget')
+            telescope.load_extension('cmdline')
+            telescope.load_extension('fzf')
+        end,
     },
-    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make', lazy = true },
     -- {
     --     "danielfalk/smart-open.nvim",
     --     branch = "0.2.x",

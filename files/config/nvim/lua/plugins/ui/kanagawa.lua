@@ -3,9 +3,6 @@ return {
         'rebelot/kanagawa.nvim',
         lazy = true,
         event = 'UIEnter',
-        dependencies = {
-            'akinsho/bufferline.nvim',
-        },
         config = function()
             local kanagawa = require('kanagawa')
             kanagawa.setup({
