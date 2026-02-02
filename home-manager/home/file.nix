@@ -38,8 +38,6 @@
     ../../files/config/nvim/lua/plugins/lsp/lua_ls.lua;
   ".config/nvim/lua/plugins/ui/bufferline.lua".source =
     ../../files/config/nvim/lua/plugins/ui/bufferline.lua;
-  ".config/nvim/lua/plugins/ui/bufresize.lua".source =
-    ../../files/config/nvim/lua/plugins/ui/bufresize.lua;
   ".config/nvim/lua/plugins/ui/kanagawa.lua".source =
     ../../files/config/nvim/lua/plugins/ui/kanagawa.lua;
   ".config/nvim/lua/plugins/ui/lsp-colors.lua".source =
@@ -66,6 +64,8 @@
     ../../files/config/nvim/lua/plugins/util/markview.lua;
   ".config/nvim/lua/plugins/util/origami.lua".source =
     ../../files/config/nvim/lua/plugins/util/origami.lua;
+  ".config/nvim/lua/plugins/util/smart-splits.lua".source =
+    ../../files/config/nvim/lua/plugins/util/smart-splits.lua;
   ".config/nvim/lua/plugins/util/startuptime.lua".source =
     ../../files/config/nvim/lua/plugins/util/startuptime.lua;
   ".config/nvim/lua/plugins/util/which-key.lua".source =
@@ -75,6 +75,8 @@
   ".config/wezterm/font.lua".source = ../../files/config/wezterm/font.lua;
   ".config/wezterm/keybindings/init.lua".source = ../../files/config/wezterm/keybindings/init.lua;
   ".config/wezterm/keybindings/keys.lua".source = ../../files/config/wezterm/keybindings/keys.lua;
+  ".config/wezterm/plugins/init.lua".source = ../../files/config/wezterm/plugins/init.lua;
+  ".config/wezterm/plugins/smart-splits-nvim.lua".source = ../../files/config/wezterm/plugins/smart-splits-nvim.lua;
   ".config/wezterm/themes/init.lua".source = ../../files/config/wezterm/themes/init.lua;
   ".config/wezterm/themes/no_image.lua".source = ../../files/config/wezterm/themes/no_image.lua;
   ".config/wezterm/themes/use_image.lua".source = ../../files/config/wezterm/themes/use_image.lua;

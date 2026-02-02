@@ -58,7 +58,6 @@ depends = ["neovim"]
 "files/config/nvim/lua/plugins/lsp/lua_ls.lua" = "~/AppData/Local/nvim/lua/plugins/lsp/lua_ls.lua"
 
 "files/config/nvim/lua/plugins/ui/bufferline.lua" = "~/AppData/Local/nvim/lua/plugins/ui/bufferline.lua"
-"files/config/nvim/lua/plugins/ui/bufresize.lua" = "~/AppData/Local/nvim/lua/plugins/ui/bufresize.lua"
 "files/config/nvim/lua/plugins/ui/kanagawa.lua" = "~/AppData/Local/nvim/lua/plugins/ui/kanagawa.lua"
 "files/config/nvim/lua/plugins/ui/lsp-colors.lua" = "~/AppData/Local/nvim/lua/plugins/ui/lsp-colors.lua"
 "files/config/nvim/lua/plugins/ui/lualine.lua" = "~/AppData/Local/nvim/lua/plugins/ui/lualine.lua"
@@ -72,12 +71,13 @@ depends = ["neovim"]
 "files/config/nvim/lua/plugins/util/inc-rename.lua" = "~/AppData/Local/nvim/lua/plugins/util/inc-rename.lua"
 "files/config/nvim/lua/plugins/util/markview.lua" = "~/AppData/Local/nvim/lua/plugins/util/markview.lua"
 "files/config/nvim/lua/plugins/util/origami.lua" = "~/AppData/Local/nvim/lua/plugins/util/origami.lua"
+"files/config/nvim/lua/plugins/util/smart-splits.lua" = "~/AppData/Local/nvim/lua/plugins/util/smart-splits.lua"
 "files/config/nvim/lua/plugins/util/startuptime.lua" = "~/AppData/Local/nvim/lua/plugins/util/startuptime.lua"
 "files/config/nvim/lua/plugins/util/which-key.lua" = "~/AppData/Local/nvim/lua/plugins/util/which-key.lua"
 
 # override
-[wezterm]
-depends = ["wezterm"]
-
-[wezterm.files]
-"files/override/windows/config/wezterm/wezterm.lua" = "~/.config/wezterm/wezterm.lua"
+# [wezterm]
+# depends = ["wezterm"]
+#
+# [wezterm.files]
+# "files/override/windows/config/wezterm/wezterm.lua" = "~/.config/wezterm/wezterm.lua"
