@@ -3,7 +3,7 @@ return {
         'nvim-lualine/lualine.nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons' },
         lazy = true,
-        event = 'BufReadPost',
+        event = { 'BufReadPost', 'ModeChanged' },
         opts = {
             options = {
                 theme = 'gruvbox',

@@ -9,7 +9,7 @@
   ".config/git/commit_template.gitconfig".source = ../../files/config/git/commit_template.gitconfig;
   ".config/git/commit_template.txt".source = ../../files/config/git/commit_template.txt;
   ".config/git/diff.gitconfig".source = ../../files/config/git/diff.gitconfig;
-  ".config/lazygit/config.yml".source = ../../files/config/lazygit/config.yml;
+  # ".config/lazygit/config.yml".source = ../../files/config/lazygit/config.yml;
   ".config/mise/config.toml".source = ../../files/config/mise/config.toml;
   ".config/neovide/config.toml".source = ../../files/config/neovide/config.toml;
   ".config/nvim/init.lua".source = ../../files/config/nvim/init.lua;
@@ -22,14 +22,13 @@
   ".config/nvim/lua/plugins/copilot.lua".source = ../../files/config/nvim/lua/plugins/copilot.lua;
   ".config/nvim/lua/plugins/conform.lua".source = ../../files/config/nvim/lua/plugins/conform.lua;
   ".config/nvim/lua/plugins/dashboard.lua".source = ../../files/config/nvim/lua/plugins/dashboard.lua;
+  ".config/nvim/lua/plugins/ergoterm.lua".source = ../../files/config/nvim/lua/plugins/ergoterm.lua;
   ".config/nvim/lua/plugins/fidget.lua".source = ../../files/config/nvim/lua/plugins/fidget.lua;
   ".config/nvim/lua/plugins/fyler.lua".source = ../../files/config/nvim/lua/plugins/fyler.lua;
   ".config/nvim/lua/plugins/lazygit.lua".source = ../../files/config/nvim/lua/plugins/lazygit.lua;
   ".config/nvim/lua/plugins/remote-nvim.lua".source =
     ../../files/config/nvim/lua/plugins/remote-nvim.lua;
   ".config/nvim/lua/plugins/telescope.lua".source = ../../files/config/nvim/lua/plugins/telescope.lua;
-  ".config/nvim/lua/plugins/toggleterm.lua".source =
-    ../../files/config/nvim/lua/plugins/toggleterm.lua;
   ".config/nvim/lua/plugins/treesitter.lua".source =
     ../../files/config/nvim/lua/plugins/treesitter.lua;
   ".config/nvim/lua/plugins/treesitter-context.lua".source =
@@ -57,8 +56,6 @@
     ../../files/config/nvim/lua/plugins/ui/bufferline.lua;
   ".config/nvim/lua/plugins/util/colorizer.lua".source =
     ../../files/config/nvim/lua/plugins/util/colorizer.lua;
-  ".config/nvim/lua/plugins/util/comment.lua".source =
-    ../../files/config/nvim/lua/plugins/util/comment.lua;
   ".config/nvim/lua/plugins/util/flash.lua".source =
     ../../files/config/nvim/lua/plugins/util/flash.lua;
   ".config/nvim/lua/plugins/util/hlslens.lua".source =

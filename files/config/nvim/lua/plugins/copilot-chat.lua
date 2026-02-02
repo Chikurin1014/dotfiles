@@ -4,7 +4,7 @@ return {
         dependencies = {
             { "nvim-lua/plenary.nvim", branch = "master" },
         },
-        build = "make tiktoken",
+        build = vim.g.is_unit and "make tiktoken" or nil,
         lazy = true,
         cmd = {
             'CopilotChat',

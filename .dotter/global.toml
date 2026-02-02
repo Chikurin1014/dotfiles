@@ -48,12 +48,11 @@ depends = [
 "files/config/nvim/lua/plugins/copilot.lua" = "~/.config/nvim/lua/plugins/copilot.lua"
 "files/config/nvim/lua/plugins/conform.lua" = "~/.config/nvim/lua/plugins/conform.lua"
 "files/config/nvim/lua/plugins/dashboard.lua" = "~/.config/nvim/lua/plugins/dashboard.lua"
+"files/config/nvim/lua/plugins/ergoterm.lua" = "~/.config/nvim/lua/plugins/ergoterm.lua"
 "files/config/nvim/lua/plugins/fidget.lua" = "~/.config/nvim/lua/plugins/fidget.lua"
 "files/config/nvim/lua/plugins/fyler.lua" = "~/.config/nvim/lua/plugins/fyler.lua"
-"files/config/nvim/lua/plugins/lazygit.lua" = "~/.config/nvim/lua/plugins/lazygit.lua"
 "files/config/nvim/lua/plugins/remote-nvim.lua" = "~/.config/nvim/lua/plugins/remote-nvim.lua"
 "files/config/nvim/lua/plugins/telescope.lua" = "~/.config/nvim/lua/plugins/telescope.lua"
-"files/config/nvim/lua/plugins/toggleterm.lua" = "~/.config/nvim/lua/plugins/toggleterm.lua"
 "files/config/nvim/lua/plugins/treesitter.lua" = "~/.config/nvim/lua/plugins/treesitter.lua"
 "files/config/nvim/lua/plugins/treesitter-context.lua" = "~/.config/nvim/lua/plugins/treesitter-context.lua"
 
@@ -70,7 +69,6 @@ depends = [
 
 "files/config/nvim/lua/plugins/util/autopairs.lua" = "~/.config/nvim/lua/plugins/util/autopairs.lua"
 "files/config/nvim/lua/plugins/util/colorizer.lua" = "~/.config/nvim/lua/plugins/util/colorizer.lua"
-"files/config/nvim/lua/plugins/util/comment.lua" = "~/.config/nvim/lua/plugins/util/comment.lua"
 "files/config/nvim/lua/plugins/util/flash.lua" = "~/.config/nvim/lua/plugins/util/flash.lua"
 "files/config/nvim/lua/plugins/util/hlslens.lua" = "~/.config/nvim/lua/plugins/util/hlslens.lua"
 "files/config/nvim/lua/plugins/util/inc-rename.lua" = "~/.config/nvim/lua/plugins/util/inc-rename.lua"

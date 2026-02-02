@@ -42,12 +42,13 @@ depends = ["neovim"]
 "files/config/nvim/lua/neovide.lua" = "~/AppData/Local/nvim/lua/neovide.lua"
 
 "files/config/nvim/lua/plugins/blink-cmp.lua" = "~/AppData/Local/nvim/lua/plugins/blink-cmp.lua"
+"files/config/nvim/lua/plugins/copilot-chat.lua" = "~/AppData/Local/nvim/lua/plugins/copilot-chat.lua"
 "files/config/nvim/lua/plugins/copilot.lua" = "~/AppData/Local/nvim/lua/plugins/copilot.lua"
 "files/config/nvim/lua/plugins/conform.lua" = "~/AppData/Local/nvim/lua/plugins/conform.lua"
 "files/config/nvim/lua/plugins/dashboard.lua" = "~/AppData/Local/nvim/lua/plugins/dashboard.lua"
+"files/config/nvim/lua/plugins/ergoterm.lua" = "~/AppData/Local/nvim/lua/plugins/ergoterm.lua"
 "files/config/nvim/lua/plugins/fidget.lua" = "~/AppData/Local/nvim/lua/plugins/fidget.lua"
 "files/config/nvim/lua/plugins/fyler.lua" = "~/AppData/Local/nvim/lua/plugins/fyler.lua"
-"files/config/nvim/lua/plugins/lazygit.lua" = "~/AppData/Local/nvim/lua/plugins/lazygit.lua"
 "files/config/nvim/lua/plugins/remote-nvim.lua" = "~/AppData/Local/nvim/lua/plugins/remote-nvim.lua"
 "files/config/nvim/lua/plugins/telescope.lua" = "~/AppData/Local/nvim/lua/plugins/telescope.lua"
 "files/config/nvim/lua/plugins/treesitter.lua" = "~/AppData/Local/nvim/lua/plugins/treesitter.lua"
@@ -66,7 +67,6 @@ depends = ["neovim"]
 
 "files/config/nvim/lua/plugins/util/autopairs.lua" = "~/AppData/Local/nvim/lua/plugins/util/autopairs.lua"
 "files/config/nvim/lua/plugins/util/colorizer.lua" = "~/AppData/Local/nvim/lua/plugins/util/colorizer.lua"
-"files/config/nvim/lua/plugins/util/comment.lua" = "~/AppData/Local/nvim/lua/plugins/util/comment.lua"
 "files/config/nvim/lua/plugins/util/flash.lua" = "~/AppData/Local/nvim/lua/plugins/util/flash.lua"
 "files/config/nvim/lua/plugins/util/hlslens.lua" = "~/AppData/Local/nvim/lua/plugins/util/hlslens.lua"
 "files/config/nvim/lua/plugins/util/inc-rename.lua" = "~/AppData/Local/nvim/lua/plugins/util/inc-rename.lua"
@@ -74,9 +74,6 @@ depends = ["neovim"]
 "files/config/nvim/lua/plugins/util/origami.lua" = "~/AppData/Local/nvim/lua/plugins/util/origami.lua"
 "files/config/nvim/lua/plugins/util/startuptime.lua" = "~/AppData/Local/nvim/lua/plugins/util/startuptime.lua"
 "files/config/nvim/lua/plugins/util/which-key.lua" = "~/AppData/Local/nvim/lua/plugins/util/which-key.lua"
-
-"files/override/windows/config/nvim/lua/plugins/toggleterm.lua" = "~/AppData/Local/nvim/lua/plugins/toggleterm.lua"
-"files/override/windows/config/nvim/lua/plugins/copilot-chat.lua" = "~/AppData/Local/nvim/lua/plugins/copilot-chat.lua"
 
 # override
 [wezterm]
