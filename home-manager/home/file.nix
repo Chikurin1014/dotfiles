@@ -42,6 +42,8 @@
     ../../files/config/nvim/lua/plugins/ui/lsp-colors.lua;
   ".config/nvim/lua/plugins/ui/lualine.lua".source =
     ../../files/config/nvim/lua/plugins/ui/lualine.lua;
+  ".config/nvim/lua/plugins/ui/mini-icons.lua".source =
+    ../../files/config/nvim/lua/plugins/ui/mini-icons.lua;
   ".config/nvim/lua/plugins/ui/scrollbar.lua".source =
     ../../files/config/nvim/lua/plugins/ui/scrollbar.lua;
   ".config/nvim/lua/plugins/ui/smear-cursor.lua".source =

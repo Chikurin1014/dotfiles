@@ -1,18 +1,27 @@
 return {
 	{
 		'nvim-lualine/lualine.nvim',
-		dependencies = { 'nvim-tree/nvim-web-devicons' },
+		dependencies = { 'echasnovski/mini.icons' },
 		lazy = true,
-		event = { 'BufReadPost', 'ModeChanged' },
+		event = { 'UIEnter' },
 		opts = {
 			options = {
 				theme = 'gruvbox',
 				background = 'dark',
+				disabled_filetypes = {
+					statusline = { 'dashboard' },
+				},
+				always_show_tabline = true,
+				globalstatus = true,
 			},
-			tabline = { lualine_z = { 'tabs' } },
-			winbar = { lualine_a = { 'buffers' } },
+			tabline = { lualine_a = { 'buffers' }, lualine_z = { 'tabs' } },
+			winbar = {},
 			inactive_winbar = {},
 			extensions = {}
 		},
+		config = function(_, opts)
+			require('mini.icons').mock_nvim_web_devicons()
+			require('lualine').setup(opts)
+		end,
 	},
 }

@@ -60,6 +60,7 @@ depends = ["neovim"]
 "files/config/nvim/lua/plugins/ui/kanagawa.lua" = "~/AppData/Local/nvim/lua/plugins/ui/kanagawa.lua"
 "files/config/nvim/lua/plugins/ui/lsp-colors.lua" = "~/AppData/Local/nvim/lua/plugins/ui/lsp-colors.lua"
 "files/config/nvim/lua/plugins/ui/lualine.lua" = "~/AppData/Local/nvim/lua/plugins/ui/lualine.lua"
+"files/config/nvim/lua/plugins/ui/mini-icons.lua" = "~/AppData/Local/nvim/lua/plugins/ui/mini-icons.lua"
 "files/config/nvim/lua/plugins/ui/scrollbar.lua" = "~/AppData/Local/nvim/lua/plugins/ui/scrollbar.lua"
 "files/config/nvim/lua/plugins/ui/smear-cursor.lua" = "~/AppData/Local/nvim/lua/plugins/ui/smear-cursor.lua"
 

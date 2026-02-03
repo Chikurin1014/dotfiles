@@ -20,4 +20,3 @@ vim.opt.helplang = { 'ja', 'en' }
 vim.opt.swapfile = false
 vim.opt.wrap = false
 vim.opt.splitright = true
-vim.opt.laststatus = 3
