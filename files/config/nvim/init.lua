@@ -1,7 +1,10 @@
-require('base')
-require('keymaps')
-require('lazy-nvim')
-
-if vim.g.neovide then
-    require('neovide')
+local user_setup = function()
+	require('base')
+	require('keymaps')
+	if vim.g.neovide then
+		require('neovide')
+	end
 end
+require('lazy-nvim').setup({
+	pre_load_callback = user_setup,
+})

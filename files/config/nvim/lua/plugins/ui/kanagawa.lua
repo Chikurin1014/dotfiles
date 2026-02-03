@@ -4,6 +4,7 @@ return {
         lazy = true,
         event = 'UIEnter',
         config = function()
+            vim.opt.winblend = 5 -- transparent float window
             local kanagawa = require('kanagawa')
             kanagawa.setup({
                 -- transparent = true,

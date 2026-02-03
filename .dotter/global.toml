@@ -2,16 +2,16 @@
 
 [default]
 depends = [
-    "clang-format",
-    "ghostty",
-    "git",
-    "lazygit",
-    "mise",
-    "neovide",
-    "neovim",
-    "wezterm",
-    "zellij",
-    "zsh",
+	"clang-format",
+	"ghostty",
+	"git",
+	"lazygit",
+	"mise",
+	"neovide",
+	"neovim",
+	"wezterm",
+	"zellij",
+	"zsh",
 ]
 
 [clang-format.files]
@@ -50,7 +50,7 @@ depends = [
 "files/config/nvim/lua/plugins/dashboard.lua" = "~/.config/nvim/lua/plugins/dashboard.lua"
 "files/config/nvim/lua/plugins/ergoterm.lua" = "~/.config/nvim/lua/plugins/ergoterm.lua"
 "files/config/nvim/lua/plugins/fidget.lua" = "~/.config/nvim/lua/plugins/fidget.lua"
-"files/config/nvim/lua/plugins/fyler.lua" = "~/.config/nvim/lua/plugins/fyler.lua"
+"files/config/nvim/lua/plugins/oil.lua" = "~/.config/nvim/lua/plugins/oil.lua"
 "files/config/nvim/lua/plugins/remote-nvim.lua" = "~/.config/nvim/lua/plugins/remote-nvim.lua"
 "files/config/nvim/lua/plugins/telescope.lua" = "~/.config/nvim/lua/plugins/telescope.lua"
 "files/config/nvim/lua/plugins/treesitter.lua" = "~/.config/nvim/lua/plugins/treesitter.lua"
@@ -59,7 +59,6 @@ depends = [
 "files/config/nvim/lua/plugins/lsp/init.lua" = "~/.config/nvim/lua/plugins/lsp/init.lua"
 "files/config/nvim/lua/plugins/lsp/lua_ls.lua" = "~/.config/nvim/lua/plugins/lsp/lua_ls.lua"
 
-"files/config/nvim/lua/plugins/ui/bufferline.lua" = "~/.config/nvim/lua/plugins/ui/bufferline.lua"
 "files/config/nvim/lua/plugins/ui/kanagawa.lua" = "~/.config/nvim/lua/plugins/ui/kanagawa.lua"
 "files/config/nvim/lua/plugins/ui/lsp-colors.lua" = "~/.config/nvim/lua/plugins/ui/lsp-colors.lua"
 "files/config/nvim/lua/plugins/ui/lualine.lua" = "~/.config/nvim/lua/plugins/ui/lualine.lua"

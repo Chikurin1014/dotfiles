@@ -9,40 +9,15 @@ vim.loader.enable()
 vim.g.is_unix = package.config:sub(1, 1) == '/'
 vim.g.shell = vim.g.is_unix and 'zsh' or 'nu'
 
-vim.opt.number = true
-vim.wo.number = true
-vim.wo.relativenumber = false
-vim.opt.mouse = 'a' -- activate
-vim.opt.title = true
 -- To avoid conflicts with treesitter
 -- vim.opt.autoindent = true
 -- vim.opt.smartindent = true
-vim.opt.hlsearch = true
 vim.opt.backup = false
 vim.opt.showcmd = true
-vim.opt.cmdheight = 2
-vim.opt.laststatus = 2
-vim.opt.expandtab = true
-vim.opt.scrolloff = 10
-vim.opt.inccommand = 'split'
-vim.opt.ignorecase = true
-vim.opt.smarttab = true
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
-vim.opt.helplang = 'ja', 'en'
-vim.opt.updatetime = 300
-vim.opt.showtabline = 2
-vim.opt.termguicolors = true
-vim.opt.signcolumn = 'yes'
-vim.opt.hidden = true
+vim.opt.helplang = { 'ja', 'en' }
 vim.opt.swapfile = false
 vim.opt.wrap = false
-vim.opt.breakindent = true
-
--- float-transparent
-vim.opt.winblend = 5 -- transparent floating windows
-
--- Python3
-vim.cmd([[
-    let g:python3_host_prog = '/usr/bin/python3'
-]])
+vim.opt.splitright = true
+vim.opt.laststatus = 3

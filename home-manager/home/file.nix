@@ -24,7 +24,7 @@
   ".config/nvim/lua/plugins/dashboard.lua".source = ../../files/config/nvim/lua/plugins/dashboard.lua;
   ".config/nvim/lua/plugins/ergoterm.lua".source = ../../files/config/nvim/lua/plugins/ergoterm.lua;
   ".config/nvim/lua/plugins/fidget.lua".source = ../../files/config/nvim/lua/plugins/fidget.lua;
-  ".config/nvim/lua/plugins/fyler.lua".source = ../../files/config/nvim/lua/plugins/fyler.lua;
+  ".config/nvim/lua/plugins/oil.lua".source = ../../files/config/nvim/lua/plugins/oil.lua;
   ".config/nvim/lua/plugins/lazygit.lua".source = ../../files/config/nvim/lua/plugins/lazygit.lua;
   ".config/nvim/lua/plugins/remote-nvim.lua".source =
     ../../files/config/nvim/lua/plugins/remote-nvim.lua;
@@ -36,8 +36,6 @@
   ".config/nvim/lua/plugins/lsp/init.lua".source = ../../files/config/nvim/lua/plugins/lsp/init.lua;
   ".config/nvim/lua/plugins/lsp/lua_ls.lua".source =
     ../../files/config/nvim/lua/plugins/lsp/lua_ls.lua;
-  ".config/nvim/lua/plugins/ui/bufferline.lua".source =
-    ../../files/config/nvim/lua/plugins/ui/bufferline.lua;
   ".config/nvim/lua/plugins/ui/kanagawa.lua".source =
     ../../files/config/nvim/lua/plugins/ui/kanagawa.lua;
   ".config/nvim/lua/plugins/ui/lsp-colors.lua".source =
