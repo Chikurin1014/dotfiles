@@ -1,7 +1,6 @@
-local theme = require 'themes'.use_image
+local theme = require 'themes.use-image'
 local font = require 'font'
-local keybindings = require 'keybindings'
-local plugins = require 'plugins'
+local keymaps = require 'keymaps'
 
 -- Pull in the wezterm API
 local wezterm = require 'wezterm'
@@ -13,14 +12,14 @@ local config = {}
 -- In newer versions of wezterm, use the config_builder which will
 -- help provide clearer error messages
 if wezterm.config_builder then
-    config = wezterm.config_builder()
+	config = wezterm.config_builder()
 end
 
 local system = wezterm.target_triple
 local default_prog = string.match(system, 'linux') and { 'zsh', '-l' }
-    or string.match(system, 'apple') and { 'zsh', '-l' }
-    or string.match(system, 'windows') and { 'nu', '-l' }
-    or { 'zsh', '-l' }
+	or string.match(system, 'apple') and { 'zsh', '-l' }
+	or string.match(system, 'windows') and { 'nu', '-l' }
+	or { 'zsh', '-l' }
 
 -- This is where you actually apply your config choices
 
@@ -46,12 +45,12 @@ config.show_new_tab_button_in_tab_bar = theme.show_new_tab_button_in_tab_bar
 wezterm.on('format-tab-title', theme.format_tab_title)
 
 config.disable_default_key_bindings = true
-config.leader = keybindings.leader
-config.keys = keybindings.keys
+config.leader = keymaps.leader
+config.keys = keymaps.keys
 -- Integrate smart-splits.nvim keybindings
-local smart_splits_keys = plugins.smart_splits_nvim.keys
-for _, key in ipairs(smart_splits_keys) do
-    table.insert(config.keys, key)
+local smart_splits = require('plugins.smart-splits-nvim')
+for _, key in ipairs(smart_splits.keys) do
+	table.insert(config.keys, key)
 end
 
 

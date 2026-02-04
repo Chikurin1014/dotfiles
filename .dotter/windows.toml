@@ -74,10 +74,3 @@ depends = ["neovim"]
 "files/config/nvim/lua/plugins/util/smart-splits.lua" = "~/AppData/Local/nvim/lua/plugins/util/smart-splits.lua"
 "files/config/nvim/lua/plugins/util/startuptime.lua" = "~/AppData/Local/nvim/lua/plugins/util/startuptime.lua"
 "files/config/nvim/lua/plugins/util/which-key.lua" = "~/AppData/Local/nvim/lua/plugins/util/which-key.lua"
-
-# override
-# [wezterm]
-# depends = ["wezterm"]
-#
-# [wezterm.files]
-# "files/override/windows/config/wezterm/wezterm.lua" = "~/AppData/Local\wezterm/wezterm.lua"

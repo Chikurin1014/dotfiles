@@ -73,13 +73,10 @@
   ".config/sheldon/plugins.toml".source = ../../files/config/sheldon/plugins.toml;
   ".config/wezterm/wezterm.lua".source = ../../files/config/wezterm/wezterm.lua;
   ".config/wezterm/font.lua".source = ../../files/config/wezterm/font.lua;
-  ".config/wezterm/keybindings/init.lua".source = ../../files/config/wezterm/keybindings/init.lua;
-  ".config/wezterm/keybindings/keys.lua".source = ../../files/config/wezterm/keybindings/keys.lua;
-  ".config/wezterm/plugins/init.lua".source = ../../files/config/wezterm/plugins/init.lua;
+  ".config/wezterm/keymaps.lua".source = ../../files/config/wezterm/keymaps.lua;
   ".config/wezterm/plugins/smart-splits-nvim.lua".source = ../../files/config/wezterm/plugins/smart-splits-nvim.lua;
-  ".config/wezterm/themes/init.lua".source = ../../files/config/wezterm/themes/init.lua;
-  ".config/wezterm/themes/no_image.lua".source = ../../files/config/wezterm/themes/no_image.lua;
-  ".config/wezterm/themes/use_image.lua".source = ../../files/config/wezterm/themes/use_image.lua;
+  ".config/wezterm/themes/no-image.lua".source = ../../files/config/wezterm/themes/no-image.lua;
+  ".config/wezterm/themes/use-image.lua".source = ../../files/config/wezterm/themes/use-image.lua;
   ".config/zellij/config.kdl".source = ../../files/config/zellij/config.kdl;
   ".config/zellij/completion.zsh".source = ../../files/config/zellij/completion.zsh;
   ".config/zsh/alias.zsh".source = ../../files/config/zsh/alias.zsh;

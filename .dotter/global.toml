@@ -80,13 +80,10 @@ depends = [
 [wezterm.files]
 "files/config/wezterm/wezterm.lua" = "~/.config/wezterm/wezterm.lua"
 "files/config/wezterm/font.lua" = "~/.config/wezterm/font.lua"
-"files/config/wezterm/keybindings/init.lua" = "~/.config/wezterm/keybindings/init.lua"
-"files/config/wezterm/keybindings/keys.lua" = "~/.config/wezterm/keybindings/keys.lua"
-"files/config/wezterm/plugins/init.lua" = "~/.config/wezterm/plugins/init.lua"
+"files/config/wezterm/keymaps.lua" = "~/.config/wezterm/keymaps.lua"
 "files/config/wezterm/plugins/smart-splits-nvim.lua" = "~/.config/wezterm/plugins/smart-splits-nvim.lua"
-"files/config/wezterm/themes/init.lua" = "~/.config/wezterm/themes/init.lua"
-"files/config/wezterm/themes/no_image.lua" = "~/.config/wezterm/themes/no_image.lua"
-"files/config/wezterm/themes/use_image.lua" = "~/.config/wezterm/themes/use_image.lua"
+"files/config/wezterm/themes/no-image.lua" = "~/.config/wezterm/themes/no-image.lua"
+"files/config/wezterm/themes/use-image.lua" = "~/.config/wezterm/themes/use-image.lua"
 
 [zellij.files]
 "files/config/zellij/config.kdl" = "~/.config/zellij/config.kdl"
