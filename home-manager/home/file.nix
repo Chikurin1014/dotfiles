@@ -16,6 +16,7 @@
   ".config/nvim/lua/base.lua".source = ../../files/config/nvim/lua/base.lua;
   ".config/nvim/lua/keymaps.lua".source = ../../files/config/nvim/lua/keymaps.lua;
   ".config/nvim/lua/lazy-nvim.lua".source = ../../files/config/nvim/lua/lazy-nvim.lua;
+  ".config/nvim/lua/lsp.lua".source = ../../files/config/nvim/lua/lsp.lua;
   ".config/nvim/lua/neovide.lua".source = ../../files/config/nvim/lua/neovide.lua;
   ".config/nvim/lua/plugins/blink-cmp.lua".source = ../../files/config/nvim/lua/plugins/blink-cmp.lua;
   ".config/nvim/lua/plugins/copilot-chat.lua".source = ../../files/config/nvim/lua/plugins/copilot-chat.lua;
@@ -24,6 +25,7 @@
   ".config/nvim/lua/plugins/dashboard.lua".source = ../../files/config/nvim/lua/plugins/dashboard.lua;
   ".config/nvim/lua/plugins/ergoterm.lua".source = ../../files/config/nvim/lua/plugins/ergoterm.lua;
   ".config/nvim/lua/plugins/fidget.lua".source = ../../files/config/nvim/lua/plugins/fidget.lua;
+  ".config/nvim/lua/plugins/mason-lspconfig.lua".source = ../../files/config/nvim/lua/plugins/lsp/init.lua;
   ".config/nvim/lua/plugins/oil.lua".source = ../../files/config/nvim/lua/plugins/oil.lua;
   ".config/nvim/lua/plugins/lazygit.lua".source = ../../files/config/nvim/lua/plugins/lazygit.lua;
   ".config/nvim/lua/plugins/remote-nvim.lua".source =
@@ -33,9 +35,6 @@
     ../../files/config/nvim/lua/plugins/treesitter.lua;
   ".config/nvim/lua/plugins/treesitter-context.lua".source =
     ../../files/config/nvim/lua/plugins/treesitter-context.lua;
-  ".config/nvim/lua/plugins/lsp/init.lua".source = ../../files/config/nvim/lua/plugins/lsp/init.lua;
-  ".config/nvim/lua/plugins/lsp/lua_ls.lua".source =
-    ../../files/config/nvim/lua/plugins/lsp/lua_ls.lua;
   ".config/nvim/lua/plugins/ui/kanagawa.lua".source =
     ../../files/config/nvim/lua/plugins/ui/kanagawa.lua;
   ".config/nvim/lua/plugins/ui/lsp-colors.lua".source =
@@ -70,6 +69,7 @@
     ../../files/config/nvim/lua/plugins/util/startuptime.lua;
   ".config/nvim/lua/plugins/util/which-key.lua".source =
     ../../files/config/nvim/lua/plugins/util/which-key.lua;
+  ".config/nvim/after/lsp/lua_ls.lua".source = ../../files/config/nvim/after/lsp/lua_ls.lua;
   ".config/sheldon/plugins.toml".source = ../../files/config/sheldon/plugins.toml;
   ".config/wezterm/wezterm.lua".source = ../../files/config/wezterm/wezterm.lua;
   ".config/wezterm/font.lua".source = ../../files/config/wezterm/font.lua;

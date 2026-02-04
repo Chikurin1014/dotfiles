@@ -41,6 +41,7 @@ depends = [
 "files/config/nvim/lua/base.lua" = "~/.config/nvim/lua/base.lua"
 "files/config/nvim/lua/keymaps.lua" = "~/.config/nvim/lua/keymaps.lua"
 "files/config/nvim/lua/lazy-nvim.lua" = "~/.config/nvim/lua/lazy-nvim.lua"
+"files/config/nvim/lua/lsp.lua" = "~/.config/nvim/lua/lsp.lua"
 "files/config/nvim/lua/neovide.lua" = "~/.config/nvim/lua/neovide.lua"
 
 "files/config/nvim/lua/plugins/blink-cmp.lua" = "~/.config/nvim/lua/plugins/blink-cmp.lua"
@@ -50,14 +51,12 @@ depends = [
 "files/config/nvim/lua/plugins/dashboard.lua" = "~/.config/nvim/lua/plugins/dashboard.lua"
 "files/config/nvim/lua/plugins/ergoterm.lua" = "~/.config/nvim/lua/plugins/ergoterm.lua"
 "files/config/nvim/lua/plugins/fidget.lua" = "~/.config/nvim/lua/plugins/fidget.lua"
+"files/config/nvim/lua/plugins/mason-lspconfig.lua" = "~/.config/nvim/lua/plugins/lsp/init.lua"
 "files/config/nvim/lua/plugins/oil.lua" = "~/.config/nvim/lua/plugins/oil.lua"
 "files/config/nvim/lua/plugins/remote-nvim.lua" = "~/.config/nvim/lua/plugins/remote-nvim.lua"
 "files/config/nvim/lua/plugins/telescope.lua" = "~/.config/nvim/lua/plugins/telescope.lua"
 "files/config/nvim/lua/plugins/treesitter.lua" = "~/.config/nvim/lua/plugins/treesitter.lua"
 "files/config/nvim/lua/plugins/treesitter-context.lua" = "~/.config/nvim/lua/plugins/treesitter-context.lua"
-
-"files/config/nvim/lua/plugins/lsp/init.lua" = "~/.config/nvim/lua/plugins/lsp/init.lua"
-"files/config/nvim/lua/plugins/lsp/lua_ls.lua" = "~/.config/nvim/lua/plugins/lsp/lua_ls.lua"
 
 "files/config/nvim/lua/plugins/ui/kanagawa.lua" = "~/.config/nvim/lua/plugins/ui/kanagawa.lua"
 "files/config/nvim/lua/plugins/ui/lsp-colors.lua" = "~/.config/nvim/lua/plugins/ui/lsp-colors.lua"
@@ -76,6 +75,8 @@ depends = [
 "files/config/nvim/lua/plugins/util/smart-splits.lua" = "~/.config/nvim/lua/plugins/util/smart-splits.lua"
 "files/config/nvim/lua/plugins/util/startuptime.lua" = "~/.config/nvim/lua/plugins/util/startuptime.lua"
 "files/config/nvim/lua/plugins/util/which-key.lua" = "~/.config/nvim/lua/plugins/util/which-key.lua"
+
+"files/config/nvim/after/lsp/lua_ls.lua" = "~/.config/nvim/after/lsp/lua_ls.lua"
 
 [wezterm.files]
 "files/config/wezterm/wezterm.lua" = "~/.config/wezterm/wezterm.lua"

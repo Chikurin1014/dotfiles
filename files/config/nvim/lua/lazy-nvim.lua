@@ -18,7 +18,7 @@ local setup = function(opts)
 
 	require('lazy').setup({
 		spec = {
-			{ import = 'plugins' }, -- plugins.lsp will be loaded automatically
+			{ import = 'plugins' },
 			{ import = 'plugins.ui' },
 			{ import = 'plugins.util' }
 		}
