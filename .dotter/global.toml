@@ -58,12 +58,13 @@ depends = [
 "files/config/nvim/lua/plugins/treesitter-context.lua" = "~/.config/nvim/lua/plugins/treesitter-context.lua"
 "files/config/nvim/lua/plugins/treesitter-textobjects.lua" = "~/.config/nvim/lua/plugins/treesitter-textobjects.lua"
 
+"files/config/nvim/lua/plugins/ui/colorscheme.lua" = "~/.config/nvim/lua/plugins/ui/colorschme.lua"
 "files/config/nvim/lua/plugins/ui/fidget.lua" = "~/.config/nvim/lua/plugins/ui/fidget.lua"
-"files/config/nvim/lua/plugins/ui/kanagawa.lua" = "~/.config/nvim/lua/plugins/ui/kanagawa.lua"
 "files/config/nvim/lua/plugins/ui/lualine.lua" = "~/.config/nvim/lua/plugins/ui/lualine.lua"
 "files/config/nvim/lua/plugins/ui/mini-icons.lua" = "~/.config/nvim/lua/plugins/ui/mini-icons.lua"
 "files/config/nvim/lua/plugins/ui/scrollbar.lua" = "~/.config/nvim/lua/plugins/ui/scrollbar.lua"
 "files/config/nvim/lua/plugins/ui/smear-cursor.lua" = "~/.config/nvim/lua/plugins/ui/smear-cursor.lua"
+"files/config/nvim/lua/plugins/ui/themes/kanagawa.lua" = "~/.config/nvim/lua/plugins/ui/themes/kanagawa.lua"
 
 "files/config/nvim/lua/plugins/util/autopairs.lua" = "~/.config/nvim/lua/plugins/util/autopairs.lua"
 "files/config/nvim/lua/plugins/util/colorizer.lua" = "~/.config/nvim/lua/plugins/util/colorizer.lua"

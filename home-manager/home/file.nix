@@ -33,9 +33,9 @@
   ".config/nvim/lua/plugins/treesitter.lua".source = ../../files/config/nvim/lua/plugins/treesitter.lua;
   ".config/nvim/lua/plugins/treesitter-context.lua".source = ../../files/config/nvim/lua/plugins/treesitter-context.lua;
   ".config/nvim/lua/plugins/treesitter-textobjects.lua".source = ../../files/config/nvim/lua/plugins/treesitter-textobjects.lua;
+  ".config/nvim/lua/plugins/ui/colorscheme.lua".source =
+    ../../files/config/nvim/lua/plugins/ui/colorscheme.lua;
   ".config/nvim/lua/plugins/ui/fidget.lua".source = ../../files/config/nvim/lua/plugins/fidget.lua;
-  ".config/nvim/lua/plugins/ui/kanagawa.lua".source =
-    ../../files/config/nvim/lua/plugins/ui/kanagawa.lua;
   ".config/nvim/lua/plugins/ui/lualine.lua".source =
     ../../files/config/nvim/lua/plugins/ui/lualine.lua;
   ".config/nvim/lua/plugins/ui/mini-icons.lua".source =
@@ -48,6 +48,8 @@
     ../../files/config/nvim/lua/plugins/util/autopairs.lua;
   ".config/nvim/lua/plugins/ui/bufferline.lua".source =
     ../../files/config/nvim/lua/plugins/ui/bufferline.lua;
+  ".config/nvim/lua/plugins/ui/themes/kanagawa.lua".source =
+    ../../files/config/nvim/lua/plugins/ui/themes/kanagawa.lua;
   ".config/nvim/lua/plugins/util/colorizer.lua".source =
     ../../files/config/nvim/lua/plugins/util/colorizer.lua;
   ".config/nvim/lua/plugins/util/flash.lua".source =

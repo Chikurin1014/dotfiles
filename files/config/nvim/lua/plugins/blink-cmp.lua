@@ -19,10 +19,7 @@ return {
 			completion = { documentation = { auto_show = true } },
 			cmdline = {
 				keymap = { preset = 'inherit' },
-				completion = {
-					documentation = { auto_show = true },
-					ghost_text = { enabled = true }
-				},
+				completion = { ghost_text = { enabled = true } },
 			},
 			fuzzy = { implementation = 'prefer_rust_with_warning' }
 		},

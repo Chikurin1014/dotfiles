@@ -56,12 +56,13 @@ depends = ["neovim"]
 "files/config/nvim/lua/plugins/treesitter-context.lua" = "~/AppData/Local/nvim/lua/plugins/treesitter-context.lua"
 "files/config/nvim/lua/plugins/treesitter-textobjects.lua" = "~/AppData/Local/nvim/lua/plugins/treesitter-textobjects.lua"
 
+"files/config/nvim/lua/plugins/ui/colorscheme.lua" = "~/AppData/Local/nvim/lua/plugins/ui/colorscheme.lua"
 "files/config/nvim/lua/plugins/ui/fidget.lua" = "~/AppData/Local/nvim/lua/plugins/ui/fidget.lua"
-"files/config/nvim/lua/plugins/ui/kanagawa.lua" = "~/AppData/Local/nvim/lua/plugins/ui/kanagawa.lua"
 "files/config/nvim/lua/plugins/ui/lualine.lua" = "~/AppData/Local/nvim/lua/plugins/ui/lualine.lua"
 "files/config/nvim/lua/plugins/ui/mini-icons.lua" = "~/AppData/Local/nvim/lua/plugins/ui/mini-icons.lua"
 "files/config/nvim/lua/plugins/ui/scrollbar.lua" = "~/AppData/Local/nvim/lua/plugins/ui/scrollbar.lua"
 "files/config/nvim/lua/plugins/ui/smear-cursor.lua" = "~/AppData/Local/nvim/lua/plugins/ui/smear-cursor.lua"
+"files/config/nvim/lua/plugins/ui/themes/kanagawa.lua" = "~/AppData/Local/nvim/lua/plugins/ui/themes/kanagawa.lua"
 
 "files/config/nvim/lua/plugins/util/autopairs.lua" = "~/AppData/Local/nvim/lua/plugins/util/autopairs.lua"
 "files/config/nvim/lua/plugins/util/colorizer.lua" = "~/AppData/Local/nvim/lua/plugins/util/colorizer.lua"
