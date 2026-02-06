@@ -20,8 +20,11 @@ vim.opt.helplang = { 'ja', 'en' }
 vim.opt.swapfile = false
 vim.opt.wrap = false
 vim.opt.splitright = true
+vim.opt.cmdheight = 0
 
 vim.diagnostic.config({
-	virtual_text = true,
-	virtual_lines = false,
+	underline = true,
+	virtual_text = false,
+	virtual_lines = { current_line = true },
+	float = { source = true },
 })

@@ -24,21 +24,18 @@
   ".config/nvim/lua/plugins/conform.lua".source = ../../files/config/nvim/lua/plugins/conform.lua;
   ".config/nvim/lua/plugins/dashboard.lua".source = ../../files/config/nvim/lua/plugins/dashboard.lua;
   ".config/nvim/lua/plugins/ergoterm.lua".source = ../../files/config/nvim/lua/plugins/ergoterm.lua;
-  ".config/nvim/lua/plugins/fidget.lua".source = ../../files/config/nvim/lua/plugins/fidget.lua;
   ".config/nvim/lua/plugins/mason-lspconfig.lua".source = ../../files/config/nvim/lua/plugins/lsp/init.lua;
   ".config/nvim/lua/plugins/oil.lua".source = ../../files/config/nvim/lua/plugins/oil.lua;
   ".config/nvim/lua/plugins/lazygit.lua".source = ../../files/config/nvim/lua/plugins/lazygit.lua;
   ".config/nvim/lua/plugins/remote-nvim.lua".source =
     ../../files/config/nvim/lua/plugins/remote-nvim.lua;
   ".config/nvim/lua/plugins/telescope.lua".source = ../../files/config/nvim/lua/plugins/telescope.lua;
-  ".config/nvim/lua/plugins/treesitter.lua".source =
-    ../../files/config/nvim/lua/plugins/treesitter.lua;
-  ".config/nvim/lua/plugins/treesitter-context.lua".source =
-    ../../files/config/nvim/lua/plugins/treesitter-context.lua;
+  ".config/nvim/lua/plugins/treesitter.lua".source = ../../files/config/nvim/lua/plugins/treesitter.lua;
+  ".config/nvim/lua/plugins/treesitter-context.lua".source = ../../files/config/nvim/lua/plugins/treesitter-context.lua;
+  ".config/nvim/lua/plugins/treesitter-textobjects.lua".source = ../../files/config/nvim/lua/plugins/treesitter-textobjects.lua;
+  ".config/nvim/lua/plugins/ui/fidget.lua".source = ../../files/config/nvim/lua/plugins/fidget.lua;
   ".config/nvim/lua/plugins/ui/kanagawa.lua".source =
     ../../files/config/nvim/lua/plugins/ui/kanagawa.lua;
-  ".config/nvim/lua/plugins/ui/lsp-colors.lua".source =
-    ../../files/config/nvim/lua/plugins/ui/lsp-colors.lua;
   ".config/nvim/lua/plugins/ui/lualine.lua".source =
     ../../files/config/nvim/lua/plugins/ui/lualine.lua;
   ".config/nvim/lua/plugins/ui/mini-icons.lua".source =

@@ -1,18 +1,3 @@
--- Some LSP is not supported with the latest API (see: https://github.com/neovim/nvim-lspconfig/issues/3705)
-local servers = {
-	'bashls',
-	'clangd',
-	'dockerls',
-	'jsonls',
-	'lua_ls',
-	'remark_ls',
-	'pyright',
-	'rust_analyzer',
-	'taplo',
-	'yamlls',
-	'zls',
-}
-
 return {
 	{
 		'williamboman/mason-lspconfig.nvim',
@@ -27,11 +12,25 @@ return {
 			"MasonInstall",
 			"MasonUninstall",
 			"MasonUninstallAll",
-			"MasonLog",
 			"MasonUpdate",
+			"MasonLog",
 		},
 		opts = {
-			ensure_installed = servers
+			-- Some LSP is not supported with the latest API
+			-- See: https://github.com/neovim/nvim-lspconfig/issues/3705
+			ensure_installed = {
+				'bashls',
+				'clangd',
+				'dockerls',
+				'jsonls',
+				'lua_ls',
+				'remark_ls',
+				'pyright',
+				'rust_analyzer',
+				'taplo',
+				'yamlls',
+				'zls',
+			},
 		},
-	}
+	},
 }
