@@ -28,7 +28,7 @@ return {
 				TelescopePreviewBorder = { bg = theme.ui.bg_dim, fg = theme.ui.bg_dim },
 
 				Pmenu = { fg = theme.ui.shade0, bg = theme.ui.bg_p1, blend = vim.opt.pumblend:get() },
-				PmenuSel = { fg = "NONE", bg = theme.ui.bg_p2, blend = vim.opt.pumblend:get() },
+				PmenuSel = { fg = 'none', bg = theme.ui.bg_p2, blend = vim.opt.pumblend:get() },
 				PmenuSbar = { bg = theme.ui.bg_m1, blend = vim.opt.pumblend:get() },
 				PmenuThumb = { bg = theme.ui.bg_p2, blend = vim.opt.pumblend:get() },
 			}

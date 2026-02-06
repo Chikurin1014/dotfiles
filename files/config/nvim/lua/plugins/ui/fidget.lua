@@ -2,14 +2,14 @@ return {
 	{
 		"j-hui/fidget.nvim",
 		lazy = true,
-		event = 'UIEnter',
+		event = 'BufReadPre',
 		opts = {
-			window = {
-				normal_hl = 'PMenu',
-				winblend = 10,
-			},
 			notification = {
 				override_vim_notify = true,
+				window = {
+					normal_hl = 'Comment',
+					winblend = vim.opt.winblend:get(),
+				},
 			}
 		},
 	},

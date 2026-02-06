@@ -7,6 +7,9 @@ return {
 		},
 		lazy = true,
 		event = 'BufReadPre',
+		keys = {
+			{ '<leader>om', '<cmd>Mason<cr>', desc = 'Open Mason' },
+		},
 		cmd = {
 			"Mason",
 			"MasonInstall",
@@ -21,7 +24,7 @@ return {
 			ensure_installed = {
 				'bashls',
 				'clangd',
-				'dockerls',
+				'clang-format',
 				'jsonls',
 				'lua_ls',
 				'remark_ls',

@@ -3,10 +3,12 @@ return {
 		'nvim-lualine/lualine.nvim',
 		dependencies = { 'echasnovski/mini.icons' },
 		lazy = true,
-		event = { 'UIEnter' },
+		event = { 'VeryLazy' },
 		opts = {
 			options = {
-				theme = 'gruvbox',
+				theme = 'iceberg',
+				component_separators = '',
+				section_separators = { left = '', right = '' },
 				background = 'dark',
 				disabled_filetypes = {
 					statusline = { 'dashboard' },

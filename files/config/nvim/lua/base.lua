@@ -13,7 +13,9 @@ vim.g.default_colorscheme = 'kanagawa'
 -- To avoid conflicts with treesitter
 -- vim.opt.autoindent = true
 -- vim.opt.smartindent = true
+
 vim.opt.backup = false
+vim.opt.number = true
 vim.opt.showcmd = true
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
@@ -22,8 +24,8 @@ vim.opt.swapfile = false
 vim.opt.wrap = false
 vim.opt.splitright = true
 vim.opt.cmdheight = 0
-vim.opt.winblend = 20
-vim.opt.pumblend = 10
+vim.opt.winblend = 10
+vim.opt.pumblend = 5
 
 vim.diagnostic.config({
 	underline = true,
