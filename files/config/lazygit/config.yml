@@ -1,6 +1,7 @@
 git:
   pagers:
     - externalDiffCommand: difft --color=always --display=side-by-side
+    - pager: delta --dark --paging=never
 gui:
   nerdFontsVersion: "3"
 
