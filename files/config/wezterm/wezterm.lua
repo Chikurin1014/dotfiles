@@ -12,14 +12,14 @@ local config = {}
 -- In newer versions of wezterm, use the config_builder which will
 -- help provide clearer error messages
 if wezterm.config_builder then
-	config = wezterm.config_builder()
+    config = wezterm.config_builder()
 end
 
 local system = wezterm.target_triple
 local default_prog = string.match(system, 'linux') and { 'zsh', '-l' }
-	or string.match(system, 'apple') and { 'zsh', '-l' }
-	or string.match(system, 'windows') and { 'nu', '-l' }
-	or { 'zsh', '-l' }
+    or string.match(system, 'apple') and { 'zsh', '-l' }
+    or string.match(system, 'windows') and { 'nu', '-l' }
+    or { 'zsh', '-l' }
 
 -- This is where you actually apply your config choices
 
@@ -50,7 +50,7 @@ config.keys = keymaps.keys
 -- Integrate smart-splits.nvim keybindings
 local smart_splits = require('plugins.smart-splits-nvim')
 for _, key in ipairs(smart_splits.keys) do
-	table.insert(config.keys, key)
+    table.insert(config.keys, key)
 end
 
 

@@ -18,7 +18,7 @@ vim.opt.backup = false
 vim.opt.number = true
 vim.opt.showcmd = true
 vim.opt.shiftwidth = 4
-vim.opt.tabstop = 4
+vim.opt.expandtab = true
 vim.opt.helplang = { 'ja', 'en' }
 vim.opt.swapfile = false
 vim.opt.wrap = false
@@ -28,8 +28,8 @@ vim.opt.winblend = 10
 vim.opt.pumblend = 5
 
 vim.diagnostic.config({
-	underline = true,
-	virtual_text = false,
-	virtual_lines = { current_line = true },
-	float = { source = true },
+    underline = true,
+    virtual_text = false,
+    virtual_lines = { current_line = true },
+    float = { source = true },
 })

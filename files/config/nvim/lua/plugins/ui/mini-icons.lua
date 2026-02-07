@@ -1,6 +1,6 @@
 return {
-	'echasnovski/mini.icons',
-	lazy = true,
-	optional = true,
-	config = true,
+    'echasnovski/mini.icons',
+    lazy = true,
+    optional = true,
+    config = true,
 }
