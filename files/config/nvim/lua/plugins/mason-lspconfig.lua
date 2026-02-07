@@ -24,7 +24,6 @@ return {
 			ensure_installed = {
 				'bashls',
 				'clangd',
-				'clang-format',
 				'jsonls',
 				'lua_ls',
 				'remark_ls',

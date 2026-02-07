@@ -81,7 +81,7 @@ cd dotfiles
   >
   > ```toml
   > includes = [".dotter/windows.toml"]
-  > packages = ["default", "wsl", "latex", "lazygit", "nushell"]
+  > packages = ["default", "latex", "nushell", "powershell", "vcxsrv", "wsl"]
   > ```
 
 - **Nothing**

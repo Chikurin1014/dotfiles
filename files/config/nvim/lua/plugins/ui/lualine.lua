@@ -3,7 +3,7 @@ return {
 		'nvim-lualine/lualine.nvim',
 		dependencies = { 'echasnovski/mini.icons' },
 		lazy = true,
-		event = { 'VeryLazy' },
+		event = { 'UIEnter' },
 		opts = {
 			options = {
 				theme = 'iceberg',

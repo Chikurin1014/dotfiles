@@ -21,9 +21,8 @@
   ".config/nvim/lua/plugins/blink-cmp.lua".source = ../../files/config/nvim/lua/plugins/blink-cmp.lua;
   ".config/nvim/lua/plugins/copilot-chat.lua".source = ../../files/config/nvim/lua/plugins/copilot-chat.lua;
   ".config/nvim/lua/plugins/copilot.lua".source = ../../files/config/nvim/lua/plugins/copilot.lua;
-  ".config/nvim/lua/plugins/conform.lua".source = ../../files/config/nvim/lua/plugins/conform.lua;
-  ".config/nvim/lua/plugins/dashboard.lua".source = ../../files/config/nvim/lua/plugins/dashboard.lua;
   ".config/nvim/lua/plugins/ergoterm.lua".source = ../../files/config/nvim/lua/plugins/ergoterm.lua;
+  ".config/nvim/lua/plugins/gitsigns.lua".source = ../../files/config/nvim/lua/plugins/gitsigns.lua;
   ".config/nvim/lua/plugins/mason-lspconfig.lua".source = ../../files/config/nvim/lua/plugins/lsp/init.lua;
   ".config/nvim/lua/plugins/oil.lua".source = ../../files/config/nvim/lua/plugins/oil.lua;
   ".config/nvim/lua/plugins/lazygit.lua".source = ../../files/config/nvim/lua/plugins/lazygit.lua;
@@ -44,14 +43,16 @@
     ../../files/config/nvim/lua/plugins/ui/scrollbar.lua;
   ".config/nvim/lua/plugins/ui/smear-cursor.lua".source =
     ../../files/config/nvim/lua/plugins/ui/smear-cursor.lua;
-  ".config/nvim/lua/plugins/util/autopairs.lua".source =
-    ../../files/config/nvim/lua/plugins/util/autopairs.lua;
   ".config/nvim/lua/plugins/ui/bufferline.lua".source =
     ../../files/config/nvim/lua/plugins/ui/bufferline.lua;
   ".config/nvim/lua/plugins/ui/themes/kanagawa.lua".source =
     ../../files/config/nvim/lua/plugins/ui/themes/kanagawa.lua;
+  ".config/nvim/lua/plugins/util/autopairs.lua".source =
+    ../../files/config/nvim/lua/plugins/util/autopairs.lua;
   ".config/nvim/lua/plugins/util/colorizer.lua".source =
     ../../files/config/nvim/lua/plugins/util/colorizer.lua;
+  ".config/nvim/lua/plugins/util/conform.lua".source = ../../files/config/nvim/lua/plugins/util/conform.lua;
+  ".config/nvim/lua/plugins/util/dashboard.lua".source = ../../files/config/nvim/lua/plugins/util/dashboard.lua;
   ".config/nvim/lua/plugins/util/flash.lua".source =
     ../../files/config/nvim/lua/plugins/util/flash.lua;
   ".config/nvim/lua/plugins/util/hlslens.lua".source =
