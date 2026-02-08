@@ -75,6 +75,7 @@
   ".config/wezterm/font.lua".source = ../../files/config/wezterm/font.lua;
   ".config/wezterm/keymaps.lua".source = ../../files/config/wezterm/keymaps.lua;
   ".config/wezterm/plugins/smart-splits-nvim.lua".source = ../../files/config/wezterm/plugins/smart-splits-nvim.lua;
+  ".config/wezterm/themes/common.lua".source = ../../files/config/wezterm/themes/common.lua;
   ".config/wezterm/themes/no-image.lua".source = ../../files/config/wezterm/themes/no-image.lua;
   ".config/wezterm/themes/use-image.lua".source = ../../files/config/wezterm/themes/use-image.lua;
   ".config/zellij/config.kdl".source = ../../files/config/zellij/config.kdl;

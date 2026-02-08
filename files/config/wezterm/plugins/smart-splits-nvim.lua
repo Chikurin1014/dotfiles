@@ -1,4 +1,4 @@
-local w = require('wezterm')
+local w = require 'wezterm'
 
 -- if you are *NOT* lazy-loading smart-splits.nvim (recommended)
 local function is_vim(pane)

@@ -2,16 +2,16 @@
 
 [default]
 depends = [
-	"clang-format",
-	"ghostty",
-	"git",
-	"lazygit",
-	"mise",
-	"neovide",
-	"neovim",
-	"wezterm",
-	"zellij",
-	"zsh",
+    "clang-format",
+    "ghostty",
+    "git",
+    "lazygit",
+    "mise",
+    "neovide",
+    "neovim",
+    "wezterm",
+    "zellij",
+    "zsh",
 ]
 
 [clang-format.files]
@@ -85,6 +85,7 @@ depends = [
 "files/config/wezterm/font.lua" = "~/.config/wezterm/font.lua"
 "files/config/wezterm/keymaps.lua" = "~/.config/wezterm/keymaps.lua"
 "files/config/wezterm/plugins/smart-splits-nvim.lua" = "~/.config/wezterm/plugins/smart-splits-nvim.lua"
+"files/config/wezterm/themes/common.lua" = "~/.config/wezterm/themes/common.lua"
 "files/config/wezterm/themes/no-image.lua" = "~/.config/wezterm/themes/no-image.lua"
 "files/config/wezterm/themes/use-image.lua" = "~/.config/wezterm/themes/use-image.lua"
 
