@@ -9,7 +9,7 @@
   ".config/git/commit_template.gitconfig".source = ../../files/config/git/commit_template.gitconfig;
   ".config/git/commit_template.txt".source = ../../files/config/git/commit_template.txt;
   ".config/git/diff.gitconfig".source = ../../files/config/git/diff.gitconfig;
-  # ".config/lazygit/config.yml".source = ../../files/config/lazygit/config.yml;
+  ".config/lazygit/config.yml".source = ../../files/config/lazygit/config.yml;
   ".config/mise/config.toml".source = ../../files/config/mise/config.toml;
   ".config/neovide/config.toml".source = ../../files/config/neovide/config.toml;
   ".config/nvim/init.lua".source = ../../files/config/nvim/init.lua;
@@ -23,9 +23,8 @@
   ".config/nvim/lua/plugins/copilot.lua".source = ../../files/config/nvim/lua/plugins/copilot.lua;
   ".config/nvim/lua/plugins/ergoterm.lua".source = ../../files/config/nvim/lua/plugins/ergoterm.lua;
   ".config/nvim/lua/plugins/gitsigns.lua".source = ../../files/config/nvim/lua/plugins/gitsigns.lua;
-  ".config/nvim/lua/plugins/mason-lspconfig.lua".source = ../../files/config/nvim/lua/plugins/lsp/init.lua;
+  ".config/nvim/lua/plugins/mason-lspconfig.lua".source = ../../files/config/nvim/lua/plugins/mason-lspconfig.lua;
   ".config/nvim/lua/plugins/oil.lua".source = ../../files/config/nvim/lua/plugins/oil.lua;
-  ".config/nvim/lua/plugins/lazygit.lua".source = ../../files/config/nvim/lua/plugins/lazygit.lua;
   ".config/nvim/lua/plugins/remote-nvim.lua".source =
     ../../files/config/nvim/lua/plugins/remote-nvim.lua;
   ".config/nvim/lua/plugins/telescope.lua".source = ../../files/config/nvim/lua/plugins/telescope.lua;
@@ -34,7 +33,7 @@
   ".config/nvim/lua/plugins/treesitter-textobjects.lua".source = ../../files/config/nvim/lua/plugins/treesitter-textobjects.lua;
   ".config/nvim/lua/plugins/ui/colorscheme.lua".source =
     ../../files/config/nvim/lua/plugins/ui/colorscheme.lua;
-  ".config/nvim/lua/plugins/ui/fidget.lua".source = ../../files/config/nvim/lua/plugins/fidget.lua;
+  ".config/nvim/lua/plugins/ui/fidget.lua".source = ../../files/config/nvim/lua/plugins/ui/fidget.lua;
   ".config/nvim/lua/plugins/ui/lualine.lua".source =
     ../../files/config/nvim/lua/plugins/ui/lualine.lua;
   ".config/nvim/lua/plugins/ui/mini-icons.lua".source =
@@ -43,8 +42,6 @@
     ../../files/config/nvim/lua/plugins/ui/scrollbar.lua;
   ".config/nvim/lua/plugins/ui/smear-cursor.lua".source =
     ../../files/config/nvim/lua/plugins/ui/smear-cursor.lua;
-  ".config/nvim/lua/plugins/ui/bufferline.lua".source =
-    ../../files/config/nvim/lua/plugins/ui/bufferline.lua;
   ".config/nvim/lua/plugins/ui/themes/kanagawa.lua".source =
     ../../files/config/nvim/lua/plugins/ui/themes/kanagawa.lua;
   ".config/nvim/lua/plugins/util/autopairs.lua".source =

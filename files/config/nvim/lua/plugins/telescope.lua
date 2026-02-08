@@ -31,7 +31,7 @@ return {
             telescope.load_extension('fzf')
         end,
     },
-    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make', lazy = true },
+    { 'nvim-telescope/telescope-fzf-native.nvim', lazy = true },
     -- {
     --     "danielfalk/smart-open.nvim",
     --     branch = "0.2.x",
