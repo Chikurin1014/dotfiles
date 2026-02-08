@@ -32,13 +32,13 @@ return {
             }
         }
         config.use_fancy_tab_bar = true
-        config.tab_bar_at_bottom = false
+        config.tab_bar_at_bottom = true
         config.show_new_tab_button_in_tab_bar = false
         -- config.show_close_tab_button_in_tabs = false
-        config.window_decorations = 'INTEGRATED_BUTTONS | RESIZE'
+        config.window_decorations = 'RESIZE'
         config.integrated_title_button_style = 'Windows'
         config.inactive_pane_hsb = { hue = 1.0, saturation = 1.0, brightness = 0.9 }
-        config.hide_tab_bar_if_only_one_tab = false
+        config.hide_tab_bar_if_only_one_tab = true
         config.default_cursor_style = 'BlinkingBar'
 
         config.window_frame = {
@@ -63,19 +63,18 @@ return {
                 local title = tab.tab_title and #tab.tab_title > 0
                     and tab.tab_title
                     or tab.active_pane.title
+                local app = title:match '([^/\\ ]+)$'
+                local cwd = (title ~= app) and title:match '[.+/\\]+[^> ]+' or nil
+                local dirname = cwd and cwd:match '[^/\\>- ]+$' or nil
+                title = string.format(
+                    '%s%s%s%s',
+                    app and app or '',
+                    (app and dirname) and ':' or '',
+                    dirname and dirname .. '/' or '',
+                    (not (app or dirname)) and title or ''
+                )
                 if #title > max_width - 2 then
-                    local app = title:match(' (.+$)')
-                    local cwd = title:match '[.+/\\]*[^> ]+'
-                    local dirname = cwd:match '[^/\\> ]+$'
-                    title = string.format(
-                        '%s%s%s',
-                        app and app or '',
-                        (app and dirname) and ':' or '',
-                        dirname and dirname .. '/' or 'no title'
-                    )
-                    if #title > max_width - 2 then
-                        title = app and app or title:sub(1, max_width - 5) .. '...'
-                    end
+                    title = app and app or title:sub(1, max_width - 5) .. '...'
                 end
                 local bg = tab.is_active and active_tab_bg or inactive_tab_bg
                 local fg = tab.is_active and active_tab_fg or inactive_tab_fg

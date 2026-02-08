@@ -1,7 +1,5 @@
 return {
     apply_to_config = function(config)
-        local wezterm = require('wezterm')
-
         require('themes.common').apply_to_config(config, {
             active_tab_bg = '#005441',
             active_tab_fg = '#CCCCCC',
