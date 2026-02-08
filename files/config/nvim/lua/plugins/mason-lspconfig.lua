@@ -24,6 +24,7 @@ return {
             ensure_installed = {
                 'bashls',
                 'clangd',
+                'copilot',
                 'jsonls',
                 'lua_ls',
                 'remark_ls',

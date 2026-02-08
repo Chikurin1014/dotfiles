@@ -46,6 +46,7 @@ with pkgs;
   eza
   fd
   fzf
+  github-copilot-cli
   lazygit
   ripgrep
   sd

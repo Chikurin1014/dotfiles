@@ -49,13 +49,12 @@ depends = ["neovim"]
 "files/config/nvim/lua/neovide.lua" = "~/AppData/Local/nvim/lua/neovide.lua"
 
 "files/config/nvim/lua/plugins/blink-cmp.lua" = "~/AppData/Local/nvim/lua/plugins/blink-cmp.lua"
-"files/config/nvim/lua/plugins/copilot-chat.lua" = "~/AppData/Local/nvim/lua/plugins/copilot-chat.lua"
-"files/config/nvim/lua/plugins/copilot.lua" = "~/AppData/Local/nvim/lua/plugins/copilot.lua"
 "files/config/nvim/lua/plugins/ergoterm.lua" = "~/AppData/Local/nvim/lua/plugins/ergoterm.lua"
 "files/config/nvim/lua/plugins/gitsigns.lua" = "~/AppData/Local/nvim/lua/plugins/gitsigns.lua"
 "files/config/nvim/lua/plugins/mason-lspconfig.lua" = "~/AppData/Local/nvim/lua/plugins/lsp/init.lua"
 "files/config/nvim/lua/plugins/oil.lua" = "~/AppData/Local/nvim/lua/plugins/oil.lua"
 "files/config/nvim/lua/plugins/remote-nvim.lua" = "~/AppData/Local/nvim/lua/plugins/remote-nvim.lua"
+"files/config/nvim/lua/plugins/sidekick.lua" = "~/AppData/Local/nvim/lua/plugins/sidekick.lua"
 "files/config/nvim/lua/plugins/telescope.lua" = "~/AppData/Local/nvim/lua/plugins/telescope.lua"
 "files/config/nvim/lua/plugins/treesitter.lua" = "~/AppData/Local/nvim/lua/plugins/treesitter.lua"
 "files/config/nvim/lua/plugins/treesitter-context.lua" = "~/AppData/Local/nvim/lua/plugins/treesitter-context.lua"
@@ -82,4 +81,5 @@ depends = ["neovim"]
 "files/config/nvim/lua/plugins/util/startuptime.lua" = "~/AppData/Local/nvim/lua/plugins/util/startuptime.lua"
 "files/config/nvim/lua/plugins/util/which-key.lua" = "~/AppData/Local/nvim/lua/plugins/util/which-key.lua"
 
+"files/config/nvim/after/lsp/copilot.lua" = "~/AppData/Local/nvim/after/lsp/copilot.lua"
 "files/config/nvim/after/lsp/lua_ls.lua" = "~/AppData/Local/nvim/after/lsp/lua_ls.lua"

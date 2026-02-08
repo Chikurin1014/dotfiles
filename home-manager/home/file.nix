@@ -19,14 +19,13 @@
   ".config/nvim/lua/lsp.lua".source = ../../files/config/nvim/lua/lsp.lua;
   ".config/nvim/lua/neovide.lua".source = ../../files/config/nvim/lua/neovide.lua;
   ".config/nvim/lua/plugins/blink-cmp.lua".source = ../../files/config/nvim/lua/plugins/blink-cmp.lua;
-  ".config/nvim/lua/plugins/copilot-chat.lua".source = ../../files/config/nvim/lua/plugins/copilot-chat.lua;
-  ".config/nvim/lua/plugins/copilot.lua".source = ../../files/config/nvim/lua/plugins/copilot.lua;
   ".config/nvim/lua/plugins/ergoterm.lua".source = ../../files/config/nvim/lua/plugins/ergoterm.lua;
   ".config/nvim/lua/plugins/gitsigns.lua".source = ../../files/config/nvim/lua/plugins/gitsigns.lua;
   ".config/nvim/lua/plugins/mason-lspconfig.lua".source = ../../files/config/nvim/lua/plugins/mason-lspconfig.lua;
   ".config/nvim/lua/plugins/oil.lua".source = ../../files/config/nvim/lua/plugins/oil.lua;
   ".config/nvim/lua/plugins/remote-nvim.lua".source =
     ../../files/config/nvim/lua/plugins/remote-nvim.lua;
+  ".config/nvim/lua/plugins/sidekick.lua".source = ../../files/config/nvim/lua/plugins/sidekick.lua;
   ".config/nvim/lua/plugins/telescope.lua".source = ../../files/config/nvim/lua/plugins/telescope.lua;
   ".config/nvim/lua/plugins/treesitter.lua".source = ../../files/config/nvim/lua/plugins/treesitter.lua;
   ".config/nvim/lua/plugins/treesitter-context.lua".source = ../../files/config/nvim/lua/plugins/treesitter-context.lua;
@@ -66,6 +65,7 @@
     ../../files/config/nvim/lua/plugins/util/startuptime.lua;
   ".config/nvim/lua/plugins/util/which-key.lua".source =
     ../../files/config/nvim/lua/plugins/util/which-key.lua;
+  ".config/nvim/after/lsp/copilot.lua".source = ../../files/config/nvim/after/lsp/copilot.lua;
   ".config/nvim/after/lsp/lua_ls.lua".source = ../../files/config/nvim/after/lsp/lua_ls.lua;
   ".config/sheldon/plugins.toml".source = ../../files/config/sheldon/plugins.toml;
   ".config/wezterm/wezterm.lua".source = ../../files/config/wezterm/wezterm.lua;
