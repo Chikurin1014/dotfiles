@@ -58,9 +58,8 @@ return {
             },
         },
         opts = {
-            -- add any options here
             cli = {
-                mux = { enabled = false },
+                mux = { enabled = vim.g.is_unix },
             },
         },
     },

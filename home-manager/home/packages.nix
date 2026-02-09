@@ -30,6 +30,7 @@ with pkgs;
   ed
   gcc
   git
+  gnumake
   openssh
   systemd
   tmux
@@ -46,7 +47,7 @@ with pkgs;
   eza
   fd
   fzf
-  github-copilot-cli
+  gh-copilot
   lazygit
   ripgrep
   sd

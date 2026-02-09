@@ -51,6 +51,9 @@
         inherit env system;
         pkgs = import nixpkgs {
           inherit system;
+          config = {
+            allowUnfree = true; # for gh-copilot
+          };
           overlays = [
             self.overlays.firge-nerd
           ];
