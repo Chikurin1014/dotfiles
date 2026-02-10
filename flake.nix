@@ -17,10 +17,7 @@
     vscode-server.url = "github:nix-community/nixos-vscode-server";
 
     # nixGL is required if you are not using NixOS
-    nixgl = {
-      url = "github:nix-community/nixgl";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    nixgl.url = "github:nix-community/nixgl";
   };
 
   outputs =
@@ -41,7 +38,7 @@
     {
       overlays = {
         firge-nerd = final: prev: {
-          firge-nerd = prev.callPackage ./nix-packages/firge-nerd.nix { };
+          firge-nerd = prev.callPackage ./nix/pkgs/firge-nerd.nix { };
         };
       };
     }
@@ -56,20 +53,35 @@
           };
           overlays = [
             self.overlays.firge-nerd
+            nixgl.overlay
           ];
         };
-        homeModules.${env.USER} = import ./home-manager {
-          inherit env nixgl;
-        };
+        homeModules.${env.USER} =
+          input:
+          import ./nix/home {
+            inherit (input) lib config;
+            inherit env pkgs nixgl;
+          };
       in
       {
         legacyPackages = {
           inherit (pkgs) home-manager firge-nerd;
 
-          nixosConfigurations = import ./nixos {
-            inherit env system;
-            inherit nixpkgs;
-            inherit vscode-server nixos-wsl;
+          nixosConfigurations = {
+            ChNix = nixpkgs.lib.nixosSystem (
+              import ./nix/nixos {
+                inherit env system;
+                inherit vscode-server;
+                hostName = "ChNix";
+              }
+            );
+            ChNix-WSL = nixpkgs.lib.nixosSystem (
+              import ./nix/nixos-wsl {
+                inherit env system;
+                inherit vscode-server nixos-wsl;
+                hostName = "ChNix-WSL";
+              }
+            );
           };
 
           homeConfigurations.${env.USER} = home-manager.lib.homeManagerConfiguration {

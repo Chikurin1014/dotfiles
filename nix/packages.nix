@@ -19,6 +19,7 @@ with pkgs;
   # shell
   zsh
   # terminal emulator
+  # ghostty
   (config.lib.nixGL.wrap ghostty)
   # editor
   neovim
@@ -47,6 +48,7 @@ with pkgs;
   eza
   fd
   fzf
+  # github-copilot-cli
   gh-copilot
   lazygit
   ripgrep

@@ -3,16 +3,30 @@
   lib,
   config,
   pkgs,
-  nixgl,
+  nixgl ? import <nixgl> { inherit pkgs; },
   ...
 }@inputs:
 
-let
-  home = import ./home inputs;
-in
 {
   # Inherit home configuration
-  inherit home;
+  home = {
+    # User name and Home directory
+    username = env.USER;
+    homeDirectory = "/home/${env.USER}";
+
+    # !!MUST NOT BE CHANGED!!
+    # Home Manager version
+    stateVersion = "24.05"; # Please read the comment before changing.
+
+    # Packages to be installed
+    packages = import ../packages.nix { inherit pkgs config; };
+
+    # Files to be linked to certain directories
+    file = import ../files.nix { inherit config; };
+
+    # Environment variables
+    sessionVariables = { };
+  };
 
   # Nix settings (that will generate ~/.config/nix/nix.conf)
   nix = {
@@ -37,12 +51,6 @@ in
       };
     };
   };
-
-  nixGL.packages = import nixgl {
-    inherit pkgs;
-  };
-  nixGL.defaultWrapper = "mesa";
-  nixGL.installScripts = [ "mesa" ];
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
