@@ -46,6 +46,10 @@
         core.editor = env.EDITOR;
       };
     };
+    direnv = {
+      enable = true;
+      enableFishIntegration = true;
+    };
   };
 
   # Let Home Manager install and manage itself.

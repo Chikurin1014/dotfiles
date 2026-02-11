@@ -14,4 +14,8 @@ function y
     rm -f -- "$tmp"
 end
 
-starship init fish | source
+if status is-interactive
+    zellij setup --generate-auto-start fish | string collect | eval
+    fzf --fish | eval
+    starship init fish | source
+end

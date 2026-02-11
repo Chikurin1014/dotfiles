@@ -8,8 +8,10 @@ let
 in
 with pkgs;
 [
+  # Nix
   nixd
   nixfmt-rfc-style
+  nix-output-monitor
   cachix
   # japanese input system
   ibus-engines.mozc

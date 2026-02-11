@@ -92,7 +92,6 @@ depends = [
 
 [zellij.files]
 "files/config/zellij/config.kdl" = "~/.config/zellij/config.kdl"
-"files/config/zellij/completion.zsh" = "~/.config/zellij/completion.zsh"
 
 [zsh.files]
 "files/zshrc" = "~/.zshrc"
