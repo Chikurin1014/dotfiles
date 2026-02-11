@@ -55,6 +55,7 @@ depends = ["neovim"]
 "files/config/nvim/lua/plugins/oil.lua" = "~/AppData/Local/nvim/lua/plugins/oil.lua"
 "files/config/nvim/lua/plugins/remote-nvim.lua" = "~/AppData/Local/nvim/lua/plugins/remote-nvim.lua"
 "files/config/nvim/lua/plugins/sidekick.lua" = "~/AppData/Local/nvim/lua/plugins/sidekick.lua"
+"files/config/nvim/lua/plugins/telescope-frecency.lua" = "~/AppData/Local/nvim/lua/plugins/telescope-frecency.lua"
 "files/config/nvim/lua/plugins/telescope.lua" = "~/AppData/Local/nvim/lua/plugins/telescope.lua"
 "files/config/nvim/lua/plugins/treesitter.lua" = "~/AppData/Local/nvim/lua/plugins/treesitter.lua"
 "files/config/nvim/lua/plugins/treesitter-context.lua" = "~/AppData/Local/nvim/lua/plugins/treesitter-context.lua"
