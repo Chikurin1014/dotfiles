@@ -49,12 +49,12 @@
   };
 
   users.users.${env.USER} = {
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
     extraGroups = [ "docker" ];
   };
 
   programs = {
     nix-ld.enable = true;
-    zsh.enable = true;
+    fish.enable = true;
   };
 }

@@ -1,7 +1,7 @@
 local wezterm = require 'wezterm'
 local config = wezterm.config_builder and wezterm.config_builder() or {}
 
-local shell = { 'zsh', '-l' }
+local shell = { 'fish', '-l' }
 if wezterm.target_triple:match 'windows' then
     shell = { 'nu', '-l' }
 end

@@ -7,7 +7,7 @@ vim.loader.enable()
 
 -- Global variables
 vim.g.is_unix = package.config:sub(1, 1) == '/'
-vim.g.shell = vim.g.is_unix and 'zsh' or 'nu'
+vim.g.shell = vim.g.is_unix and 'fish' or 'nu'
 vim.g.default_colorscheme = 'kanagawa'
 
 -- To avoid conflicts with treesitter

@@ -52,7 +52,7 @@ cd dotfiles
   Run:
 
   ```shell
-  nix run home-manager -- switch --flake . -b bak
+  ./deploy.sh
   ```
 
   > [!NOTE]
@@ -84,12 +84,24 @@ cd dotfiles
   > packages = ["default", "latex", "nushell", "powershell", "vcxsrv", "wsl"]
   > ```
 
+  And then run:
+
+  ```shell
+  ./deploy.sh
+  ```
+
 - **Nothing**
 
   Initialize and update submodules to use [sl-maker-for-dotfiles](https://github.com/Chikurin1014/sl-maker-for-dotfiles):
 
   ```shell
   git submodule init && git submodule update
+  ```
+
+  then run:
+
+  ```shell
+  ./deploy.sh
   ```
 
 ## Usage

@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 
-if which nix > /dev/null 2>&1; then
+if which home-manager > /dev/null 2>&1; then
     home-manager switch --flake ~/dotfiles -b bak
+    exit $?
+fi
+
+if which nix > /dev/null 2>&1; then
+    nix --extra-experimental-features nix-commands,flakes run home-manager switch -- --flake ~/dotfiles -b bak
     exit $?
 fi
 

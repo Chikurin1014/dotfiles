@@ -19,13 +19,15 @@
     stateVersion = "24.05"; # Please read the comment before changing.
 
     # Packages to be installed
-    packages = import ../packages.nix { inherit pkgs config; };
+    packages = import ./packages.nix { inherit pkgs config; };
 
     # Files to be linked to certain directories
-    file = import ../files.nix { inherit config; };
+    file = import ./files.nix { inherit config; };
 
     # Environment variables
-    sessionVariables = { };
+    sessionVariables = {
+      inherit (env) EDITOR;
+    };
   };
 
   # Nix settings (that will generate ~/.config/nix/nix.conf)
@@ -34,12 +36,6 @@
   };
 
   programs = {
-    zsh = {
-      enable = true;
-      sessionVariables = {
-        inherit (env) EDITOR;
-      };
-    };
     git = {
       enable = true;
       extraConfig = {

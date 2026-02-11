@@ -11,7 +11,6 @@ return {
         config = function()
             local nvim_treesitter = require('nvim-treesitter')
             local languages = {
-                'arduino',
                 'bash',
                 'bibtex',
                 'c',

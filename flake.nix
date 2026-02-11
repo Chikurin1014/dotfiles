@@ -58,7 +58,7 @@
         };
         homeModules.${env.USER} =
           input:
-          import ./nix/home {
+          import ./nix/home.nix {
             inherit (input) lib config;
             inherit env pkgs nixgl;
           };

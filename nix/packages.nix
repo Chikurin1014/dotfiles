@@ -18,6 +18,7 @@ with pkgs;
   udev-gothic-nf
   # shell
   zsh
+  fish
   # terminal emulator
   # ghostty
   (config.lib.nixGL.wrap ghostty)

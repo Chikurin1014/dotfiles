@@ -17,5 +17,5 @@ EOF
         fc -R
     fi
 }
-add-zsh-hook precmd remove_last_history_if_not_needed
+# add-zsh-hook precmd remove_last_history_if_not_needed
 

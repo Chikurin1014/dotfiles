@@ -11,7 +11,7 @@ background-opacity = 0.9
 
 unfocused-split-fill = "#0F0F0F"
 
-command = "zsh -l"
+command = "fish -l"
 
 # font
 font-family = "FirgeNerd Console"
