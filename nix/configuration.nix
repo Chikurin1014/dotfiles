@@ -44,17 +44,35 @@
     };
   };
 
-  virtualisation.docker = {
-    enable = true;
+  environment = {
+    systemPackages = with pkgs; [
+      nix-ld
+      openssh
+      systemd
+      docker
+      fish
+    ];
   };
 
-  users.users.${env.USER} = {
-    shell = pkgs.fish;
-    extraGroups = [ "docker" ];
+  services = {
+    openssh = {
+      enable = true;
+    };
+  };
+
+  virtualisation = {
+    docker = {
+      enable = true;
+    };
   };
 
   programs = {
     nix-ld.enable = true;
     fish.enable = true;
+  };
+
+  users.users.${env.USER} = {
+    shell = pkgs.fish;
+    extraGroups = [ "docker" ];
   };
 }

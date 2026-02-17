@@ -1,0 +1,21 @@
+name: dotfiles
+
+services:
+  playground:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      args:
+        UNAME: $USER
+        GNAME: $USER
+        UID: 1001
+        GID: 1001
+        DOTFILES_CONTEXT: .
+    environment:
+      USER:
+      GIT_USER_NAME:
+      GIT_USER_EMAIL:
+      EDITOR:
+    user: $USER
+    tty: true
+    command: sh -c "~/dotfiles/docker/entrypoint.sh && fish -l"

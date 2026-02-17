@@ -153,3 +153,11 @@ After installing packages, you can install language runtimes by the following co
 ```shell
 mise install
 ```
+
+## Docker container
+
+You can use docker container with running
+
+```shell
+docker compose run playground
+```

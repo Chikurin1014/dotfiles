@@ -3,6 +3,7 @@
 [default]
 depends = [
     "clang-format",
+    "fish",
     "ghostty",
     "git",
     "lazygit",
@@ -16,6 +17,9 @@ depends = [
 
 [clang-format.files]
 "files/clang-format" = "~/.clang-format"
+
+[fish.files]
+"files/config/fish/config.fish" = "~/.config/fish/config.fish"
 
 [ghostty.files]
 "files/config/ghostty/config" = "~/.config/ghostty/config"
@@ -99,10 +103,8 @@ depends = [
 "files/config/sheldon/plugins.toml" = "~/.config/sheldon/plugins.toml"
 "files/config/zsh/alias.zsh" = "~/.config/zsh/alias.zsh"
 "files/config/zsh/completion.zsh" = "~/.config/zsh/completion.zsh"
-"files/config/zsh/hook.zsh" = "~/.config/zsh/hook.zsh"
 "files/config/zsh/option.zsh" = "~/.config/zsh/option.zsh"
 "files/config/zsh/ssh-agent.zsh" = "~/.config/zsh/ssh-agent.zsh"
-"files/config/zsh/style.zsh" = "~/.config/zsh/style.zsh"
 
 [settings]
 default_target_type = "symbolic"

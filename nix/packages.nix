@@ -18,30 +18,18 @@ with pkgs;
   # fonts
   firge-nerd
   udev-gothic-nf
-  # shell
-  zsh
-  fish
-  # terminal emulator
-  # ghostty
-  (config.lib.nixGL.wrap ghostty)
-  # editor
-  neovim
-  neovide
-  tree-sitter
   # essential tools
   curl
-  dbus
-  ed
-  gcc
+  gcc # required by tree-sitter
   git
-  gnumake
-  openssh
-  systemd
   tmux
   tree
   unzip
   vim
   wget
+  # shell
+  zsh
+  fish
   # shell tools
   bat
   btop
@@ -61,6 +49,13 @@ with pkgs;
   tealdeer
   yazi
   zellij
+  # editor
+  neovim
+  neovide
+  tree-sitter
+  # terminal emulator
+  wezterm
+  (config.lib.nixGL.wrap ghostty)
   # runtime / package manager
   mise
   rustup
