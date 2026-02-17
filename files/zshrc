@@ -15,4 +15,4 @@ fi
 # Reset key bindings to default
 bindkey -e
 
-which sheldon > /dev/null 2>&1 && eval "$(sheldon source)" || echo "sheldon is not installed"
+command -v sheldon > /dev/null 2>&1 && eval "$(sheldon source)" || echo "sheldon is not installed"
