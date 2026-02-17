@@ -10,10 +10,4 @@ $env.FZF_DEFAULT_COMMAND = "fd"
 
 alias deploy-dotfiles = nu -c "cd ~/dotfiles; sudo dotter deploy -fy"
 alias wsl = wsl --cd '~'
-alias ls! = ls
-alias ls = eza --icons --git
-alias cat = bat
-alias diff = difft
-alias find! = find
-alias find = fd
-alias grep = rg
+alias l = eza --icons --git
