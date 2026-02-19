@@ -1,7 +1,6 @@
 return {
     {
         'nvimdev/dashboard-nvim',
-        dependencies = { { 'echasnovski/mini.icons' } },
         lazy = true,
         event = 'VimEnter',
         keys = {

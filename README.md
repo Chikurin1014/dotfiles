@@ -56,11 +56,11 @@ cd dotfiles
   ```
 
   > [!NOTE]
-  > You may need to change the values in [`.env`](.env):
+  > You may need to change the values in [`.env`](./.env):
   >
   > ```env
   > # .env
-  >
+  > 
   > USER="<your-user-name>"
   > GIT_USER_NAME="<your-git-user-name>"
   > GIT_USER_EMAIL="<your-git-user-email>"
@@ -128,7 +128,7 @@ deploy-dotfiles
 
   You need to install packages manually.
 
-  Check the [`home-manager/home/packages.nix`](https://github.com/Chikurin1014/dotfiles/blob/main/home-manager/home/packages.nix) file for the list of packages to install.
+  Check the [`nix/packages.nix`](./nix/packages.nix) file for the list of packages to install.
 
   - Example for Debian/Ubuntu
 

@@ -1,19 +1,17 @@
 return {
+    { 'nvim-lua/plenary.nvim',                   lazy = true },
+    { 'nvim-telescope/telescope-frecency.nvim',  lazy = true },
+    { 'nvim-telescope/telescope-ui-select.nvim', lazy = true },
+    { 'jonarrien/telescope-cmdline.nvim',        lazy = true },
     {
         'nvim-telescope/telescope.nvim',
         lazy = true,
-        dependencies = {
-            'nvim-lua/plenary.nvim',
-            'nvim-telescope/telescope-ui-select.nvim',
-            'jonarrien/telescope-cmdline.nvim',
-        },
-        event = { 'BufReadPost' },
         cmd = { 'Telescope' },
         keys = {
             { '<leader>f' },
             { 'q' },
             { '<leader>ff', '<cmd>Telescope find_files<cr>',                mode = 'n', desc = 'Find a file' },
-            { '<leader>fr', '<cmd>Telescope oldfiles<cr>',                  mode = 'n', desc = 'Find a recent file' },
+            { '<leader>fr', '<cmd>Telescope frecency<cr>',                  mode = 'n', desc = 'Find a recent file' },
             { '<leader>f/', '<cmd>Telescope current_buffer_fuzzy_find<cr>', mode = 'n', desc = 'Find a word (current buffer)' },
             { '<leader>fg', '<cmd>Telescope live_grep<cr>',                 mode = 'n', desc = 'Find a word (live grep)' },
             { '<leader>fb', '<cmd>Telescope buffers<cr>',                   mode = 'n', desc = 'Find a buffer' },
@@ -31,6 +29,7 @@ return {
                 sorting_strategy = 'ascending',
             },
             extensions = {
+                frecency = {},
                 fidget = {},
                 ["ui-select"] = {
                     require("telescope.themes").get_cursor {},
@@ -38,12 +37,5 @@ return {
                 cmdline = {},
             },
         },
-        config = function(_, opts)
-            local telescope = require 'telescope'
-            telescope.setup(opts)
-            telescope.load_extension 'fidget'
-            telescope.load_extension 'ui-select'
-            telescope.load_extension 'cmdline'
-        end,
     },
 }

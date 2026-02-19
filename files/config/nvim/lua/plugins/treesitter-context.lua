@@ -1,8 +1,8 @@
 return {
     {
         'nvim-treesitter/nvim-treesitter-context',
-        dependencies = { 'nvim-treesitter' },
         lazy = true,
+        event = 'BufReadPost',
         opts = {
             enable = true,            -- Enable this plugin (Can be enabled/disabled later via commands)
             multiwindow = false,      -- Enable multiwindow support.
@@ -17,6 +17,6 @@ return {
             separator = nil,
             zindex = 20,     -- The Z-index of the context window
             on_attach = nil, -- (fun(buf: integer): boolean) return false to disable attaching
-        }
-    }
+        },
+    },
 }
