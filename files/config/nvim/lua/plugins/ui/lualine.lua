@@ -2,7 +2,7 @@ return {
     {
         'nvim-lualine/lualine.nvim',
         lazy = true,
-        event = { 'UIEnter' },
+        event = 'BufReadPost',
         opts = {
             options = {
                 theme = 'iceberg',
@@ -12,10 +12,9 @@ return {
                 disabled_filetypes = {
                     statusline = { 'dashboard' },
                 },
-                always_show_tabline = true,
                 globalstatus = true,
             },
-            tabline = { lualine_a = { 'buffers' }, lualine_z = { 'tabs' } },
+            tabline = {},
             winbar = {},
             inactive_winbar = {},
             extensions = {}

@@ -2,10 +2,7 @@ return {
     {
         'folke/which-key.nvim',
         lazy = true,
-        event = 'SafeState',
-        opts = {
-            preset = 'helix'
-        },
+        event = { 'CursorHold' },
         cmd = { 'WhichKey' },
         keys = {
             { '<leader>' },
@@ -18,6 +15,9 @@ return {
                 noremap = true,
                 silent = true
             }
+        },
+        opts = {
+            preset = 'helix'
         },
         init = function()
             vim.o.timeout = true

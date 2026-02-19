@@ -8,8 +8,8 @@ vim.keymap.set('n', '<leader>t', '', { desc = 'Toggle' })
 vim.keymap.set('n', '<C-b>', '', { desc = 'Buffer' })
 
 -- Buffer
-vim.keymap.set('n', '<C-b>d', '<CMD>bdelete<CR>', { desc = 'Delete buffer' })
-vim.keymap.set('n', '<C-b>D', '<CMD>%bdelete|edit #|bdelete #<CR>', { desc = 'Delete all buffers' })
+-- vim.keymap.set('n', '<C-b>d', '<CMD>bdelete<CR>', { desc = 'Delete buffer' })
+-- vim.keymap.set('n', '<C-b>D', '<CMD>%bdelete|edit #|bdelete #<CR>', { desc = 'Delete all buffers' })
 
 -- Diagnostic
 vim.keymap.set(

@@ -70,6 +70,7 @@ depends = ["neovim"]
 "files/config/nvim/lua/plugins/ui/themes/kanagawa.lua" = "~/AppData/Local/nvim/lua/plugins/ui/themes/kanagawa.lua"
 
 "files/config/nvim/lua/plugins/util/autopairs.lua" = "~/AppData/Local/nvim/lua/plugins/util/autopairs.lua"
+"files/config/nvim/lua/plugins/util/buffer-sticks.lua" = "~/AppData/Local/nvim/lua/plugins/util/buffer-sticks.lua"
 "files/config/nvim/lua/plugins/util/colorizer.lua" = "~/AppData/Local/nvim/lua/plugins/util/colorizer.lua"
 "files/config/nvim/lua/plugins/util/conform.lua" = "~/AppData/Local/nvim/lua/plugins/util/conform.lua"
 "files/config/nvim/lua/plugins/util/dashboard.lua" = "~/AppData/Local/nvim/lua/plugins/util/dashboard.lua"
