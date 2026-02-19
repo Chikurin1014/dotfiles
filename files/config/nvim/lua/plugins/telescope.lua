@@ -8,8 +8,6 @@ return {
         lazy = true,
         cmd = { 'Telescope' },
         keys = {
-            { '<leader>f' },
-            { 'q' },
             { '<leader>ff', '<cmd>Telescope find_files<cr>',                mode = 'n', desc = 'Find a file' },
             { '<leader>fr', '<cmd>Telescope frecency<cr>',                  mode = 'n', desc = 'Find a recent file' },
             { '<leader>f/', '<cmd>Telescope current_buffer_fuzzy_find<cr>', mode = 'n', desc = 'Find a word (current buffer)' },
