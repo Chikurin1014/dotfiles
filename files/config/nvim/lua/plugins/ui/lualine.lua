@@ -16,6 +16,7 @@ return {
                 disabled_filetypes = {
                     statusline = { 'dashboard' },
                 },
+                always_show_tabline = false,
                 globalstatus = true,
             },
             sections = {
@@ -26,7 +27,7 @@ return {
                 lualine_y = { { 'fancy_lsp_servers' } },
                 lualine_z = { { '"  " .. os.date("%H:%M")' } },
             },
-            tabline = {},
+            tabline = { lualine_z = { { 'tabs' } } },
             winbar = {},
             inactive_winbar = {},
             extensions = {}

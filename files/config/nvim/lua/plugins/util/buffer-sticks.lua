@@ -4,9 +4,10 @@ return {
         lazy = true,
         event = { 'BufReadPre' },
         keys = {
-            { '<leader>b', function() BufferSticks.jump() end,   mode = 'n', desc = 'Buffer' },
-            { '<leader>bc', function() BufferSticks.close() end,  mode = 'n', desc = 'Close to buffer' },
-            { '<leader>tb', function() BufferSticks.toggle() end, mode = 'n', desc = 'Toggle BufferSticks' },
+            { '<leader>b',  function() BufferSticks.jump() end,       mode = 'n', desc = 'Buffer' },
+            { '<leader>bc', function() BufferSticks.close() end,      mode = 'n', desc = 'Close buffer' },
+            { '<leader>bC', '<cmd>%bdelete | edit # | bdelete #<cr>', mode = 'n', desc = 'Close all buffer' },
+            { '<leader>tb', function() BufferSticks.toggle() end,     mode = 'n', desc = 'Toggle BufferSticks' },
         },
         opts = {
             offset = { x = 1, y = 0, },
