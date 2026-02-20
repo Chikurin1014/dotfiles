@@ -2,9 +2,10 @@ return {
     {
         'smjonas/inc-rename.nvim',
         lazy = true,
+        cmd = 'IncRename',
         keys = {
-            { '<leader>r', ':IncRename ', mode = 'n', desc = 'Rename symbol' }
+            { 'grn', ':IncRename ', mode = 'n', desc = 'rename symbol' }
         },
-        opts = {}
+        config = true,
     }
 }

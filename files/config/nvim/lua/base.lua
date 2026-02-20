@@ -18,7 +18,6 @@ vim.opt.expandtab = true
 vim.opt.helplang = { 'ja', 'en' }
 vim.opt.swapfile = false
 vim.opt.wrap = false
-vim.opt.splitright = true
 vim.opt.cmdheight = 0
 vim.opt.winblend = 10
 vim.opt.pumblend = 5

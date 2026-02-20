@@ -47,28 +47,6 @@ return {
             },
 
             {
-                '<leader><C-s>',
-                mode = { 'n' },
-                desc = 'Swap',
-            },
-            {
-                '<leader><C-s>n',
-                function()
-                    require('nvim-treesitter-textobjects.swap').swap_next '@parameter.inner'
-                end,
-                mode = { 'n' },
-                desc = 'Swap parameter with next parameter',
-            },
-            {
-                '<leader><C-s>n',
-                function()
-                    require('nvim-treesitter-textobjects.swap').swap_previous '@parameter.outer'
-                end,
-                mode = { 'n' },
-                desc = 'Swap parameter with previous parameter',
-            },
-
-            {
                 ']m',
                 function()
                     require('nvim-treesitter-textobjects.move').goto_next_start('@function.outer', 'textobjects')

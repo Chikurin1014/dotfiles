@@ -9,7 +9,18 @@ return {
         lazy = false,
         cmd = { 'Oil' },
         keys = {
-            { '<leader>oe', '<CMD>Oil<CR>', mode = 'n', desc = 'Open Oil explorer' },
+            {
+                '<leader>oe',
+                function()
+                    local oil = require 'oil'
+                    oil.open(nil, { preview = { vertical = true, split = 'belowright' } }, function()
+                        -- open & resize preview automatically
+                        oil.open_preview({}, function() vim.cmd('vertical resize 30') end)
+                    end)
+                end,
+                mode = 'n',
+                desc = 'Open Oil explorer'
+            },
         },
         opts = {
             default_file_explorer = true,
@@ -36,24 +47,6 @@ return {
         config = function(_, opts)
             local oil = require('oil')
             oil.setup(opts)
-
-            local open_preview_callback = function()
-                -- resize explorer window automatically
-                vim.cmd('vertical resize 30')
-            end
-
-            local oil_enter_callback = function(args)
-                -- open preview automattically
-                local current_buf = vim.api.nvim_get_current_buf()
-                if current_buf == args.data.buf and oil.get_cursor_entry() then
-                    oil.open_preview({}, open_preview_callback)
-                end
-            end
-
-            vim.api.nvim_create_autocmd("User", {
-                pattern = "OilEnter",
-                callback = vim.schedule_wrap(oil_enter_callback),
-            })
         end,
     },
 }

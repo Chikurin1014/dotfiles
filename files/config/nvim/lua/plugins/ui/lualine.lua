@@ -2,7 +2,11 @@ return {
     {
         'nvim-lualine/lualine.nvim',
         lazy = true,
-        event = 'BufReadPost',
+        specs = {
+            { 'nvim-mini/mini.icons',         lazy = true },
+            { 'meuter/lualine-so-fancy.nvim', lazy = true },
+        },
+        event = 'BufEnter',
         opts = {
             options = {
                 theme = 'iceberg',
@@ -13,6 +17,14 @@ return {
                     statusline = { 'dashboard' },
                 },
                 globalstatus = true,
+            },
+            sections = {
+                lualine_a = { 'fancy_mode' },
+                lualine_b = { { 'fancy_branch' }, { 'fancy_diff' }, { 'fancy_diagnostics' } },
+                lualine_c = { { 'fancy_location' }, { 'fancy_cwd', substitute_home = true } },
+                lualine_x = { { 'fancy_macro' }, { 'encoding' }, { 'fileformat' }, { 'fancy_filetype' } },
+                lualine_y = { { 'fancy_lsp_servers' } },
+                lualine_z = { { '"  " .. os.date("%H:%M")' } },
             },
             tabline = {},
             winbar = {},

@@ -1,11 +1,13 @@
 return {
-    { 'xzbdmw/colorful-menu.nvim', lazy = true },
     {
         'saghen/blink.cmp',
         version = '1.*',
         dependencies = {
             -- optional: provides snippets for the snippet source
             'rafamadriz/friendly-snippets',
+        },
+        specs = {
+            { 'xzbdmw/colorful-menu.nvim', lazy = true },
         },
         lazy = true,
         event = { 'InsertEnter', 'CmdLineEnter' },

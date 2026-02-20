@@ -1,23 +1,29 @@
 return {
     {
         'williamboman/mason-lspconfig.nvim',
+        specs = {
+            {
+                'williamboman/mason.nvim',
+                lazy = true,
+                cmd = {
+                    "Mason",
+                    "MasonInstall",
+                    "MasonUninstall",
+                    "MasonUninstallAll",
+                    "MasonUpdate",
+                    "MasonLog",
+                },
+                keys = {
+                    { '<leader>om', '<cmd>Mason<cr>', desc = 'Open Mason' },
+                },
+                opts = {}
+            },
+        },
         dependencies = {
-            { 'williamboman/mason.nvim', opts = {} },
-            "neovim/nvim-lspconfig",
+            'neovim/nvim-lspconfig',
         },
         lazy = true,
-        event = 'BufReadPre',
-        keys = {
-            { '<leader>om', '<cmd>Mason<cr>', desc = 'Open Mason' },
-        },
-        cmd = {
-            "Mason",
-            "MasonInstall",
-            "MasonUninstall",
-            "MasonUninstallAll",
-            "MasonUpdate",
-            "MasonLog",
-        },
+        event = 'FileType',
         opts = {
             -- Some LSP is not supported with the latest API
             -- See: https://github.com/neovim/nvim-lspconfig/issues/3705

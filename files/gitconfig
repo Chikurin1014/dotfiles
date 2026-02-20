@@ -5,3 +5,5 @@
     path = "~/.config/git/commit_template.gitconfig"
     path = "~/.config/git/diff.gitconfig"
     path = "~/.config/git/local_settings.gitconfig" # Not managed in dotfiles
+[credential "helperselector"]
+	selected = manager
