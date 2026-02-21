@@ -3,8 +3,7 @@ return {
         'nvim-lualine/lualine.nvim',
         lazy = true,
         specs = {
-            { 'nvim-mini/mini.icons',         lazy = true },
-            { 'meuter/lualine-so-fancy.nvim', lazy = true },
+            { 'nvim-mini/mini.icons', lazy = true },
         },
         event = 'UIEnter',
         opts = {
@@ -35,10 +34,66 @@ return {
                         end,
                     },
                 },
-                lualine_b = { { 'branch' }, { 'fancy_diff' }, { 'fancy_diagnostics' } },
-                lualine_c = { { 'location', icon = ' ' }, { 'fancy_cwd', substitute_home = true } },
-                lualine_x = { { 'fancy_macro' }, { 'encoding', padding = 0 }, { 'fileformat' }, { 'fancy_filetype', ts_icon = ' ' } },
-                lualine_y = { { 'fancy_lsp_servers' } },
+                lualine_b = {
+                    { 'branch' },
+                    {
+                        'diff',
+                        colored = true,
+                        symbols = {
+                            added = ' ',
+                            modified = ' ',
+                            removed = ' ',
+                        },
+                    },
+                    {
+                        'diagnostics',
+                        colored = true,
+                        symbols = {
+                            error = ' ',
+                            warn = ' ',
+                            info = ' ',
+                            hint = ' ',
+                        },
+                    },
+                },
+                lualine_c = {
+                    { 'filetype', icon_only = true, padding = { left = 1, right = 0 } },
+                    {
+                        'filename',
+                        path = 0,
+                        padding = 0,
+                        symbols = {
+                            modified = ' ',
+                            readonly = '󰏯 ',
+                            unnamed = '',
+                            newfile = ' ',
+                        },
+                    },
+                    {
+                        'filename',
+                        path = 4,
+                        color = 'lualine_c_inactive',
+                        file_status = false,
+                        fmt = function(text, _)
+                            -- FIXME: using screen width but component width
+                            return #text <= vim.opt.columns:get() * 0.4
+                                and vim.fn.fnamemodify(text, ':h')
+                                or nil
+                        end,
+                    },
+                },
+                lualine_x = {
+                    { 'location', icon = '' },
+                    { 'encoding', padding = 0 },
+                    { 'fileformat' }
+                },
+                lualine_y = {
+                    {
+                        'lsp_status',
+                        icon = ' ',
+                        ignore_lsp = { 'copilot' },
+                    },
+                },
                 lualine_z = { { 'datetime', style = '%H:%M', icon = ' ' } },
             },
             tabline = { lualine_z = { { 'tabs' } } },
