@@ -56,12 +56,13 @@ depends = [
 "files/config/nvim/lua/plugins/sidekick.lua" = "~/.config/nvim/lua/plugins/sidekick.lua"
 "files/config/nvim/lua/plugins/snacks.lua" = "~/.config/nvim/lua/plugins/snacks.lua"
 "files/config/nvim/lua/plugins/treesitter.lua" = "~/.config/nvim/lua/plugins/treesitter.lua"
-"files/config/nvim/lua/plugins/treesitter-context.lua" = "~/.config/nvim/lua/plugins/treesitter-context.lua"
-"files/config/nvim/lua/plugins/treesitter-textobjects.lua" = "~/.config/nvim/lua/plugins/treesitter-textobjects.lua"
 
 "files/config/nvim/lua/plugins/snacks/dashboard.lua" = "~/.config/nvim/lua/plugins/snacks/dashboard.lua"
 "files/config/nvim/lua/plugins/snacks/notifier.lua" = "~/.config/nvim/lua/plugins/snacks/notifier.lua"
 "files/config/nvim/lua/plugins/snacks/picker.lua" = "~/.config/nvim/lua/plugins/snacks/picker.lua"
+
+"files/config/nvim/lua/plugins/treesitter/context.lua" = "~/.config/nvim/lua/plugins/treesitter/context.lua"
+"files/config/nvim/lua/plugins/treesitter/textobjects.lua" = "~/.config/nvim/lua/plugins/treesitter/textobjects.lua"
 
 "files/config/nvim/lua/plugins/ui/colorscheme.lua" = "~/.config/nvim/lua/plugins/ui/colorschme.lua"
 "files/config/nvim/lua/plugins/ui/edgy.lua" = "~/.config/nvim/lua/plugins/ui/edgy.lua"

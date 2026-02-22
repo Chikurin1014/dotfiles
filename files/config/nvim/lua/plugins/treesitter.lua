@@ -1,4 +1,6 @@
 return {
+    require 'plugins.treesitter.context',
+    require 'plugins.treesitter.textobjects',
     {
         'nvim-treesitter/nvim-treesitter',
         branch = 'main',

@@ -22,6 +22,11 @@ return {
                 ['<C-d>'] = { 'scroll_documentation_down', 'scroll_signature_down', 'fallback' },
             },
             completion = {
+                ghost_text = {
+                    enabled = true,
+                    show_with_menu = true,
+                },
+                list = { selection = { auto_insert = false } },
                 menu = {
                     winblend = vim.opt.pumblend:get(),
                     draw = {
@@ -54,6 +59,7 @@ return {
                                 end,
                             },
                         },
+                        treesitter = { 'lsp' },
                     },
                 },
                 documentation = {
@@ -65,13 +71,17 @@ return {
                 },
             },
             signature = {
+                enabled = true,
                 window = {
                     winblend = vim.opt.winblend:get(),
                 },
             },
             cmdline = {
                 keymap = { preset = 'inherit' },
-                completion = { ghost_text = { enabled = true } },
+                completion = {
+                    menu = { auto_show = true },
+                    ghost_text = { enabled = true },
+                },
             },
             sources = {
                 default = function(_)
@@ -85,13 +95,7 @@ return {
                     end
                 end,
                 providers = {
-                    path = {
-                        opts = {
-                            get_cwd = function(_)
-                                return vim.fn.getcwd()
-                            end,
-                        },
-                    },
+                    lsp = { async = true },
                 },
             },
             fuzzy = { implementation = 'prefer_rust_with_warning' }
