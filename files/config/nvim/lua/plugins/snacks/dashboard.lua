@@ -31,14 +31,12 @@ return {
             footer = { '%s', align = 'center' },
             header = { '%s', align = 'center' },
             file = function(item, ctx)
-                local sep = vim.g.is_unix and '/' or '\\'
-                local fname = vim.fn.fnamemodify(item.file, ':~')
-                local dir = vim.fn.fnamemodify(fname, ':h')
-                local file = vim.fn.fnamemodify(fname, ':t')
+                local dir = vim.fn.fnamemodify(item.file, ':~:h:gs?\\?/?')
+                local file = vim.fn.fnamemodify(item.file, ':t')
                 if (#dir + #file + 2) > ctx.width then
                     -- truncate dir
-                    local subdir = dir:match(('^~%s([^%s]+)%s'):format(sep, sep, sep))
-                    dir = ('~%s……%s'):format(sep .. subdir .. sep, sep) .. vim.fn.fnamemodify(dir, ':t')
+                    local subdir = dir:match('^~/([^/]+)/')
+                    dir = ('~/%s/……/'):format(subdir) .. vim.fn.fnamemodify(dir, ':t')
                 end
                 return dir and { { file, hl = 'file' }, { '  ' .. dir, hl = 'dir' } } or { { fname, hl = 'file' } }
             end,

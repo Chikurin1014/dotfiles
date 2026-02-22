@@ -76,13 +76,6 @@ return {
                     winblend = vim.opt.winblend:get(),
                 },
             },
-            cmdline = {
-                keymap = { preset = 'inherit' },
-                completion = {
-                    menu = { auto_show = true },
-                    ghost_text = { enabled = true },
-                },
-            },
             sources = {
                 default = function(_)
                     local success, node = pcall(vim.treesitter.get_node)
