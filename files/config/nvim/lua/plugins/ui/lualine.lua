@@ -80,12 +80,16 @@ return {
 
                             local root = vim.lsp.buf.list_workspace_folders()
                             root = root and root[1] or root -- if `root` is table, get the first element
-                            local fname = root
-                                and vim.fn.fnamemodify(
-                                    vim.fs.joinpath(vim.fn.fnamemodify(root, ':t'), vim.fs.relpath(root, text)),
-                                    ':h:gs?\\?/?')
-                                or vim.fn.fnamemodify(text, ':h:gs?\\?/?')
-
+                            -- fallback to default
+                            local fname = vim.fn.fnamemodify(text, ':h:gs?\\?/?')
+                            if root then
+                                local relpath = vim.fs.relpath(root, text)
+                                if relpath then
+                                    fname = vim.fn.fnamemodify(
+                                        vim.fs.joinpath(vim.fn.fnamemodify(root, ':t'), relpath),
+                                        ':h:gs?\\?/?')
+                                end
+                            end
                             -- FIXME: using screen width but component width
                             local width_ok = #fname <= vim.opt.columns:get() * 0.3
                             return width_ok and fname or nil
