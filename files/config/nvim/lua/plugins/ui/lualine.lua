@@ -76,14 +76,15 @@ return {
                         file_status = false,
                         fmt = function(text, _)
                             if not text then return nil end
-                            if text:sub(1, 4) == 'oil:' then return text end
+                            if text:match '.+://' then return text end
 
                             local root = vim.lsp.buf.list_workspace_folders()
                             root = root and root[1] or root -- if `root` is table, get the first element
-                            local relpath = vim.fn.fnamemodify(
-                                vim.fs.joinpath(vim.fn.fnamemodify(root, ':t'), vim.fs.relpath(root, text)),
-                                ':h:gs?\\?/?')
-                            local fname = root and relpath or vim.fn.fnamemodify(text, ':h:gs?\\?/?')
+                            local fname = root
+                                and vim.fn.fnamemodify(
+                                    vim.fs.joinpath(vim.fn.fnamemodify(root, ':t'), vim.fs.relpath(root, text)),
+                                    ':h:gs?\\?/?')
+                                or vim.fn.fnamemodify(text, ':h:gs?\\?/?')
 
                             -- FIXME: using screen width but component width
                             local width_ok = #fname <= vim.opt.columns:get() * 0.3

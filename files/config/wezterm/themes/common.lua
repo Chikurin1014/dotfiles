@@ -68,10 +68,10 @@ return {
                 local dirname = cwd and cwd:match '[^/\\>- ]+$' or nil
                 title = string.format(
                     '%s%s%s%s',
-                    app and app or '',
-                    (app and dirname) and ':' or '',
-                    dirname and dirname .. '/' or '',
-                    (not (app or dirname)) and title or ''
+                    app or '',
+                    app and dirname and ':' or '',
+                    dirname .. '/' or '',
+                    not app and not dirname and title or ''
                 )
                 if #title > max_width - 2 then
                     title = app and app or title:sub(1, max_width - 5) .. '...'

@@ -1,26 +1,24 @@
 local function import_theme(plugin, mod, options)
     if not options then options = {} end
-    local theme = options.theme and options.theme or mod
+    local theme = options.theme or mod
+    local is_default = theme == vim.g.default_colorscheme
     local ok, specs = pcall(require, 'plugins.ui.themes.' .. theme)
     if not ok then
         specs = {}
     end
-    local enabled = options.enabled and options.enabled
-        or specs.enabled and specs.enabled
-        or theme == vim.g.default_colorscheme
-    local config = specs.config and specs.config or function(_, opts)
-        require(specs.main and specs.main or mod).setup(opts)
-        if theme == vim.g.default_colorscheme then
-            vim.cmd.colorscheme(theme)
-        end
-    end
     return {
         plugin,
-        enabled = enabled,
+        enabled = options.enabled or specs.enabled or is_default,
         lazy = true,
-        event = 'UIEnter',
-        opts = specs.opts and specs.opts or {},
-        config = config,
+        event = is_default and { 'UIEnter' } or { 'ColorSchemePre', 'CursorHold' },
+        opts = vim.tbl_deep_extend('force', specs.opts or {}, options.opts or {}),
+        config = specs.config
+            or function(_, opts)
+                require(specs.main or mod).setup(opts)
+                if is_default then
+                    vim.cmd.colorscheme(theme)
+                end
+            end,
     }
 end
 

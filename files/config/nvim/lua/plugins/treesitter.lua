@@ -5,34 +5,19 @@ return {
         'nvim-treesitter/nvim-treesitter',
         branch = 'main',
         build = ':TSUpdate',
-        lazy = true,
-        event = 'BufReadPost',
+        lazy = false,
         config = function()
-            local nvim_treesitter = require('nvim-treesitter')
+            local treesitter = require 'nvim-treesitter'
             local languages = {
                 'bash',
-                'bibtex',
-                'c',
-                'cpp',
-                'cmake',
-                'comment',
-                'css',
                 'diff',
                 'dockerfile',
-                'doxygen',
-                'editorconfig',
-                'elixir',
                 'git_config',
                 'git_rebase',
                 'gitattributes',
                 'gitcommit',
                 'gitignore',
-                'haskell',
-                'html',
-                'ini',
-                'javascript',
                 'json',
-                'latex',
                 'lua',
                 'luadoc',
                 'markdown',
@@ -40,27 +25,20 @@ return {
                 'nix',
                 'nu',
                 'python',
-                'regex',
                 'rust',
-                'ssh_config',
                 'toml',
-                'tsx',
-                'typescript',
-                'typst',
-                'udev',
                 'xml',
                 'yaml',
-                'zig',
                 'zsh'
             }
 
-            nvim_treesitter.setup({
-                install_dir = vim.fs.joinpath(vim.fn.stdpath('data'), 'site')
-            })
-            nvim_treesitter.install(languages)
+            treesitter.setup {
+                install_dir = vim.fs.joinpath(vim.fn.stdpath('data'), 'treesitter')
+            }
+            treesitter.install(languages)
 
             vim.api.nvim_create_autocmd('FileType', {
-                group = vim.api.nvim_create_augroup('TreesitterSetup', { clear = true }),
+                group = vim.api.nvim_create_augroup('TreesitterSetup', { clear = false }),
                 pattern = languages,
                 callback = function()
                     vim.treesitter.start()
@@ -73,6 +51,6 @@ return {
                     vim.bo.indentexpr = 'v:lua.require("nvim-treesitter").indentexpr()'
                 end
             })
-        end
-    }
+        end,
+    },
 }
