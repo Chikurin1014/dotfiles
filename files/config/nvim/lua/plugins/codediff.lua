@@ -5,7 +5,7 @@ return {
         lazy = true,
         cmd = 'CodeDiff',
         keys = {
-            { '<leader>d', '<cmd>CodeDiff<cr>', mode = 'n' },
+            { '<leader>d', '<cmd>CodeDiff<cr>', mode = 'n', desc = 'CodeDiff' },
         },
         opts = {
             explorer = {

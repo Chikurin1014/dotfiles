@@ -90,7 +90,7 @@ return {
                                         ':h:gs?\\?/?')
                                 end
                             end
-                            -- FIXME: using screen width but component width
+                            -- FIXME: using screen width but section width
                             local width_ok = #fname <= vim.opt.columns:get() * 0.3
                             return width_ok and fname or nil
                         end,

@@ -56,15 +56,16 @@ depends = ["neovim"]
 "files/config/nvim/lua/plugins/oil.lua" = "~/AppData/Local/nvim/lua/plugins/oil.lua"
 "files/config/nvim/lua/plugins/remote-nvim.lua" = "~/AppData/Local/nvim/lua/plugins/remote-nvim.lua"
 "files/config/nvim/lua/plugins/sidekick.lua" = "~/AppData/Local/nvim/lua/plugins/sidekick.lua"
-"files/config/nvim/lua/plugins/snacks.lua" = "~/AppData/Local/nvim/lua/plugins/snacks.lua"
-"files/config/nvim/lua/plugins/treesitter.lua" = "~/AppData/Local/nvim/lua/plugins/treesitter.lua"
 
 "files/config/nvim/lua/plugins/snacks/dashboard.lua" = "~/AppData/Local/nvim/lua/plugins/snacks/dashboard.lua"
+"files/config/nvim/lua/plugins/snacks/integration.lua" = "~/AppData/Local/nvim/lua/plugins/snacks/integration.lua"
+"files/config/nvim/lua/plugins/snacks/misc.lua" = "~/AppData/Local/nvim/lua/plugins/snacks/misc.lua"
 "files/config/nvim/lua/plugins/snacks/picker.lua" = "~/AppData/Local/nvim/lua/plugins/snacks/picker.lua"
 "files/config/nvim/lua/plugins/snacks/notifier.lua" = "~/AppData/Local/nvim/lua/plugins/snacks/notifier.lua"
 "files/config/nvim/lua/plugins/snacks/statuscolumn.lua" = "~/AppData/Local/nvim/lua/plugins/snacks/statuscolumn.lua"
 
 "files/config/nvim/lua/plugins/treesitter/context.lua" = "~/AppData/Local/nvim/lua/plugins/treesitter/context.lua"
+"files/config/nvim/lua/plugins/treesitter/install.lua" = "~/AppData/Local/nvim/lua/plugins/treesitter/install.lua"
 "files/config/nvim/lua/plugins/treesitter/textobjects.lua" = "~/AppData/Local/nvim/lua/plugins/treesitter/textobjects.lua"
 
 "files/config/nvim/lua/plugins/ui/colorscheme.lua" = "~/AppData/Local/nvim/lua/plugins/ui/colorscheme.lua"
