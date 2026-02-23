@@ -49,8 +49,10 @@ depends = [
 "files/config/nvim/lua/neovide.lua" = "~/.config/nvim/lua/neovide.lua"
 
 "files/config/nvim/lua/plugins/blink-cmp.lua" = "~/.config/nvim/lua/plugins/blink-cmp.lua"
+"files/config/nvim/lua/plugins/codediff.lua" = "~/.config/nvim/lua/plugins/codediff.lua"
 "files/config/nvim/lua/plugins/gitsigns.lua" = "~/.config/nvim/lua/plugins/gitsigns.lua"
 "files/config/nvim/lua/plugins/mason-lspconfig.lua" = "~/.config/nvim/lua/plugins/lsp/init.lua"
+"files/config/nvim/lua/plugins/neogit.lua" = "~/.config/nvim/lua/plugins/neogit.lua"
 "files/config/nvim/lua/plugins/oil.lua" = "~/.config/nvim/lua/plugins/oil.lua"
 "files/config/nvim/lua/plugins/remote-nvim.lua" = "~/.config/nvim/lua/plugins/remote-nvim.lua"
 "files/config/nvim/lua/plugins/sidekick.lua" = "~/.config/nvim/lua/plugins/sidekick.lua"

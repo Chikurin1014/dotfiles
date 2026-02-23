@@ -5,6 +5,7 @@ vim.g.mapleader = ' '
 vim.keymap.set('n', '<leader>f', '', { desc = 'Find' })
 vim.keymap.set('n', '<leader>o', '', { desc = 'Open' })
 vim.keymap.set('n', '<leader>t', '', { desc = 'Toggle' })
+vim.keymap.set('n', 'gd', '', { desc = 'diagnostics' })
 
 -- Diagnostic
 vim.keymap.set(
@@ -32,19 +33,19 @@ vim.keymap.set(
 )
 vim.keymap.set(
     'n',
-    '<leader>ds',
+    '<leader><s-k>',
     function() vim.diagnostic.open_float() end,
     { desc = 'Open diagnostic window' }
 )
 vim.keymap.set(
     'n',
-    '<leader>dn',
+    'gdn',
     function() vim.diagnostic.jump({ count = 1 }) end,
     { desc = 'next diagnostic' }
 )
 vim.keymap.set(
     'n',
-    '<leader>dN',
+    'gdN',
     function() vim.diagnostic.jump({ count = -1 }) end,
     { desc = 'previous diagnostic' }
 )
