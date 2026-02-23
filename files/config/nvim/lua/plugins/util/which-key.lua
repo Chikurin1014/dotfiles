@@ -2,10 +2,9 @@ return {
     {
         'folke/which-key.nvim',
         lazy = true,
-        event = { 'CursorHold' },
+        event = { 'VeryLazy' },
         cmd = { 'WhichKey' },
         keys = {
-            { '<leader>' },
             {
                 '<F1>',
                 function()
@@ -20,8 +19,8 @@ return {
             preset = 'helix'
         },
         init = function()
-            vim.o.timeout = true
-            vim.o.timeoutlen = 300
+            vim.opt.timeout = true
+            vim.opt.timeoutlen = 300
         end
     }
 }
