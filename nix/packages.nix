@@ -39,6 +39,7 @@ with pkgs;
   eza
   fd
   fzf
+  gh
   ghq
   # github-copilot-cli
   gh-copilot

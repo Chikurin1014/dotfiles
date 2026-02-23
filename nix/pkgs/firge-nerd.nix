@@ -1,6 +1,6 @@
 let
   inherit (builtins) fromJSON readFile;
-  inputInfo = (fromJSON (readFile ../flake.lock)).nodes.nixpkgs;
+  inputInfo = (fromJSON (readFile ../../flake.lock)).nodes.nixpkgs;
   flakeInput = rec {
     inherit (inputInfo.locked) rev narHash;
     outPath = fetchTarball {
