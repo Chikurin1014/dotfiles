@@ -49,6 +49,7 @@ with pkgs;
   tealdeer
   yazi
   zellij
+  zoxide
   # editor
   neovim
   neovide

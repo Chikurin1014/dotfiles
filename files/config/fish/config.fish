@@ -15,6 +15,7 @@ function y
 end
 
 if status is-interactive
-    mise activate fish | eval
+    mise activate fish | source
     starship init fish | source
+    zoxide init fish | source
 end

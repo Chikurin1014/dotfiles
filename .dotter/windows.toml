@@ -10,6 +10,7 @@
 "files/override/windows/AppData/Roaming/nushell/vendor/autoload/ssh-agent.nu" = "~/AppData/Roaming/nushell/vendor/autoload/ssh-agent.nu"
 "files/override/windows/AppData/Roaming/nushell/vendor/autoload/starship.nu" = "~/AppData/Roaming/nushell/vendor/autoload/starship.nu"
 "files/override/windows/AppData/Roaming/nushell/vendor/autoload/yazi.nu" = "~/AppData/Roaming/nushell/vendor/autoload/yazi.nu"
+"files/override/windows/AppData/Roaming/nushell/vendor/autoload/zoxide.nu" = "~/AppData/Roaming/nushell/vendor/autoload/zoxide.nu"
 
 [powershell.files]
 "files/override/windows/Documents/PowerShell/Microsoft.PowerShell_profile.ps1" = "~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1"
