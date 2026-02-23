@@ -1,7 +1,7 @@
 return {
     {
         'nvim-lualine/lualine.nvim',
-        lazy = true,
+
         specs = {
             { 'nvim-mini/mini.icons', lazy = true },
         },
@@ -26,7 +26,8 @@ return {
                                 ['NORMAL'] = '',
                                 ['VISUAL'] = '',
                                 ['INSERT'] = '󰗧',
-                                ['TERMINAL'] = '',
+                                ['COMMAND'] = '',
+                                ['TERMINAL'] = '',
                             }
                             return icons[text]
                                 and icons[text]

@@ -16,7 +16,7 @@ return {
                 keys = {
                     { '<leader>om', '<cmd>Mason<cr>', desc = 'Open Mason' },
                 },
-                opts = {}
+                config = true,
             },
         },
         dependencies = {
