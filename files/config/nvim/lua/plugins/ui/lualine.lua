@@ -82,7 +82,7 @@ return {
                             root = root and root[1] or root -- if `root` is table, get the first element
                             -- fallback to default
                             local fname = vim.fn.fnamemodify(text, ':h:gs?\\?/?')
-                            if root then
+                            if root and #root > 0 then
                                 local relpath = vim.fs.relpath(root, text)
                                 if relpath then
                                     fname = vim.fn.fnamemodify(
