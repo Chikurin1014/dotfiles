@@ -39,6 +39,7 @@ with pkgs;
   eza
   fd
   fzf
+  ghq
   # github-copilot-cli
   gh-copilot
   lazygit
