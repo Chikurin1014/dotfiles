@@ -62,6 +62,7 @@ depends = ["neovim"]
 "files/config/nvim/lua/plugins/snacks/dashboard.lua" = "~/AppData/Local/nvim/lua/plugins/snacks/dashboard.lua"
 "files/config/nvim/lua/plugins/snacks/picker.lua" = "~/AppData/Local/nvim/lua/plugins/snacks/picker.lua"
 "files/config/nvim/lua/plugins/snacks/notifier.lua" = "~/AppData/Local/nvim/lua/plugins/snacks/notifier.lua"
+"files/config/nvim/lua/plugins/snacks/statuscolumn.lua" = "~/AppData/Local/nvim/lua/plugins/snacks/statuscolumn.lua"
 
 "files/config/nvim/lua/plugins/treesitter/context.lua" = "~/AppData/Local/nvim/lua/plugins/treesitter/context.lua"
 "files/config/nvim/lua/plugins/treesitter/textobjects.lua" = "~/AppData/Local/nvim/lua/plugins/treesitter/textobjects.lua"

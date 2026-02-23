@@ -5,7 +5,6 @@ vim.g.mapleader = ' '
 vim.keymap.set('n', '<leader>f', '', { desc = 'Find' })
 vim.keymap.set('n', '<leader>o', '', { desc = 'Open' })
 vim.keymap.set('n', '<leader>t', '', { desc = 'Toggle' })
-vim.keymap.set('n', 'gd', '', { desc = 'diagnostics' })
 
 -- Diagnostic
 vim.keymap.set(
@@ -20,32 +19,22 @@ vim.keymap.set(
     'n',
     '<leader>tv',
     function()
-        local old_vl = vim.diagnostic.config().virtual_lines
-        local new_vl = false
-        if type(old_vl) == 'boolean' and not old_vl then
-            new_vl = { current_line = true }
+        -- `{ ... }` <-- toggle --> `false`
+        local old_virtual_lines = vim.diagnostic.config().virtual_lines
+        ---@type table | boolean
+        local new_virtual_lines = false
+        if type(old_virtual_lines) == 'boolean' and not old_virtual_lines then
+            new_virtual_lines = { current_line = true }
         end
-        vim.diagnostic.config({
-            virtual_lines = new_vl
-        })
+        vim.diagnostic.config {
+            virtual_lines = new_virtual_lines
+        }
     end,
-    { desc = 'Toggle diagnostic virtual_lines' }
+    { desc = 'Toggle diagnostic virtual lines' }
 )
 vim.keymap.set(
     'n',
     '<leader><s-k>',
     function() vim.diagnostic.open_float() end,
     { desc = 'Open diagnostic window' }
-)
-vim.keymap.set(
-    'n',
-    'gdn',
-    function() vim.diagnostic.jump({ count = 1 }) end,
-    { desc = 'next diagnostic' }
-)
-vim.keymap.set(
-    'n',
-    'gdN',
-    function() vim.diagnostic.jump({ count = -1 }) end,
-    { desc = 'previous diagnostic' }
 )

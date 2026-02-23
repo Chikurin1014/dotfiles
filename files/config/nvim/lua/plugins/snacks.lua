@@ -1,6 +1,7 @@
 local dashboard = require 'plugins.snacks.dashboard'
 local notifier = require 'plugins.snacks.notifier'
 local picker = require 'plugins.snacks.picker'
+local statuscolumn = require 'plugins.snacks.statuscolumn'
 
 return {
     {
@@ -13,7 +14,6 @@ return {
         keys = vim.list_extend(vim.list_extend(
                 {
                     { '<leader>of', function() Snacks.explorer.open() end,   mode = 'n', desc = 'Open explorer-like picker' },
-                    { '<leader>og', function() Snacks.lazygit.open() end,    mode = 'n', desc = 'Open lazygit' },
                     { '<leader>ot', function() Snacks.terminal.open() end,   mode = 'n', desc = 'Open terminal window' },
                     { '<leader>tt', function() Snacks.terminal.toggle() end, mode = 'n', desc = 'Toggle terminal window' },
                     { '<leader>tz', function() Snacks.zen() end,             mode = 'n', desc = 'Toggle zen mode' },
@@ -33,6 +33,7 @@ return {
             picker = picker.opts,
             quickfile = { enabled = true },
             scroll = { enabled = true },
+            statuscolumn = statuscolumn.opts,
             terminal = { shell = vim.g.shell },
             words = { enabled = true },
         },
@@ -41,6 +42,7 @@ return {
                 pattern = 'VeryLazy',
                 callback = function()
                     notifier.init()
+                    statuscolumn.init()
 
                     -- Setup some globals for debugging (lazy-loaded)
                     _G.dd = function(...)
@@ -76,7 +78,7 @@ return {
         ---@module 'edgy'
         ---@param opts Edgy.Config
         opts = function(_, opts)
-            for _, pos in ipairs({ 'top', 'bottom', 'left', 'right' }) do
+            for _, pos in ipairs { 'top', 'bottom', 'left', 'right' } do
                 opts[pos] = opts[pos] or {}
                 table.insert(opts[pos], {
                     ft = 'snacks_terminal',

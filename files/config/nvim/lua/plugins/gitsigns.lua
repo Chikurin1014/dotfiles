@@ -6,7 +6,7 @@ return {
         cmd = 'Gitsigns',
         opts = {
             signs_staged_enable = true,
-            signcolumn = false,
+            signcolumn = true,
             numhl = true,
             linehl = false,
             word_diff = false,

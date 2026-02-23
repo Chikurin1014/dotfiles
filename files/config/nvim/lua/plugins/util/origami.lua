@@ -1,8 +1,8 @@
 return {
     {
-        "chrisgrieser/nvim-origami",
+        'chrisgrieser/nvim-origami',
         lazy = true,
-        event = "BufReadPost",
+        event = 'BufReadPost',
         opts = {
             autoFold = {
                 enable = false,
