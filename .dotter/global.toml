@@ -54,6 +54,7 @@ depends = [
 "files/config/nvim/lua/plugins/luasnip.lua" = "~/.config/nvim/lua/plugins/luasnip.lua"
 "files/config/nvim/lua/plugins/mason-lspconfig.lua" = "~/.config/nvim/lua/plugins/lsp/init.lua"
 "files/config/nvim/lua/plugins/neogit.lua" = "~/.config/nvim/lua/plugins/neogit.lua"
+"files/config/nvim/lua/plugins/octo.lua" = "~/.config/nvim/lua/plugins/octo.lua"
 "files/config/nvim/lua/plugins/oil.lua" = "~/.config/nvim/lua/plugins/oil.lua"
 "files/config/nvim/lua/plugins/remote-nvim.lua" = "~/.config/nvim/lua/plugins/remote-nvim.lua"
 "files/config/nvim/lua/plugins/sidekick.lua" = "~/.config/nvim/lua/plugins/sidekick.lua"
