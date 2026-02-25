@@ -1,7 +1,6 @@
 return {
     {
         'nvim-lualine/lualine.nvim',
-
         specs = {
             { 'nvim-mini/mini.icons', lazy = true },
         },
@@ -24,8 +23,11 @@ return {
                         fmt = function(text)
                             local icons = {
                                 ['NORMAL'] = '',
-                                ['VISUAL'] = '',
-                                ['INSERT'] = '󰗧',
+                                ['VISUAL'] = '',
+                                ['INSERT'] = '󰊄',
+                                ['REPLACE'] = '',
+                                ['SELECT'] = '󰒉',
+                                ['O-PENDING'] = '',
                                 ['COMMAND'] = '',
                                 ['TERMINAL'] = '',
                             }
@@ -45,6 +47,16 @@ return {
                             modified = ' ',
                             removed = ' ',
                         },
+                        source = function()
+                            local gitsigns = vim.b.gitsigns_status_dict
+                            if gitsigns then
+                                return {
+                                    added = gitsigns.added,
+                                    modified = gitsigns.changed,
+                                    removed = gitsigns.removed,
+                                }
+                            end
+                        end,
                     },
                     {
                         'diagnostics',
@@ -92,7 +104,7 @@ return {
                                 end
                             end
                             -- FIXME: using screen width but section width
-                            local width_ok = #fname <= vim.opt.columns:get() * 0.3
+                            local width_ok = #fname <= vim.opt.columns:get() - 70
                             return width_ok and fname or nil
                         end,
                     },
