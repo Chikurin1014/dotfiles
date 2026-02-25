@@ -62,7 +62,7 @@ local all_emojis = {
     refactor = {
         'A code change that neither fixes a bug nor adds a feature',
         { icon = '🔥', name = 'fire', default_title = 'Remove code or files' },
-        { icon = '♻️', name = 'recycle', default_title = 'Refactor cod' },
+        { icon = '♻️', name = 'recycle', default_title = 'Refactor code' },
         { icon = '🏗️', name = 'building_construction', default_title = 'Make architectural changes' },
         { icon = '🗑️', name = 'wastebasket', default_title = 'Deprecate code that needs to be cleaned up' },
         { icon = '⚰️', name = 'coffin', default_title = 'Remove dead code' },
