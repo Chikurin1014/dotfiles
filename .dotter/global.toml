@@ -97,7 +97,6 @@ depends = [
 
 [wezterm.files]
 "files/config/wezterm/wezterm.lua" = "~/.config/wezterm/wezterm.lua"
-"files/config/wezterm/font.lua" = "~/.config/wezterm/font.lua"
 "files/config/wezterm/keymaps.lua" = "~/.config/wezterm/keymaps.lua"
 "files/config/wezterm/plugins/smart-splits-nvim.lua" = "~/.config/wezterm/plugins/smart-splits-nvim.lua"
 "files/config/wezterm/themes/common.lua" = "~/.config/wezterm/themes/common.lua"
