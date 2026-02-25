@@ -12,8 +12,8 @@ return {
                 lazy = true
             },
             -- sources
-            { 'rafamadriz/friendly-snippets', lazy = true }, -- snippets
-            { 'Kaiser-Yang/blink-cmp-git',    lazy = true }, -- git
+            { 'L3MON4D3/LuaSnip',          version = 'v2.*', lazy = true }, -- snippets
+            { 'Kaiser-Yang/blink-cmp-git', lazy = true },                   -- git
         },
         lazy = true,
         event = { 'InsertEnter', 'CmdLineEnter' },
@@ -30,16 +30,21 @@ return {
             sources = {
                 default = { 'lsp', 'path', 'snippets', 'buffer' },
                 per_filetype = {
-                    gitcommit = { inherit_defaults = true, 'git' },
+                    gitcommit = { 'snippets', 'git', 'path' },
                 },
                 providers = {
                     lsp = { async = true },
+                    luasnip_choice = {
+                        name = 'luasnip_choice',
+                        module = 'blink.compat.source',
+                    },
                     git = {
                         name = 'git',
                         module = 'blink-cmp-git',
                     },
                 },
             },
+            snippets = { preset = 'luasnip' },
             completion = {
                 ghost_text = {
                     enabled = true,
@@ -51,7 +56,7 @@ return {
                     auto_show_delay_ms = function(_, _) return vim.api.nvim_get_mode().mode == 'c' and 500 or 0 end,
                     winblend = vim.opt.pumblend:get(),
                     draw = {
-                        columns = { { 'kind_icon' }, { 'label', gap = 1 } },
+                        columns = { { 'kind_icon' }, { 'label', 'label_description', gap = 1 } },
                         components = {
                             label = {
                                 text = function(ctx) return require('colorful-menu').blink_components_text(ctx) end,
@@ -96,7 +101,7 @@ return {
                 },
             },
             term = { enabled = true },
-            fuzzy = { implementation = 'prefer_rust_with_warning' }
+            fuzzy = { implementation = 'prefer_rust_with_warning' },
         },
         opts_extend = { 'sources.default' },
     },
