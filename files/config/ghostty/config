@@ -14,7 +14,7 @@ unfocused-split-fill = "#0F0F0F"
 command = "fish -l"
 
 # font
-font-family = "FirgeNerd Console"
+font-family = "Moralerspace Neon HW"
 
 # keybindingsex
 keybind = "clear"

@@ -17,7 +17,7 @@ with pkgs;
   ibus-engines.mozc
   # fonts
   firge-nerd
-  udev-gothic-nf
+  moralerspace-hw
   # essential tools
   curl
   gcc # required by tree-sitter

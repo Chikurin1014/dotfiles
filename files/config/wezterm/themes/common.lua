@@ -12,12 +12,12 @@ return {
 
         local font_with_fallback = function(opts)
             return wezterm.font_with_fallback {
-                { family = 'UDEV Gothic NF',     weight = opts.weight },
-                { family = 'UDEV Gothic NF',     weight = opts.weight, assume_emoji_presentation = true },
-                { family = 'FirgeNerd Console',  weight = opts.weight },
-                { family = 'FirgeNerd Console',  weight = opts.weight, assume_emoji_presentation = true },
-                { family = 'HackGen Console NF', weight = opts.weight },
-                { family = 'HackGen Console NF', weight = opts.weight, assume_emoji_presentation = true },
+                { family = 'Moralerspace Neon HW', weight = 'Regular' },
+                { family = 'Moralerspace Neon HW', weight = 'Regular',   assume_emoji_presentation = true },
+                { family = 'FirgeNerd Console',    weight = opts.weight },
+                { family = 'FirgeNerd Console',    weight = opts.weight, assume_emoji_presentation = true },
+                { family = 'HackGen Console NF',   weight = opts.weight },
+                { family = 'HackGen Console NF',   weight = opts.weight, assume_emoji_presentation = true },
                 'DefaVu Sans Mono'
             }
         end
