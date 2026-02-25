@@ -3,7 +3,7 @@
 
 [include]
     path = "~/.config/git/commit_template.gitconfig"
-    path = "~/.config/git/diff.gitconfig"
     path = "~/.config/git/local_settings.gitconfig" # Not managed in dotfiles
+    path = "~/.config/git/tools.gitconfig"
 [credential "helperselector"]
 	selected = manager

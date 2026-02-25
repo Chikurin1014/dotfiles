@@ -9,3 +9,9 @@
 
 [difftool "difftastic"]
     cmd = difft "$LOCAL" "$REMOTE"
+
+[merge]
+    tool = codediff
+
+[mergetool "codediff"]
+    cmd = nvim "$MERGED" -c "CodeDiff merge \"$MERGED\""
