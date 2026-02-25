@@ -28,7 +28,7 @@ depends = [
 "files/gitconfig" = "~/.gitconfig"
 "files/config/git/commit_template.gitconfig" = "~/.config/git/commit_template.gitconfig"
 "files/config/git/commit_template.txt" = "~/.config/git/commit_template.txt"
-"files/config/git/diff.gitconfig" = "~/.config/git/diff.gitconfig"
+"files/config/git/tools.gitconfig" = "~/.config/git/tools.gitconfig"
 
 [lazygit.files]
 "files/config/lazygit/config.yml" = "~/.config/lazygit/config.yml"
@@ -51,6 +51,7 @@ depends = [
 "files/config/nvim/lua/plugins/blink-cmp.lua" = "~/.config/nvim/lua/plugins/blink-cmp.lua"
 "files/config/nvim/lua/plugins/codediff.lua" = "~/.config/nvim/lua/plugins/codediff.lua"
 "files/config/nvim/lua/plugins/gitsigns.lua" = "~/.config/nvim/lua/plugins/gitsigns.lua"
+"files/config/nvim/lua/plugins/luasnip.lua" = "~/.config/nvim/lua/plugins/luasnip.lua"
 "files/config/nvim/lua/plugins/mason-lspconfig.lua" = "~/.config/nvim/lua/plugins/lsp/init.lua"
 "files/config/nvim/lua/plugins/neogit.lua" = "~/.config/nvim/lua/plugins/neogit.lua"
 "files/config/nvim/lua/plugins/oil.lua" = "~/.config/nvim/lua/plugins/oil.lua"
@@ -88,6 +89,8 @@ depends = [
 "files/config/nvim/lua/plugins/util/smart-splits.lua" = "~/.config/nvim/lua/plugins/util/smart-splits.lua"
 "files/config/nvim/lua/plugins/util/startuptime.lua" = "~/.config/nvim/lua/plugins/util/startuptime.lua"
 "files/config/nvim/lua/plugins/util/which-key.lua" = "~/.config/nvim/lua/plugins/util/which-key.lua"
+
+"files/config/nvim/lua/snippets/gitcommit.lua" = "~/.config/nvim/lua/snippets/gitcommit.lua"
 
 "files/config/nvim/after/lsp/copilot.lua" = "~/.config/nvim/after/lsp/copilot.lua"
 "files/config/nvim/after/lsp/lua_ls.lua" = "~/.config/nvim/after/lsp/lua_ls.lua"

@@ -52,6 +52,7 @@ depends = ["neovim"]
 "files/config/nvim/lua/plugins/blink-cmp.lua" = "~/AppData/Local/nvim/lua/plugins/blink-cmp.lua"
 "files/config/nvim/lua/plugins/codediff.lua" = "~/AppData/Local/nvim/lua/plugins/codediff.lua"
 "files/config/nvim/lua/plugins/gitsigns.lua" = "~/AppData/Local/nvim/lua/plugins/gitsigns.lua"
+"files/config/nvim/lua/plugins/luasnip.lua" = "~/AppData/Local/nvim/lua/plugins/luasnip.lua"
 "files/config/nvim/lua/plugins/mason-lspconfig.lua" = "~/AppData/Local/nvim/lua/plugins/lsp/init.lua"
 "files/config/nvim/lua/plugins/neogit.lua" = "~/AppData/Local/nvim/lua/plugins/neogit.lua"
 "files/config/nvim/lua/plugins/oil.lua" = "~/AppData/Local/nvim/lua/plugins/oil.lua"
@@ -89,6 +90,8 @@ depends = ["neovim"]
 "files/config/nvim/lua/plugins/util/smart-splits.lua" = "~/AppData/Local/nvim/lua/plugins/util/smart-splits.lua"
 "files/config/nvim/lua/plugins/util/startuptime.lua" = "~/AppData/Local/nvim/lua/plugins/util/startuptime.lua"
 "files/config/nvim/lua/plugins/util/which-key.lua" = "~/AppData/Local/nvim/lua/plugins/util/which-key.lua"
+
+"files/config/nvim/lua/snippets/gitcommit.lua" = "~/AppData/Local/nvim/lua/snippets/gitcommit.lua"
 
 "files/config/nvim/after/lsp/copilot.lua" = "~/AppData/Local/nvim/after/lsp/copilot.lua"
 "files/config/nvim/after/lsp/lua_ls.lua" = "~/AppData/Local/nvim/after/lsp/lua_ls.lua"
