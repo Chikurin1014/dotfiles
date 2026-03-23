@@ -3,16 +3,18 @@ title = "Ghostty"
 command = "fish -l"
 
 # window
-window-subtitle = working-directory
-window-theme = "ghostty"
+window-height = 24
+window-width = 80
 window-padding-x = 10
 window-padding-y = 5
 window-padding-balance = true
+window-theme = "ghostty"
+window-subtitle = working-directory
 
 # background
-background-opacity = 0.9
+background-opacity = 1.0
 background-image = bg.png
-background-image-opacity = 0.5
+background-image-opacity = 0.2
 background-image-fit = cover
 unfocused-split-fill = "#0F0F0F"
 
