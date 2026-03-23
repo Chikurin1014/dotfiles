@@ -13,7 +13,7 @@ window-subtitle = working-directory
 
 # background
 background-opacity = 1.0
-background-image = bg.png
+background-image = ~/Pictures/ghostty/bg.png
 background-image-opacity = 0.2
 background-image-fit = cover
 unfocused-split-fill = "#0F0F0F"
