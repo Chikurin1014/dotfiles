@@ -58,7 +58,7 @@ with pkgs;
   tree-sitter
   # terminal emulator
   wezterm
-  (config.lib.nixGL.wrap ghostty)
+  ghostty
   # runtime / package manager
   mise
   rustup

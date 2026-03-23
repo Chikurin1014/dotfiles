@@ -3,7 +3,6 @@
   lib,
   config,
   pkgs,
-  nixgl ? import <nixgl> { inherit pkgs; },
   ...
 }@inputs:
 
@@ -14,9 +13,8 @@
     username = env.USER;
     homeDirectory = "/home/${env.USER}";
 
-    # !!MUST NOT BE CHANGED!!
     # Home Manager version
-    stateVersion = "24.05"; # Please read the comment before changing.
+    stateVersion = "25.11";
 
     # Packages to be installed
     packages = import ./packages.nix { inherit pkgs config; };
@@ -38,7 +36,7 @@
   programs = {
     git = {
       enable = true;
-      extraConfig = {
+      settings = {
         user = {
           name = env.GIT_USER_NAME;
           email = env.GIT_USER_EMAIL;

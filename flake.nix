@@ -3,11 +3,12 @@
 
   inputs = {
     # Specify the source of Home Manager and Nixpkgs.
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+
     flake-utils.url = "github:numtide/flake-utils";
 
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -58,14 +59,16 @@
         };
         homeModules.${env.USER} =
           input:
-          import ./nix/home.nix {
-            inherit (input) lib config;
-            inherit env pkgs nixgl;
-          };
+          import ./nix/home.nix (
+            input
+            // {
+              inherit env pkgs;
+            }
+          );
       in
       {
         legacyPackages = {
-          inherit (pkgs) home-manager firge-nerd;
+          # inherit (pkgs) home-manager firge-nerd;
 
           nixosConfigurations = {
             ChNix = nixpkgs.lib.nixosSystem (
@@ -97,7 +100,7 @@
           };
         };
 
-        formatter = nixpkgs.legacyPackages.${system}.nixfmt-tree;
+        formatter = pkgs.nixfmt-tree;
       }
     );
 }
