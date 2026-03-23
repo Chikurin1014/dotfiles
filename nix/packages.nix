@@ -9,8 +9,6 @@ in
 with pkgs;
 [
   # Nix
-  nixd
-  nixfmt-rfc-style
   nix-output-monitor
   cachix
   # japanese input system
@@ -53,9 +51,22 @@ with pkgs;
   zellij
   zoxide
   # editor
+  helix
   neovim
   neovide
   tree-sitter
+  # lsp / formatter / linter
+  bash-language-server
+  clang-tools
+  vscode-langservers-extracted
+  lua-language-server
+  marksman
+  nixd
+  nixfmt-rfc-style
+  pyright
+  taplo
+  yaml-language-server
+  zls
   # terminal emulator
   wezterm
   ghostty

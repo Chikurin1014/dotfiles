@@ -1,0 +1,41 @@
+[[language]]
+name = "c"
+formatter = { command = "clang-format" }
+auto-format = true
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "cpp"
+formatter = { command = "clang-format" }
+auto-format = true
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "git-commit"
+file-types = [
+  { glob = "COMMIT_EDITMSG" },
+  { glob = "MERGE_MSG" },
+  { glob = "TAG_EDITMSG" },
+  { glob = "commit_template.txt" },
+]
+
+[[language]]
+name = "lua"
+auto-format = true
+
+[[language]]
+name = "nix"
+formatter = { command = "nixfmt" }
+auto-format = true
+
+[[language]]
+name = "python"
+auto-format = true
+
+[[language]]
+name = "toml"
+auto-format = true
+
+[[language]]
+name = "zig"
+auto-format = true

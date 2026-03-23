@@ -1,0 +1,6 @@
+theme = "kanagawa-dragon"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"

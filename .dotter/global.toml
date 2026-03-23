@@ -6,6 +6,7 @@ depends = [
     "fish",
     "ghostty",
     "git",
+    "helix",
     "lazygit",
     "mise",
     "neovide",
@@ -29,6 +30,10 @@ depends = [
 "files/config/git/commit_template.gitconfig" = "~/.config/git/commit_template.gitconfig"
 "files/config/git/commit_template.txt" = "~/.config/git/commit_template.txt"
 "files/config/git/tools.gitconfig" = "~/.config/git/tools.gitconfig"
+
+[helix.files]
+"files/config/helix/config.toml" = "~/.config/helix/config.toml"
+"files/config/helix/languages.toml" = "~/.config/helix/languages.toml"
 
 [lazygit.files]
 "files/config/lazygit/config.yml" = "~/.config/lazygit/config.yml"

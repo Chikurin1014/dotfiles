@@ -23,6 +23,14 @@
 "files/override/windows/wslconfig" = "~/.wslconfig"
 
 # override
+[helix]
+depends = ["helix"]
+
+[helix.files]
+"files/config/helix/config.toml" = "~/AppData/Roaming/helix/config.toml"
+"files/config/helix/languages.toml" = "~/AppData/Roaming/helix/languages.toml"
+
+# override
 [lazygit]
 depends = ["lazygit"]
 
