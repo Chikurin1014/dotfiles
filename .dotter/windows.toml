@@ -88,7 +88,6 @@ depends = ["neovim"]
 "files/config/nvim/lua/plugins/util/hlslens.lua" = "~/AppData/Local/nvim/lua/plugins/util/hlslens.lua"
 "files/config/nvim/lua/plugins/util/inc-rename.lua" = "~/AppData/Local/nvim/lua/plugins/util/inc-rename.lua"
 "files/config/nvim/lua/plugins/util/origami.lua" = "~/AppData/Local/nvim/lua/plugins/util/origami.lua"
-"files/config/nvim/lua/plugins/util/smart-splits.lua" = "~/AppData/Local/nvim/lua/plugins/util/smart-splits.lua"
 "files/config/nvim/lua/plugins/util/startuptime.lua" = "~/AppData/Local/nvim/lua/plugins/util/startuptime.lua"
 "files/config/nvim/lua/plugins/util/which-key.lua" = "~/AppData/Local/nvim/lua/plugins/util/which-key.lua"
 

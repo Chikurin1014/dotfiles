@@ -87,7 +87,6 @@ depends = [
 "files/config/nvim/lua/plugins/util/hlslens.lua" = "~/.config/nvim/lua/plugins/util/hlslens.lua"
 "files/config/nvim/lua/plugins/util/inc-rename.lua" = "~/.config/nvim/lua/plugins/util/inc-rename.lua"
 "files/config/nvim/lua/plugins/util/origami.lua" = "~/.config/nvim/lua/plugins/util/origami.lua"
-"files/config/nvim/lua/plugins/util/smart-splits.lua" = "~/.config/nvim/lua/plugins/util/smart-splits.lua"
 "files/config/nvim/lua/plugins/util/startuptime.lua" = "~/.config/nvim/lua/plugins/util/startuptime.lua"
 "files/config/nvim/lua/plugins/util/which-key.lua" = "~/.config/nvim/lua/plugins/util/which-key.lua"
 
@@ -98,8 +97,7 @@ depends = [
 
 [wezterm.files]
 "files/config/wezterm/wezterm.lua" = "~/.config/wezterm/wezterm.lua"
-"files/config/wezterm/keymaps.lua" = "~/.config/wezterm/keymaps.lua"
-"files/config/wezterm/plugins/smart-splits-nvim.lua" = "~/.config/wezterm/plugins/smart-splits-nvim.lua"
+"files/config/wezterm/keys.lua" = "~/.config/wezterm/keys.lua"
 "files/config/wezterm/themes/common.lua" = "~/.config/wezterm/themes/common.lua"
 "files/config/wezterm/themes/no-image.lua" = "~/.config/wezterm/themes/no-image.lua"
 "files/config/wezterm/themes/use-image.lua" = "~/.config/wezterm/themes/use-image.lua"

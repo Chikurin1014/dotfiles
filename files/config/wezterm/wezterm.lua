@@ -12,17 +12,11 @@ config.default_prog = shell
 config.initial_rows = 24
 config.initial_cols = 80
 
-require('keymaps').apply_to_config(config)
+require('keys').apply_to_config(config)
 if image_path then
     require('themes.use-image').apply_to_config(config, { image_path = image_path })
 else
     require('themes.no-image').apply_to_config(config)
-end
-
--- Integrate smart-splits.nvim keybindings
-local smart_splits = require('plugins.smart-splits-nvim')
-for _, key in ipairs(smart_splits.keys) do
-    table.insert(config.keys, key)
 end
 
 return config
