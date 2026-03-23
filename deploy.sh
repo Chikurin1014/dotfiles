@@ -8,7 +8,9 @@ if command -v home-manager > /dev/null 2>&1; then
 fi
 
 if command -v nix > /dev/null 2>&1; then
-    nix --extra-experimental-features nix-commands,flakes run home-manager switch -- --flake $SRC_DIR -b bak
+    nix --extra-experimental-features nix-command \
+        --extra-experimental-features flakes \
+	run home-manager switch -- --flake $SRC_DIR -b bak
     exit $?
 fi
 
