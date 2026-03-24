@@ -19,7 +19,7 @@ return {
                     vim.b[args.buf].miniindentscope_disable = true
                 end
             })
-            require('nvim.indentscope').setup(opts)
+            require('mini.indentscope').setup(opts)
         end,
     },
 }
