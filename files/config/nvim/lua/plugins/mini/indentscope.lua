@@ -12,5 +12,14 @@ return {
                 goto_bottom = '',
             },
         },
+        config = function(_, opts)
+            vim.api.nvim_create_autocmd('Filetype', {
+                pattern = { 'alpha', 'dashboard', 'snacks_dashboard' },
+                callback = function(args)
+                    vim.b[args.buf].miniindentscope_disable = true
+                end
+            })
+            require('nvim.indentscope').setup(opts)
+        end,
     },
 }
