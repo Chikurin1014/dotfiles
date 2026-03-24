@@ -64,6 +64,11 @@ depends = [
 "files/config/nvim/lua/plugins/remote-nvim.lua" = "~/.config/nvim/lua/plugins/remote-nvim.lua"
 "files/config/nvim/lua/plugins/sidekick.lua" = "~/.config/nvim/lua/plugins/sidekick.lua"
 
+"files/config/nvim/lua/plugins/mini/icons.lua" = "~/.config/nvim/lua/plugins/mini/icons.lua"
+"files/config/nvim/lua/plugins/mini/indentscope.lua" = "~/.config/nvim/lua/plugins/mini/indentscope.lua"
+"files/config/nvim/lua/plugins/mini/move.lua" = "~/.config/nvim/lua/plugins/mini/move.lua"
+"files/config/nvim/lua/plugins/mini/trailspace.lua" = "~/.config/nvim/lua/plugins/mini/trailspace.lua"
+
 "files/config/nvim/lua/plugins/snacks/dashboard.lua" = "~/.config/nvim/lua/plugins/snacks/dashboard.lua"
 "files/config/nvim/lua/plugins/snacks/integration.lua" = "~/.config/nvim/lua/plugins/snacks/integration.lua"
 "files/config/nvim/lua/plugins/snacks/misc.lua" = "~/.config/nvim/lua/plugins/snacks/misc.lua"
@@ -78,7 +83,6 @@ depends = [
 "files/config/nvim/lua/plugins/ui/colorscheme.lua" = "~/.config/nvim/lua/plugins/ui/colorschme.lua"
 "files/config/nvim/lua/plugins/ui/edgy.lua" = "~/.config/nvim/lua/plugins/ui/edgy.lua"
 "files/config/nvim/lua/plugins/ui/lualine.lua" = "~/.config/nvim/lua/plugins/ui/lualine.lua"
-"files/config/nvim/lua/plugins/ui/mini-icons.lua" = "~/.config/nvim/lua/plugins/ui/mini-icons.lua"
 "files/config/nvim/lua/plugins/ui/render-markdown.lua" = "~/.config/nvim/lua/plugins/ui/render-markdown.lua"
 "files/config/nvim/lua/plugins/ui/scrollbar.lua" = "~/.config/nvim/lua/plugins/ui/scrollbar.lua"
 "files/config/nvim/lua/plugins/ui/smear-cursor.lua" = "~/.config/nvim/lua/plugins/ui/smear-cursor.lua"

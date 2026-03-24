@@ -5,8 +5,8 @@ return {
         event = { 'BufReadPre' },
         keys = {
             { '<leader>b',  function() BufferSticks.jump() end,       mode = 'n', desc = 'Buffer' },
-            { '<leader>bc', function() BufferSticks.close() end,      mode = 'n', desc = 'Close buffer' },
-            { '<leader>bC', '<cmd>%bdelete | edit # | bdelete #<cr>', mode = 'n', desc = 'Close all buffer' },
+            { '<leader>c',  function() BufferSticks.close() end,      mode = 'n', desc = 'Close buffer' },
+            { '<leader>C',  '<cmd>%bdelete | edit # | bdelete #<cr>', mode = 'n', desc = 'Close all buffer' },
             { '<leader>tb', function() BufferSticks.toggle() end,     mode = 'n', desc = 'Toggle BufferSticks' },
         },
         opts = {

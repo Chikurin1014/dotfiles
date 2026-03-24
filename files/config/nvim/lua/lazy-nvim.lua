@@ -20,6 +20,7 @@ return {
         require('lazy').setup {
             spec = {
                 { import = 'plugins' },
+                { import = 'plugins.mini' },
                 { import = 'plugins.snacks' },
                 { import = 'plugins.treesitter' },
                 { import = 'plugins.ui' },
