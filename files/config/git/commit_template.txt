@@ -7,7 +7,7 @@
 # type        ... e.g. build, chore, ci, docs, feat, fix, style, refactor, revert, perf, test, etc.
 # scope       ... e.g. file name, module name, etc.
 # description ... title of the commit
-# 
+#
 # ## Types and related gitmojis (about gitmoji: https://gitmoji.dev)
 # * build  ......  Changes that affect the build system or external dependencies
 #                      🔧 :wrench:                    Add or update configuration files
