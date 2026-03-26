@@ -1,10 +1,8 @@
 set -gx SSH_AUTH_SOCK       "$XDG_RUNTIME_DIR/ssh-agent.socket"
 set -gx FZF_DEFAULT_COMMAND fd
 
-abbr --add l               eza --icons --git
-abbr --add df              difft
-
-alias deploy-dotfiles ~/dotfiles/deploy.sh
+alias ls              "eza --icons --git"
+alias deploy-dotfiles "~/dotfiles/deploy.sh"
 
 function y
     set tmp (mktemp -t "yazi-cwd.XXXXXX")
