@@ -17,8 +17,8 @@ with pkgs;
   firge-nerd
   moralerspace-hw
   # essential tools
+  clang # required by tree-sitter
   curl
-  gcc # required by tree-sitter
   git
   tmux
   tree
@@ -57,16 +57,13 @@ with pkgs;
   tree-sitter
   # lsp / formatter / linter
   bash-language-server
-  clang-tools
   vscode-langservers-extracted
   lua-language-server
   marksman
   nixd
   nixfmt-rfc-style
-  pyright
   taplo
   yaml-language-server
-  zls
   # terminal emulator
   wezterm
   ghostty

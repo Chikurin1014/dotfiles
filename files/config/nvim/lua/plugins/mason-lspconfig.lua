@@ -13,9 +13,6 @@ return {
                     "MasonUpdate",
                     "MasonLog",
                 },
-                keys = {
-                    { '<leader>om', '<cmd>Mason<cr>', desc = 'Open Mason' },
-                },
                 config = true,
             },
         },
@@ -29,16 +26,13 @@ return {
             -- See: https://github.com/neovim/nvim-lspconfig/issues/3705
             ensure_installed = {
                 'bashls',
-                'clangd',
                 'copilot',
                 'jsonls',
                 'lua_ls',
-                'remark_ls',
+                'marksman',
                 'pyright',
-                'rust_analyzer',
                 'taplo',
                 'yamlls',
-                'zls',
             },
         },
     },
