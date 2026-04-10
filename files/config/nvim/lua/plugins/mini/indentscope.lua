@@ -13,7 +13,8 @@ return {
             },
         },
         config = function(_, opts)
-            vim.api.nvim_create_autocmd('Filetype', {
+            vim.api.nvim_create_autocmd('FileType', {
+                group = vim.api.nvim_create_augroup('MiniIndentscope', {}),
                 pattern = { 'alpha', 'dashboard', 'snacks_dashboard' },
                 callback = function(args)
                     vim.b[args.buf].miniindentscope_disable = true
