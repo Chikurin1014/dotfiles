@@ -19,6 +19,8 @@
 
     # nixGL is required if you are not using NixOS
     nixgl.url = "github:nix-community/nixgl";
+
+    nvim-config.url = "github:Chikurin1014/nvim-config";
   };
 
   outputs =
@@ -30,6 +32,7 @@
       nixos-wsl,
       vscode-server,
       nixgl,
+      nvim-config,
       ...
     }:
     let
@@ -62,7 +65,7 @@
           import ./nix/home.nix (
             input
             // {
-              inherit env pkgs;
+              inherit env pkgs nvim-config;
             }
           );
       in

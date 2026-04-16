@@ -69,6 +69,12 @@ cd dotfiles
 
 - **Dotter**
 
+  Initialize and update submodules:
+
+  ```shell
+  git submodule init && git submodule update
+  ```
+
   Create `.dotter/local.toml` and add the following content:
 
   ```toml
@@ -92,7 +98,7 @@ cd dotfiles
 
 - **Nothing**
 
-  Initialize and update submodules to use [sl-maker-for-dotfiles](https://github.com/Chikurin1014/sl-maker-for-dotfiles):
+  Initialize and update submodules:
 
   ```shell
   git submodule init && git submodule update

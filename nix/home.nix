@@ -3,6 +3,7 @@
   lib,
   config,
   pkgs,
+  nvim-config,
   ...
 }@inputs:
 
@@ -20,7 +21,7 @@
     packages = import ./packages.nix { inherit pkgs config; };
 
     # Files to be linked to certain directories
-    file = import ./files.nix { inherit config; };
+    file = (import ./files.nix).file // nvim-config.file;
 
     # Environment variables
     sessionVariables = {
