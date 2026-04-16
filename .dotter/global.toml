@@ -20,108 +20,41 @@ depends = [
 "files/clang-format" = "~/.clang-format"
 
 [fish.files]
-"files/config/fish/config.fish" = "~/.config/fish/config.fish"
+"files/config/fish" = "~/.config/fish"
 
 [ghostty.files]
-"files/config/ghostty/config" = "~/.config/ghostty/config"
+"files/config/ghostty" = "~/.config/ghostty"
 
 [git.files]
 "files/gitconfig" = "~/.gitconfig"
-"files/config/git/commit_template.gitconfig" = "~/.config/git/commit_template.gitconfig"
-"files/config/git/commit_template.txt" = "~/.config/git/commit_template.txt"
-"files/config/git/tools.gitconfig" = "~/.config/git/tools.gitconfig"
+"files/config/git" = "~/.config/git"
 
 [helix.files]
-"files/config/helix/config.toml" = "~/.config/helix/config.toml"
-"files/config/helix/languages.toml" = "~/.config/helix/languages.toml"
+"files/config/helix" = "~/.config/helix"
 
 [lazygit.files]
-"files/config/lazygit/config.yml" = "~/.config/lazygit/config.yml"
+"files/config/lazygit" = "~/.config/lazygit"
 
 [mise.files]
-"files/config/mise/config.toml" = "~/.config/mise/config.toml"
+"files/config/mise" = "~/.config/mise"
 
 [neovide.files]
-"nvim-config/neovide/config.toml" = "~/.config/neovide/config.toml"
+"nvim-config/neovide" = "~/.config/neovide"
 
 [neovim.files]
-"nvim-config/nvim/init.lua" = "~/.config/nvim/init.lua"
-
-"nvim-config/nvim/lua/base.lua" = "~/.config/nvim/lua/base.lua"
-"nvim-config/nvim/lua/keymaps.lua" = "~/.config/nvim/lua/keymaps.lua"
-"nvim-config/nvim/lua/lazy-nvim.lua" = "~/.config/nvim/lua/lazy-nvim.lua"
-"nvim-config/nvim/lua/lsp.lua" = "~/.config/nvim/lua/lsp.lua"
-"nvim-config/nvim/lua/neovide.lua" = "~/.config/nvim/lua/neovide.lua"
-
-"nvim-config/nvim/lua/plugins/blink-cmp.lua" = "~/.config/nvim/lua/plugins/blink-cmp.lua"
-"nvim-config/nvim/lua/plugins/codediff.lua" = "~/.config/nvim/lua/plugins/codediff.lua"
-"nvim-config/nvim/lua/plugins/gitsigns.lua" = "~/.config/nvim/lua/plugins/gitsigns.lua"
-"nvim-config/nvim/lua/plugins/luasnip.lua" = "~/.config/nvim/lua/plugins/luasnip.lua"
-"nvim-config/nvim/lua/plugins/mason-lspconfig.lua" = "~/.config/nvim/lua/plugins/lsp/init.lua"
-"nvim-config/nvim/lua/plugins/neogit.lua" = "~/.config/nvim/lua/plugins/neogit.lua"
-"nvim-config/nvim/lua/plugins/octo.lua" = "~/.config/nvim/lua/plugins/octo.lua"
-"nvim-config/nvim/lua/plugins/oil.lua" = "~/.config/nvim/lua/plugins/oil.lua"
-"nvim-config/nvim/lua/plugins/remote-nvim.lua" = "~/.config/nvim/lua/plugins/remote-nvim.lua"
-"nvim-config/nvim/lua/plugins/sidekick.lua" = "~/.config/nvim/lua/plugins/sidekick.lua"
-
-"nvim-config/nvim/lua/plugins/mini/icons.lua" = "~/.config/nvim/lua/plugins/mini/icons.lua"
-"nvim-config/nvim/lua/plugins/mini/indentscope.lua" = "~/.config/nvim/lua/plugins/mini/indentscope.lua"
-"nvim-config/nvim/lua/plugins/mini/move.lua" = "~/.config/nvim/lua/plugins/mini/move.lua"
-"nvim-config/nvim/lua/plugins/mini/trailspace.lua" = "~/.config/nvim/lua/plugins/mini/trailspace.lua"
-
-"nvim-config/nvim/lua/plugins/snacks/dashboard.lua" = "~/.config/nvim/lua/plugins/snacks/dashboard.lua"
-"nvim-config/nvim/lua/plugins/snacks/integration.lua" = "~/.config/nvim/lua/plugins/snacks/integration.lua"
-"nvim-config/nvim/lua/plugins/snacks/misc.lua" = "~/.config/nvim/lua/plugins/snacks/misc.lua"
-"nvim-config/nvim/lua/plugins/snacks/notifier.lua" = "~/.config/nvim/lua/plugins/snacks/notifier.lua"
-"nvim-config/nvim/lua/plugins/snacks/picker.lua" = "~/.config/nvim/lua/plugins/snacks/picker.lua"
-"nvim-config/nvim/lua/plugins/snacks/statuscolumn.lua" = "~/.config/nvim/lua/plugins/snacks/statuscolumn.lua"
-
-"nvim-config/nvim/lua/plugins/treesitter/context.lua" = "~/.config/nvim/lua/plugins/treesitter/context.lua"
-"nvim-config/nvim/lua/plugins/treesitter/install.lua" = "~/.config/nvim/lua/plugins/treesitter/install.lua"
-"nvim-config/nvim/lua/plugins/treesitter/textobjects.lua" = "~/.config/nvim/lua/plugins/treesitter/textobjects.lua"
-
-"nvim-config/nvim/lua/plugins/ui/colorscheme.lua" = "~/.config/nvim/lua/plugins/ui/colorschme.lua"
-"nvim-config/nvim/lua/plugins/ui/edgy.lua" = "~/.config/nvim/lua/plugins/ui/edgy.lua"
-"nvim-config/nvim/lua/plugins/ui/lualine.lua" = "~/.config/nvim/lua/plugins/ui/lualine.lua"
-"nvim-config/nvim/lua/plugins/ui/render-markdown.lua" = "~/.config/nvim/lua/plugins/ui/render-markdown.lua"
-"nvim-config/nvim/lua/plugins/ui/scrollbar.lua" = "~/.config/nvim/lua/plugins/ui/scrollbar.lua"
-"nvim-config/nvim/lua/plugins/ui/smear-cursor.lua" = "~/.config/nvim/lua/plugins/ui/smear-cursor.lua"
-"nvim-config/nvim/lua/plugins/ui/themes/kanagawa.lua" = "~/.config/nvim/lua/plugins/ui/themes/kanagawa.lua"
-
-"nvim-config/nvim/lua/plugins/util/autopairs.lua" = "~/.config/nvim/lua/plugins/util/autopairs.lua"
-"nvim-config/nvim/lua/plugins/util/buffer-sticks.lua" = "~/.config/nvim/lua/plugins/util/buffer-sticks.lua"
-"nvim-config/nvim/lua/plugins/util/colorizer.lua" = "~/.config/nvim/lua/plugins/util/colorizer.lua"
-"nvim-config/nvim/lua/plugins/util/conform.lua" = "~/.config/nvim/lua/plugins/util/conform.lua"
-"nvim-config/nvim/lua/plugins/util/flash.lua" = "~/.config/nvim/lua/plugins/util/flash.lua"
-"nvim-config/nvim/lua/plugins/util/hlslens.lua" = "~/.config/nvim/lua/plugins/util/hlslens.lua"
-"nvim-config/nvim/lua/plugins/util/inc-rename.lua" = "~/.config/nvim/lua/plugins/util/inc-rename.lua"
-"nvim-config/nvim/lua/plugins/util/origami.lua" = "~/.config/nvim/lua/plugins/util/origami.lua"
-"nvim-config/nvim/lua/plugins/util/startuptime.lua" = "~/.config/nvim/lua/plugins/util/startuptime.lua"
-"nvim-config/nvim/lua/plugins/util/which-key.lua" = "~/.config/nvim/lua/plugins/util/which-key.lua"
-
-"nvim-config/nvim/lua/snippets/gitcommit.lua" = "~/.config/nvim/lua/snippets/gitcommit.lua"
-
-"nvim-config/nvim/after/lsp/copilot.lua" = "~/.config/nvim/after/lsp/copilot.lua"
-"nvim-config/nvim/after/lsp/lua_ls.lua" = "~/.config/nvim/after/lsp/lua_ls.lua"
+"nvim-config/nvim" = "~/.config/nvim"
 
 [wezterm.files]
-"files/config/wezterm/wezterm.lua" = "~/.config/wezterm/wezterm.lua"
-"files/config/wezterm/keys.lua" = "~/.config/wezterm/keys.lua"
-"files/config/wezterm/themes/common.lua" = "~/.config/wezterm/themes/common.lua"
-"files/config/wezterm/themes/no-image.lua" = "~/.config/wezterm/themes/no-image.lua"
-"files/config/wezterm/themes/use-image.lua" = "~/.config/wezterm/themes/use-image.lua"
+"files/config/wezterm" = "~/.config/wezterm"
 
 [zellij.files]
-"files/config/zellij/config.kdl" = "~/.config/zellij/config.kdl"
+"files/config/zellij" = "~/.config/zellij"
 
 [zsh.files]
 "files/zshrc" = "~/.zshrc"
 "files/config/starship.toml" = "~/.config/starship.toml"
-"files/config/sheldon/plugins.toml" = "~/.config/sheldon/plugins.toml"
-"files/config/zsh/alias.zsh" = "~/.config/zsh/alias.zsh"
-"files/config/zsh/completion.zsh" = "~/.config/zsh/completion.zsh"
-"files/config/zsh/option.zsh" = "~/.config/zsh/option.zsh"
-"files/config/zsh/ssh-agent.zsh" = "~/.config/zsh/ssh-agent.zsh"
+"files/config/sheldon" = "~/.config/sheldon"
+"files/config/zsh" = "~/.config/zsh"
 
 [settings]
 default_target_type = "symbolic"
