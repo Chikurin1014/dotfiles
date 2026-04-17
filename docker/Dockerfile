@@ -57,6 +57,9 @@ RUN curl -fLsS https://github.com/Wilfred/difftastic/releases/latest/download/di
 # Install zellij
 RUN curl -fLsS https://github.com/zellij-org/zellij/releases/latest/download/zellij-x86_64-unknown-linux-musl.tar.gz | tar -xzf - -C ~/.local/bin
 
+# Install zoxide
+RUN curl -fLsS https://github.com/ajeetdsouza/zoxide/releases/latest/download/zoxide-0.9.9-x86_64-unknown-linux-musl.tar.gz | tar -xzf - -C ~/.local/bin
+
 # Install GitHub Copilot
 RUN curl -fLsS https://github.com/github/copilot-cli/releases/download/v0.0.409/copilot-linux-x64.tar.gz -o ~/.local/bin/copilot && \
     chmod +x ~/.local/bin/copilot
