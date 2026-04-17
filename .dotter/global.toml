@@ -3,27 +3,17 @@
 [default]
 depends = [
     "clang-format",
-    "fish",
-    "ghostty",
     "git",
     "helix",
     "lazygit",
     "mise",
-    "neovide",
-    "neovim",
+    "starship",
     "wezterm",
-    "zellij",
-    "zsh",
+    "nvim-config",
 ]
 
 [clang-format.files]
 "files/clang-format" = "~/.clang-format"
-
-[fish.files]
-"files/config/fish" = "~/.config/fish"
-
-[ghostty.files]
-"files/config/ghostty" = "~/.config/ghostty"
 
 [git.files]
 "files/gitconfig" = "~/.gitconfig"
@@ -38,23 +28,21 @@ depends = [
 [mise.files]
 "files/config/mise" = "~/.config/mise"
 
+[starship.files]
+"files/config/starship.toml" = "~/.config/starship.toml"
+
+[wezterm.files]
+"files/config/wezterm" = "~/.config/wezterm"
+
+# Files in `nvim-config` submodule
+[nvim-config]
+depends = ["neovide", "neovim"]
+
 [neovide.files]
 "nvim-config/neovide" = "~/.config/neovide"
 
 [neovim.files]
 "nvim-config/nvim" = "~/.config/nvim"
-
-[wezterm.files]
-"files/config/wezterm" = "~/.config/wezterm"
-
-[zellij.files]
-"files/config/zellij" = "~/.config/zellij"
-
-[zsh.files]
-"files/zshrc" = "~/.zshrc"
-"files/config/starship.toml" = "~/.config/starship.toml"
-"files/config/sheldon" = "~/.config/sheldon"
-"files/config/zsh" = "~/.config/zsh"
 
 [settings]
 default_target_type = "symbolic"

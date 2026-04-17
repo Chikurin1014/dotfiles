@@ -1,3 +1,6 @@
+[windows]
+depends = ["latex", "nushell", "powershell", "vcxsrv", "wsl", "override"]
+
 [latex.files]
 "files/override/windows/latexmkrc" = "~/.latexmkrc"
 "files/override/windows/indentconfig.yaml" = "~/.indentconfig.yaml"
@@ -17,30 +20,18 @@
 [wsl.files]
 "files/override/windows/wslconfig" = "~/.wslconfig"
 
-# override
-[helix]
-depends = ["helix"]
+# ---- Override default packages ----
+[override]
+depends = ["helix", "lazygit", "nvim-config"]
 
 [helix.files]
 "files/config/helix" = "~/AppData/Roaming/helix"
 
-# override
-[lazygit]
-depends = ["lazygit"]
-
 [lazygit.files]
 "files/config/lazygit" = "~/AppData/Local/lazygit"
 
-# override
-[neovide]
-depends = ["neovide"]
-
-[neovide.files]
+[neovide.files] # `nvim-config` dependant
 "nvim-config/neovide" = "~/AppData/Roaming/neovide"
 
-# override
-[neovim]
-depends = ["neovim"]
-
-[neovim.files]
+[neovim.files] # `nvim-config` dependant
 "nvim-config/nvim" = "~/AppData/Local/nvim"

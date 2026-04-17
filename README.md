@@ -78,8 +78,8 @@ cd dotfiles
   Create `.dotter/local.toml` and add the following content:
 
   ```toml
-  includes = []
-  packages = ["default"]
+  includes = [".dotter/unix.toml"]
+  packages = ["default", "unix"]
   ```
 
   > [!NOTE]
@@ -87,7 +87,7 @@ cd dotfiles
   >
   > ```toml
   > includes = [".dotter/windows.toml"]
-  > packages = ["default", "latex", "nushell", "powershell", "vcxsrv", "wsl"]
+  > packages = ["default", "windows"]
   > ```
 
   And then run:
