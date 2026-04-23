@@ -5,7 +5,7 @@
     # Specify the source of Home Manager and Nixpkgs.
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
 
-    flake-utils.url = "github:numtide/flake-utils";
+    flake-parts.url = "github:hercules-ci/flake-parts";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
@@ -24,10 +24,10 @@
   };
 
   outputs =
-    {
+    inputs@{
       self,
       nixpkgs,
-      flake-utils,
+      flake-parts,
       home-manager,
       nixos-wsl,
       vscode-server,
@@ -39,71 +39,78 @@
       inherit (builtins) fromTOML readFile;
       env = fromTOML (readFile ./.env);
     in
-    {
-      overlays = {
-        firge-nerd = final: prev: {
-          firge-nerd = prev.callPackage ./nix/pkgs/firge-nerd.nix { };
-        };
-      };
-    }
-    // flake-utils.lib.eachDefaultSystem (
-      system:
-      let
-        inherit env system;
-        pkgs = import nixpkgs {
-          inherit system;
-          config = {
-            allowUnfree = true; # for gh-copilot
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      imports = [
+        inputs.home-manager.flakeModules.home-manager
+      ];
+
+      flake = {
+        overlays = {
+          firge-nerd = final: prev: {
+            firge-nerd = prev.callPackage ./nix/pkgs/firge-nerd.nix { };
           };
-          overlays = [
-            self.overlays.firge-nerd
-            nixgl.overlay
-          ];
         };
+
         homeModules.${env.USER} =
-          input:
-          import ./nix/home.nix (
-            input
-            // {
-              inherit env pkgs nvim-config;
-            }
-          );
-      in
-      {
-        legacyPackages = {
-          # inherit (pkgs) home-manager firge-nerd;
+          input@{ pkgs, ... }: import ./nix/home.nix (input // { inherit env nvim-config; });
+      };
 
-          nixosConfigurations = {
-            ChNix = nixpkgs.lib.nixosSystem (
-              import ./nix/nixos {
-                inherit env system;
-                inherit vscode-server;
-                hostName = "ChNix";
-              }
-            );
-            ChNix-WSL = nixpkgs.lib.nixosSystem (
-              import ./nix/nixos-wsl {
-                inherit env system;
-                inherit vscode-server nixos-wsl;
-                hostName = "ChNix-WSL";
-              }
-            );
+      systems = [
+        "x86_64-linux"
+        "aarch64-linux"
+        "aarch64-darwin"
+      ];
+
+      perSystem =
+        {
+          system,
+          pkgs,
+          ...
+        }:
+        {
+          _module.args.pkgs = import inputs.nixpkgs {
+            inherit system;
+            config = {
+              allowUnfree = true; # for gh-copilot
+            };
+            overlays = [
+              self.overlays.firge-nerd
+              nixgl.overlay
+            ];
           };
 
-          homeConfigurations.${env.USER} = home-manager.lib.homeManagerConfiguration {
-            inherit pkgs;
+          legacyPackages = {
+            nixosConfigurations = {
+              ChNix = nixpkgs.lib.nixosSystem (
+                import ./nix/nixos {
+                  inherit env system;
+                  inherit vscode-server;
+                  hostName = "ChNix";
+                }
+              );
+              ChNix-WSL = nixpkgs.lib.nixosSystem (
+                import ./nix/nixos-wsl {
+                  inherit env system;
+                  inherit vscode-server nixos-wsl;
+                  hostName = "ChNix-WSL";
+                }
+              );
+            };
 
-            # Specify your home configuration modules here, for example,
-            # the path to your home.nix.
-            modules = [ homeModules.${env.USER} ];
+            homeConfigurations.${env.USER} = home-manager.lib.homeManagerConfiguration {
+              inherit pkgs;
 
-            # Optionally use extraSpecialArgs
-            # to pass through arguments to home.nix
-            extraSpecialArgs = { };
+              # Specify your home configuration modules here, for example,
+              # the path to your home.nix.
+              modules = [ self.homeModules.${env.USER} ];
+
+              # Optionally use extraSpecialArgs
+              # to pass through arguments to home.nix
+              extraSpecialArgs = { };
+            };
           };
+
+          formatter = pkgs.nixfmt-tree;
         };
-
-        formatter = pkgs.nixfmt-tree;
-      }
-    );
+    };
 }
