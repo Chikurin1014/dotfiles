@@ -3,9 +3,6 @@
   ...
 }:
 
-let
-  inherit (pkgs) firge-nerd;
-in
 {
   home.packages = with pkgs; [
     # Nix
