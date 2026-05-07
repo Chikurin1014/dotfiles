@@ -39,7 +39,7 @@ in
 
           specialArgs = {
             inherit (inputs) self;
-            hostName = "ChNix";
+            hostName = "ChNix-WSL";
           };
         };
       };
