@@ -5,7 +5,7 @@
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
 {
-  env,
+  self,
   hostName,
   config,
   lib,
@@ -13,6 +13,10 @@
   ...
 }:
 
+let
+  inherit (builtins) fromTOML readFile;
+  env = fromTOML (readFile (self + "/.env"));
+in
 {
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

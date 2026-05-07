@@ -28,14 +28,11 @@
       flake-parts,
       ...
     }:
-    let
-      inherit (builtins) fromTOML readFile;
-      env = fromTOML (readFile ./.env);
-    in
     flake-parts.lib.mkFlake { inherit inputs; } {
       imports = [
         inputs.home-manager.flakeModules.home-manager
         ./nix/home-manager
+        ./nix/nixos
       ];
 
       systems = [
@@ -45,31 +42,8 @@
       ];
 
       perSystem =
+        { pkgs, ... }:
         {
-          system,
-          pkgs,
-          ...
-        }:
-        {
-          legacyPackages = {
-            nixosConfigurations = {
-              ChNix = inputs.nixpkgs.lib.nixosSystem (
-                import ./nix/nixos {
-                  inherit env system;
-                  inherit (inputs) vscode-server;
-                  hostName = "ChNix";
-                }
-              );
-              ChNix-WSL = inputs.nixpkgs.lib.nixosSystem (
-                import ./nix/nixos-wsl {
-                  inherit env system;
-                  inherit (inputs) vscode-server nixos-wsl;
-                  hostName = "ChNix-WSL";
-                }
-              );
-            };
-          };
-
           formatter = pkgs.nixfmt-tree;
         };
     };
