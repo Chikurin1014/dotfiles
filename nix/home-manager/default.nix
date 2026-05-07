@@ -12,12 +12,6 @@ in
   ];
 
   flake = {
-    overlays = {
-      firge-nerd = final: prev: {
-        firge-nerd = prev.callPackage ../pkgs/firge-nerd.nix { };
-      };
-    };
-
     homeModules = {
       editor = {
         # Environment variables
@@ -50,19 +44,8 @@ in
   };
 
   perSystem =
-    { system, pkgs, ... }:
+    { pkgs, ... }:
     {
-      _module.args.pkgs = import inputs.nixpkgs {
-        inherit system;
-        config = {
-          allowUnfree = true; # for gh-copilot
-        };
-        overlays = [
-          inputs.self.overlays.firge-nerd
-          inputs.nixgl.overlay
-        ];
-      };
-
       legacyPackages = {
         homeConfigurations.${env.USER} = inputs.home-manager.lib.homeManagerConfiguration {
           inherit pkgs;

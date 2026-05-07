@@ -40,10 +40,28 @@
         "aarch64-linux"
         "aarch64-darwin"
       ];
+      flake = {
+        overlays = {
+          firge-nerd = final: prev: {
+            firge-nerd = prev.callPackage ./nix/packages/firge-nerd.nix { };
+          };
+        };
+      };
 
       perSystem =
-        { pkgs, ... }:
+        { system, pkgs, ... }:
         {
+          _module.args.pkgs = import inputs.nixpkgs {
+            inherit system;
+            config = {
+              allowUnfree = true; # for gh-copilot
+            };
+            overlays = [
+              inputs.self.overlays.firge-nerd
+              inputs.nixgl.overlay
+            ];
+          };
+
           formatter = pkgs.nixfmt-tree;
         };
     };
