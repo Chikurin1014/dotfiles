@@ -5,7 +5,7 @@
     # Specify the source of Home Manager and Nixpkgs.
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
 
-    flake-utils.url = "github:numtide/flake-utils";
+    flake-parts.url = "github:hercules-ci/flake-parts";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
@@ -24,86 +24,44 @@
   };
 
   outputs =
-    {
-      self,
-      nixpkgs,
-      flake-utils,
-      home-manager,
-      nixos-wsl,
-      vscode-server,
-      nixgl,
-      nvim-config,
+    inputs@{
+      flake-parts,
       ...
     }:
-    let
-      inherit (builtins) fromTOML readFile;
-      env = fromTOML (readFile ./.env);
-    in
-    {
-      overlays = {
-        firge-nerd = final: prev: {
-          firge-nerd = prev.callPackage ./nix/pkgs/firge-nerd.nix { };
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      imports = [
+        ./nix/home-manager
+        ./nix/nixos
+      ];
+
+      systems = [
+        "x86_64-linux"
+        "aarch64-linux"
+        "aarch64-darwin"
+      ];
+      flake = {
+        overlays = {
+          firge-nerd = final: prev: {
+            firge-nerd = prev.callPackage ./nix/packages/firge-nerd.nix { };
+          };
         };
       };
-    }
-    // flake-utils.lib.eachDefaultSystem (
-      system:
-      let
-        inherit env system;
-        pkgs = import nixpkgs {
-          inherit system;
-          config = {
-            allowUnfree = true; # for gh-copilot
+
+      perSystem =
+        { system, pkgs, ... }:
+        {
+          _module.args.pkgs = import inputs.nixpkgs {
+            inherit system;
+            config = {
+              allowUnfree = true; # for gh-copilot
+            };
+            overlays = [
+              inputs.self.overlays.firge-nerd
+              inputs.nixgl.overlay
+            ];
           };
-          overlays = [
-            self.overlays.firge-nerd
-            nixgl.overlay
-          ];
+
+          formatter = pkgs.nixfmt-tree;
         };
-        homeModules.${env.USER} =
-          input:
-          import ./nix/home.nix (
-            input
-            // {
-              inherit env pkgs nvim-config;
-            }
-          );
-      in
-      {
-        legacyPackages = {
-          # inherit (pkgs) home-manager firge-nerd;
-
-          nixosConfigurations = {
-            ChNix = nixpkgs.lib.nixosSystem (
-              import ./nix/nixos {
-                inherit env system;
-                inherit vscode-server;
-                hostName = "ChNix";
-              }
-            );
-            ChNix-WSL = nixpkgs.lib.nixosSystem (
-              import ./nix/nixos-wsl {
-                inherit env system;
-                inherit vscode-server nixos-wsl;
-                hostName = "ChNix-WSL";
-              }
-            );
-          };
-
-          homeConfigurations.${env.USER} = home-manager.lib.homeManagerConfiguration {
-            inherit pkgs;
-
-            # Specify your home configuration modules here, for example,
-            # the path to your home.nix.
-            modules = [ homeModules.${env.USER} ];
-
-            # Optionally use extraSpecialArgs
-            # to pass through arguments to home.nix
-            extraSpecialArgs = { };
-          };
-        };
-
-        formatter = pkgs.nixfmt-tree;
-      }
-    );
+    };
 }
