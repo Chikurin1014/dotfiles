@@ -24,33 +24,19 @@
   };
 
   outputs =
-    inputs:
+    inputs@{
+      flake-parts,
+      ...
+    }:
     let
       inherit (builtins) fromTOML readFile;
       env = fromTOML (readFile ./.env);
     in
-    inputs.flake-parts.lib.mkFlake { inherit inputs; } {
+    flake-parts.lib.mkFlake { inherit inputs; } {
       imports = [
         inputs.home-manager.flakeModules.home-manager
+        ./nix/home-manager
       ];
-
-      flake = {
-        overlays = {
-          firge-nerd = final: prev: {
-            firge-nerd = prev.callPackage ./nix/pkgs/firge-nerd.nix { };
-          };
-        };
-
-        homeModules.${env.USER} =
-          input@{ pkgs, ... }:
-          import ./nix/home.nix (
-            input
-            // {
-              inherit env;
-              inherit (inputs) nvim-config;
-            }
-          );
-      };
 
       systems = [
         "x86_64-linux"
@@ -65,17 +51,6 @@
           ...
         }:
         {
-          _module.args.pkgs = import inputs.nixpkgs {
-            inherit system;
-            config = {
-              allowUnfree = true; # for gh-copilot
-            };
-            overlays = [
-              inputs.self.overlays.firge-nerd
-              inputs.nixgl.overlay
-            ];
-          };
-
           legacyPackages = {
             nixosConfigurations = {
               ChNix = inputs.nixpkgs.lib.nixosSystem (
@@ -92,18 +67,6 @@
                   hostName = "ChNix-WSL";
                 }
               );
-            };
-
-            homeConfigurations.${env.USER} = inputs.home-manager.lib.homeManagerConfiguration {
-              inherit pkgs;
-
-              # Specify your home configuration modules here, for example,
-              # the path to your home.nix.
-              modules = [ inputs.self.homeModules.${env.USER} ];
-
-              # Optionally use extraSpecialArgs
-              # to pass through arguments to home.nix
-              extraSpecialArgs = { };
             };
           };
 
