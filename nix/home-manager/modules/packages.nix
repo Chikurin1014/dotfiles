@@ -53,6 +53,7 @@
     tree-sitter
     # lsp / formatter / linter
     copilot-language-server
+    marksman
     nixd
     nixfmt
     # terminal emulator
