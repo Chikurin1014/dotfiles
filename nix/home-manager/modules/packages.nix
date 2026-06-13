@@ -36,8 +36,7 @@
     fzf
     gh
     ghq
-    # github-copilot-cli
-    gh-copilot
+    github-copilot-cli
     lazygit
     ripgrep
     sd
@@ -67,6 +66,5 @@
     # runtime / package manager
     mise
     rustup
-    nodePackages.npm
   ];
 }
