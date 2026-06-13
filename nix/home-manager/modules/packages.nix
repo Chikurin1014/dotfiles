@@ -52,14 +52,9 @@
     neovide
     tree-sitter
     # lsp / formatter / linter
-    bash-language-server
-    vscode-langservers-extracted
-    lua-language-server
-    marksman
+    copilot-language-server
     nixd
-    nixfmt-rfc-style
-    taplo
-    yaml-language-server
+    nixfmt
     # terminal emulator
     wezterm
     ghostty
