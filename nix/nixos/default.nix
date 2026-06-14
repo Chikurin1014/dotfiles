@@ -2,45 +2,60 @@
 let
   inherit (builtins) fromTOML readFile;
   env = fromTOML (readFile (inputs.self + "/.env"));
-  common-modules = [
-    ./configuration.nix
-    inputs.vscode-server.nixosModules.default
-    { services.vscode-server.enable = true; }
-  ];
 in
 {
+  systems = [
+    "x86_64-linux"
+    "aarch64-linux"
+  ];
+
+  flake = {
+    nixosConfigurations.ChNix-WSL = inputs.nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+
+      modules = [
+        ./configuration.nix
+
+        # VSCode Server
+        inputs.vscode-server.nixosModules.default
+        { services.vscode-server.enable = true; }
+
+        inputs.nixos-wsl.nixosModules.default
+        {
+          wsl = {
+            enable = true;
+            defaultUser = env.USER;
+          };
+        }
+      ];
+
+      specialArgs = {
+        inherit (inputs) self;
+        hostName = "ChNix-WSL";
+      };
+    };
+  };
+
   perSystem =
-    { system, ... }:
+    { pkgs, ... }:
+    let
+      inherit (pkgs.stdenv.hostPlatform) system;
+    in
     {
-      legacyPackages.nixosConfigurations = {
-        ChNix = inputs.nixpkgs.lib.nixosSystem {
-          inherit system;
+      legacyPackages.nixosConfigurations.ChNix = inputs.nixpkgs.lib.nixosSystem {
+        inherit system;
 
-          modules = common-modules;
+        modules = [
+          ./configuration.nix
 
-          specialArgs = {
-            inherit (inputs) self;
-            hostName = "ChNix";
-          };
-        };
+          # VSCode Server
+          inputs.vscode-server.nixosModules.default
+          { services.vscode-server.enable = true; }
+        ];
 
-        ChNix-WSL = inputs.nixpkgs.lib.nixosSystem {
-          inherit system;
-
-          modules = common-modules ++ [
-            inputs.nixos-wsl.nixosModules.default
-            {
-              wsl = {
-                enable = true;
-                defaultUser = env.USER;
-              };
-            }
-          ];
-
-          specialArgs = {
-            inherit (inputs) self;
-            hostName = "ChNix-WSL";
-          };
+        specialArgs = {
+          inherit (inputs) self;
+          hostName = "ChNix";
         };
       };
     };
