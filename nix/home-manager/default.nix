@@ -103,7 +103,7 @@ in
             [
               {
                 # Home directory
-                home.homeDirectory = "Users/${username}";
+                home.homeDirectory = "/Users/${username}";
               }
               ./modules/packages/darwin.nix
             ]
