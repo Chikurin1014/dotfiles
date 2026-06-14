@@ -39,6 +39,7 @@
         "aarch64-linux"
         "aarch64-darwin"
       ];
+
       flake = {
         overlays = {
           firge-nerd = final: prev: {
