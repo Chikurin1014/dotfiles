@@ -1,4 +1,4 @@
-lsps = {
+local lsps = {
     'bashls',
     'emmylua_ls',
     'fish_lsp',
