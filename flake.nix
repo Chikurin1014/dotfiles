@@ -45,6 +45,17 @@
       perSystem =
         { pkgs, ... }:
         {
+          devShells.default = pkgs.mkShell {
+            packages = with pkgs; [
+              bash-language-server
+              emmylua-ls
+              emmylua-formatter
+              fish-lsp
+              taplo
+              vscode-langservers-extracted
+              yaml-language-server
+            ];
+          };
           formatter = pkgs.nixfmt-tree;
         };
     };

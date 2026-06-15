@@ -8,3 +8,9 @@
 /.dotter/cache
 /.dotter/cache.toml
 /.dotter/local.toml
+
+# Direnv
+.direnv
+/.envrc
+/direnv
+/direnv.test

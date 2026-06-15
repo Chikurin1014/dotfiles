@@ -8,13 +8,17 @@ function y
     set tmp (mktemp -t "yazi-cwd.XXXXXX")
     command yazi $argv --cwd-file="$tmp"
     if read -z cwd < "$tmp"; and [ "$cwd" != "$PWD" ]; and test -d "$cwd"
-            builtin cd -- "$cwd"
+        builtin cd -- "$cwd"
     end
-    rm -f -- "$tmp"
+    command rm -f -- "$tmp"
 end
 
 if status is-interactive
     mise activate fish | source
     starship init fish | source
     zoxide init fish | source
+
+    if command -q nix-your-shell
+        nix-your-shell fish | source
+    end
 end

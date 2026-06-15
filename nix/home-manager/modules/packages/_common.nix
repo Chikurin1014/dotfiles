@@ -3,8 +3,8 @@
 with pkgs;
 [
   # Nix
-  nix-output-monitor
   cachix
+  nix-your-shell
   # essential tools
   clang # required by tree-sitter
   curl
