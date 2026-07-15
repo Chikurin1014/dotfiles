@@ -23,7 +23,7 @@ if status is-interactive
     end
 
     # install fish plugins
-    if functioins -q fisher
+    if functions -q fisher
         curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 
         fisher install acomagu/fish-async-prompt
