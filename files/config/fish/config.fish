@@ -21,15 +21,4 @@ if status is-interactive
     if command -q nix-your-shell
         nix-your-shell fish | source
     end
-
-    # install fish plugins
-    if functions -q fisher
-        curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
-
-        fisher install acomagu/fish-async-prompt
-        fisher install decors/fish-ghq
-        fisher install jorgebucaran/autopair.fish
-        fisher install kidonng/nix.fish
-        fisher install PatrickF1/fzf.fish
-    end
 end
