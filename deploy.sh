@@ -27,11 +27,20 @@ if [ ! -x "$SRC_DIR/sl-maker-for-dotfiles/run.sh" ]; then
     exit 1
 fi
 
-source "$SRC_DIR/sl-maker-for-dotfiles/run.sh" \
+echo "==== main ====" > "$SRC_DIR/sl-maker-for-dotfiles.log"
+"$SRC_DIR/sl-maker-for-dotfiles/run.sh" \
     -o "$SRC_DIR/files" \
     -d "$HOME" \
     -r "zshrc -> .zshrc" \
     -r "config/ -> .config/" \
+    -r "nvim-config/ -> .config/nvim/" \
     -r "clang-format -> .clang-format" \
     -r "gitconfig -> .gitconfig" \
-    > "$SRC_DIR/sl-maker-for-dotfiles.log"
+    -i "override/windows" \
+    >> "$SRC_DIR/sl-maker-for-dotfiles.log"
+
+echo "==== submodule: nvim-config ====" >> "$SRC_DIR/sl-maker-for-dotfiles.log"
+"$SRC_DIR/sl-maker-for-dotfiles/run.sh" \
+    -o "$SRC_DIR/nvim-config" \
+    -d "$HOME/.config" \
+    >> "$SRC_DIR/sl-maker-for-dotfiles.log"
