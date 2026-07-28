@@ -50,5 +50,4 @@ with pkgs;
   nixfmt
   # runtime / package manager
   mise
-  rustup
 ]

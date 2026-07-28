@@ -2,12 +2,12 @@
 
 set -e
 
-if [ -e '~/.initialized' ]; then
+if [ -e "$HOME/.initialized" ]; then
    exit 0
 fi
 
-echo 'includes = [".dotter/unix.toml"]' > ~/dotfiles/.dotter/local.toml
-echo 'packages = ["default", "unix"]' >> ~/dotfiles/.dotter/local.toml
-cd ~/dotfiles && ~/.local/bin/dotter deploy --force
+"$HOME/dotfiles/deploy.sh"
 
 touch ~/.initialized
+
+exec fish -l

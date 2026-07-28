@@ -6,16 +6,15 @@ services:
       context: .
       dockerfile: docker/Dockerfile
       args:
-        UNAME: $USER
-        GNAME: $USER
-        UID: 1001
-        GID: 1001
+        UID: ${UID}
+        GID: ${GID}
         DOTFILES_CONTEXT: .
+    volumes:
+      - type: bind
+        source: ${PWD}
+        target: /home/ubuntu/dotfiles
     environment:
-      USER:
-      GIT_USER_NAME:
-      GIT_USER_EMAIL:
-      EDITOR:
-    user: $USER
+      GIT_USER_NAME: ${GIT_USER_NAME}
+      GIT_USER_EMAIL: ${GIT_USER_EMAIL}
+      EDITOR: ${EDITOR}
     tty: true
-    command: sh -c "~/dotfiles/docker/entrypoint.sh && fish -l"
