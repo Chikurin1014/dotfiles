@@ -1,4 +1,4 @@
-let starship_exe = $env.USERPROFILE | path join "scoop" "shims" "starship.exe"
+let starship_exe = $env.LOCALAPPDATA | path join "mise" "installs" "starship" "1.26.0" "starship.exe"
 
 # this file is both a valid
 # - overlay which can be loaded with `overlay use starship.nu`
@@ -7,7 +7,7 @@ let starship_exe = $env.USERPROFILE | path join "scoop" "shims" "starship.exe"
 export-env { $env.STARSHIP_SHELL = "nu"; load-env {
     STARSHIP_SESSION_KEY: (random chars -l 16)
     PROMPT_MULTILINE_INDICATOR: (
-        ^($starship_exe) prompt --continuation
+        ^$starship_exe prompt --continuation
     )
 
     # Does not play well with default character module.
@@ -15,12 +15,21 @@ export-env { $env.STARSHIP_SHELL = "nu"; load-env {
     PROMPT_INDICATOR: ""
 
     PROMPT_COMMAND: {||
-        # jobs are not supported
         (
-            ^($starship_exe) prompt
-                --cmd-duration $env.CMD_DURATION_MS
+            # The initial value of `$env.CMD_DURATION_MS` is always `0823`, which is an official setting.
+            # See https://github.com/nushell/nushell/discussions/6402#discussioncomment-3466687.
+            let cmd_duration = if $env.CMD_DURATION_MS == "0823" { 0 } else { $env.CMD_DURATION_MS };
+            ^$starship_exe prompt
+                --cmd-duration $cmd_duration
                 $"--status=($env.LAST_EXIT_CODE)"
                 --terminal-width (term size).columns
+                ...(
+                    if (which "job list" | where type == built-in | is-not-empty) {
+                        ["--jobs", (job list | length)]
+                    } else {
+                        []
+                    }
+                )
         )
     }
 
@@ -30,11 +39,21 @@ export-env { $env.STARSHIP_SHELL = "nu"; load-env {
 
     PROMPT_COMMAND_RIGHT: {||
         (
-            ^($starship_exe) prompt
+            # The initial value of `$env.CMD_DURATION_MS` is always `0823`, which is an official setting.
+            # See https://github.com/nushell/nushell/discussions/6402#discussioncomment-3466687.
+            let cmd_duration = if $env.CMD_DURATION_MS == "0823" { 0 } else { $env.CMD_DURATION_MS };
+            ^$starship_exe prompt
                 --right
-                --cmd-duration $env.CMD_DURATION_MS
+                --cmd-duration $cmd_duration
                 $"--status=($env.LAST_EXIT_CODE)"
                 --terminal-width (term size).columns
+                ...(
+                    if (which "job list" | where type == built-in | is-not-empty) {
+                        ["--jobs", (job list | length)]
+                    } else {
+                        []
+                    }
+                )
         )
     }
 }}

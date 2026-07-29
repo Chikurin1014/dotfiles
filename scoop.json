@@ -47,27 +47,6 @@
             "Updated": "\/Date(1769528804428)\/"
         },
         {
-            "Name": "bat",
-            "Version": "0.26.1",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1769528799397)\/"
-        },
-        {
-            "Name": "bun",
-            "Version": "1.3.7",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1769528663100)\/"
-        },
-        {
-            "Info": "",
-            "Source": "main",
-            "Name": "copilot-cli",
-            "Version": "0.0.406",
-            "Updated": "\/Date(1770560671835)\/"
-        },
-        {
             "Name": "dark",
             "Version": "3.14.1",
             "Info": "",
@@ -75,67 +54,11 @@
             "Updated": "\/Date(1760946527298)\/"
         },
         {
-            "Name": "difftastic",
-            "Version": "0.67.0",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1769528664183)\/"
-        },
-        {
-            "Name": "direnv",
-            "Version": "2.37.1",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1760946530712)\/"
-        },
-        {
             "Name": "dotter",
             "Version": "0.13.4",
             "Info": "",
             "Source": "main",
             "Updated": "\/Date(1760946531770)\/"
-        },
-        {
-            "Name": "dust",
-            "Version": "1.2.4",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1769528664942)\/"
-        },
-        {
-            "Name": "eza",
-            "Version": "0.23.4",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1760946533248)\/"
-        },
-        {
-            "Name": "fd",
-            "Version": "10.3.0",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1760946533841)\/"
-        },
-        {
-            "Name": "fzf",
-            "Version": "0.67.0",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1769528665811)\/"
-        },
-        {
-            "Name": "gh",
-            "Version": "2.86.0",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1769528667364)\/"
-        },
-        {
-            "Name": "ghq",
-            "Version": "1.9.4",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1771835552301)\/"
         },
         {
             "Name": "git",
@@ -150,13 +73,6 @@
             "Info": "",
             "Source": "main",
             "Updated": "\/Date(1769528667998)\/"
-        },
-        {
-            "Name": "lazygit",
-            "Version": "0.58.1",
-            "Info": "",
-            "Source": "extras",
-            "Updated": "\/Date(1769528668841)\/"
         },
         {
             "Name": "less",
@@ -180,32 +96,11 @@
             "Updated": "\/Date(1769528698341)\/"
         },
         {
-            "Name": "navi",
-            "Version": "2.24.0",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1760946688137)\/"
-        },
-        {
             "Name": "neovide",
             "Version": "0.15.2",
             "Info": "",
             "Source": "extras",
             "Updated": "\/Date(1769963281219)\/"
-        },
-        {
-            "Name": "neovim",
-            "Version": "0.11.6",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1769528702516)\/"
-        },
-        {
-            "Name": "nodejs",
-            "Version": "25.5.0",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1769528708458)\/"
         },
         {
             "Name": "nu",
@@ -222,13 +117,6 @@
             "Updated": "\/Date(1760946780705)\/"
         },
         {
-            "Name": "ripgrep",
-            "Version": "15.1.0",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1769528714146)\/"
-        },
-        {
             "Name": "rustup",
             "Version": "1.28.2",
             "Info": "",
@@ -236,32 +124,11 @@
             "Updated": "\/Date(1760946827694)\/"
         },
         {
-            "Name": "sd",
-            "Version": "1.0.0",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1760946828688)\/"
-        },
-        {
-            "Name": "starship",
-            "Version": "1.24.2",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1769528715472)\/"
-        },
-        {
             "Name": "sudo",
             "Version": "0.2020.01.26",
             "Info": "",
             "Source": "main",
             "Updated": "\/Date(1760946830012)\/"
-        },
-        {
-            "Name": "tealdeer",
-            "Version": "1.8.1",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1769528716847)\/"
         },
         {
             "Name": "tectonic",
@@ -276,20 +143,6 @@
             "Info": "",
             "Source": "extras",
             "Updated": "\/Date(1760946836851)\/"
-        },
-        {
-            "Name": "tree-sitter",
-            "Version": "0.26.3",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1769530474326)\/"
-        },
-        {
-            "Name": "typst",
-            "Version": "0.14.2",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1769528718598)\/"
         },
         {
             "Name": "vcxsrv",
@@ -312,19 +165,5 @@
             "Source": "main",
             "Updated": "\/Date(1760946929622)\/"
         },
-        {
-            "Name": "yazi",
-            "Version": "26.1.22",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1769528820517)\/"
-        },
-        {
-            "Info": "",
-            "Source": "main",
-            "Name": "zoxide",
-            "Version": "0.9.9",
-            "Updated": "\/Date(1771822081804)\/"
-        }
     ]
 }
