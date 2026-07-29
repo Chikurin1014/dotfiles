@@ -48,6 +48,4 @@ with pkgs;
   marksman
   nixd
   nixfmt
-  # runtime / package manager
-  mise
 ]

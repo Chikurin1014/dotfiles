@@ -14,7 +14,9 @@ function y
 end
 
 if status is-interactive
-    mise activate fish | source
+    if command -q mise
+        mise activate fish | source
+    end
     starship init fish | source
     zoxide init fish | source
 
