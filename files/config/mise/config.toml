@@ -1,4 +1,6 @@
 [tools]
+'aqua:neovim' = 'latest'
+
 bat = 'latest'
 btop = 'latest'
 copilot = 'latest'
