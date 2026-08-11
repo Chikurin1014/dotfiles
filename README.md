@@ -167,3 +167,22 @@ You can use docker container with running
 ```shell
 docker compose run playground
 ```
+
+## Development
+
+Example of workspace settings (Neovim):
+```lua
+-- .nvim.lua
+
+local lsps = {
+    'bashls',
+    'emmylua_ls',
+    'fish_lsp',
+    'taplo',
+    'jsonls',
+    'yamlls'
+}
+for _, lsp in ipairs(lsps) do
+    vim.lsp.enable(lsp)
+end
+```
