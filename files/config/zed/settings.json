@@ -1,0 +1,55 @@
+{
+  "agent_servers": {
+    "github-copilot-cli": {
+      "type": "registry"
+    }
+  },
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "git_panel": {
+    "dock": "left"
+  },
+  "vim_mode": true,
+  "terminal": {
+    "font_family": "Moralerspace Neon HW",
+    "cursor_shape": "bar"
+  },
+  "buffer_font_fallbacks": [
+    "Consolas",
+    "Courier New",
+    "monospace"
+  ],
+  "buffer_font_family": "Moralerspace Neon HW",
+  "file_types": {
+    "toml": [
+      "*.toml"
+    ]
+  },
+  "auto_indent_on_paste": true,
+  "show_edit_predictions": true,
+  "base_keymap": "Zed",
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "dark",
+    "light": "Ayu Light",
+    "dark": "Nord Dark - No Italics"
+  },
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Colored Zed Icons Theme Light",
+    "dark": "Colored Zed Icons Theme Dark"
+  }
+}
