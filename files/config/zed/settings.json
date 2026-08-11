@@ -1,9 +1,20 @@
 {
-  "agent_servers": {
-    "github-copilot-cli": {
-      "type": "registry"
-    }
+  "auto_indent_on_paste": true,
+  "show_edit_predictions": true,
+  "base_keymap": "Zed",
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "dark",
+    "light": "Ayu Light",
+    "dark": "Nord Dark - No Italics"
   },
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Colored Zed Icons Theme Light",
+    "dark": "Colored Zed Icons Theme Dark"
+  },
+  "cli_default_open_behavior": "new_window",
   "project_panel": {
     "dock": "left"
   },
@@ -12,11 +23,6 @@
   },
   "collaboration_panel": {
     "dock": "left"
-  },
-  "agent": {
-    "dock": "right",
-    "favorite_models": [],
-    "model_parameters": []
   },
   "git_panel": {
     "dock": "left"
@@ -37,19 +43,22 @@
       "*.toml"
     ]
   },
-  "auto_indent_on_paste": true,
-  "show_edit_predictions": true,
-  "base_keymap": "Zed",
-  "ui_font_size": 16,
-  "buffer_font_size": 15,
-  "theme": {
-    "mode": "dark",
-    "light": "Ayu Light",
-    "dark": "Nord Dark - No Italics"
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
   },
-  "icon_theme": {
-    "mode": "dark",
-    "light": "Colored Zed Icons Theme Light",
-    "dark": "Colored Zed Icons Theme Dark"
+  "agent_servers": {
+    "github-copilot-cli": {
+      "type": "registry"
+    }
+  },
+  "auto_install_extensions": {
+    // Theme
+    "colored-zed-icons-theme": true,
+    "nord": true,
+    // Languages
+    "markdown-oxide": true,
+    "nix": true,
   }
 }
