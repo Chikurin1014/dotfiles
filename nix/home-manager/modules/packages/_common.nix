@@ -45,7 +45,7 @@ with pkgs;
   tree-sitter
   # lsp / formatter / linter
   copilot-language-server
-  marksman
+  markdown-oxide
   nixd
   nixfmt
 ]
