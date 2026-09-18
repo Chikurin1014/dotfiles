@@ -17,7 +17,9 @@ if status is-interactive
     if command -q mise
         mise activate fish | source
     end
+    if command -q direnv
+        direnv hook fish | source
+    end
     starship init fish | source
     zoxide init fish | source
-    direnv hook fish | source
 end
