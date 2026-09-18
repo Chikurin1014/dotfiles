@@ -2,6 +2,8 @@
 'aqua:neovim/neovim' = 'latest'
 'aqua:github/copilot-cli' = 'latest'
 'aqua:tealdeer-rs/tealdeer' = 'latest'
+"npm:@github/copilot-language-server" = "latest"
+"github:Feel-ix-343/markdown-oxide" = "latest"
 
 bat = 'latest'
 btop = 'latest'
@@ -17,7 +19,6 @@ ripgrep = 'latest'
 sd = 'latest'
 starship = 'latest'
 tree-sitter = 'latest'
-uv = 'latest'
 yazi = 'latest'
 zellij = 'latest'
 zoxide = 'latest'
