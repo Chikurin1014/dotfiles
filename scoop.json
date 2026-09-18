@@ -1,169 +1,150 @@
 {
+    "apps": [
+        {
+            "Name": "7zip",
+            "Info": "",
+            "Version": "26.03",
+            "Source": "main",
+            "Updated": "2026-09-18T23:33:57.5776052+09:00"
+        },
+        {
+            "Name": "aria2",
+            "Info": "",
+            "Version": "1.37.0-1",
+            "Source": "main",
+            "Updated": "2026-02-09T18:13:08.5223278+09:00"
+        },
+        {
+            "Name": "dark",
+            "Info": "",
+            "Version": "3.14.1",
+            "Source": "main",
+            "Updated": "2025-09-06T11:48:03.4331966+09:00"
+        },
+        {
+            "Name": "dotter",
+            "Info": "",
+            "Version": "0.13.5",
+            "Source": "main",
+            "Updated": "2026-09-18T23:33:59.471717+09:00"
+        },
+        {
+            "Name": "git",
+            "Info": "",
+            "Version": "2.55.0.5",
+            "Source": "main",
+            "Updated": "2026-09-18T23:34:35.6899845+09:00"
+        },
+        {
+            "Name": "innounp",
+            "Info": "",
+            "Version": "2.71.1",
+            "Source": "main",
+            "Updated": "2026-09-18T23:34:36.5120854+09:00"
+        },
+        {
+            "Name": "less",
+            "Info": "",
+            "Version": "704",
+            "Source": "main",
+            "Updated": "2026-09-18T23:34:37.6745453+09:00"
+        },
+        {
+            "Name": "mise",
+            "Info": "",
+            "Version": "2026.9.11",
+            "Source": "main",
+            "Updated": "2026-09-18T23:35:52.6726256+09:00"
+        },
+        {
+            "Name": "msys2",
+            "Info": "",
+            "Version": "2026-06-11",
+            "Source": "main",
+            "Updated": "2026-09-18T23:37:06.1503048+09:00"
+        },
+        {
+            "Name": "neovide",
+            "Info": "",
+            "Version": "0.16.2",
+            "Source": "extras",
+            "Updated": "2026-09-18T23:37:09.0165274+09:00"
+        },
+        {
+            "Name": "nu",
+            "Info": "",
+            "Version": "0.115.1",
+            "Source": "main",
+            "Updated": "2026-09-18T23:57:24.5437914+09:00"
+        },
+        {
+            "Name": "openssl",
+            "Info": "",
+            "Version": "4.0.2",
+            "Source": "main",
+            "Updated": "2026-09-18T23:38:23.5155536+09:00"
+        },
+        {
+            "Name": "sudo",
+            "Info": "",
+            "Version": "0.2020.01.26",
+            "Source": "main",
+            "Updated": "2025-02-26T01:00:50.6326342+09:00"
+        },
+        {
+            "Name": "tectonic",
+            "Info": "",
+            "Version": "0.17.0",
+            "Source": "main",
+            "Updated": "2026-09-18T23:57:33.1281892+09:00"
+        },
+        {
+            "Name": "tex-fmt",
+            "Info": "",
+            "Version": "0.5.7",
+            "Source": "extras",
+            "Updated": "2026-09-18T23:57:34.4944331+09:00"
+        },
+        {
+            "Name": "vcxsrv",
+            "Info": "",
+            "Version": "21.1.16.1",
+            "Source": "extras",
+            "Updated": "2025-04-26T19:05:50.3073565+09:00"
+        },
+        {
+            "Name": "wezterm",
+            "Info": "",
+            "Version": "20240203-110809-5046fc22",
+            "Source": "extras",
+            "Updated": "2025-02-26T21:11:16.394371+09:00"
+        },
+        {
+            "Name": "which",
+            "Info": "",
+            "Version": "2.20",
+            "Source": "main",
+            "Updated": "2025-02-26T02:15:17.6177311+09:00"
+        }
+    ],
     "buckets": [
         {
             "Name": "main",
-            "Source": "https://github.com/ScoopInstaller/Main",
-            "Updated": {
-                "value": "\/Date(1769517145000)\/",
-                "DisplayHint": 2,
-                "DateTime": "Tuesday, January 27, 2026 9:32:25 PM"
-            },
-            "Manifests": 1422
+            "Source": "https://github.com/ScoopInstaller/Main.git",
+            "Updated": "2026-09-18T21:39:12+09:00",
+            "Manifests": 1652
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": {
-                "value": "\/Date(1769517136000)\/",
-                "DisplayHint": 2,
-                "DateTime": "Tuesday, January 27, 2026 9:32:16 PM"
-            },
-            "Manifests": 2257
+            "Updated": "2026-09-18T21:39:49+09:00",
+            "Manifests": 2389
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": {
-                "value": "\/Date(1769520184000)\/",
-                "DisplayHint": 2,
-                "DateTime": "Tuesday, January 27, 2026 10:23:04 PM"
-            },
-            "Manifests": 550
+            "Updated": "2026-09-18T22:02:49+09:00",
+            "Manifests": 605
         }
-    ],
-    "apps": [
-        {
-            "Name": "7zip",
-            "Version": "25.01",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1760946352986)\/"
-        },
-        {
-            "Name": "aria2",
-            "Version": "1.37.0-1",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1769528804428)\/"
-        },
-        {
-            "Name": "dark",
-            "Version": "3.14.1",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1760946527298)\/"
-        },
-        {
-            "Name": "dotter",
-            "Version": "0.13.4",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1760946531770)\/"
-        },
-        {
-            "Name": "git",
-            "Version": "2.52.0",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1769528651361)\/"
-        },
-        {
-            "Name": "innounp",
-            "Version": "2.67.2",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1769528667998)\/"
-        },
-        {
-            "Name": "less",
-            "Version": "691",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1769528670110)\/"
-        },
-        {
-            "Name": "mise",
-            "Version": "2026.1.8",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1769528671804)\/"
-        },
-        {
-            "Name": "msys2",
-            "Version": "2025-12-13",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1769528698341)\/"
-        },
-        {
-            "Name": "neovide",
-            "Version": "0.15.2",
-            "Info": "",
-            "Source": "extras",
-            "Updated": "\/Date(1769963281219)\/"
-        },
-        {
-            "Name": "nu",
-            "Version": "0.110.0",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1769528713430)\/"
-        },
-        {
-            "Name": "openssl",
-            "Version": "3.6.0",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1760946780705)\/"
-        },
-        {
-            "Name": "rustup",
-            "Version": "1.28.2",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1760946827694)\/"
-        },
-        {
-            "Name": "sudo",
-            "Version": "0.2020.01.26",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1760946830012)\/"
-        },
-        {
-            "Name": "tectonic",
-            "Version": "0.15.0",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1760946836067)\/"
-        },
-        {
-            "Name": "tex-fmt",
-            "Version": "0.5.6",
-            "Info": "",
-            "Source": "extras",
-            "Updated": "\/Date(1760946836851)\/"
-        },
-        {
-            "Name": "vcxsrv",
-            "Version": "21.1.16.1",
-            "Info": "",
-            "Source": "extras",
-            "Updated": "\/Date(1760946891390)\/"
-        },
-        {
-            "Name": "wezterm",
-            "Version": "20240203-110809-5046fc22",
-            "Info": "",
-            "Source": "extras",
-            "Updated": "\/Date(1760946923307)\/"
-        },
-        {
-            "Name": "which",
-            "Version": "2.20",
-            "Info": "",
-            "Source": "main",
-            "Updated": "\/Date(1760946929622)\/"
-        },
     ]
 }
