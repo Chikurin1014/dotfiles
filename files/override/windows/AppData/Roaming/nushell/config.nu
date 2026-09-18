@@ -8,6 +8,8 @@ $env.config = {
 $env.EDITOR = "nvim"
 $env.FZF_DEFAULT_COMMAND = "fd"
 
-alias deploy-dotfiles = nu -c "cd ~/dotfiles; sudo dotter deploy -fy"
+def deploy-dotfiles [] {
+  nu -c "cd ~/dotfiels; sudo dotter deploy -fy"
+}
 alias wsl = wsl --cd '~'
-alias l = eza --icons --git
+alias ls = eza --icons --git
