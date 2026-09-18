@@ -4,7 +4,6 @@ with pkgs;
 [
   # Nix
   cachix
-  nix-your-shell
   # essential tools
   clang # required by tree-sitter
   curl

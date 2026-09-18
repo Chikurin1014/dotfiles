@@ -19,8 +19,5 @@ if status is-interactive
     end
     starship init fish | source
     zoxide init fish | source
-
-    if command -q nix-your-shell
-        nix-your-shell fish | source
-    end
+    direnv hook fish | source
 end
