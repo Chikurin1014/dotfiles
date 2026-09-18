@@ -1,0 +1,6 @@
+[tools]
+"github:EmmyLuaLs/emmylua-analyzer-rust" = "latest"
+"npm:bash-language-server" = "latest"
+"npm:vscode-langservers-extracted" = "latest"
+"npm:yaml-language-server" = "latest"
+taplo = "latest"
