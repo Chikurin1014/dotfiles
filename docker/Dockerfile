@@ -22,6 +22,11 @@ RUN apt-get update && \
     fish && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
+# Install neovim
+RUN curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz && \
+    tar -xzf nvim-linux-x86_64.tar.gz -C /opt && \
+    ln -s /opt/nvim-linux-x86_64/bin/nvim ${HOME}/.local/bin/nvim
+
 RUN chown -R "${UID}:${GID}" "${HOME}"
 
 USER ${UID}:${GID}
@@ -35,11 +40,6 @@ COPY files/config/mise/config.toml ${HOME}/.config/mise/config.toml
 RUN ${HOME}/.local/bin/mise install --yes
 
 WORKDIR ${HOME}
-
-# Install neovim
-RUN curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage && \
-    chmod u+x nvim-linux-x86_64.appimage && \
-    mv nvim-linux-x86_64.appimage ${HOME}/.local/bin/nvim
 
 COPY --chmod=0755 docker/entrypoint.sh /opt/entrypoint.sh
 
