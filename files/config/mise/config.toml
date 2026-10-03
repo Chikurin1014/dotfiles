@@ -1,5 +1,4 @@
 [tools]
-'aqua:neovim/neovim' = 'latest'
 'aqua:github/copilot-cli' = 'latest'
 'aqua:tealdeer-rs/tealdeer' = 'latest'
 "npm:@github/copilot-language-server" = "latest"
