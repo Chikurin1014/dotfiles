@@ -5,6 +5,7 @@ $env.config = {
     }
 }
 
+$env.SHELL = "nu"
 $env.EDITOR = "nvim"
 $env.FZF_DEFAULT_COMMAND = "fd"
 

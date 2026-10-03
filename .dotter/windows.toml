@@ -22,7 +22,7 @@ depends = ["latex", "nushell", "powershell", "vcxsrv", "wsl", "override"]
 
 # ---- Override default packages ----
 [override]
-depends = ["helix", "lazygit", "nvim-config", "zed"]
+depends = ["helix", "lazygit", "nvim-config", "zed", "zellij"]
 
 [helix.files]
 "files/config/helix" = "~/AppData/Roaming/helix"
@@ -38,3 +38,6 @@ depends = ["helix", "lazygit", "nvim-config", "zed"]
 
 [zed.files]
 "files/config/zed" = "~/AppData/Roaming/zed"
+
+[zellij.files]
+"files/config/zellij" = "~/AppData/Roaming/Zellij"

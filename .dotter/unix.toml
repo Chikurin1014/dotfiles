@@ -1,14 +1,11 @@
 [unix]
-depends = ["fish", "ghostty", "zellij", "zed", "zsh"]
+depends = ["fish", "ghostty", "zed", "zsh"]
 
 [fish.files]
 "files/config/fish" = "~/.config/fish"
 
 [ghostty.files]
 "files/config/ghostty" = "~/.config/ghostty"
-
-[zellij.files]
-"files/config/zellij" = "~/.config/zellij"
 
 [zed.files]
 "files/config/zed" = "~/.config/zed"

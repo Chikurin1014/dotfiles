@@ -9,6 +9,7 @@ depends = [
     "mise",
     "starship",
     "wezterm",
+    "zellij",
     "nvim-config",
 ]
 
@@ -33,6 +34,9 @@ depends = [
 
 [wezterm.files]
 "files/config/wezterm" = "~/.config/wezterm"
+
+[zellij.files]
+"files/config/zellij" = "~/.config/zellij"
 
 # Files in `nvim-config` submodule
 [nvim-config]
