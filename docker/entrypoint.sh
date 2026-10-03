@@ -8,6 +8,7 @@ fi
 
 "$HOME/dotfiles/deploy.sh"
 
-touch ~/.initialized
+touch "$HOME/.initialized"
 
+eval $(mise activate bash)
 exec fish -l

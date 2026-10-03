@@ -29,15 +29,18 @@ USER ${UID}:${GID}
 # Install mise
 RUN curl https://mise.run | sh
 
-RUN curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage && \
-    chmod u+x nvim-linux-x86_64.appimage && \
-    mv nvim-linux-x86_64.appimage ${HOME}/.local/bin/nvim
-
 # Install packages by mise
+RUN mkdir -p ${HOME}/.config/mise
+COPY files/config/mise/config.toml ${HOME}/.config/mise/config.toml
 RUN ${HOME}/.local/bin/mise install --yes
 
 WORKDIR ${HOME}
 
-COPY docker/entrypoint.sh /tmp/entrypoint.sh
-RUN chmod +x /tmp/entrypoint.sh
-ENTRYPOINT ["/tmp/entrypoint.sh"]
+# Install neovim
+RUN curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage && \
+    chmod u+x nvim-linux-x86_64.appimage && \
+    mv nvim-linux-x86_64.appimage ${HOME}/.local/bin/nvim
+
+COPY --chmod=0755 docker/entrypoint.sh /opt/entrypoint.sh
+
+ENTRYPOINT ["/opt/entrypoint.sh"]
