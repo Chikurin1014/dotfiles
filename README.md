@@ -114,7 +114,7 @@ cd dotfiles
 
 ### Deploying dotfiles
 
-After the installation, you can use the following command to deploy the dotfiles (in *zsh* or *nushell*):
+After the installation, you can use the following command to deploy the dotfiles (in *fish*, *zsh* or *nushell*):
 
 ```shell
 deploy-dotfiles
@@ -134,7 +134,7 @@ deploy-dotfiles
 
   You need to install packages manually.
 
-  Check the [`nix/packages.nix`](./nix/packages.nix) file for the list of packages to install.
+  Check the [`nix/home-manager/modules/packages/_common.nix`](./nix/home-manager/modules/packages/_common.nix) file for the list of packages to install.
 
   - Example for Debian/Ubuntu
 
