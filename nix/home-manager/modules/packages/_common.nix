@@ -7,7 +7,6 @@ with pkgs;
   # essential tools
   clang # required by tree-sitter
   curl
-  git
   tmux
   tree
   unzip
@@ -20,7 +19,6 @@ with pkgs;
   bat
   btop
   dust
-  direnv
   difftastic
   eza
   fd

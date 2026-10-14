@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, env, ... }:
 let
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
@@ -7,16 +7,8 @@ let
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   stateVersion = "26.05"; # Did you read the comment?
-
-  inherit (builtins) fromTOML readFile;
-  env = fromTOML (readFile (inputs.self + "/.env"));
 in
 {
-  systems = [
-    "x86_64-linux"
-    "aarch64-linux"
-  ];
-
   flake = {
     nixosConfigurations.ChNix-WSL = inputs.nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -38,8 +30,7 @@ in
       ];
 
       specialArgs = {
-        inherit (inputs) self;
-        inherit stateVersion;
+        inherit env stateVersion;
         hostName = "ChNix-WSL";
       };
     };
@@ -63,8 +54,7 @@ in
         ];
 
         specialArgs = {
-          inherit (inputs) self;
-          inherit stateVersion;
+          inherit env stateVersion;
           hostName = "ChNix";
         };
       };

@@ -1,22 +1,15 @@
 {
   inputs,
+  env,
   ...
 }:
 let
   stateVersion = "26.05";
-  inherit (builtins) readFile;
-  env = fromTOML (readFile (inputs.self + "/.env"));
   username = env.USER;
 in
 {
   imports = [
     inputs.home-manager.flakeModules.home-manager
-  ];
-
-  systems = [
-    "x86_64-linux"
-    "aarch64-linux"
-    "aarch64-darwin"
   ];
 
   flake = {
@@ -30,36 +23,19 @@ in
   perSystem =
     { pkgs, ... }:
     let
-      inherit (pkgs.stdenv.hostPlatform) system isLinux isDarwin;
+      inherit (pkgs.stdenv.hostPlatform) system isDarwin;
     in
     {
-      legacyPackages.homeConfigurations.${env.USER} = inputs.home-manager.lib.homeManagerConfiguration {
-        pkgs =
-          if isLinux then
-            import inputs.nixpkgs {
-              inherit system;
-              config = {
-                allowUnfree = true; # for gh-copilot
-              };
-              overlays = [
-                inputs.self.overlays.firge-nerd
-                inputs.nixgl.overlay
-              ];
-            }
-          else if isDarwin then
-            import inputs.nixpkgs {
-              inherit system;
-              config = {
-                allowUnfree = true; # for gh-copilot
-              };
-              overlays = [
-                inputs.self.overlays.firge-nerd
-              ];
-            }
-          else
-            import inputs.nixpkgs {
-              inherit system;
-            };
+      legacyPackages.homeConfigurations.${username} = inputs.home-manager.lib.homeManagerConfiguration {
+        pkgs = import inputs.nixpkgs {
+          inherit system;
+          config = {
+            allowUnfree = true; # for gh-copilot
+          };
+          overlays = [
+            inputs.self.overlays.firge-nerd
+          ];
+        };
 
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
@@ -71,13 +47,13 @@ in
             # User name
             home.username = username;
 
+            # Home directory
+            home.homeDirectory = if isDarwin then "/Users/${username}" else "/home/${username}";
+
             # Environment variables
             home.sessionVariables = {
               inherit (env) EDITOR;
             };
-
-            # Nix settings (that will generate ~/.config/nix/nix.conf)
-            nix.package = pkgs.nix;
 
             # Let Home Manager install and manage itself.
             programs.home-manager.enable = true;
@@ -87,29 +63,11 @@ in
           ./modules/git.nix
           ./modules/direnv.nix
 
+          # OS specific packages
+          (if isDarwin then ./modules/packages/darwin.nix else ./modules/packages/linux.nix)
+
           inputs.self.homeModules.nvim-config
-        ]
-        ++ (
-          # OS specific settings
-          if isLinux then
-            [
-              {
-                # Home directory
-                home.homeDirectory = "/home/${username}";
-              }
-              ./modules/packages/linux.nix
-            ]
-          else if isDarwin then
-            [
-              {
-                # Home directory
-                home.homeDirectory = "/Users/${username}";
-              }
-              ./modules/packages/darwin.nix
-            ]
-          else
-            [ ] # unreachable
-        );
+        ];
 
         # Optionally use extraSpecialArgs
         # to pass through arguments to ./modules/*.nix

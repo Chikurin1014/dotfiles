@@ -5,7 +5,7 @@
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
 {
-  self,
+  env,
   stateVersion,
   hostName,
   config,
@@ -15,8 +15,6 @@
 }:
 
 let
-  inherit (builtins) fromTOML readFile;
-  env = fromTOML (readFile (self + "/.env"));
   username = env.USER;
 in
 {
