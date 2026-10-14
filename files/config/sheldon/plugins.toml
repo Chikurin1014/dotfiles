@@ -38,7 +38,8 @@ apply = ['defer']
 
 [plugins.zsh-completions]
 github = "zsh-users/zsh-completions"
-apply = ['defer']
+dir = "src"
+apply = ["fpath"]
 
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
@@ -46,7 +47,12 @@ apply = ['defer']
 
 [plugins.rust-zsh-completions]
 github = "ryutok/rust-zsh-completions"
-apply = ['defer']
+dir = "src"
+apply = ["fpath"]
+
+# Must be loaded after the plugins which add completions to fpath
+[plugins.compinit]
+inline = "autoload -Uz compinit && compinit"
 
 [plugins.zsh-autosuggestions-strategy]
 inline = "export ZSH_AUTOSUGGEST_STRATEGY=(history completion)"
