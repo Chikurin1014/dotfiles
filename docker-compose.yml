@@ -8,10 +8,9 @@ services:
       args:
         UID: ${UID}
         GID: ${GID}
-        DOTFILES_CONTEXT: .
     volumes:
       - type: bind
-        source: ${PWD}
+        source: .
         target: /home/ubuntu/dotfiles
     environment:
       GIT_USER_NAME: ${GIT_USER_NAME}

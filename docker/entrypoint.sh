@@ -2,13 +2,9 @@
 
 set -e
 
-if [ -e "$HOME/.initialized" ]; then
-   exit 0
+if [ ! -e "$HOME/.initialized" ]; then
+    "$HOME/dotfiles/deploy.sh"
+    touch "$HOME/.initialized"
 fi
 
-"$HOME/dotfiles/deploy.sh"
-
-touch "$HOME/.initialized"
-
-eval $(mise activate bash)
 exec fish -l
