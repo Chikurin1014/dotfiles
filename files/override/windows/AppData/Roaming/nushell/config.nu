@@ -1,9 +1,5 @@
-$env.config = {
-    show_banner: false # 起動時のバナー
-    shell_integration: {
-        osc133: false # weztermとの相性が悪いので無効化
-    }
-}
+$env.config.show_banner = false # 起動時のバナー
+$env.config.shell_integration.osc133 = false # weztermとの相性が悪いので無効化
 
 $env.SHELL = "nu"
 $env.EDITOR = "nvim"
