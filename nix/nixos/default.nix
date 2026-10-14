@@ -7,56 +7,35 @@ let
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   stateVersion = "26.05"; # Did you read the comment?
-in
-{
-  flake = {
-    nixosConfigurations.ChNix-WSL = inputs.nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
 
+  mkSystem =
+    hostName: modules:
+    inputs.nixpkgs.lib.nixosSystem {
       modules = [
-        ./configuration.nix
+        ./modules/common.nix
 
         # VSCode Server
         inputs.vscode-server.nixosModules.default
         { services.vscode-server.enable = true; }
-
-        inputs.nixos-wsl.nixosModules.default
-        {
-          wsl = {
-            enable = true;
-            defaultUser = env.USER;
-          };
-        }
-      ];
+      ]
+      ++ modules;
 
       specialArgs = {
-        inherit env stateVersion;
-        hostName = "ChNix-WSL";
+        inherit
+          inputs
+          env
+          stateVersion
+          hostName
+          ;
       };
     };
+in
+{
+  flake.nixosConfigurations = {
+    # NixOS on WSL
+    ChNix-WSL = mkSystem "ChNix-WSL" [ ./modules/wsl.nix ];
+
+    # NixOS on a physical machine
+    ChNix = mkSystem "ChNix" [ ./modules/baremetal.nix ];
   };
-
-  perSystem =
-    { pkgs, ... }:
-    let
-      inherit (pkgs.stdenv.hostPlatform) system;
-    in
-    {
-      legacyPackages.nixosConfigurations.ChNix = inputs.nixpkgs.lib.nixosSystem {
-        inherit system;
-
-        modules = [
-          ./configuration.nix
-
-          # VSCode Server
-          inputs.vscode-server.nixosModules.default
-          { services.vscode-server.enable = true; }
-        ];
-
-        specialArgs = {
-          inherit env stateVersion;
-          hostName = "ChNix";
-        };
-      };
-    };
 }

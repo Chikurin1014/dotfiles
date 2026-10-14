@@ -8,8 +8,6 @@
   env,
   stateVersion,
   hostName,
-  config,
-  lib,
   pkgs,
   ...
 }:
@@ -41,16 +39,6 @@ in
     };
   };
 
-  environment = {
-    systemPackages = with pkgs; [
-      nix-ld
-      openssh
-      systemd
-      docker
-      fish
-    ];
-  };
-
   services = {
     openssh = {
       enable = true;
@@ -69,6 +57,7 @@ in
   };
 
   users.users.${username} = {
+    isNormalUser = true;
     shell = pkgs.fish;
     extraGroups = [ "docker" ];
   };
