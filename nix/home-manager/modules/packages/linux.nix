@@ -1,6 +1,10 @@
 { pkgs, ... }:
 
 {
+  imports = [
+    ../ssh-agent.nix
+  ];
+
   home.packages =
     with pkgs;
     [
