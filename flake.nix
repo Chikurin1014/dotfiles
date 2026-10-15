@@ -20,6 +20,12 @@
     # VSCode server
     vscode-server.url = "github:nix-community/nixos-vscode-server";
 
+    # nixGL is required to run GUI applications on Linux distributions other than NixOS
+    nixgl = {
+      url = "github:nix-community/nixgl";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nvim-config.url = "github:Chikurin1014/nvim-config";
   };
 
