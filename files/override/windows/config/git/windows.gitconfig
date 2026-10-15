@@ -1,0 +1,9 @@
+# Windows specific settings (deployed only on Windows)
+
+[core]
+    # Use Windows OpenSSH, which can talk with the ssh-agent service.
+    # The ssh bundled with Git for Windows cannot.
+    sshCommand = "C:/Windows/System32/OpenSSH/ssh.exe"
+
+[credential "helperselector"]
+    selected = manager
