@@ -120,6 +120,57 @@ cd dotfiles
   ./deploy.sh
   ```
 
+## NixOS configurations
+
+This flake also provides NixOS configurations (see [`nix/nixos`](./nix/nixos)):
+
+| Host | Description |
+| --- | --- |
+| `ChNix-WSL` | NixOS on WSL ([NixOS-WSL](https://github.com/nix-community/NixOS-WSL)) |
+| `ChNix` | NixOS on a physical machine (UEFI) |
+
+Apply a configuration by running:
+
+```shell
+sudo nixos-rebuild switch --flake .#<host>
+```
+
+### `ChNix` (physical machine)
+
+#### Hardware configuration
+
+[`nix/nixos/modules/hardware-configuration.nix`](./nix/nixos/modules/hardware-configuration.nix) is a **placeholder**.
+It assumes a UEFI machine whose partitions are labeled `nixos` (root, ext4) and `boot` (ESP, vfat).
+Replace it with the one generated on the target machine before building:
+
+```shell
+# On an installed system
+nixos-generate-config --show-hardware-config > nix/nixos/modules/hardware-configuration.nix
+
+# From the NixOS installer (the target system is mounted on /mnt)
+nixos-generate-config --root /mnt --show-hardware-config > nix/nixos/modules/hardware-configuration.nix
+```
+
+> [!NOTE]
+> Nix flakes only see files tracked by Git, so run `git add` after replacing the file.
+
+#### User password
+
+The user account is created **without a password** since no password (hash) is stored in this repository.
+Set it as root after installation:
+
+```shell
+# From the NixOS installer, after `nixos-install --flake .#ChNix` (before rebooting)
+nixos-enter --root /mnt -c 'passwd <your-user-name>'
+
+# On an installed system
+sudo passwd <your-user-name>
+```
+
+> [!NOTE]
+> `nixos-install` asks for the root password at the end of the installation.
+> The password set by `passwd` is kept across rebuilds (`users.mutableUsers` is `true` by default).
+
 ## Usage
 
 ### Deploying dotfiles

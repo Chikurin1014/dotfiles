@@ -1,6 +1,6 @@
 # Configuration for NixOS installed on a physical (non-WSL) machine
 #
-# After installation, set the user's password with `passwd <user>` as root.
+# See README.md for the hardware configuration and the user password.
 { env, ... }:
 {
   imports = [
