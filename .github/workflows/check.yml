@@ -28,8 +28,10 @@ jobs:
 
       - name: Evaluate Home Manager configurations
         run: |
-          user=$(sed -n 's/^USER="\(.*\)"$/\1/p' .env)
           for system in x86_64-linux aarch64-linux aarch64-darwin; do
-            nix eval --raw ".#legacyPackages.$system.homeConfigurations.$user.activationPackage.drvPath"
-            echo
+            for name in $(nix eval --raw ".#legacyPackages.$system.homeConfigurations" --apply 'c: builtins.concatStringsSep "\n" (builtins.attrNames c)'); do
+              echo "$system: $name"
+              nix eval --raw ".#legacyPackages.$system.homeConfigurations.\"$name\".activationPackage.drvPath"
+              echo
+            done
           done
