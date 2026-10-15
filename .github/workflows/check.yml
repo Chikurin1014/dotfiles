@@ -1,0 +1,37 @@
+name: Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  flake-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: cachix/install-nix-action@v31
+
+      - name: Check formatting
+        run: nix fmt -- --ci
+
+      - name: Check flake
+        run: nix flake check --all-systems --no-build
+
+      - name: Evaluate NixOS configurations
+        run: |
+          for host in ChNix-WSL ChNix; do
+            nix eval --raw ".#nixosConfigurations.$host.config.system.build.toplevel.drvPath"
+            echo
+          done
+
+      - name: Evaluate Home Manager configurations
+        run: |
+          for system in x86_64-linux aarch64-linux aarch64-darwin; do
+            for name in $(nix eval --raw ".#legacyPackages.$system.homeConfigurations" --apply 'c: builtins.concatStringsSep "\n" (builtins.attrNames c)'); do
+              echo "$system: $name"
+              nix eval --raw ".#legacyPackages.$system.homeConfigurations.\"$name\".activationPackage.drvPath"
+              echo
+            done
+          done
