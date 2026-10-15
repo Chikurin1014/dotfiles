@@ -13,7 +13,6 @@ with pkgs;
   vim
   wget
   # shell
-  zsh
   fish
   # shell tools
   bat
@@ -29,7 +28,6 @@ with pkgs;
   lazygit
   ripgrep
   sd
-  sheldon
   starship
   tealdeer
   yazi

@@ -1,5 +1,5 @@
 [unix]
-depends = ["fish", "ghostty", "ssh-agent", "zed", "zsh"]
+depends = ["fish", "ghostty", "ssh-agent", "zed"]
 
 [fish.files]
 "files/config/fish" = "~/.config/fish"
@@ -12,8 +12,3 @@ depends = ["fish", "ghostty", "ssh-agent", "zed", "zsh"]
 
 [zed.files]
 "files/config/zed" = "~/.config/zed"
-
-[zsh.files]
-"files/zshrc" = "~/.zshrc"
-"files/config/sheldon" = "~/.config/sheldon"
-"files/config/zsh" = "~/.config/zsh"

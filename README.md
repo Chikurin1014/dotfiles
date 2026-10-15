@@ -175,7 +175,7 @@ sudo passwd <your-user-name>
 
 ### Deploying dotfiles
 
-After the installation, you can use the following command to deploy the dotfiles (in *fish*, *zsh* or *nushell*):
+After the installation, you can use the following command to deploy the dotfiles (in *fish* or *nushell*):
 
 ```shell
 deploy-dotfiles

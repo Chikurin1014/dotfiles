@@ -41,7 +41,6 @@ echo "==== main ====" > "$SRC_DIR/sl-maker-for-dotfiles.log"
 "$SRC_DIR/sl-maker-for-dotfiles/run.sh" \
     -o "$SRC_DIR/files" \
     -d "$HOME" \
-    -r "zshrc -> .zshrc" \
     -r "config/ -> .config/" \
     -r "clang-format -> .clang-format" \
     -r "gitconfig -> .gitconfig" \
