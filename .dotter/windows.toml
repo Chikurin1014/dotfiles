@@ -1,5 +1,5 @@
 [windows]
-depends = ["git-windows", "latex", "nushell", "powershell", "vcxsrv", "wsl", "override"]
+depends = ["git-windows", "latex", "nushell", "vcxsrv", "wsl", "override"]
 
 [git-windows.files]
 "files/override/windows/config/git/windows.gitconfig" = "~/.config/git/windows.gitconfig"
@@ -12,9 +12,6 @@ depends = ["git-windows", "latex", "nushell", "powershell", "vcxsrv", "wsl", "ov
 
 [nushell.files]
 "files/override/windows/AppData/Roaming/nushell" = "~/AppData/Roaming/nushell"
-
-[powershell.files]
-"files/override/windows/Documents/PowerShell/Microsoft.PowerShell_profile.ps1" = "~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1"
 
 [vcxsrv.files]
 "files/override/windows/config.xlaunch" = "~/.config.xlaunch"
