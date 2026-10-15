@@ -89,11 +89,10 @@ in
         # Usage: home-manager switch --flake .#<username>@generic-linux
         "${username}@generic-linux" = mkHomeConfiguration [
           {
-            targets.genericLinux = {
-              enable = true;
-              # Run GUI applications through nixGL
-              nixGL.packages = inputs.nixgl.packages;
-            };
+            # This also enables targets.genericLinux.gpu, which provides GPU drivers
+            # for Nix packages via /run/opengl-driver.
+            # Run `sudo non-nixos-gpu-setup` once after the first switch.
+            targets.genericLinux.enable = true;
           }
         ];
       };
