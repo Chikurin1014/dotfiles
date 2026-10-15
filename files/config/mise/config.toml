@@ -4,7 +4,7 @@
 "github:Feel-ix-343/markdown-oxide" = "latest"
 
 bat = 'latest'
-btop = 'latest'
+btop = { version = 'latest', os = ['linux'] } # Not available on Windows and macOS via aqua
 difftastic = 'latest'
 dust = 'latest'
 eza = 'latest'
