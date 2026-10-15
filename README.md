@@ -223,8 +223,7 @@ deploy-dotfiles
 
 > [!WARNING]
 > Use **PowerShell 7 or later** to update `scoop.json`.
-> In Windows PowerShell 5.1 and earlier, redirection with `>` writes UTF-16, which Git treats as a binary file,
-> and `Set-Content` cannot write UTF-8 without BOM (`-Encoding UTF8` adds a BOM).
+> In Windows PowerShell 5.1 and earlier, redirection with `>` writes UTF-16, which Git treats as a binary file.
 > If you have to use Windows PowerShell, write the file with .NET instead:
 >
 > ```powershell
