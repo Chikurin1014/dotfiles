@@ -1,4 +1,8 @@
-{ pkgs }:
+{
+  pkgs,
+  # Wrapper for GUI applications (e.g. nixGL)
+  wrapGL ? (pkg: pkg),
+}:
 
 with pkgs;
 [
@@ -38,7 +42,7 @@ with pkgs;
   # editor
   helix
   neovim
-  neovide
+  (wrapGL neovide)
   tree-sitter
   # lsp / formatter / linter
   copilot-language-server
