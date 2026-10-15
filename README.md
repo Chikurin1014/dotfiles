@@ -213,6 +213,13 @@ deploy-dotfiles
 > scoop import scoop.json
 > ```
 >
+> To update `scoop.json`, export it as UTF-8 (without BOM) in PowerShell 7.
+> (Redirection with `>` in Windows PowerShell 5 writes UTF-16, which Git treats as binary.)
+>
+> ```powershell
+> scoop export | Set-Content -Encoding utf8NoBOM scoop.json
+> ```
+>
 > You should install Firge Nerd Font **manually** from [Releases · yuru7/Firge](https://github.com/yuru7/Firge/releases).
 
 After installing packages, you can install language runtimes by the following command:
