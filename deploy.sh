@@ -2,6 +2,11 @@
 
 SRC_DIR=$(cd "$(dirname "${BASH_SOURCE:-$0}")" && pwd)
 
+# Initialize git submodules which are not initialized yet (e.g. nvim-config read by the flake).
+# Initialized ones are left as is not to discard local changes.
+git -C "$SRC_DIR" submodule status | awk '/^-/ { print $2 }' \
+    | xargs -r git -C "$SRC_DIR" submodule update --init --
+
 # Select the Home Manager configuration (see nix/home-manager/default.nix)
 FLAKE_REF="$SRC_DIR"
 if [ "$(uname -s)" = "Linux" ] && [ ! -e /etc/NIXOS ] \
