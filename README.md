@@ -160,6 +160,15 @@ After installing packages, you can install language runtimes by the following co
 mise install
 ```
 
+### SSH agent (Linux)
+
+The `ssh-agent` systemd user service is deployed to `~/.config/systemd/user/ssh-agent.service`.
+It is enabled automatically with **Nix**. With **Dotter** or **Nothing**, enable it manually:
+
+```shell
+systemctl --user enable --now ssh-agent
+```
+
 ## Docker container
 
 You can use docker container with running

@@ -5,6 +5,10 @@ let
   wrapGL = config.lib.nixGL.wrap;
 in
 {
+  imports = [
+    ../ssh-agent.nix
+  ];
+
   home.packages =
     with pkgs;
     [
