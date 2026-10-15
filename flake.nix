@@ -12,13 +12,19 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
+    nixos-wsl = {
+      url = "github:nix-community/NixOS-WSL/main";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # VSCode server
     vscode-server.url = "github:nix-community/nixos-vscode-server";
 
-    # nixGL is required if you are not using NixOS
-    nixgl.url = "github:nix-community/nixgl";
+    # nixGL is required to run GUI applications on Linux distributions other than NixOS
+    nixgl = {
+      url = "github:nix-community/nixgl";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     nvim-config.url = "github:Chikurin1014/nvim-config";
   };
@@ -28,35 +34,51 @@
       flake-parts,
       ...
     }:
-    flake-parts.lib.mkFlake { inherit inputs; } {
-      imports = [
-        ./nix/home-manager
-        ./nix/nixos
-      ];
+    let
+      inherit (builtins) fromTOML readFile;
+      # User specific values shared with docker-compose
+      env = fromTOML (readFile ./.env);
+    in
+    flake-parts.lib.mkFlake
+      {
+        inherit inputs;
+        specialArgs = { inherit env; };
+      }
+      {
+        imports = [
+          ./nix/home-manager
+          ./nix/nixos
+        ];
 
-      flake = {
-        overlays = {
-          firge-nerd = final: prev: {
-            firge-nerd = prev.callPackage ./nix/packages/firge-nerd.nix { };
+        systems = [
+          "x86_64-linux"
+          "aarch64-linux"
+          "aarch64-darwin"
+        ];
+
+        flake = {
+          overlays = {
+            firge-nerd = final: prev: {
+              firge-nerd = prev.callPackage ./nix/packages/firge-nerd.nix { };
+            };
           };
         };
+
+        perSystem =
+          { pkgs, ... }:
+          {
+            devShells.default = pkgs.mkShell {
+              packages = with pkgs; [
+                bash-language-server
+                emmylua-ls
+                emmylua-formatter
+                fish-lsp
+                taplo
+                vscode-langservers-extracted
+                yaml-language-server
+              ];
+            };
+            formatter = pkgs.nixfmt-tree;
+          };
       };
-
-      perSystem =
-        { pkgs, ... }:
-        {
-          devShells.default = pkgs.mkShell {
-            packages = with pkgs; [
-              bash-language-server
-              emmylua-ls
-              emmylua-formatter
-              fish-lsp
-              taplo
-              vscode-langservers-extracted
-              yaml-language-server
-            ];
-          };
-          formatter = pkgs.nixfmt-tree;
-        };
-    };
 }

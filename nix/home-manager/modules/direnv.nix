@@ -1,7 +1,7 @@
 {
+  # Shell hooks are configured in files/config/{fish,zsh}
   programs.direnv = {
     enable = true;
-    enableFishIntegration = true;
     nix-direnv.enable = true;
   };
 }

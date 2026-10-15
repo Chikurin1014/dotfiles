@@ -8,7 +8,7 @@
       moralerspace-hw
       # terminal emulator
       wezterm
-      ghostty
+      ghostty-bin # `ghostty` is Linux only
     ]
     ++ import ./_common.nix { inherit pkgs; };
 }

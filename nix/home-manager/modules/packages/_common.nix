@@ -1,4 +1,8 @@
-{ pkgs }:
+{
+  pkgs,
+  # Wrapper for GUI applications (e.g. nixGL)
+  wrapGL ? (pkg: pkg),
+}:
 
 with pkgs;
 [
@@ -7,7 +11,6 @@ with pkgs;
   # essential tools
   clang # required by tree-sitter
   curl
-  git
   tmux
   tree
   unzip
@@ -20,7 +23,6 @@ with pkgs;
   bat
   btop
   dust
-  direnv
   difftastic
   eza
   fd
@@ -40,7 +42,7 @@ with pkgs;
   # editor
   helix
   neovim
-  neovide
+  (wrapGL neovide)
   tree-sitter
   # lsp / formatter / linter
   copilot-language-server

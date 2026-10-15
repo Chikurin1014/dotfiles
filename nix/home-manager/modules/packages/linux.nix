@@ -1,5 +1,9 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
+let
+  # Wrap GUI applications with nixGL on non-NixOS systems (no-op on NixOS)
+  wrapGL = config.lib.nixGL.wrap;
+in
 {
   home.packages =
     with pkgs;
@@ -10,8 +14,8 @@
       firge-nerd
       moralerspace-hw
       # terminal emulator
-      wezterm
-      ghostty
+      (wrapGL wezterm)
+      (wrapGL ghostty)
     ]
-    ++ import ./_common.nix { inherit pkgs; };
+    ++ import ./_common.nix { inherit pkgs wrapGL; };
 }
