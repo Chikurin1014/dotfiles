@@ -41,7 +41,7 @@ If you don't use **Nix**, you can use **Dotter** to manage your dotfiles. You ca
 
 ```shell
 cd ~
-git clone git@github.com:Chikurin1014/dotfiles.git
+git clone --recurse-submodules git@github.com:Chikurin1014/dotfiles.git
 cd dotfiles
 ```
 
@@ -54,6 +54,10 @@ cd dotfiles
   ```shell
   ./deploy.sh
   ```
+
+  > [!NOTE]
+  > Nix 2.27 or later is required, since the flake reads the `nvim-config` git submodule (`inputs.self.submodules`).
+  > `deploy.sh` initializes git submodules which are not initialized yet.
 
   > [!NOTE]
   > You may need to change the values in [`.env`](./.env):
@@ -235,6 +239,23 @@ After installing packages, you can install language runtimes by the following co
 ```shell
 mise install
 ```
+
+### Neovim configuration
+
+The Neovim configuration is managed in [`nvim-config`](https://github.com/Chikurin1014/nvim-config),
+which is included as a git submodule and used by all deployment tools.
+
+- **Trying changes**: edit the files in `nvim-config/` and run `deploy-dotfiles`.
+  With **Nix**, uncommitted changes in the submodule are also applied,
+  but new files must be added to Git first (`git -C nvim-config add <file>`).
+  With **Dotter** or **Nothing**, the files are symlinked, so changes are applied immediately.
+- **Updating**: update the submodule and commit it (Dependabot also opens pull requests for it):
+
+  ```shell
+  git submodule update --remote nvim-config
+  git add nvim-config
+  git commit
+  ```
 
 ### SSH agent (Linux)
 

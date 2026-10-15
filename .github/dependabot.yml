@@ -14,3 +14,9 @@ updates:
     directory: /
     schedule:
       interval: monthly
+
+  # nvim-config
+  - package-ecosystem: gitsubmodule
+    directory: /
+    schedule:
+      interval: weekly

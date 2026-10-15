@@ -143,18 +143,14 @@
     },
     "nvim-config": {
       "locked": {
-        "lastModified": 1791025292,
-        "narHash": "sha256-hoek2O+EA5NcNlqdn+09nBzOjpPRD2s4CzRXOf9a8Ko=",
-        "owner": "Chikurin1014",
-        "repo": "nvim-config",
-        "rev": "ad7338a778bd47e7ecbd0c32b2b45900bc6c3f87",
-        "type": "github"
+        "path": "./nvim-config",
+        "type": "path"
       },
       "original": {
-        "owner": "Chikurin1014",
-        "repo": "nvim-config",
-        "type": "github"
-      }
+        "path": "./nvim-config",
+        "type": "path"
+      },
+      "parent": []
     },
     "root": {
       "inputs": {

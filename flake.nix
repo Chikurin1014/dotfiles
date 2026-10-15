@@ -2,6 +2,9 @@
   description = "A Nix flake for managing environments and configurations for systems which is used by Chikurin1014";
 
   inputs = {
+    # Include git submodules (e.g. nvim-config) in the flake source
+    self.submodules = true;
+
     # Specify the source of Home Manager and Nixpkgs.
     nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
 
@@ -20,7 +23,8 @@
     # VSCode server
     vscode-server.url = "github:nix-community/nixos-vscode-server";
 
-    nvim-config.url = "github:Chikurin1014/nvim-config";
+    # Use the nvim-config submodule
+    nvim-config.url = "./nvim-config";
   };
 
   outputs =
