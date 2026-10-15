@@ -10,5 +10,8 @@
   wsl = {
     enable = true;
     defaultUser = env.USER;
+    # Use ssh-agent service of Windows via wsl2-ssh-agent
+    # (this also sets SSH_AUTH_SOCK)
+    ssh-agent.enable = true;
   };
 }

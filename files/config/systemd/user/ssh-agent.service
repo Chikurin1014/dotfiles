@@ -1,5 +1,7 @@
 [Unit]
 Description=SSH key agent
+# On WSL, ssh-agent service of Windows is used via wsl2-ssh-agent instead
+ConditionVirtualization=!wsl
 
 [Service]
 Type=simple

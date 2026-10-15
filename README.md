@@ -230,6 +230,9 @@ It is enabled automatically with **Nix**. With **Dotter** or **Nothing**, enable
 systemctl --user enable --now ssh-agent
 ```
 
+> [!NOTE]
+> The service does not start on WSL. See [SSH agent (WSL)](#ssh-agent-wsl).
+
 ### SSH agent (Windows)
 
 Use the ssh-agent service (OpenSSH Authentication Agent) of Windows.
@@ -249,6 +252,29 @@ ssh-add -l
 > [!NOTE]
 > The ssh bundled with Git for Windows cannot talk with the ssh-agent service.
 > `~/.config/git/windows.gitconfig` (deployed by Dotter) sets `core.sshCommand` to use Windows OpenSSH (`C:/Windows/System32/OpenSSH/ssh.exe`) instead.
+
+### SSH agent (WSL)
+
+On WSL, the ssh-agent service of Windows is used via [wsl2-ssh-agent](https://github.com/mame/wsl2-ssh-agent),
+so the same keys are available on both Windows and WSL.
+`ChNix-WSL` enables it by `wsl.ssh-agent.enable` of NixOS-WSL, which also sets `SSH_AUTH_SOCK`.
+On other WSL distributions, install it by following [its README](https://github.com/mame/wsl2-ssh-agent#how-to-use).
+
+1. Set up the ssh-agent service on Windows and add your key (see [SSH agent (Windows)](#ssh-agent-windows)).
+2. Apply the NixOS configuration and restart WSL (`wsl --shutdown` on Windows).
+3. Check that the keys added on Windows are listed:
+
+   ```shell
+   ssh-add -l
+   ```
+
+> [!NOTE]
+> Private keys are not needed in WSL.
+> If you use `IdentitiesOnly yes` in `~/.ssh/config`, set `IdentityFile` to the **public** key (e.g. `~/.ssh/id_ed25519.pub`)
+> so that ssh can pick the corresponding key from the agent.
+
+> [!TIP]
+> If it does not work, check the logs with `journalctl --user -u wsl2-ssh-agent`.
 
 ## Docker container
 
