@@ -67,6 +67,16 @@ cd dotfiles
   > EDITOR="<your-favorite-editor>"
   > ```
 
+  > [!NOTE]
+  > On Linux distributions other than NixOS (not on WSL), use the `<your-user-name>@generic-linux` configuration
+  > (`home-manager switch --flake .#<your-user-name>@generic-linux`).
+  > To make GPU drivers available to GUI applications installed by Nix, run the following command once after the first deployment
+  > (and again when Home Manager warns that the drivers require an update):
+  >
+  > ```shell
+  > sudo "$(command -v non-nixos-gpu-setup)"
+  > ```
+
 - **Dotter**
 
   Initialize and update submodules:
