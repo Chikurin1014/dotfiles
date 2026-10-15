@@ -65,8 +65,11 @@
         };
 
         perSystem =
-          { pkgs, ... }:
+          { pkgs, inputs', ... }:
           {
+            # Used by deploy.sh to bootstrap Home Manager pinned in flake.lock
+            packages.home-manager = inputs'.home-manager.packages.home-manager;
+
             devShells.default = pkgs.mkShell {
               packages = with pkgs; [
                 bash-language-server
