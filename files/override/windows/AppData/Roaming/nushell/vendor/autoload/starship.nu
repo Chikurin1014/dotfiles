@@ -1,4 +1,5 @@
-let starship_exe = $env.LOCALAPPDATA | path join "mise" "installs" "starship" "1.26.0" "starship.exe"
+# Resolve starship installed by mise without hard-coding its version (mise.nu adds mise to PATH)
+let starship_exe = (^mise where starship | str trim | path join "starship.exe")
 
 # this file is both a valid
 # - overlay which can be loaded with `overlay use starship.nu`
