@@ -230,6 +230,26 @@ It is enabled automatically with **Nix**. With **Dotter** or **Nothing**, enable
 systemctl --user enable --now ssh-agent
 ```
 
+### SSH agent (Windows)
+
+Use the ssh-agent service (OpenSSH Authentication Agent) of Windows.
+It is **disabled** by default, so enable and start it once with administrator privileges:
+
+```powershell
+sudo powershell -NoProfile -Command "Set-Service ssh-agent -StartupType Automatic; Start-Service ssh-agent"
+```
+
+Then add your key once. The Windows ssh-agent keeps added keys across reboots:
+
+```powershell
+ssh-add $env:USERPROFILE\.ssh\id_ed25519
+ssh-add -l
+```
+
+> [!NOTE]
+> The ssh bundled with Git for Windows cannot talk with the ssh-agent service.
+> `~/.config/git/windows.gitconfig` (deployed by Dotter) sets `core.sshCommand` to use Windows OpenSSH (`C:/Windows/System32/OpenSSH/ssh.exe`) instead.
+
 ## Docker container
 
 You can use docker container with running
