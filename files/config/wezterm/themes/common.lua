@@ -18,7 +18,7 @@ return {
                 { family = 'FirgeNerd Console',    weight = opts.weight, assume_emoji_presentation = true },
                 { family = 'HackGen Console NF',   weight = opts.weight },
                 { family = 'HackGen Console NF',   weight = opts.weight, assume_emoji_presentation = true },
-                'DefaVu Sans Mono'
+                'DejaVu Sans Mono'
             }
         end
 
@@ -70,7 +70,7 @@ return {
                     '%s%s%s%s',
                     app or '',
                     app and dirname and ':' or '',
-                    dirname .. '/' or '',
+                    dirname and (dirname .. '/') or '',
                     not app and not dirname and title or ''
                 )
                 if #title > max_width - 2 then
