@@ -1,16 +1,15 @@
 let
   inherit (builtins) fromJSON readFile;
-  inputInfo = (fromJSON (readFile ../../flake.lock)).nodes.nixpkgs;
-  flakeInput = rec {
-    inherit (inputInfo.locked) rev narHash;
-    outPath = fetchTarball {
-      url = "https://github.com/${inputInfo.owner}/${inputInfo.repo}/archive/${rev}.tar.gz";
-      sha256 = narHash;
-    };
+  # Resolve the nixpkgs input of this flake (not a transitive one) from flake.lock
+  lock = fromJSON (readFile ../../flake.lock);
+  nixpkgsLocked = lock.nodes.${lock.nodes.root.inputs.nixpkgs}.locked;
+  nixpkgsSrc = fetchTarball {
+    url = "https://github.com/${nixpkgsLocked.owner}/${nixpkgsLocked.repo}/archive/${nixpkgsLocked.rev}.tar.gz";
+    sha256 = nixpkgsLocked.narHash;
   };
 in
 {
-  pkgs ? flakeInput,
+  pkgs ? import nixpkgsSrc { },
   lib ? pkgs.lib,
 }:
 
@@ -32,10 +31,10 @@ pkgs.stdenvNoCC.mkDerivation rec {
     runHook postInstall
   '';
 
-  meta = with lib; {
+  meta = {
     description = "Fira Mono と源真ゴシックを合成したプログラミングフォント Firge (ファージ)";
-    homepage = "${repository-url}";
-    license = licenses.ofl;
-    platforms = platforms.all;
+    homepage = repository-url;
+    license = lib.licenses.ofl;
+    platforms = lib.platforms.all;
   };
 }

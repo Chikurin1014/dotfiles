@@ -15,7 +15,6 @@ RUN mkdir -p "/home/${USER}/.local/bin" && \
 
 # Install packages by apt
 RUN apt-get update && \
-    apt-get install -y gosu && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y tzdata && \
     apt-get install -y \
     build-essential curl git tmux tree unzip vim wget \

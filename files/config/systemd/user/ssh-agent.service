@@ -3,8 +3,8 @@ Description=SSH key agent
 
 [Service]
 Type=simple
-Environment=SSH_AUTH_SOCK=%t/ssh-agent.socket
-ExecStart=/usr/bin/ssh-agent -D -a $SSH_AUTH_SOCK
+# Resolve ssh-agent from PATH since it is not in /usr/bin on NixOS
+ExecStart=/usr/bin/env ssh-agent -D -a %t/ssh-agent.socket
 
 [Install]
 WantedBy=default.target

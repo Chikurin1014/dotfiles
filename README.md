@@ -67,6 +67,16 @@ cd dotfiles
   > EDITOR="<your-favorite-editor>"
   > ```
 
+  > [!NOTE]
+  > On Linux distributions other than NixOS (not on WSL), use the `<your-user-name>@generic-linux` configuration
+  > (`home-manager switch --flake .#<your-user-name>@generic-linux`).
+  > To make GPU drivers available to GUI applications installed by Nix, run the following command once after the first deployment
+  > (and again when Home Manager warns that the drivers require an update):
+  >
+  > ```shell
+  > sudo "$(command -v non-nixos-gpu-setup)"
+  > ```
+
 - **Dotter**
 
   Initialize and update submodules:
@@ -114,7 +124,7 @@ cd dotfiles
 
 ### Deploying dotfiles
 
-After the installation, you can use the following command to deploy the dotfiles (in *zsh* or *nushell*):
+After the installation, you can use the following command to deploy the dotfiles (in *fish*, *zsh* or *nushell*):
 
 ```shell
 deploy-dotfiles
@@ -134,7 +144,7 @@ deploy-dotfiles
 
   You need to install packages manually.
 
-  Check the [`nix/packages.nix`](./nix/packages.nix) file for the list of packages to install.
+  Check the [`nix/home-manager/modules/packages/_common.nix`](./nix/home-manager/modules/packages/_common.nix) file for the list of packages to install.
 
   - Example for Debian/Ubuntu
 
@@ -158,6 +168,15 @@ After installing packages, you can install language runtimes by the following co
 
 ```shell
 mise install
+```
+
+### SSH agent (Linux)
+
+The `ssh-agent` systemd user service is deployed to `~/.config/systemd/user/ssh-agent.service`.
+It is enabled automatically with **Nix**. With **Dotter** or **Nothing**, enable it manually:
+
+```shell
+systemctl --user enable --now ssh-agent
 ```
 
 ## Docker container
