@@ -60,15 +60,17 @@ cd dotfiles
   > `deploy.sh` initializes git submodules which are not initialized yet.
 
   > [!NOTE]
-  > You may need to change the values in [`.env`](./.env):
+  > You may need to change the values in [`user.toml`](./user.toml), which are read by Nix and Dotter templates:
   >
-  > ```env
-  > # .env
-  > 
-  > USER="<your-user-name>"
-  > GIT_USER_NAME="<your-git-user-name>"
-  > GIT_USER_EMAIL="<your-git-user-email>"
-  > EDITOR="<your-favorite-editor>"
+  > ```toml
+  > # user.toml
+  >
+  > username = "<your-user-name>"
+  > editor = "<your-favorite-editor>"
+  >
+  > [git]
+  > name = "<your-git-user-name>"
+  > email = "<your-git-user-email>"
   > ```
 
   > [!NOTE]
@@ -103,6 +105,9 @@ cd dotfiles
   > includes = [".dotter/windows.toml"]
   > packages = ["default", "windows"]
   > ```
+  >
+  > Run `dotter deploy` in the root of this repository,
+  > since some templates read [`user.toml`](./user.toml) by a path relative to it.
 
   And then run:
 
@@ -308,6 +313,14 @@ You can use docker container with running
 ```shell
 docker compose run playground
 ```
+
+> [!NOTE]
+> The user in the container uses UID/GID 1000 by default.
+> If the UID/GID of your host user differ, set them in `.env` (not tracked by git):
+>
+> ```shell
+> printf 'UID=%s\nGID=%s\n' "$(id -u)" "$(id -g)" > .env
+> ```
 
 ## Development
 

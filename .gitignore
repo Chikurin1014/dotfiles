@@ -20,3 +20,6 @@
 /direnv.test
 
 /sl-maker-for-dotfiles.log
+
+# Local values for docker compose (e.g. UID/GID)
+/.env

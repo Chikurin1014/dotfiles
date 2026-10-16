@@ -11,7 +11,9 @@ depends = ["git-windows", "latex", "nushell", "vcxsrv", "wsl", "override"]
 "files/override/windows/AppData/Roaming/tex-fmt/tex-fmt.toml" = "~/AppData/Roaming/tex-fmt/tex-fmt.toml"
 
 [nushell.files]
-"files/override/windows/AppData/Roaming/nushell" = "~/AppData/Roaming/nushell"
+# config.nu reads values from user.toml (Dotter must be run in the repository root)
+"files/override/windows/AppData/Roaming/nushell/config.nu" = { target = "~/AppData/Roaming/nushell/config.nu", type = "template" }
+"files/override/windows/AppData/Roaming/nushell/vendor" = "~/AppData/Roaming/nushell/vendor"
 
 [vcxsrv.files]
 "files/override/windows/config.xlaunch" = "~/.config.xlaunch"

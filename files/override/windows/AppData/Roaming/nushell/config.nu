@@ -2,7 +2,8 @@ $env.config.show_banner = false # 起動時のバナー
 $env.config.shell_integration.osc133 = false # weztermとの相性が悪いので無効化
 
 $env.SHELL = "nu"
-$env.EDITOR = "nvim"
+# Rendered by Dotter from user.toml
+$env.EDITOR = "{{ unquote (json_str_query "editor" (read_to_str "user.toml") format="toml") }}"
 $env.FZF_DEFAULT_COMMAND = "fd"
 
 def deploy-dotfiles [] {

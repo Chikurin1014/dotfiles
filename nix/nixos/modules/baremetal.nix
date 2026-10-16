@@ -1,7 +1,7 @@
 # Configuration for NixOS installed on a physical (non-WSL) machine
 #
 # See README.md for the hardware configuration and the user password.
-{ env, ... }:
+{ user, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -17,7 +17,7 @@
 
   time.timeZone = "Asia/Tokyo";
 
-  users.users.${env.USER}.extraGroups = [
+  users.users.${user.username}.extraGroups = [
     "networkmanager"
     "wheel"
   ];

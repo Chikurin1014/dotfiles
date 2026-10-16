@@ -1,13 +1,12 @@
-{ env, ... }:
+{ user, ... }:
 {
   programs.git = {
     enable = true;
     settings = {
       user = {
-        name = env.GIT_USER_NAME;
-        email = env.GIT_USER_EMAIL;
+        inherit (user.git) name email;
       };
-      core.editor = env.EDITOR;
+      core.editor = user.editor;
     };
   };
 }

@@ -1,4 +1,4 @@
-{ inputs, env, ... }:
+{ inputs, user, ... }:
 let
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
@@ -23,7 +23,7 @@ let
       specialArgs = {
         inherit
           inputs
-          env
+          user
           stateVersion
           hostName
           ;

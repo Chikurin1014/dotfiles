@@ -6,14 +6,11 @@ services:
       context: .
       dockerfile: docker/Dockerfile
       args:
-        UID: ${UID}
-        GID: ${GID}
+        # If the UID/GID of the host user are not 1000, set them in `.env` (not tracked)
+        UID: ${UID:-1000}
+        GID: ${GID:-1000}
     volumes:
       - type: bind
         source: .
         target: /home/ubuntu/dotfiles
-    environment:
-      GIT_USER_NAME: ${GIT_USER_NAME}
-      GIT_USER_EMAIL: ${GIT_USER_EMAIL}
-      EDITOR: ${EDITOR}
     tty: true
