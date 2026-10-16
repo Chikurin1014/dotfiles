@@ -5,7 +5,7 @@
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
 {
-  env,
+  user,
   stateVersion,
   hostName,
   pkgs,
@@ -13,7 +13,7 @@
 }:
 
 let
-  username = env.USER;
+  inherit (user) username;
 in
 {
   system.stateVersion = stateVersion;

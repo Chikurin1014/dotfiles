@@ -12,8 +12,8 @@ FLAKE_REF="$SRC_DIR"
 if [ "$(uname -s)" = "Linux" ] && [ ! -e /etc/NIXOS ] \
     && ! grep -qi microsoft /proc/sys/kernel/osrelease 2> /dev/null; then
     # Linux distributions other than NixOS (not on WSL) need GPU drivers for GUI applications
-    HM_USER=$(sed -n 's/^USER="\(.*\)"$/\1/p' "$SRC_DIR/.env")
-    FLAKE_REF="$SRC_DIR#$HM_USER@generic-linux"
+    # The configuration is named after the user (`username` in user.toml), who runs this script
+    FLAKE_REF="$SRC_DIR#$(id -un)@generic-linux"
 fi
 
 if command -v home-manager > /dev/null 2>&1; then

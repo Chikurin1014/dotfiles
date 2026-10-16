@@ -34,13 +34,13 @@
     }:
     let
       inherit (builtins) fromTOML readFile;
-      # User specific values shared with docker-compose
-      env = fromTOML (readFile ./.env);
+      # User specific values shared with Dotter templates
+      user = fromTOML (readFile ./user.toml);
     in
     flake-parts.lib.mkFlake
       {
         inherit inputs;
-        specialArgs = { inherit env; };
+        specialArgs = { inherit user; };
       }
       {
         imports = [

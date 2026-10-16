@@ -1,11 +1,11 @@
 {
   inputs,
-  env,
+  user,
   ...
 }:
 let
   stateVersion = "26.05";
-  username = env.USER;
+  inherit (user) username;
 in
 {
   imports = [
@@ -53,7 +53,7 @@ in
 
               # Environment variables
               home.sessionVariables = {
-                inherit (env) EDITOR;
+                EDITOR = user.editor;
               };
 
               # Let Home Manager install and manage itself.
@@ -75,7 +75,7 @@ in
           # to pass through arguments to ./modules/*.nix
           extraSpecialArgs = {
             inherit (inputs) self;
-            inherit env;
+            inherit user;
           };
         };
     in

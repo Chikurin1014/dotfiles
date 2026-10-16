@@ -1,0 +1,9 @@
+# User specific values, read by Nix (flake.nix) and Dotter templates
+
+# Login user name
+username = "chikurin"
+editor = "nvim"
+
+[git]
+name = "Chikurin1014"
+email = "chikurin1014@gmail.com"
