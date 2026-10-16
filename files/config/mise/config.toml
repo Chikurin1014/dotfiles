@@ -2,8 +2,8 @@
 'aqua:github/copilot-cli' = 'latest'
 'aqua:tealdeer-rs/tealdeer' = 'latest'
 "github:Feel-ix-343/markdown-oxide" = "latest"
-# Installed by Nix on the other systems. postinstall exposes the native binary (see the script).
-"npm:@github/copilot-language-server" = { version = 'latest', os = ['windows'], postinstall = 'pwsh -NoProfile -File "%USERPROFILE%\.config\mise\scripts\link-copilot-language-server.ps1"' }
+# postinstall exposes the native binary (see the script)
+"npm:@github/copilot-language-server" = { version = 'latest', postinstall = 'node "{{xdg_config_home}}/mise/scripts/link-copilot-language-server.js"' }
 
 bat = 'latest'
 btop = { version = 'latest', os = ['linux'] } # Not available on Windows and macOS via aqua
