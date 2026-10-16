@@ -217,22 +217,11 @@ deploy-dotfiles
 > scoop import scoop.json
 > ```
 >
-> To update `scoop.json`, run the following command in PowerShell 7 or later:
->
-> ```powershell
-> scoop export > scoop.json
-> ```
+> `scoop.json` is maintained by hand, not by `scoop export`, which also writes volatile fields such as versions and timestamps.
+> To add a package, add its `Name` and `Source` (the bucket name) to `apps`.
+> The bucket must also be listed in `buckets` of the same file, since `scoop import` treats an unknown `Source` as the name of an app.
 >
 > You should install Firge Nerd Font **manually** from [Releases · yuru7/Firge](https://github.com/yuru7/Firge/releases).
-
-> [!WARNING]
-> Use **PowerShell 7 or later** to update `scoop.json`.
-> In Windows PowerShell 5.1 and earlier, redirection with `>` writes UTF-16, which Git treats as a binary file.
-> If you have to use Windows PowerShell, write the file with .NET instead:
->
-> ```powershell
-> [IO.File]::WriteAllLines("$PWD\scoop.json", [string[]](scoop export))
-> ```
 
 After installing packages, you can install language runtimes by the following command:
 

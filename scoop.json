@@ -1,162 +1,27 @@
 {
-    "apps": [
-        {
-            "Name": "7zip",
-            "Info": "",
-            "Version": "26.03",
-            "Source": "main",
-            "Updated": "\/Date(1790852878767)\/"
-        },
-        {
-            "Name": "aria2",
-            "Info": "",
-            "Version": "1.37.0-1",
-            "Source": "main",
-            "Updated": "\/Date(1769528804428)\/"
-        },
-        {
-            "Name": "dark",
-            "Info": "",
-            "Version": "3.14.1",
-            "Source": "main",
-            "Updated": "\/Date(1760946527298)\/"
-        },
-        {
-            "Name": "dotter",
-            "Info": "",
-            "Version": "0.13.5",
-            "Source": "main",
-            "Updated": "\/Date(1790852880548)\/"
-        },
-        {
-            "Name": "git",
-            "Info": "",
-            "Version": "2.56.0",
-            "Source": "main",
-            "Updated": "\/Date(1790852897329)\/"
-        },
-        {
-            "Name": "innounp",
-            "Info": "",
-            "Version": "2.71.1",
-            "Source": "main",
-            "Updated": "\/Date(1790852898921)\/"
-        },
-        {
-            "Name": "less",
-            "Info": "",
-            "Version": "710",
-            "Source": "main",
-            "Updated": "\/Date(1790852905818)\/"
-        },
-        {
-            "Name": "mise",
-            "Info": "",
-            "Version": "2026.10.0",
-            "Source": "main",
-            "Updated": "\/Date(1791015024060)\/"
-        },
-        {
-            "Name": "msys2",
-            "Info": "",
-            "Version": "2026-09-27",
-            "Source": "main",
-            "Updated": "\/Date(1790852955204)\/"
-        },
-        {
-            "Name": "neovide",
-            "Info": "",
-            "Version": "0.16.2",
-            "Source": "extras",
-            "Updated": "\/Date(1790852748656)\/"
-        },
-        {
-            "Name": "neovim",
-            "Info": "",
-            "Version": "0.12.5",
-            "Source": "main",
-            "Updated": "\/Date(1791014658377)\/"
-        },
-        {
-            "Name": "nu",
-            "Info": "",
-            "Version": "0.116.0",
-            "Source": "main",
-            "Updated": "\/Date(1790852963067)\/"
-        },
-        {
-            "Name": "openssl",
-            "Info": "",
-            "Version": "4.0.3",
-            "Source": "main",
-            "Updated": "\/Date(1790853063066)\/"
-        },
-        {
-            "Name": "sudo",
-            "Info": "",
-            "Version": "0.2020.01.26",
-            "Source": "main",
-            "Updated": "\/Date(1760946830012)\/"
-        },
-        {
-            "Name": "vcredist2022",
-            "Info": "",
-            "Version": "14.51.36247.0",
-            "Source": "extras",
-            "Updated": "\/Date(1791014878467)\/"
-        },
-        {
-            "Name": "vcxsrv",
-            "Info": "",
-            "Version": "21.1.16.1",
-            "Source": "extras",
-            "Updated": "\/Date(1760946891390)\/"
-        },
-        {
-            "Name": "wezterm",
-            "Info": "",
-            "Version": "20240203-110809-5046fc22",
-            "Source": "extras",
-            "Updated": "\/Date(1760946923307)\/"
-        },
-        {
-            "Name": "which",
-            "Info": "",
-            "Version": "2.20",
-            "Source": "main",
-            "Updated": "\/Date(1760946929622)\/"
-        }
-    ],
     "buckets": [
-        {
-            "Name": "main",
-            "Source": "https://github.com/ScoopInstaller/Main",
-            "Updated": {
-                "value": "\/Date(1791002327000)\/",
-                "DisplayHint": 2,
-                "DateTime": "Saturday, October 3, 2026 1:38:47 PM"
-            },
-            "Manifests": 1663
-        },
-        {
-            "Name": "extras",
-            "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": {
-                "value": "\/Date(1791002313000)\/",
-                "DisplayHint": 2,
-                "DateTime": "Saturday, October 3, 2026 1:38:33 PM"
-            },
-            "Manifests": 2404
-        },
-        {
-            "Name": "versions",
-            "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": {
-                "value": "\/Date(1791005385000)\/",
-                "DisplayHint": 2,
-                "DateTime": "Saturday, October 3, 2026 2:29:45 PM"
-            },
-            "Manifests": 620
-        }
+        { "Name": "main", "Source": "https://github.com/ScoopInstaller/Main" },
+        { "Name": "extras", "Source": "https://github.com/ScoopInstaller/Extras" },
+        { "Name": "versions", "Source": "https://github.com/ScoopInstaller/Versions" }
+    ],
+    "apps": [
+        { "Name": "7zip", "Source": "main" },
+        { "Name": "aria2", "Source": "main" },
+        { "Name": "dark", "Source": "main" },
+        { "Name": "dotter", "Source": "main" },
+        { "Name": "git", "Source": "main" },
+        { "Name": "innounp", "Source": "main" },
+        { "Name": "less", "Source": "main" },
+        { "Name": "mise", "Source": "main" },
+        { "Name": "msys2", "Source": "main" },
+        { "Name": "neovide", "Source": "extras" },
+        { "Name": "neovim", "Source": "main" },
+        { "Name": "nu", "Source": "main" },
+        { "Name": "openssl", "Source": "main" },
+        { "Name": "sudo", "Source": "main" },
+        { "Name": "vcredist2022", "Source": "extras" },
+        { "Name": "vcxsrv", "Source": "extras" },
+        { "Name": "wezterm", "Source": "extras" },
+        { "Name": "which", "Source": "main" }
     ]
 }
