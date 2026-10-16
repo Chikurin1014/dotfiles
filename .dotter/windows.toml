@@ -2,7 +2,8 @@
 depends = ["git-windows", "latex", "nushell", "vcxsrv", "wsl", "override"]
 
 [git-windows.files]
-"files/override/windows/config/git/windows.gitconfig" = "~/.config/git/windows.gitconfig"
+# windows.gitconfig reads values from user.toml (Dotter must be run in the repository root)
+"files/override/windows/config/git/windows.gitconfig" = { target = "~/.config/git/windows.gitconfig", type = "template" }
 
 [latex.files]
 "files/override/windows/latexmkrc" = "~/.latexmkrc"

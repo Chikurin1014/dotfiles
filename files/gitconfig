@@ -3,6 +3,7 @@
 
 [include]
     path = "~/.config/git/commit_template.gitconfig"
-    path = "~/.config/git/local_settings.gitconfig" # Not managed in dotfiles
     path = "~/.config/git/tools.gitconfig"
     path = "~/.config/git/windows.gitconfig" # Deployed only on Windows
+    # Included last to override the settings above
+    path = "~/.config/git/local_settings.gitconfig" # Not managed in dotfiles
