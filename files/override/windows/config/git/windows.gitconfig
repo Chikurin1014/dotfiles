@@ -1,6 +1,13 @@
 # Windows specific settings (deployed only on Windows)
+# This file is a Dotter template: user and editor are rendered from user.toml
+# (Nix sets them in nix/home-manager/modules/git.nix)
+
+[user]
+    name = "{{ unquote (json_str_query "git.name" (read_to_str "user.toml") format="toml") }}"
+    email = "{{ unquote (json_str_query "git.email" (read_to_str "user.toml") format="toml") }}"
 
 [core]
+    editor = "{{ unquote (json_str_query "editor" (read_to_str "user.toml") format="toml") }}"
     # Use Windows OpenSSH, which can talk with the ssh-agent service.
     # The ssh bundled with Git for Windows cannot.
     sshCommand = "C:/Windows/System32/OpenSSH/ssh.exe"
