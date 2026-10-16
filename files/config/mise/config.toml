@@ -23,6 +23,3 @@ tree-sitter = 'latest'
 yazi = 'latest'
 zellij = 'latest'
 zoxide = 'latest'
-
-[settings]
-plugin_autoupdate_last_check_duration = '1 week'
