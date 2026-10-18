@@ -2,6 +2,13 @@
 
 SRC_DIR=$(cd "$(dirname "${BASH_SOURCE:-$0}")" && pwd)
 
+case "$(uname -s)" in
+    MINGW* | MSYS* | CYGWIN*)
+        echo "Use deploy.ps1 on Windows" >&2
+        exit 1
+        ;;
+esac
+
 # Initialize git submodules which are not initialized yet (e.g. nvim-config read by the flake).
 # Initialized ones are left as is not to discard local changes.
 git -C "$SRC_DIR" submodule status | awk '/^-/ { print $2 }' \
@@ -29,31 +36,89 @@ if command -v nix > /dev/null 2>&1; then
     exit $?
 fi
 
-if command -v dotter > /dev/null 2>&1; then
-    cd "$SRC_DIR" || exit 1
-    dotter deploy --force
-    exit $?
+# ---- Without Nix: deploy the dotfiles with Dotter and install the tools with mise ----
+
+set -eu
+cd "$SRC_DIR"
+
+download() {
+    if command -v curl > /dev/null 2>&1; then
+        curl -fsSL -o "$2" "$1"
+    elif command -v wget > /dev/null 2>&1; then
+        wget -q -O "$2" "$1"
+    else
+        echo "curl or wget is required" >&2
+        return 1
+    fi
+}
+
+sha256_of() {
+    if command -v sha256sum > /dev/null 2>&1; then
+        sha256sum "$1" | cut -d ' ' -f 1
+    else
+        shasum -a 256 "$1" | cut -d ' ' -f 1
+    fi
+}
+
+# Print the Dotter command: the installed one, or the binary pinned in .dotter/manifest.toml
+dotter_command() {
+    if command -v dotter > /dev/null 2>&1; then
+        echo dotter
+        return
+    fi
+
+    local asset
+    case "$(uname -s)/$(uname -m)" in
+        Linux/x86_64 | Linux/amd64) asset="dotter-linux-x64-musl" ;;
+        Linux/aarch64 | Linux/arm64) asset="dotter-linux-arm64-musl" ;;
+        Darwin/arm64) asset="dotter-macos-arm64.arm" ;;
+        *)
+            echo "Dotter has no binary for $(uname -s)/$(uname -m): install Nix or Dotter" >&2
+            return 1
+            ;;
+    esac
+
+    local manifest=".dotter/manifest.toml" version sha256
+    version=$(sed -n 's/^version = "\(.*\)"$/\1/p' "$manifest")
+    sha256=$(sed -n "s/^\"$asset\" = \"\(.*\)\"$/\1/p" "$manifest")
+    if [ -z "$version" ] || [ -z "$sha256" ]; then
+        echo "$manifest has no version or SHA-256 for $asset" >&2
+        return 1
+    fi
+
+    # Download the binary unless the one downloaded before matches the manifest
+    local bin=".dotter/bin/dotter"
+    if [ ! -x "$bin" ] || [ "$(sha256_of "$bin")" != "$sha256" ]; then
+        echo "Downloading Dotter $version ($asset)" >&2
+        mkdir -p "$(dirname "$bin")"
+        download "https://github.com/SuperCuber/dotter/releases/download/$version/$asset" "$bin.tmp"
+        if [ "$(sha256_of "$bin.tmp")" != "$sha256" ]; then
+            echo "Checksum mismatch for $asset" >&2
+            rm -f "$bin.tmp"
+            return 1
+        fi
+        chmod +x "$bin.tmp"
+        mv "$bin.tmp" "$bin"
+    fi
+    echo "$SRC_DIR/$bin"
+}
+
+if [ ! -e .dotter/local.toml ]; then
+    echo "Creating .dotter/local.toml" >&2
+    printf '%s\n' 'includes = [".dotter/unix.toml"]' 'packages = ["default", "unix"]' > .dotter/local.toml
 fi
 
-if [ ! -x "$SRC_DIR/sl-maker-for-dotfiles/run.sh" ]; then
-    echo "An executable file \`sl-maker-for-dotfiles/run.sh\` is not found" >&2
-    echo "Be sure to initialize & update git submodule by:" >&2
-    echo "\`git submodule init && git submodule update\`" >&2
-    exit 1
+# Some templates read user.toml by a path relative to the repository root
+DOTTER=$(dotter_command)
+"$DOTTER" deploy --force --noconfirm
+
+# Install mise if needed (https://mise.jdx.dev/installing-mise.html), then the tools in its global config
+MISE=$(command -v mise || echo "$HOME/.local/bin/mise")
+if [ ! -x "$MISE" ]; then
+    echo "Installing mise" >&2
+    installer=$(mktemp)
+    download https://mise.run "$installer"
+    sh "$installer"
+    rm -f "$installer"
 fi
-
-echo "==== main ====" > "$SRC_DIR/sl-maker-for-dotfiles.log"
-"$SRC_DIR/sl-maker-for-dotfiles/run.sh" \
-    -o "$SRC_DIR/files" \
-    -d "$HOME" \
-    -r "config/ -> .config/" \
-    -r "clang-format -> .clang-format" \
-    -r "gitconfig -> .gitconfig" \
-    -i "override/windows" \
-    >> "$SRC_DIR/sl-maker-for-dotfiles.log"
-
-echo "==== submodule: nvim-config ====" >> "$SRC_DIR/sl-maker-for-dotfiles.log"
-"$SRC_DIR/sl-maker-for-dotfiles/run.sh" \
-    -o "$SRC_DIR/nvim-config" \
-    -d "$HOME/.config" \
-    >> "$SRC_DIR/sl-maker-for-dotfiles.log"
+(cd "$HOME" && "$MISE" install --yes)

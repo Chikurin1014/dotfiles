@@ -19,7 +19,8 @@
 /direnv
 /direnv.test
 
-/sl-maker-for-dotfiles.log
+# Dotter binary downloaded by deploy.sh / deploy.ps1
+/.dotter/bin
 
 # Local values for docker compose (e.g. UID/GID)
 /.env

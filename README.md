@@ -5,22 +5,21 @@
 ## Environment requirements for installation
 
 - **Git**
-- **Nix** (**recommended**, optional)
-- **Dotter** (optional)
+- **Nix** (**recommended**, optional; not on Windows)
 
-You can choose a deployment tool to manage your dotfiles. The following tools are available:
+The deployment scripts ([`deploy.sh`](./deploy.sh) on Linux / macOS, [`deploy.ps1`](./deploy.ps1) on Windows) select a deployment tool:
 
 - **Nix** \
-You can deploy the dotfiles and install packages with a single command
+If Nix (or Home Manager) is installed, Home Manager deploys the dotfiles and installs the packages.
 
 - **Dotter** \
-You need to install packages manually.
-
-- **Nothing** \
-You don't need any external tools (expect git), but you use the shellscripts in [`sl-maker-for-dotfiles`](https://github.com/Chikurin1014/sl-maker-for-dotfiles), which is a repository hosted by [Chikurin1014](https://github.com/Chikurin1014). You need to install packages manually.
+Otherwise, [Dotter](https://github.com/SuperCuber/dotter) deploys the dotfiles.
+If Dotter is not installed, the scripts download the Dotter binary pinned in [`.dotter/manifest.toml`](./.dotter/manifest.toml) into `.dotter/bin/` and check its SHA-256.
+Then they install [mise](https://mise.jdx.dev/) if it is not installed, and run `mise install` for the tools in its global configuration.
+On Windows, `deploy.ps1` also installs [Scoop](https://scoop.sh/) if it is not installed, and the packages in [`scoop.json`](./scoop.json).
 
 > [!NOTE]
-> If you are using Windows, you should use **Dotter**
+> `.dotter/manifest.toml` is updated by a pull request from the [`Update Dotter`](./.github/workflows/update-dotter.yml) workflow when Dotter is released.
 
 ### Installation of Nix (optional)
 
@@ -28,12 +27,6 @@ If you haven't installed **Nix**, you can install it by following the instructio
 
 - [NixOS website](https://nixos.org/download/)
 - [Determinate Nix](https://docs.determinate.systems/determinate-nix#getting-started)
-
-### Installation of Dotter (optional)
-
-If you don't use **Nix**, you can use **Dotter** to manage your dotfiles. You can install it by following the instructions below.
-
-- [Dotter Wiki](https://github.com/SuperCuber/dotter/wiki)
 
 ## Installation
 
@@ -45,36 +38,34 @@ git clone --recurse-submodules git@github.com:Chikurin1014/dotfiles.git
 cd dotfiles
 ```
 
-### 2. Set up a deployment tool
+> [!NOTE]
+> You may need to change the values in [`user.toml`](./user.toml), which are read by Nix and Dotter templates:
+>
+> ```toml
+> # user.toml
+>
+> username = "<your-user-name>"
+> editor = "<your-favorite-editor>"
+>
+> [git]
+> name = "<your-git-user-name>"
+> email = "<your-git-user-email>"
+> ```
 
-- **Nix**
+### 2. Run the deployment script
 
-  Run:
+- **Linux / macOS**
 
   ```shell
   ./deploy.sh
   ```
 
   > [!NOTE]
-  > Nix 2.27 or later is required, since the flake reads the `nvim-config` git submodule (`inputs.self.submodules`).
   > `deploy.sh` initializes git submodules which are not initialized yet.
+  > With Nix, Nix 2.27 or later is required, since the flake reads the `nvim-config` git submodule (`inputs.self.submodules`).
 
   > [!NOTE]
-  > You may need to change the values in [`user.toml`](./user.toml), which are read by Nix and Dotter templates:
-  >
-  > ```toml
-  > # user.toml
-  >
-  > username = "<your-user-name>"
-  > editor = "<your-favorite-editor>"
-  >
-  > [git]
-  > name = "<your-git-user-name>"
-  > email = "<your-git-user-email>"
-  > ```
-
-  > [!NOTE]
-  > On Linux distributions other than NixOS (not on WSL), use the `<your-user-name>@generic-linux` configuration
+  > On Linux distributions other than NixOS (not on WSL), Nix uses the `<your-user-name>@generic-linux` configuration
   > (`home-manager switch --flake .#<your-user-name>@generic-linux`).
   > To make GPU drivers available to GUI applications installed by Nix, run the following command once after the first deployment
   > (and again when Home Manager warns that the drivers require an update):
@@ -83,51 +74,37 @@ cd dotfiles
   > sudo "$(command -v non-nixos-gpu-setup)"
   > ```
 
-- **Dotter**
+  > [!NOTE]
+  > Without Nix, `deploy.sh` creates `.dotter/local.toml` for Unix if it does not exist:
+  >
+  > ```toml
+  > includes = [".dotter/unix.toml"]
+  > packages = ["default", "unix"]
+  > ```
 
-  Initialize and update submodules:
+- **Windows**
 
-  ```shell
-  git submodule init && git submodule update
-  ```
+  Run the following command in PowerShell **as a normal user** (Scoop refuses to be installed by an administrator).
+  It also works on Windows PowerShell 5.1, which is the only PowerShell on a fresh Windows.
 
-  Create `.dotter/local.toml` and add the following content:
-
-  ```toml
-  includes = [".dotter/unix.toml"]
-  packages = ["default", "unix"]
+  ```powershell
+  powershell -ExecutionPolicy Bypass -File deploy.ps1
   ```
 
   > [!NOTE]
-  > On Windows, `.dotter/local.toml` should be like below:
+  > Creating symbolic links needs administrator rights or [Developer Mode](https://learn.microsoft.com/windows/advanced-settings/developer-mode).
+  > Without Developer Mode, `deploy.ps1` runs Dotter as administrator (a UAC prompt appears).
+
+  > [!NOTE]
+  > `deploy.ps1` creates `.dotter/local.toml` for Windows if it does not exist:
   >
   > ```toml
   > includes = [".dotter/windows.toml"]
   > packages = ["default", "windows"]
   > ```
   >
-  > Run `dotter deploy` in the root of this repository,
+  > When you run `dotter deploy` by yourself, run it in the root of this repository,
   > since some templates read [`user.toml`](./user.toml) by a path relative to it.
-
-  And then run:
-
-  ```shell
-  ./deploy.sh
-  ```
-
-- **Nothing**
-
-  Initialize and update submodules:
-
-  ```shell
-  git submodule init && git submodule update
-  ```
-
-  then run:
-
-  ```shell
-  ./deploy.sh
-  ```
 
 ## NixOS configurations
 
@@ -200,9 +177,10 @@ deploy-dotfiles
   deploy-dotfiles
   ```
 
-- **Dotter** or **Nothing**
+- **Dotter**
 
-  You need to install packages manually.
+  The deployment scripts install the tools managed by mise ([`files/config/mise/config.toml`](./files/config/mise/config.toml)).
+  On Linux / macOS, you need to install the other packages manually.
 
   Check the [`nix/home-manager/modules/packages/_common.nix`](./nix/home-manager/modules/packages/_common.nix) file for the list of packages to install.
 
@@ -216,11 +194,7 @@ deploy-dotfiles
     ```
 
 > [!NOTE]
-> On Windows, you can use [Scoop](https://scoop.sh/) to install packages:
->
-> ```shell
-> scoop import scoop.json
-> ```
+> On Windows, `deploy.ps1` installs the packages in `scoop.json` with [Scoop](https://scoop.sh/) (`scoop import scoop.json`).
 >
 > `scoop.json` is maintained by hand, not by `scoop export`, which also writes volatile fields such as versions and timestamps.
 > To add a package, add its `Name` and `Source` (the bucket name) to `apps`.
@@ -228,7 +202,7 @@ deploy-dotfiles
 >
 > You should install Firge Nerd Font **manually** from [Releases · yuru7/Firge](https://github.com/yuru7/Firge/releases).
 
-After installing packages, you can install language runtimes by the following command:
+To install the tools added to the mise configuration later, run the following command:
 
 ```shell
 mise install
@@ -242,7 +216,7 @@ which is included as a git submodule and used by all deployment tools.
 - **Trying changes**: edit the files in `nvim-config/` and run `deploy-dotfiles`.
   With **Nix**, uncommitted changes in the submodule are also applied,
   but new files must be added to Git first (`git -C nvim-config add <file>`).
-  With **Dotter** or **Nothing**, the files are symlinked, so changes are applied immediately.
+  With **Dotter**, the files are symlinked, so changes are applied immediately.
 - **Updating**: update the submodule and commit it (Dependabot also opens pull requests for it):
 
   ```shell
@@ -254,7 +228,7 @@ which is included as a git submodule and used by all deployment tools.
 ### SSH agent (Linux)
 
 The `ssh-agent` systemd user service is deployed to `~/.config/systemd/user/ssh-agent.service`.
-It is enabled automatically with **Nix**. With **Dotter** or **Nothing**, enable it manually:
+It is enabled automatically with **Nix**. With **Dotter**, enable it manually:
 
 ```shell
 systemctl --user enable --now ssh-agent
@@ -321,6 +295,11 @@ docker compose run playground
 > ```shell
 > printf 'UID=%s\nGID=%s\n' "$(id -u)" "$(id -g)" > .env
 > ```
+
+> [!NOTE]
+> The container runs `deploy.sh` on the first start, which deploys the dotfiles with Dotter.
+> Since this repository is mounted into the container, Dotter there uses `.dotter/local.toml`, `.dotter/cache.toml` and `.dotter/bin/` of the host.
+> If you deploy with Dotter on the host too (e.g. a Windows host), the container overwrites the cache of the host.
 
 ## Development
 

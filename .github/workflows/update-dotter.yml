@@ -1,0 +1,74 @@
+name: Update Dotter
+
+# Open a pull request to update .dotter/manifest.toml (the Dotter binary used by deploy.sh / deploy.ps1)
+# when Dotter is released.
+# Creating pull requests needs "Allow GitHub Actions to create and approve pull requests"
+# in Settings > Actions > General.
+
+on:
+  schedule:
+    - cron: "0 0 * * 1" # every Monday
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-dotter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Update .dotter/manifest.toml
+        id: update
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          manifest=.dotter/manifest.toml
+
+          current=$(sed -n 's/^version = "\(.*\)"$/\1/p' "$manifest")
+          release=$(gh api repos/SuperCuber/dotter/releases/latest)
+          latest=$(jq -r .tag_name <<< "$release")
+          echo "Current: $current, latest: $latest"
+          echo "version=$latest" >> "$GITHUB_OUTPUT"
+          echo "url=$(jq -r .html_url <<< "$release")" >> "$GITHUB_OUTPUT"
+          if [ "$latest" = "$current" ]; then
+            exit 0
+          fi
+
+          {
+            # Keep the comments before `version`
+            sed '/^version = /,$d' "$manifest"
+            echo "version = \"$latest\""
+            echo
+            echo "# SHA-256 of the release assets"
+            echo "[sha256]"
+            # `-` for a missing digest, since `read` merges empty fields
+            jq -r '.assets[] | select(.name | startswith("dotter-")) | "\(.name) \(.digest // "-") \(.browser_download_url)"' <<< "$release" \
+              | sort \
+              | while read -r name digest url; do
+                  if [ "$digest" != "-" ]; then
+                    sha256=${digest#sha256:}
+                  else
+                    # GitHub provides no digest for assets uploaded before June 2025
+                    sha256=$(curl -fsSL "$url" | sha256sum | cut -d ' ' -f 1)
+                  fi
+                  echo "\"$name\" = \"$sha256\""
+                done
+          } > "$manifest.new"
+          mv "$manifest.new" "$manifest"
+          cat "$manifest"
+
+      - uses: peter-evans/create-pull-request@v8
+        with:
+          branch: update-dotter
+          commit-message: "chore: ⬆️ Upgrade Dotter to ${{ steps.update.outputs.version }}"
+          title: "chore: ⬆️ Upgrade Dotter to ${{ steps.update.outputs.version }}"
+          body: |
+            Update the Dotter binary used by `deploy.sh` / `deploy.ps1` to [${{ steps.update.outputs.version }}](${{ steps.update.outputs.url }}).
+
+            The SHA-256 values are taken from the GitHub API (or computed from the downloaded assets).
+            Check that the asset names still match `deploy.sh` and `deploy.ps1`.
+          delete-branch: true

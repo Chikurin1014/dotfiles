@@ -1,0 +1,11 @@
+# Dotter binary downloaded by deploy.sh / deploy.ps1 when Dotter is not installed
+# This file is updated by .github/workflows/update-dotter.yml
+
+version = "v0.13.5"
+
+# SHA-256 of the release assets
+[sha256]
+"dotter-linux-arm64-musl" = "6efc68bf72313db462a72810b9c2d33edcf04d9b10382f564c46f9aaf942c979"
+"dotter-linux-x64-musl" = "a79e1ef325d4ecb3e3fffe3dd961f6f854cc45e2eb82755d3be23cdfe0603211"
+"dotter-macos-arm64.arm" = "1de749c8ca106e164db3c63fcf3fd0cb7820645663ae6c4afe5c976779ba3738"
+"dotter-windows-x64-msvc.exe" = "db2008898f2b81972a86f77f340f2ef44c4b3dffd01c61bba52d0bd804510c37"
