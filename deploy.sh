@@ -36,7 +36,7 @@ if command -v nix > /dev/null 2>&1; then
     exit $?
 fi
 
-# ---- Without Nix: deploy the dotfiles with Dotter and install the tools with mise ----
+# ---- Without Nix: deploy the dotfiles with the Dotter binary and install the tools with mise ----
 
 set -eu
 cd "$SRC_DIR"
@@ -60,20 +60,15 @@ sha256_of() {
     fi
 }
 
-# Print the Dotter command: the installed one, or the binary pinned in .dotter/manifest.toml
+# Print the path to the Dotter binary pinned in .dotter/manifest.toml (Dotter installed elsewhere is not used)
 dotter_command() {
-    if command -v dotter > /dev/null 2>&1; then
-        echo dotter
-        return
-    fi
-
     local asset
     case "$(uname -s)/$(uname -m)" in
         Linux/x86_64 | Linux/amd64) asset="dotter-linux-x64-musl" ;;
         Linux/aarch64 | Linux/arm64) asset="dotter-linux-arm64-musl" ;;
         Darwin/arm64) asset="dotter-macos-arm64.arm" ;;
         *)
-            echo "Dotter has no binary for $(uname -s)/$(uname -m): install Nix or Dotter" >&2
+            echo "Dotter has no binary for $(uname -s)/$(uname -m): install Nix" >&2
             return 1
             ;;
     esac

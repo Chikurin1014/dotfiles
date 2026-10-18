@@ -84,8 +84,9 @@ Without Nix, `deploy.sh` does the following:
    packages = ["default", "unix"]
    ```
 
-3. Deploys the dotfiles with Dotter.
-   If Dotter is not installed, it downloads the Dotter binary pinned in [`.dotter/manifest.toml`](./.dotter/manifest.toml) into `.dotter/bin/` and checks its SHA-256
+3. Deploys the dotfiles with the Dotter binary pinned in [`.dotter/manifest.toml`](./.dotter/manifest.toml) (`.dotter/bin/dotter`).
+   It downloads the binary and checks its SHA-256 if the binary does not exist or does not match the manifest.
+   Dotter installed elsewhere (e.g. by a package manager) is not used
 4. Installs mise into `~/.local/bin` with [the official installer](https://mise.jdx.dev/installing-mise.html) if it is not installed,
    and runs `mise install` for the tools in its global configuration
 
@@ -121,8 +122,9 @@ powershell -ExecutionPolicy Bypass -File deploy.ps1
    packages = ["default", "windows"]
    ```
 
-4. Deploys the dotfiles with Dotter (installed by Scoop).
-   If Dotter is not installed, it downloads the Dotter binary pinned in [`.dotter/manifest.toml`](./.dotter/manifest.toml) into `.dotter\bin\` and checks its SHA-256
+4. Deploys the dotfiles with the Dotter binary pinned in [`.dotter/manifest.toml`](./.dotter/manifest.toml) (`.dotter\bin\dotter.exe`).
+   It downloads the binary and checks its SHA-256 if the binary does not exist or does not match the manifest.
+   Dotter installed elsewhere (e.g. by Scoop) is not used
 5. Runs `mise install` (mise is installed by Scoop) for the tools in its global configuration
 
 > [!NOTE]
@@ -130,7 +132,7 @@ powershell -ExecutionPolicy Bypass -File deploy.ps1
 > Without Developer Mode, `deploy.ps1` runs Dotter as administrator (a UAC prompt appears).
 
 > [!NOTE]
-> When you run `dotter deploy` by yourself, run it in the root of this repository,
+> When you run Dotter by yourself (`.dotter\bin\dotter.exe deploy`), run it in the root of this repository,
 > since some templates read [`user.toml`](./user.toml) by a path relative to it.
 
 > [!NOTE]
@@ -196,6 +198,8 @@ After the installation, you can use the following command to deploy the dotfiles
 ```shell
 deploy-dotfiles
 ```
+
+It runs `deploy.sh` (fish) or `deploy.ps1` (nushell on Windows).
 
 ### Installing packages
 

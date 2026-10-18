@@ -18,13 +18,10 @@ function Invoke-Native([scriptblock]$Command) {
     if ($LASTEXITCODE -ne 0) { throw "Failed (exit code $LASTEXITCODE): $Command" }
 }
 
-# Return the Dotter command: the installed one, or the binary pinned in .dotter/manifest.toml
+# Return the path to the Dotter binary pinned in .dotter/manifest.toml (Dotter installed elsewhere is not used)
 function Get-DotterCommand {
-    $installed = Get-Command dotter -CommandType Application -ErrorAction SilentlyContinue | Select-Object -First 1
-    if ($installed) { return $installed.Source }
-
     if ($env:PROCESSOR_ARCHITECTURE -ne 'AMD64') {
-        throw "Dotter has no binary for Windows/$env:PROCESSOR_ARCHITECTURE: install Dotter"
+        throw "Dotter has no binary for Windows/$env:PROCESSOR_ARCHITECTURE"
     }
     $asset = 'dotter-windows-x64-msvc.exe'
 
