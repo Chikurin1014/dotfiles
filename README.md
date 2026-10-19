@@ -258,7 +258,7 @@ which is included as a git submodule and used by all deployment tools.
   With **Nix**, uncommitted changes in the submodule are also applied,
   but new files must be added to Git first (`git -C nvim-config add <file>`).
   With **Dotter**, the files are symlinked, so changes are applied immediately.
-- **Updating**: update the submodule and commit it (Dependabot also opens pull requests for it):
+- **Updating**: update the submodule and commit it (Renovate also opens pull requests for it every week):
 
   ```shell
   git submodule update --remote nvim-config
