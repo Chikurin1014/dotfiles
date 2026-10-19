@@ -97,12 +97,7 @@ You need to install the other packages manually (see [Installing packages](#inst
 
 ### Dotter on Windows
 
-**Requirements**: Git to clone this repository. If you have nothing, install Scoop and Git first in PowerShell:
-
-```powershell
-Invoke-RestMethod https://get.scoop.sh | Invoke-Expression
-scoop install git
-```
+**Requirements**: Git (to clone this repository).
 
 Run the following command in PowerShell **as a normal user** (Scoop refuses to be installed by an administrator).
 It also works on Windows PowerShell 5.1, which is the only PowerShell on a fresh Windows.
