@@ -1,25 +1,26 @@
 [tools]
-'aqua:github/copilot-cli' = 'latest'
-'aqua:tealdeer-rs/tealdeer' = 'latest'
-"github:Feel-ix-343/markdown-oxide" = "latest"
+'aqua:github/copilot-cli' = '1.0.98'
+'aqua:tealdeer-rs/tealdeer' = '1.9.0'
+# The default backend (vfox) of eza records no checksums and host-dependent URLs in mise.lock
+'aqua:eza-community/eza' = { version = '0.23.5', os = ['linux', 'windows'] } # No binary for macOS
+"github:Feel-ix-343/markdown-oxide" = "0.25.12"
 # postinstall exposes the native binary (see the script)
-"npm:@github/copilot-language-server" = { version = 'latest', postinstall = 'node "{{xdg_config_home}}/mise/scripts/link-copilot-language-server.js"' }
+"npm:@github/copilot-language-server" = { version = '1.554.0', postinstall = 'node "{{xdg_config_home}}/mise/scripts/link-copilot-language-server.js"' }
 
-bat = 'latest'
-btop = { version = 'latest', os = ['linux'] } # Not available on Windows and macOS via aqua
-difftastic = 'latest'
-dust = 'latest'
-eza = 'latest'
-fd = 'latest'
-fzf = 'latest'
-ghq = 'latest'
-github-cli = 'latest'
-lazygit = 'latest'
-node = 'lts'
-ripgrep = 'latest'
-sd = 'latest'
-starship = 'latest'
-tree-sitter = 'latest'
-yazi = 'latest'
-zellij = 'latest'
-zoxide = 'latest'
+bat = '0.26.1'
+btop = { version = '1.4.7', os = ['linux'] } # Not available on Windows and macOS via aqua
+difftastic = '0.71.0'
+dust = '1.2.6'
+fd = '10.5.0'
+fzf = '0.74.5'
+ghq = '1.11.2'
+github-cli = '2.102.0'
+lazygit = '0.66.2'
+node = '24.22.0' # LTS
+ripgrep = '15.2.0'
+sd = '1.1.0'
+starship = '1.27.0'
+tree-sitter = '0.27.1'
+yazi = '26.9.1'
+zellij = '0.45.1'
+zoxide = '0.10.0'

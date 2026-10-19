@@ -237,6 +237,18 @@ To install the tools added to the mise configuration later, run the following co
 mise install
 ```
 
+> [!NOTE]
+> The versions of the tools are pinned in the mise configurations, and locked with download URLs and checksums for each platform in the lockfiles:
+>
+> | Configuration | Lockfile |
+> | --- | --- |
+> | [`files/config/mise/config.toml`](./files/config/mise/config.toml) (global, deployed to `~/.config/mise/`) | [`files/config/mise/mise.lock`](./files/config/mise/mise.lock) (deployed with the configuration) |
+> | [`mise.toml`](./mise.toml) (this repository) | [`mise.lock`](./mise.lock) |
+>
+> npm packages also have their dependency graphs in `.mise/locks/` next to the lockfiles.
+> After changing a version, update the lockfiles (`mise lock --global` for the global one) with the platforms already in them
+> (Linux x64 / arm64, macOS arm64 and Windows x64), and commit them together.
+
 ### Neovim configuration
 
 The Neovim configuration is managed in [`nvim-config`](https://github.com/Chikurin1014/nvim-config),
