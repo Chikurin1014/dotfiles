@@ -6,8 +6,9 @@ $env.SHELL = "nu"
 $env.EDITOR = "{{ unquote (json_str_query "editor" (read_to_str "user.toml") format="toml") }}"
 $env.FZF_DEFAULT_COMMAND = "fd"
 
+# Deploy with the Dotter binary pinned in .dotter/manifest.toml (see deploy.ps1)
 def deploy-dotfiles [] {
-  nu -c "cd ~/dotfiles; sudo dotter deploy -fy"
+  ^powershell -NoProfile -ExecutionPolicy Bypass -File ("~/dotfiles/deploy.ps1" | path expand)
 }
 
 # Generate init scripts of the tools into the user autoload directory

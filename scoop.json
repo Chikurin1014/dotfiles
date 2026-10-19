@@ -8,7 +8,6 @@
         { "Name": "7zip", "Source": "main" },
         { "Name": "aria2", "Source": "main" },
         { "Name": "dark", "Source": "main" },
-        { "Name": "dotter", "Source": "main" },
         { "Name": "git", "Source": "main" },
         { "Name": "innounp", "Source": "main" },
         { "Name": "less", "Source": "main" },
