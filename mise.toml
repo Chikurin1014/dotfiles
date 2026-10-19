@@ -1,7 +1,7 @@
 [tools]
 # The release also contains the other tools (e.g. luafmt), so select the language server explicitly
-"github:EmmyLuaLs/emmylua-analyzer-rust" = { version = "latest", matching = "emmylua_ls" }
-"npm:bash-language-server" = "latest"
-"npm:vscode-langservers-extracted" = "latest"
-"npm:yaml-language-server" = "latest"
-taplo = "latest"
+"github:EmmyLuaLs/emmylua-analyzer-rust" = { version = "0.25.1", matching = "emmylua_ls" }
+"npm:bash-language-server" = "5.8.1"
+"npm:vscode-langservers-extracted" = "4.10.0"
+"npm:yaml-language-server" = "2.0.0"
+taplo = "0.10.0"
