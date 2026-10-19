@@ -1,0 +1,3 @@
+# Keep the lockfiles of mise and their sidecar files as mise writes them (LF), also on Windows
+**/mise.lock text eol=lf
+**/.mise/locks/** text eol=lf
