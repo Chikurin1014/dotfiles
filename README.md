@@ -120,7 +120,8 @@ powershell -ExecutionPolicy Bypass -File deploy.ps1
 4. Deploys the dotfiles with the Dotter binary pinned in [`.dotter/manifest.toml`](./.dotter/manifest.toml) (`.dotter\bin\dotter.exe`).
    It downloads the binary and checks its SHA-256 if the binary does not exist or does not match the manifest.
    Dotter installed elsewhere (e.g. by Scoop) is not used
-5. Runs `mise install` (mise is installed by Scoop) for the tools in its global configuration
+5. Installs mise into `~\.local\bin` with [the official installer](https://mise.jdx.dev/installing-mise.html) (`irm https://mise.run/powershell | iex`) if it is not installed,
+   and runs `mise install` for the tools in its global configuration
 
 > [!NOTE]
 > Creating symbolic links needs administrator rights or [Developer Mode](https://learn.microsoft.com/windows/advanced-settings/developer-mode).
