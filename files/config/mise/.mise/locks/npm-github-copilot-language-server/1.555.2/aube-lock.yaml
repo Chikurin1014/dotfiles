@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@github/copilot-language-server':
-        specifier: 1.554.0
-        version: 1.554.0
+        specifier: 1.555.2
+        version: 1.555.2
 
 packages:
 
@@ -26,38 +26,38 @@ packages:
     os: [darwin]
     hasBin: true
 
-  '@github/copilot-language-server-darwin-arm64@1.554.0':
-    resolution: {integrity: sha512-j4DcVI6OMxarMbWHdP3vvzn4Lyyhy0D/XiuHrcpXH1zN2GpDb/DU9EIzUc0I79Qu4ijIn3iSXpCTWmTCY48qbQ==}
+  '@github/copilot-language-server-darwin-arm64@1.555.2':
+    resolution: {integrity: sha512-Yw0efkkv2utlYmg6ITVsV8DywI+7pWEu7QorHk7emKL6T2ILLMBWLmKlO38O2QzCWZLART9DGit7OwMRgoaUgg==}
     cpu: [arm64]
     os: [darwin]
 
-  '@github/copilot-language-server-darwin-x64@1.554.0':
-    resolution: {integrity: sha512-10RGcgihJ6mS7X/yGqhmfJd9IwlFwese70n9Uaky0STvfaDzXEBOeegGU7z9WRxyhGqAU4REX9Vh7U5Ryv/o0g==}
+  '@github/copilot-language-server-darwin-x64@1.555.2':
+    resolution: {integrity: sha512-xpdF+SaiazXPlr4Z9qq7RZ698FnHD+82cSlz0EArepPMcKBx7iT87rN982Kxzak44inM4FmdyUFECjv9LRjfmg==}
     cpu: [x64]
     os: [darwin]
 
-  '@github/copilot-language-server-linux-arm64@1.554.0':
-    resolution: {integrity: sha512-vAG2JPEVpk7z5Wia0+GV9anBG7D1chn21qjCeDTzMV5hSzeaFeDV3Jsbyy+xzAhYFItkSKUym5WHV5G09+/I2w==}
+  '@github/copilot-language-server-linux-arm64@1.555.2':
+    resolution: {integrity: sha512-JxYr0zPm/UKmESx8Xkse0MZMEAdeeP/ZPUSU0yCzXj5+oJdxYu1DPYOnChEIw3l9hSjD5y23qJ/WqQyhZUwYiQ==}
     cpu: [arm64]
     os: [linux]
 
-  '@github/copilot-language-server-linux-x64@1.554.0':
-    resolution: {integrity: sha512-ZfsGISVKG6/cpS33N21bhbjWj4kKoKKeT9qwz5+Qc3Ro4Jt1aBGjpNDrSFcw4q8Ipcxrs/QIg3aSRtMQk8Cb+A==}
+  '@github/copilot-language-server-linux-x64@1.555.2':
+    resolution: {integrity: sha512-CF94bHl8bOwNUo3eZssYHkJKwMDSSgMEU3ax9tgc2Jp0GIKBhxMBrcmNuO/xaIZlgzhi2FqPUCjW9lC790PGDg==}
     cpu: [x64]
     os: [linux]
 
-  '@github/copilot-language-server-win32-arm64@1.554.0':
-    resolution: {integrity: sha512-PPHqtDRXD6c99E2p/V6X4FO+7A3V52NZkXuWvJcRObxQjY4QzJet18CMA6pbgj9jy+olCpe7xbYFjwQ8iqjPkg==}
+  '@github/copilot-language-server-win32-arm64@1.555.2':
+    resolution: {integrity: sha512-jmlaxcn41Tucjk3xDmQgTHJqrOHQkshJS3l/SVljP3ot5Xo8lVxvOXm9f8ThVf+TJTKMyrTVvpii/u/S0NBgqQ==}
     cpu: [arm64]
     os: [win32]
 
-  '@github/copilot-language-server-win32-x64@1.554.0':
-    resolution: {integrity: sha512-ZMrbEPg4TDBld+EBh463B5kJ81570Vfv6yy8eaZNuVRSfp0sDcihIIlAlwKQo/nu0uUSwmlAZOtrzxtPODW5KA==}
+  '@github/copilot-language-server-win32-x64@1.555.2':
+    resolution: {integrity: sha512-GOTYI+yk+wSr6YuRuSJ8gbk20hUSN+DtSqyRyO41W3GJasT+TLwiYNYeuxQi3wLGCfKXd65Y+P9EXRNC8K8TDA==}
     cpu: [x64]
     os: [win32]
 
-  '@github/copilot-language-server@1.554.0':
-    resolution: {integrity: sha512-IKgGTNJRBTmBSePBgMYyEnqv0NuSaRbzTzvQ8gmPGp2au8I7jjZWMYZfCdYQmGt6rYNOIVchB107khphiEHuAQ==}
+  '@github/copilot-language-server@1.555.2':
+    resolution: {integrity: sha512-ZUOn1XuzvMstXTYWLW2GdTsPRUYTBJLauHAjtuyYekNMqHdZj62Wvsgl8idyVhlQD28SG0LON4tRRvqC2PaCpg==}
     hasBin: true
 
   '@github/copilot-linux-arm64@1.0.96':
@@ -136,36 +136,36 @@ snapshots:
   '@github/copilot-darwin-x64@1.0.96':
     optional: true
 
-  '@github/copilot-language-server-darwin-arm64@1.554.0':
+  '@github/copilot-language-server-darwin-arm64@1.555.2':
     optional: true
 
-  '@github/copilot-language-server-darwin-x64@1.554.0':
+  '@github/copilot-language-server-darwin-x64@1.555.2':
     optional: true
 
-  '@github/copilot-language-server-linux-arm64@1.554.0':
+  '@github/copilot-language-server-linux-arm64@1.555.2':
     optional: true
 
-  '@github/copilot-language-server-linux-x64@1.554.0':
+  '@github/copilot-language-server-linux-x64@1.555.2':
     optional: true
 
-  '@github/copilot-language-server-win32-arm64@1.554.0':
+  '@github/copilot-language-server-win32-arm64@1.555.2':
     optional: true
 
-  '@github/copilot-language-server-win32-x64@1.554.0':
+  '@github/copilot-language-server-win32-x64@1.555.2':
     optional: true
 
-  '@github/copilot-language-server@1.554.0':
+  '@github/copilot-language-server@1.555.2':
     dependencies:
       vscode-languageserver-protocol: 3.18.4
     optionalDependencies:
       '@github/copilot-darwin-arm64': 1.0.96
       '@github/copilot-darwin-x64': 1.0.96
-      '@github/copilot-language-server-darwin-arm64': 1.554.0
-      '@github/copilot-language-server-darwin-x64': 1.554.0
-      '@github/copilot-language-server-linux-arm64': 1.554.0
-      '@github/copilot-language-server-linux-x64': 1.554.0
-      '@github/copilot-language-server-win32-arm64': 1.554.0
-      '@github/copilot-language-server-win32-x64': 1.554.0
+      '@github/copilot-language-server-darwin-arm64': 1.555.2
+      '@github/copilot-language-server-darwin-x64': 1.555.2
+      '@github/copilot-language-server-linux-arm64': 1.555.2
+      '@github/copilot-language-server-linux-x64': 1.555.2
+      '@github/copilot-language-server-win32-arm64': 1.555.2
+      '@github/copilot-language-server-win32-x64': 1.555.2
       '@github/copilot-linux-arm64': 1.0.96
       '@github/copilot-linux-x64': 1.0.96
       '@github/copilot-sdk-darwin-arm64': 1.0.20

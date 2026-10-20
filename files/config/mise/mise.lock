@@ -338,10 +338,10 @@ checksum = "sha256:f9683a19877e12a9b167305c8db71040d812876359de21f0d2e97c3f321f8
 url = "https://nodejs.org/dist/v24.22.0/node-v24.22.0-win-x64.zip"
 
 [[tools."npm:@github/copilot-language-server"]]
-version = "1.554.0"
-aube = { path = ".mise/locks/npm-github-copilot-language-server/1.554.0", digest = "sha256:fb920a2342e8adcb16fc40a1c562d507f4394ec44a2c857d0874acf44140b112" }
+version = "1.555.2"
+aube = { path = ".mise/locks/npm-github-copilot-language-server/1.555.2", digest = "sha256:f540a6e19efdb10ee9ec4d91c499102ba9e8cda8bd43e6fb3a93c25fa2db0cda" }
 backend = "npm:@github/copilot-language-server"
-specifiers = ["1.554.0"]
+specifiers = ["1.555.2"]
 
 [[tools.ripgrep]]
 version = "15.2.0"
