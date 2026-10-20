@@ -13,6 +13,12 @@
     efi.canTouchEfiVariables = true;
   };
 
+  services = {
+    tailscale = {
+      enable = true;
+    };
+  };
+
   networking.networkmanager.enable = true;
 
   time.timeZone = "Asia/Tokyo";
