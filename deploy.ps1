@@ -46,6 +46,21 @@ function Get-DotterCommand {
     return $bin
 }
 
+# Return the mise command, installing mise by the official installer if needed
+# (https://mise.jdx.dev/installing-mise.html), as deploy.sh does on Linux / macOS
+function Get-MiseCommand {
+    $installed = Get-Command mise -CommandType Application -ErrorAction SilentlyContinue | Select-Object -First 1
+    if ($installed) { return $installed.Source }
+
+    # The installer puts mise.exe here (~\.local\bin\mise.exe by default) and adds it to the user Path
+    $mise = if ($env:MISE_INSTALL_PATH) { $env:MISE_INSTALL_PATH } else { Join-Path $HOME '.local\bin\mise.exe' }
+    if (-not (Test-Path $mise)) {
+        Write-Host 'Installing mise'
+        Invoke-RestMethod -UseBasicParsing https://mise.run/powershell | Invoke-Expression
+    }
+    return $mise
+}
+
 # Creating symbolic links needs administrator rights or Developer Mode
 function Test-SymlinkPermission {
     $principal = [Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()
@@ -102,10 +117,11 @@ function Main {
         Pop-Location
     }
 
-    # ---- Tools (mise, installed by Scoop) ----
+    # ---- Tools (mise) ----
+    $mise = Get-MiseCommand
     Push-Location $HOME
     try {
-        Invoke-Native { mise install --yes }
+        Invoke-Native { & $mise install --yes }
     } finally {
         Pop-Location
     }
