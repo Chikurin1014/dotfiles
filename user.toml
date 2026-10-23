@@ -1,7 +1,7 @@
 # User specific values, read by Nix (flake.nix) and Dotter templates
 
 # Login user name
-username = "chikurin"
+username = "ch"
 editor = "nvim"
 
 [git]
