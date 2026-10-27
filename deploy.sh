@@ -23,6 +23,11 @@ if [ "$(uname -s)" = "Linux" ] && [ ! -e /etc/NIXOS ] \
     FLAKE_REF="$SRC_DIR#$(id -un)@generic-linux"
 fi
 
+# Enable flakes for every nix command, including the ones run by home-manager,
+# even when nix.conf does not enable them (command-line options do not reach those)
+export NIX_CONFIG="${NIX_CONFIG:+$NIX_CONFIG
+}extra-experimental-features = nix-command flakes"
+
 if command -v home-manager > /dev/null 2>&1; then
     home-manager switch --flake "$FLAKE_REF" -b bak
     exit $?
@@ -30,9 +35,7 @@ fi
 
 if command -v nix > /dev/null 2>&1; then
     # Use Home Manager pinned in flake.lock
-    nix --extra-experimental-features nix-command \
-        --extra-experimental-features flakes \
-    run "$SRC_DIR#home-manager" -- switch --flake "$FLAKE_REF" -b bak
+    nix run "$SRC_DIR#home-manager" -- switch --flake "$FLAKE_REF" -b bak
     exit $?
 fi
 
