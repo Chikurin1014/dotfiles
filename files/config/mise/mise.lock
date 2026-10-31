@@ -23,54 +23,62 @@ url = "https://github.com/eza-community/eza/releases/download/v0.23.5/eza.exe_x8
 url_api = "https://api.github.com/repos/eza-community/eza/releases/assets/471228877"
 
 [[tools."aqua:github/copilot-cli"]]
-version = "1.0.98"
+version = "1.0.105"
 backend = "aqua:github/copilot-cli"
-specifiers = ["1.0.98"]
+specifiers = ["1.0.105"]
 
 [tools."aqua:github/copilot-cli"."platforms.linux-arm64"]
-checksum = "sha256:a7509dcac0e5f22886788ba4c1e2f8b9b07367e84714e42b9e7cee4d8f9fa5f2"
-url = "https://github.com/github/copilot-cli/releases/download/v1.0.98/copilot-linux-arm64.tar.gz"
-url_api = "https://api.github.com/repos/github/copilot-cli/releases/assets/641478156"
+checksum = "sha256:e7b488cc04ac3e2ed800e1bf0aace33ada42dcf167529b3d2f48a61e1535a847"
+checksum_source = "mise-versions"
+url = "https://github.com/github/copilot-cli/releases/download/v1.0.105/copilot-linux-arm64.tar.gz"
+url_api = "https://api.github.com/repos/github/copilot-cli/releases/assets/683348971"
 
 [tools."aqua:github/copilot-cli"."platforms.linux-x64"]
-checksum = "sha256:87ddb4b3f98462b7cb13c0a6857c68ee410ec9673e2e5f64ee5bedad45825b05"
-url = "https://github.com/github/copilot-cli/releases/download/v1.0.98/copilot-linux-x64.tar.gz"
-url_api = "https://api.github.com/repos/github/copilot-cli/releases/assets/641478341"
+checksum = "sha256:aba1f06f27bc0447656647f76e0a4cf58b4b2a341c75ff04a750982b6aeb6bd2"
+checksum_source = "mise-versions"
+url = "https://github.com/github/copilot-cli/releases/download/v1.0.105/copilot-linux-x64.tar.gz"
+url_api = "https://api.github.com/repos/github/copilot-cli/releases/assets/683349254"
 
 [tools."aqua:github/copilot-cli"."platforms.macos-arm64"]
-checksum = "sha256:a87018a0194789313c979906e45e8874699fee50549ea11d0be7bdde88b6b3c8"
-url = "https://github.com/github/copilot-cli/releases/download/v1.0.98/copilot-darwin-arm64.tar.gz"
-url_api = "https://api.github.com/repos/github/copilot-cli/releases/assets/641478157"
+checksum = "sha256:34aacd03fb478d47e4b3cfc5ca045c37278c5d8d86239466521a16ea54ac84aa"
+checksum_source = "mise-versions"
+url = "https://github.com/github/copilot-cli/releases/download/v1.0.105/copilot-darwin-arm64.tar.gz"
+url_api = "https://api.github.com/repos/github/copilot-cli/releases/assets/683348970"
 
 [tools."aqua:github/copilot-cli"."platforms.windows-x64"]
-checksum = "sha256:e264811888fd77217dc36e9656c13d0b9abbb0433a7041043e1d53798e31fd94"
-url = "https://github.com/github/copilot-cli/releases/download/v1.0.98/copilot-win32-x64.zip"
-url_api = "https://api.github.com/repos/github/copilot-cli/releases/assets/641478155"
+checksum = "sha256:34e16e9cf47de0e1534920171d6f39fa246638bddbb6ece820870b382bcc061a"
+checksum_source = "mise-versions"
+url = "https://github.com/github/copilot-cli/releases/download/v1.0.105/copilot-win32-x64.zip"
+url_api = "https://api.github.com/repos/github/copilot-cli/releases/assets/683348975"
 
 [[tools."aqua:tealdeer-rs/tealdeer"]]
-version = "1.9.0"
+version = "1.9.1"
 backend = "aqua:tealdeer-rs/tealdeer"
-specifiers = ["1.9.0"]
+specifiers = ["1.9.1"]
 
 [tools."aqua:tealdeer-rs/tealdeer"."platforms.linux-arm64"]
-checksum = "sha256:a748f181c00933980cb850f4a24199c45900fc523787f6c524232a6bfc66b895"
-url = "https://github.com/tealdeer-rs/tealdeer/releases/download/v1.9.0/tealdeer-linux-aarch64-musl"
-url_api = "https://api.github.com/repos/tealdeer-rs/tealdeer/releases/assets/527792762"
+checksum = "sha256:247746dd2d18f0135da79b849bb6b49e45262e2fe4318adfc3082dc6ce3ee968"
+checksum_source = "mise-versions"
+url = "https://github.com/tealdeer-rs/tealdeer/releases/download/v1.9.1/tealdeer-linux-aarch64-musl"
+url_api = "https://api.github.com/repos/tealdeer-rs/tealdeer/releases/assets/673322969"
 
 [tools."aqua:tealdeer-rs/tealdeer"."platforms.linux-x64"]
-checksum = "sha256:dc7263b550e90c0689ea2cb434e3144469805d5dddecbb1f7fc534e1185b7408"
-url = "https://github.com/tealdeer-rs/tealdeer/releases/download/v1.9.0/tealdeer-linux-x86_64-musl"
-url_api = "https://api.github.com/repos/tealdeer-rs/tealdeer/releases/assets/527792725"
+checksum = "sha256:5a9c3f0691b9cf375ee5c99de802885f3d50498cf686a539e2ddda028eb6b4f6"
+checksum_source = "mise-versions"
+url = "https://github.com/tealdeer-rs/tealdeer/releases/download/v1.9.1/tealdeer-linux-x86_64-musl"
+url_api = "https://api.github.com/repos/tealdeer-rs/tealdeer/releases/assets/673323057"
 
 [tools."aqua:tealdeer-rs/tealdeer"."platforms.macos-arm64"]
-checksum = "sha256:e6c6d9bf6d0267a38d5709c2b8334467fedd456927429ab426ff823201c13a40"
-url = "https://github.com/tealdeer-rs/tealdeer/releases/download/v1.9.0/tealdeer-macos-aarch64"
-url_api = "https://api.github.com/repos/tealdeer-rs/tealdeer/releases/assets/527792693"
+checksum = "sha256:5c0a088880d83faf098e2716abbc373a5607addf76a7e1b7ebbe206bde4ebd35"
+checksum_source = "mise-versions"
+url = "https://github.com/tealdeer-rs/tealdeer/releases/download/v1.9.1/tealdeer-macos-aarch64"
+url_api = "https://api.github.com/repos/tealdeer-rs/tealdeer/releases/assets/673323038"
 
 [tools."aqua:tealdeer-rs/tealdeer"."platforms.windows-x64"]
-checksum = "sha256:23fb76fb683d76dd413cb470b1a3c32157e585edec7d740e73da1aa9c6406dfe"
-url = "https://github.com/tealdeer-rs/tealdeer/releases/download/v1.9.0/tealdeer-windows-x86_64-msvc.exe"
-url_api = "https://api.github.com/repos/tealdeer-rs/tealdeer/releases/assets/527792764"
+checksum = "sha256:f75a3e4b43e7b03d30bac88eccf928af90b8993cd354fe207aec1c643910736f"
+checksum_source = "mise-versions"
+url = "https://github.com/tealdeer-rs/tealdeer/releases/download/v1.9.1/tealdeer-windows-x86_64-msvc.exe"
+url_api = "https://api.github.com/repos/tealdeer-rs/tealdeer/releases/assets/673323013"
 
 [[tools.bat]]
 version = "0.26.1"
@@ -98,19 +106,21 @@ url = "https://github.com/sharkdp/bat/releases/download/v0.26.1/bat-v0.26.1-x86_
 url_api = "https://api.github.com/repos/sharkdp/bat/releases/assets/323549116"
 
 [[tools.btop]]
-version = "1.4.7"
+version = "1.4.8"
 backend = "aqua:aristocratos/btop"
-specifiers = ["1.4.7"]
+specifiers = ["1.4.8"]
 
 [tools.btop."platforms.linux-arm64"]
-checksum = "sha256:6270de0ef4c84cf0eea61cb148b3ad9ae91a11e9c3309867ffc6b3751024c252"
-url = "https://github.com/aristocratos/btop/releases/download/v1.4.7/btop-aarch64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/aristocratos/btop/releases/assets/409963650"
+checksum = "sha256:95328e26ab08f42033af26628e2d169206a5a420f35669ce17459ef85114c14c"
+checksum_source = "mise-versions"
+url = "https://github.com/aristocratos/btop/releases/download/v1.4.8/btop-aarch64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/aristocratos/btop/releases/assets/674452393"
 
 [tools.btop."platforms.linux-x64"]
-checksum = "sha256:5099054dd6a101bd12eb6ff3702a9a6a3f57aaa27923a0da478ae5b517faf335"
-url = "https://github.com/aristocratos/btop/releases/download/v1.4.7/btop-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/aristocratos/btop/releases/assets/409963672"
+checksum = "sha256:af589cf82cc9ea9c29ce050b9239a13bef2d1492256d476156e1054a42ce89ad"
+checksum_source = "mise-versions"
+url = "https://github.com/aristocratos/btop/releases/download/v1.4.8/btop-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/aristocratos/btop/releases/assets/674452462"
 
 [[tools.difftastic]]
 version = "0.71.0"
@@ -238,32 +248,32 @@ url = "https://github.com/x-motemen/ghq/releases/download/v1.11.2/ghq_windows_am
 url_api = "https://api.github.com/repos/x-motemen/ghq/releases/assets/598741479"
 
 [[tools.github-cli]]
-version = "2.102.0"
+version = "2.103.3"
 backend = "aqua:cli/cli"
-specifiers = ["2.102.0"]
+specifiers = ["2.103.3"]
 
 [tools.github-cli."platforms.linux-arm64"]
-checksum = "sha256:7862c86c72f43df3a2d93ddde6f473285b4e2af61b494849846827e513ef6484"
-url = "https://github.com/cli/cli/releases/download/v2.102.0/gh_2.102.0_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/cli/cli/releases/assets/599854680"
+checksum = "sha256:ee32df2323c8847f5fac6cb6b4b69ca75828e9329a8f22f677021f7b3306ce63"
+url = "https://github.com/cli/cli/releases/download/v2.103.3/gh_2.103.3_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/cli/cli/releases/assets/679195636"
 provenance = "github-attestations"
 
 [tools.github-cli."platforms.linux-x64"]
-checksum = "sha256:bb766f710eef8ede859c18578c72c327597cd4c8a85b06001b1f3843c6019386"
-url = "https://github.com/cli/cli/releases/download/v2.102.0/gh_2.102.0_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/cli/cli/releases/assets/599854672"
+checksum = "sha256:4c806978ffce1cec70853302a56d70ac6da4f19bae7adca4e1a8ab00633dd91d"
+url = "https://github.com/cli/cli/releases/download/v2.103.3/gh_2.103.3_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/cli/cli/releases/assets/679195621"
 provenance = "github-attestations"
 
 [tools.github-cli."platforms.macos-arm64"]
-checksum = "sha256:da922c20d1792e5b2cbf375593d7a658acf034c12c84e007e71c76ef959c337e"
-url = "https://github.com/cli/cli/releases/download/v2.102.0/gh_2.102.0_macOS_arm64.zip"
-url_api = "https://api.github.com/repos/cli/cli/releases/assets/599854720"
+checksum = "sha256:d700207eae9ae98fe2b89535c2c087c07823d4628c56364695a5a07ef311c062"
+url = "https://github.com/cli/cli/releases/download/v2.103.3/gh_2.103.3_macOS_arm64.zip"
+url_api = "https://api.github.com/repos/cli/cli/releases/assets/679195704"
 provenance = "github-attestations"
 
 [tools.github-cli."platforms.windows-x64"]
-checksum = "sha256:ae64e556ecc240b200f7eba60d550e4bb60d78e860e69dd88c449405b86067f4"
-url = "https://github.com/cli/cli/releases/download/v2.102.0/gh_2.102.0_windows_amd64.zip"
-url_api = "https://api.github.com/repos/cli/cli/releases/assets/599854760"
+checksum = "sha256:98d0cfa794721665d7973dd728c78aff7bd836d58f10f6d7a03568eccb0a22e0"
+url = "https://github.com/cli/cli/releases/download/v2.103.3/gh_2.103.3_windows_amd64.zip"
+url_api = "https://api.github.com/repos/cli/cli/releases/assets/679195750"
 provenance = "github-attestations"
 
 [[tools."github:Feel-ix-343/markdown-oxide"]]
@@ -338,10 +348,10 @@ checksum = "sha256:f9683a19877e12a9b167305c8db71040d812876359de21f0d2e97c3f321f8
 url = "https://nodejs.org/dist/v24.22.0/node-v24.22.0-win-x64.zip"
 
 [[tools."npm:@github/copilot-language-server"]]
-version = "1.555.2"
-aube = { path = ".mise/locks/npm-github-copilot-language-server/1.555.2", digest = "sha256:f540a6e19efdb10ee9ec4d91c499102ba9e8cda8bd43e6fb3a93c25fa2db0cda" }
+version = "1.562.0"
+aube = { path = ".mise/locks/npm-github-copilot-language-server/1.562.0", digest = "sha256:08ec2d46cb12f5684e32b1c90a4dac2c401f9946eb500832448ea2509c195651" }
 backend = "npm:@github/copilot-language-server"
-specifiers = ["1.555.2"]
+specifiers = ["1.562.0"]
 
 [[tools.ripgrep]]
 version = "15.2.0"
