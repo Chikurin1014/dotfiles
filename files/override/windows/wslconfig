@@ -1,4 +1,6 @@
 [wsl2]
 memory=8GB
+defaultVhdSize=256GB
+sparseVhd=true
 networkingMode=mirrored
 
