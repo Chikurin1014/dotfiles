@@ -1,10 +1,18 @@
-$env.config.show_banner = false # 起動時のバナー
-$env.config.shell_integration.osc133 = false # weztermとの相性が悪いので無効化
-
 $env.SHELL = "nu"
 # Rendered by Dotter from user.toml
 $env.EDITOR = "{{ unquote (json_str_query "editor" (read_to_str "user.toml") format="toml") }}"
 $env.FZF_DEFAULT_COMMAND = "fd"
+
+$env.config = {
+  show_banner: false # 起動時のバナー
+  shell_integration: {
+    osc133: false # weztermとの相性が悪いので無効化
+  }
+  abbreviations: {
+    wsl: "wsl --cd '~'"
+    ls: "eza --icons --git"
+  }
+}
 
 # Deploy with the Dotter binary pinned in .dotter/manifest.toml (see deploy.ps1)
 def deploy-dotfiles [] {
@@ -42,6 +50,3 @@ if (which mise | is-not-empty) {
     }
   }
 }
-
-alias wsl = wsl --cd '~'
-alias ls = eza --icons --git
